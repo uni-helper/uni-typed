@@ -41,7 +41,7 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
-    "test": "vitest",
+    "test": "vitest run --typecheck",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
