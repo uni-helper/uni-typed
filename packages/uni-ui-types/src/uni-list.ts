@@ -28,7 +28,7 @@ type _UniListProps = Partial<{
 type _UniList = Component<_UniListProps>;
 
 /** 列表实例 */
-type _UniListInstance = InstanceType<_UniList>;
+interface _UniListInstance extends InstanceType<_UniList>{};;
 
 export type {
   _UniListProps as UniListProps,

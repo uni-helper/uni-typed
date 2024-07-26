@@ -64,7 +64,7 @@ type _UniListChatProps = Partial<{
 type _UniListChat = Component<_UniListChatProps>;
 
 /** 聊天列表实例 */
-type _UniListChatInstance = InstanceType<_UniListChat>;
+interface _UniListChatInstance extends InstanceType<_UniListChat>{};;
 
 export type {
   _UniListChatLink as UniListChatLink,

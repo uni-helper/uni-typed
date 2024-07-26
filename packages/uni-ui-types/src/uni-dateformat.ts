@@ -84,7 +84,7 @@ type _UniDateformatProps = Partial<{
 type _UniDateformat = Component<_UniDateformatProps>;
 
 /** 日期格式化组件实例 */
-type _UniDateformatInstance = InstanceType<_UniDateformat>;
+interface _UniDateformatInstance extends InstanceType<_UniDateformat>{};;
 
 export type {
   _UniDateformatLocale as UniDateformatLocale,

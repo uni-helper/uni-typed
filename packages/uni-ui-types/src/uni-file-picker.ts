@@ -466,7 +466,7 @@ type _UniFilePickerProps = _UniFilePickerArrayProps | _UniFilePickerObjectProps;
 type _UniFilePicker = Component<_UniFilePickerProps>;
 
 /** 文件选择上传组件属性 */
-type _UniFilePickerInstance = InstanceType<_UniFilePicker>;
+interface _UniFilePickerInstance extends InstanceType<_UniFilePicker>{};;
 
 export type {
   _UniFilePickerValue as UniFilePickerValue,

@@ -59,7 +59,7 @@ type _AdRewardedVideoProps = Partial<{
 type _AdRewardedVideo = Component<_AdRewardedVideoProps>;
 
 /** 激励视频广告实例 */
-type _AdRewardedVideoInstance = InstanceType<_AdRewardedVideo>;
+interface _AdRewardedVideoInstance extends InstanceType<_AdRewardedVideo>{};
 
 export type {
   _AdRewardedVideoUrlCallback as AdRewardedVideoUrlCallback,

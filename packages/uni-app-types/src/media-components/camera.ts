@@ -156,7 +156,7 @@ type _CameraProps = Partial<{
 type _Camera = Component<_CameraProps>;
 
 /** 页面内嵌的区域相机组件实例 */
-type _CameraInstance = InstanceType<_Camera>;
+interface _CameraInstance extends InstanceType<_Camera>{};
 
 export type {
   _CameraMode as CameraMode,

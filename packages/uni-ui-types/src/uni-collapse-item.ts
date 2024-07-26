@@ -64,7 +64,7 @@ type _UniCollapseItemProps = Partial<{
 
 type _UniCollapseItem = Component<_UniCollapseItemProps>;
 
-type _UniCollapseItemInstance = InstanceType<_UniCollapseItem>;
+interface _UniCollapseItemInstance extends InstanceType<_UniCollapseItem>{};;
 
 export type {
   _UniCollapseItemTitleBorder as UniCollapseItemTitleBorder,

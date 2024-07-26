@@ -94,7 +94,7 @@ type _PageMetaProps = Partial<{
 type _PageMeta = Component<_PageMetaProps>;
 
 /** 页面属性配置节点实例 */
-type _PageMetaInstance = InstanceType<_PageMeta>;
+interface _PageMetaInstance extends InstanceType<_PageMeta>{};
 
 export type {
   _PageMetaBackgroundTextStyle as PageMetaBackgroundTextStyle,

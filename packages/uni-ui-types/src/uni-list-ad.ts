@@ -7,7 +7,7 @@ type _UniListAdProps = Partial<{
 
 type _UniListAd = Component<_UniListAdProps>;
 
-type _UniListAdInstance = InstanceType<_UniListAd>;
+interface _UniListAdInstance extends InstanceType<_UniListAd>{};;
 
 export type {
   _UniListAdProps as UniListAdProps,

@@ -95,7 +95,7 @@ type _UniNoticeBarProps = Partial<{
 type _UniNoticeBar = Component<_UniNoticeBarProps>;
 
 /** 通告栏实例 */
-type _UniNoticeBarInstance = InstanceType<_UniNoticeBar>;
+interface _UniNoticeBarInstance extends InstanceType<_UniNoticeBar>{};;
 
 export type {
   _UniNoticeBarOnClick as UniNoticeBarOnClick,

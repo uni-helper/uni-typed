@@ -188,7 +188,7 @@ type _UniFormsProps = Partial<{
 type _UniForms = Component<_UniFormsProps>;
 
 /** 表单实例 */
-type _UniFormsInstance = InstanceType<_UniForms>;
+interface _UniFormsInstance extends InstanceType<_UniForms>{};;
 
 export type {
   _UniFormsFormat as UniFormsFormat,

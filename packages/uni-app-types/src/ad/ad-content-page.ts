@@ -145,7 +145,7 @@ type _AdContentPageProps = Partial<{
 type _AdContentPage = Component<_AdContentPageProps>;
 
 /** 短视频内容联盟广告实例 */
-type _AdContentPageInstance = InstanceType<_AdContentPage>;
+interface _AdContentPageInstance extends InstanceType<_AdContentPage>{};
 
 export type {
   _AdContentPageOnLoadEvent as AdContentPageOnLoadEvent,

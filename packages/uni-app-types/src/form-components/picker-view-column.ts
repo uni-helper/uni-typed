@@ -4,7 +4,7 @@ type _PickerViewColumnProps = Partial<{}>;
 
 type _PickerViewColumn = Component<_PickerViewColumnProps>;
 
-type _PickerViewColumnInstance = InstanceType<_PickerViewColumn>;
+interface _PickerViewColumnInstance extends InstanceType<_PickerViewColumn>{};
 
 export type {
   _PickerViewColumnProps as PickerViewColumnProps,

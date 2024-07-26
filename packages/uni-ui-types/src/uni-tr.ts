@@ -12,7 +12,7 @@ type _UniTrProps = Partial<{
 
 type _UniTr = Component<_UniTrProps>;
 
-type _UniTrInstance = InstanceType<_UniTr>;
+interface _UniTrInstance extends InstanceType<_UniTr>{};;
 
 export type {
   _UniTrProps as UniTrProps,

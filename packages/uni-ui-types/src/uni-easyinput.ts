@@ -288,7 +288,7 @@ type _UniEasyinputProps = Partial<{
 /** 对原生 input 组件的增强 */
 type _UniEasyinput = Component<_UniEasyinputProps>;
 
-type _UniEasyinputInstance = InstanceType<_UniEasyinput>;
+interface _UniEasyinputInstance extends InstanceType<_UniEasyinput>{};;
 
 export type {
   _UniEasyinputValue as UniEasyinputValue,

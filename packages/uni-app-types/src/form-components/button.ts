@@ -527,7 +527,7 @@ type _ButtonProps = Partial<{
 type _Button = Component<_ButtonProps>;
 
 /** 按钮实例 */
-type _ButtonInstance = InstanceType<_Button>;
+interface _ButtonInstance extends InstanceType<_Button>{};
 
 export type {
   _ButtonSize as ButtonSize,

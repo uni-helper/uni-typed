@@ -712,7 +712,7 @@ type _MapProps = Partial<{
 type _Map = Component<_MapProps>;
 
 /** 地图组件实例 */
-type _MapInstance = InstanceType<_Map>;
+interface _MapInstance extends InstanceType<_Map>{};
 
 export type {
   _MapDisplay as MapDisplay,

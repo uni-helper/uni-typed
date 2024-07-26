@@ -391,7 +391,7 @@ type _LivePlayerProps = Partial<{
 type _LivePlayer = Component<_LivePlayerProps>;
 
 /** 实时音视频播放（直播拉流）实例 */
-type _LivePlayerInstance = InstanceType<_LivePlayer>;
+interface _LivePlayerInstance extends InstanceType<_LivePlayer>{};
 
 export type {
   _LivePlayerMode as LivePlayerMode,

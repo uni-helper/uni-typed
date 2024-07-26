@@ -239,7 +239,7 @@ type _TextareaProps = Partial<{
 type _Textarea = Component<_TextareaProps>;
 
 /** 多行输入框实例 */
-type _TextareaInstance = InstanceType<_Textarea>;
+interface _TextareaInstance extends InstanceType<_Textarea>{};
 
 export type {
   _TextareaValue as TextareaValue,

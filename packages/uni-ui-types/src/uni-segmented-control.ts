@@ -55,7 +55,7 @@ type _UniSegmentedControlProps = Partial<{
 type _UniSegmentedControl = Component<_UniSegmentedControlProps>;
 
 /** 分段器实例 */
-type _UniSegmentedControlInstance = InstanceType<_UniSegmentedControl>;
+interface _UniSegmentedControlInstance extends InstanceType<_UniSegmentedControl>{};;
 
 export type {
   _UniSegmentedControlCurrent as UniSegmentedControlCurrent,

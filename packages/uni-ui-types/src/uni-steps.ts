@@ -62,7 +62,7 @@ type _UniStepsProps = Partial<{
 type _UniSteps = Component<_UniStepsProps>;
 
 /** 步骤条实例 */
-type _UniStepsInstance = InstanceType<_UniSteps>;
+interface _UniStepsInstance extends InstanceType<_UniSteps>{};;
 
 export type {
   _UniStepsDirection as UniStepsDirection,

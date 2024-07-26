@@ -57,7 +57,7 @@ type _UniFormsItemProps = Partial<{
 
 type _UniFormsItem = Component<_UniFormsItemProps>;
 
-type _UniFormsItemInstance = InstanceType<_UniFormsItem>;
+interface _UniFormsItemInstance extends InstanceType<_UniFormsItem>{};;
 
 export type {
   _UniFormsItemRulesRule as UniFormsItemRulesRule,

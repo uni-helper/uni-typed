@@ -96,7 +96,7 @@ type _EditorProps = Partial<{
 type _Editor = Component<_EditorProps>;
 
 /** 富文本编辑器实例 */
-type _EditorInstance = InstanceType<_Editor>;
+interface _EditorInstance extends InstanceType<_Editor>{};
 
 export type {
   _EditorOnReadyEvent as EditorOnReadyEvent,

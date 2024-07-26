@@ -45,7 +45,7 @@ type _UniRowProps = Partial<{
 type _UniRow = Component<_UniRowProps>;
 
 /** 流式栅格系统中的行实例 */
-type _UniRowInstance = InstanceType<_UniRow>;
+interface _UniRowInstance extends InstanceType<_UniRow>{};;
 
 export type {
   _UniRowJustify as UniRowJustify,

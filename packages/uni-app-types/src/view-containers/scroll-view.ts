@@ -217,7 +217,7 @@ type _ScrollViewProps = Partial<{
 type _ScrollView = Component<_ScrollViewProps>;
 
 /** 可滚动视图区域实例 */
-type _ScrollViewInstance = InstanceType<_ScrollView>;
+interface _ScrollViewInstance extends InstanceType<_ScrollView>{};
 
 export type {
   _ScrollViewRefresherDefaultStyle as ScrollViewRefresherDefaultStyle,

@@ -95,7 +95,7 @@ type _ProgressProps = Partial<{
 type _Progress = Component<_ProgressProps>;
 
 /** 进度条实例 */
-type _ProgressInstance = InstanceType<_Progress>;
+interface _ProgressInstance extends InstanceType<_Progress>{};
 
 export type {
   _ProgressActiveMode as ProgressActiveMode,

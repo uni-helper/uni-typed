@@ -21,7 +21,7 @@ type _CheckboxGroupProps = Partial<{
 type _CheckboxGroup = Component<_CheckboxGroupProps>;
 
 /** 多项选择器实例 */
-type _CheckboxGroupInstance = InstanceType<_CheckboxGroup>;
+interface _CheckboxGroupInstance extends InstanceType<_CheckboxGroup>{};
 
 export type {
   _CheckboxGroupOnChangeDetail as CheckboxGroupOnChangeDetail,

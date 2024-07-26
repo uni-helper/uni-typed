@@ -55,7 +55,7 @@ type _CustomTabBarProps = Partial<{
 type _CustomTabBar = Component<_CustomTabBarProps>;
 
 /** 自定义 tabBar 组件实例 */
-type _CustomTabBarInstance = InstanceType<_CustomTabBar>;
+interface _CustomTabBarInstance extends InstanceType<_CustomTabBar>{};
 
 export type {
   _CustomTabBarDirection as CustomTabBarDirection,

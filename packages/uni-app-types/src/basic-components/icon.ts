@@ -20,7 +20,7 @@ type _IconProps = Partial<{
 type _Icon = Component<_IconProps>;
 
 /** 图标实例 */
-type _IconInstance = InstanceType<_Icon>;
+interface _IconInstance extends InstanceType<_Icon>{};
 
 export type {
   _IconProps as IconProps,

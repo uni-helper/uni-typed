@@ -91,7 +91,7 @@ type _UniNavBarProps = Partial<{
 type _UniNavBar = Component<_UniNavBarProps>;
 
 /** 导航栏组件实例 */
-type _UniNavBarInstance = InstanceType<_UniNavBar>;
+interface _UniNavBarInstance extends InstanceType<_UniNavBar>{};;
 
 export type {
   _UniNavBarProps as UniNavBarProps,

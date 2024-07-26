@@ -366,7 +366,7 @@ type _InputProps = Partial<{
 type _Input = Component<_InputProps>;
 
 /** 输入框实例 */
-type _InputInstance = InstanceType<_Input>;
+interface _InputInstance extends InstanceType<_Input>{};
 
 export type {
   _InputValue as InputValue,

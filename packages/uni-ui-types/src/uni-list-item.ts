@@ -192,7 +192,7 @@ type _UniListItemProps = Partial<{
 
 type _UniListItem = Component<_UniListItemProps>;
 
-type _UniListItemInstance = InstanceType<_UniListItem>;
+interface _UniListItemInstance extends InstanceType<_UniListItem>{};;
 
 export type {
   _UniListItemEllipsis as UniListItemEllipsis,

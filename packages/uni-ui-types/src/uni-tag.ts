@@ -102,7 +102,9 @@ type _UniTagProps = Partial<{
 /** 用于展示一个或多个文字标签，可点击切换选中、不选中的状态 */
 type _UniTag = Component<_UniTagProps>;
 
-type _UniTagInstance = InstanceType<_UniTag>;
+interface _UniTagInstance extends InstanceType<_UniTag>{
+
+}
 
 export type {
   _UniTagSize as UniTagSize,

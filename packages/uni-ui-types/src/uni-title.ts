@@ -54,7 +54,7 @@ type _UniTitleProps = Partial<{
  */
 type _UniTitle = Component<_UniTitleProps>;
 
-type _UniTitleInstance = InstanceType<_UniTitle>;
+interface _UniTitleInstance extends InstanceType<_UniTitle>{};;
 
 export type {
   _UniTitleType as UniTitleType,

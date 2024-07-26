@@ -71,7 +71,7 @@ type _UniSectionProps = Partial<{
 /** 标题栏 */
 type _UniSection = Component<_UniSectionProps>;
 
-type _UniSectionInstance = InstanceType<_UniSection>;
+interface _UniSectionInstance extends InstanceType<_UniSection>{};;
 
 export type {
   _UniSectionType as UniSectionType,

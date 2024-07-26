@@ -49,7 +49,7 @@ type _UniIndexedListProps = Partial<{
 type _UniIndexedList = Component<_UniIndexedListProps>;
 
 /** 索引列表实例 */
-type _UniIndexedListInstance = InstanceType<_UniIndexedList>;
+interface _UniIndexedListInstance extends InstanceType<_UniIndexedList>{};;
 
 export type {
   _UniIndexedListOption as UniIndexedListOption,

@@ -114,7 +114,7 @@ type _UniLoadMoreProps = Partial<{
 /** 用于列表中，做滚动加载使用，展示 loading 的各种状态 */
 type _UniLoadMore = Component<_UniLoadMoreProps>;
 
-type _UniLoadMoreInstance = InstanceType<_UniLoadMore>;
+interface _UniLoadMoreInstance extends InstanceType<_UniLoadMore>{};;
 
 export type {
   _UniLoadMoreStatus as UniLoadMoreStatus,

@@ -92,7 +92,7 @@ type _UniSwipeActionItemProps = Partial<{
 
 type _UniSwipeActionItem = Component<_UniSwipeActionItemProps>;
 
-type _UniSwipeActionItemInstance = InstanceType<_UniSwipeActionItem>;
+interface _UniSwipeActionItemInstance extends InstanceType<_UniSwipeActionItem>{};;
 
 export type {
   _UniSwipeActionItemShow as UniSwipeActionItemShow,

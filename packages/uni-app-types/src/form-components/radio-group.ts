@@ -25,7 +25,7 @@ type _RadioGroupProps = Partial<{
 type _RadioGroup = Component<_RadioGroupProps>;
 
 /** 单项选择器实例 */
-type _RadioGroupInstance = InstanceType<_RadioGroup>;
+interface _RadioGroupInstance extends InstanceType<_RadioGroup>{};
 
 export type {
   _RadioGroupOnChangeDetail as RadioGroupOnChangeDetail,

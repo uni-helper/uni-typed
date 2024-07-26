@@ -10,7 +10,7 @@ type _UniGridItemProps = Partial<{
 type _UniGridItem = Component<_UniGridItemProps>;
 
 /** 宫格项实例 */
-type _UniGridItemInstance = InstanceType<_UniGridItem>;
+interface _UniGridItemInstance extends InstanceType<_UniGridItem>{};;
 
 export type {
   _UniGridItemProps as UniGridItemProps,

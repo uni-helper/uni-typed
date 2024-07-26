@@ -37,7 +37,7 @@ type _RadioProps = Partial<{
 type _Radio = Component<_RadioProps>;
 
 /** 单选项目实例 */
-type _RadioInstance = InstanceType<_Radio>;
+interface _RadioInstance extends InstanceType<_Radio>{};
 
 export type {
   _RadioValue as RadioValue,

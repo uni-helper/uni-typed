@@ -91,7 +91,7 @@ type _UniPaginationProps = Partial<{
 type _UniPagination = Component<_UniPaginationProps>;
 
 /** 分页器组件实例 */
-type _UniPaginationInstance = InstanceType<_UniPagination>;
+interface _UniPaginationInstance extends InstanceType<_UniPagination>{};;
 
 export type {
   _UniPaginationOnInput as UniPaginationOnInput,

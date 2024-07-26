@@ -172,7 +172,7 @@ type _MovableViewProps = Partial<{
 type _MovableView = Component<_MovableViewProps>;
 
 /** 可移动的视图容器实例 */
-type _MovableViewInstance = InstanceType<_MovableView>;
+interface _MovableViewInstance extends InstanceType<_MovableView>{};
 
 export type {
   _MovableViewDirection as MovableViewDirection,

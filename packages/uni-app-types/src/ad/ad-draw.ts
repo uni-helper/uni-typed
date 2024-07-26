@@ -34,7 +34,7 @@ type _AdDrawProps = Partial<{
 type _AdDraw = Component<_AdDrawProps>;
 
 /** 沉浸视频流广告实例 */
-type _AdDrawInstance = InstanceType<_AdDraw>;
+interface _AdDrawInstance extends InstanceType<_AdDraw>{};
 
 export type {
   _AdDrawOnLoadEvent as AdDrawOnLoadEvent,

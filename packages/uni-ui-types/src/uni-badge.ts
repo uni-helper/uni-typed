@@ -137,7 +137,7 @@ type _UniBadgeProps = Partial<{
 type _UniBadge = Component<_UniBadgeProps>;
 
 /** 数字角标实例 */
-type _UniBadgeInstance = InstanceType<_UniBadge>;
+interface _UniBadgeInstance extends InstanceType<_UniBadge>{};
 
 export type {
   _UniBadgeType as UniBadgeType,

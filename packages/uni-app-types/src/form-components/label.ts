@@ -18,7 +18,7 @@ type _LabelProps = Partial<{
 type _Label = Component<_LabelProps>;
 
 /** 表单标签实例 */
-type _LabelInstance = InstanceType<_Label>;
+interface _LabelInstance extends InstanceType<_Label>{};
 
 export type {
   _LabelProps as LabelProps,

@@ -60,7 +60,7 @@ type _PickerViewProps = Partial<{
 type _PickerView = Component<_PickerViewProps>;
 
 /** 嵌入页面的滚动选择器 */
-type _PickerViewInstance = InstanceType<_PickerView>;
+interface _PickerViewInstance extends InstanceType<_PickerView>{};
 
 export type {
   _PickerViewValueElement as PickerViewValueElement,

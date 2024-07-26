@@ -48,7 +48,7 @@ type _UniLinkProps = Partial<{
 type _UniLink = Component<_UniLinkProps>;
 
 /** 外部网页超链接组件实例 */
-type _UniLinkInstance = InstanceType<_UniLink>;
+interface _UniLinkInstance extends InstanceType<_UniLink>{};;
 
 export type {
   _UniLinkProps as UniLinkProps,

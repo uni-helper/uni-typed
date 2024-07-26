@@ -22,7 +22,7 @@ type _CoverViewProps = Partial<{
 type _CoverView = Component<_CoverViewProps>;
 
 /** 覆盖在原生组件之上的视图 */
-type _CoverViewInstance = InstanceType<_CoverView>;
+interface _CoverViewInstance extends InstanceType<_CoverView>{};
 
 export type {
   _CoverViewProps as CoverViewProps,

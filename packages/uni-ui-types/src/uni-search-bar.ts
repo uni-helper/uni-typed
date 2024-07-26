@@ -143,7 +143,7 @@ type _UniSearchBarProps = Partial<{
 type _UniSearchBar = Component<_UniSearchBarProps>;
 
 /** 搜索栏实例 */
-type _UniSearchBarInstance = InstanceType<_UniSearchBar>;
+interface _UniSearchBarInstance extends InstanceType<_UniSearchBar>{};;
 
 export type {
   _UniSearchBarValue as UniSearchBarValue,

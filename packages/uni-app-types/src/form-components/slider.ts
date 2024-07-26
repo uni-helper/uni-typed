@@ -98,7 +98,7 @@ type _SliderProps = Partial<{
 type _Slider = Component<_SliderProps>;
 
 /** 滑动选择器实例 */
-type _SliderInstance = InstanceType<_Slider>;
+interface _SliderInstance extends InstanceType<_Slider>{};
 
 export type {
   _SliderValue as SliderValue,

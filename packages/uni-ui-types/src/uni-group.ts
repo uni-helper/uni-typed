@@ -48,7 +48,7 @@ type _UniGroupProps = Partial<{
 type _UniGroup = Component<_UniGroupProps>;
 
 /** 分组组件实例 */
-type _UniGroupInstance = InstanceType<_UniGroup>;
+interface _UniGroupInstance extends InstanceType<_UniGroup>{};;
 
 export type {
   _UniGroupMode as UniGroupMode,

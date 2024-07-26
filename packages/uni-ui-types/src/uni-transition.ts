@@ -307,7 +307,7 @@ type _UniTransitionProps = Partial<{
 /** 元素过渡动画 */
 type _UniTransition = Component<_UniTransitionProps>;
 
-type _UniTransitionInstance = InstanceType<_UniTransition>;
+interface _UniTransitionInstance extends InstanceType<_UniTransition>{};;
 
 export type {
   _UniTransitionModeClass as UniTransitionModeClass,

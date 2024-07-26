@@ -101,7 +101,7 @@ type _UniTableProps = Partial<{
 type _UniTable = Component<_UniTableProps>;
 
 /** 表格实例 */
-type _UniTableInstance = InstanceType<_UniTable>;
+interface _UniTableInstance extends InstanceType<_UniTable>{};;
 
 export type {
   _UniTableType as UniTableType,

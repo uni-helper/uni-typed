@@ -75,7 +75,7 @@ type _CanvasProps = Partial<{
 type _Canvas = Component<_CanvasProps>;
 
 /** 画布实例 */
-type _CanvasInstance = InstanceType<_Canvas>;
+interface _CanvasInstance extends InstanceType<_Canvas>{};
 
 export type {
   _CanvasType as CanvasType,

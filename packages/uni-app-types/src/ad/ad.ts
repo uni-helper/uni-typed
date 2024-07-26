@@ -83,7 +83,7 @@ type _AdProps = Partial<{
 type _Ad = Component<_AdProps>;
 
 /** 信息流广告实例 */
-type _AdInstance = InstanceType<_Ad>;
+interface _AdInstance extends InstanceType<_Ad>{};
 
 export type {
   _AdOnLoadEvent as AdOnLoadEvent,

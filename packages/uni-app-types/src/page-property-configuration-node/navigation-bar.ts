@@ -190,7 +190,7 @@ type _NavigationBarProps = Partial<{
 type _NavigationBar = Component<_NavigationBarProps>;
 
 /** 页面导航条配置节点实例 */
-type _NavigationBarInstance = InstanceType<_NavigationBar>;
+interface _NavigationBarInstance extends InstanceType<_NavigationBar>{};
 
 export type {
   _NavigationBarSubtitleOverflow as NavigationBarSubtitleOverflow,

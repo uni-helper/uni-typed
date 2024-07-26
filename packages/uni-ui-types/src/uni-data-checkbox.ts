@@ -188,7 +188,7 @@ type _UniDataCheckboxProps =
  */
 type _UniDataCheckbox = Component<_UniDataCheckboxProps>;
 
-type _UniDataCheckboxInstance = InstanceType<_UniDataCheckbox>;
+interface _UniDataCheckboxInstance extends InstanceType<_UniDataCheckbox>{};;
 
 export type {
   _UniDataCheckboxValue as UniDataCheckboxValue,

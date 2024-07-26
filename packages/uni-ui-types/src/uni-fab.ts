@@ -144,7 +144,7 @@ type _UniFabProps = Partial<{
 /** 点击可展开一个图形按钮菜单 */
 type _UniFab = Component<_UniFabProps>;
 
-type _UniFabInstance = InstanceType<_UniFab>;
+interface _UniFabInstance extends InstanceType<_UniFab>{};;
 
 export type {
   _UniFabPattern as UniFabPattern,

@@ -46,7 +46,7 @@ type _UniComboxProps = Partial<{
 type _UniCombox = Component<_UniComboxProps>;
 
 /** 组合框组件实例 */
-type _UniComboxInstance = InstanceType<_UniCombox>;
+interface _UniComboxInstance extends InstanceType<_UniCombox>{};;
 
 export type {
   _UniComboxValue as UniComboxValue,

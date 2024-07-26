@@ -14,7 +14,7 @@ type _SwiperItemProps = Partial<{
 type _SwiperItem = Component<_SwiperItemProps>;
 
 /** Swiper 直接子组件实例 */
-type _SwiperItemInstance = InstanceType<_SwiperItem>;
+interface _SwiperItemInstance extends InstanceType<_SwiperItem>{};
 
 export type {
   _SwiperItemProps as SwiperItemProps,

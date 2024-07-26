@@ -81,7 +81,7 @@ type _UniThProps = Partial<{
 
 type _UniTh = Component<_UniThProps>;
 
-type _UniThInstance = InstanceType<_UniTh>;
+interface _UniThInstance extends InstanceType<_UniTh>{};;
 
 export type {
   _UniThAlign as UniThAlign,

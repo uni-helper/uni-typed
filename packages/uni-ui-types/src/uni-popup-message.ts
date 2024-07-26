@@ -50,7 +50,7 @@ type _UniPopupMessageProps = Partial<{
 /** 消息弹窗 */
 type _UniPopupMessage = Component<_UniPopupMessageProps>;
 
-type _UniPopupMessageInstance = InstanceType<_UniPopupMessage>;
+interface _UniPopupMessageInstance extends InstanceType<_UniPopupMessage>{};;
 
 export type {
   _UniPopupMessageType as UniPopupMessageType,

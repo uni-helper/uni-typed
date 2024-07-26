@@ -71,7 +71,7 @@ type _FormProps = Partial<{
 type _Form = Component<_FormProps>;
 
 /** 表单实例 */
-type _FormInstance = InstanceType<_Form>;
+interface _FormInstance extends InstanceType<_Form>{};
 
 export type {
   _FormOnSubmitDetailValue as FormOnSubmitDetailValue,

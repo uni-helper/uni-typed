@@ -69,7 +69,7 @@ type _RichTextProps = Partial<{
 type _RichText = Component<_RichTextProps>;
 
 /** 富文本实例 */
-type _RichTextInstance = InstanceType<_RichText>;
+interface _RichTextInstance extends InstanceType<_RichText>{};
 
 export type {
   _RichTextSpace as RichTextSpace,

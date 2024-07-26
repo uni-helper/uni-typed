@@ -102,7 +102,7 @@ type _AudioProps = Partial<{
 type _Audio = Component<_AudioProps>;
 
 /** 音频实例 */
-type _AudioInstance = InstanceType<_Audio>;
+interface _AudioInstance extends InstanceType<_Audio>{};
 
 export type {
   _AudioOnErrorDetail as AudioOnErrorDetail,

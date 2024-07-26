@@ -55,7 +55,7 @@ type _WebViewProps = Partial<{
 type _WebView = Component<_WebViewProps>;
 
 /** Web 浏览器组件实例 */
-type _WebViewInstance = InstanceType<_WebView>;
+interface _WebViewInstance extends InstanceType<_WebView>{};
 
 export type {
   _WebViewStyles as WebViewStyles,

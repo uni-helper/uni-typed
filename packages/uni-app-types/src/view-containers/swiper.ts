@@ -213,7 +213,7 @@ type _SwiperProps = Partial<{
 type _Swiper = Component<_SwiperProps>;
 
 /** 滑块视图容器实例 */
-type _SwiperInstance = InstanceType<_Swiper>;
+interface _SwiperInstance extends InstanceType<_Swiper>{};
 
 export type {
   _SwiperSource as SwiperSource,

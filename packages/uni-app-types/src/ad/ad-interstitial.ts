@@ -51,7 +51,7 @@ type _AdInterstitialProps = Partial<{
 type _AdInterstitial = Component<_AdInterstitialProps>;
 
 /** 插屏广告实例 */
-type _AdInterstitialInstance = InstanceType<_AdInterstitial>;
+interface _AdInterstitialInstance extends InstanceType<_AdInterstitial>{};
 
 export type {
   _AdInterstitialOnLoadEvent as AdInterstitialOnLoadEvent,

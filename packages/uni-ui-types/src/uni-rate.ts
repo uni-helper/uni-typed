@@ -98,7 +98,7 @@ type _UniRateProps = Partial<{
 type _UniRate = Component<_UniRateProps>;
 
 /** 评分组件实例 */
-type _UniRateInstance = InstanceType<_UniRate>;
+interface _UniRateInstance extends InstanceType<_UniRate>{};;
 
 export type {
   _UniRateValue as UniRateValue,

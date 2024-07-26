@@ -51,7 +51,7 @@ type _UniGridProps = Partial<{
 type _UniGrid = Component<_UniGridProps>;
 
 /** 宫格属性 */
-type _UniGridInstance = InstanceType<_UniGrid>;
+interface _UniGridInstance extends InstanceType<_UniGrid>{};;
 
 export type {
   _UniGridOnChangeDetail as UniGridOnChangeDetail,

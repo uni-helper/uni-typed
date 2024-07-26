@@ -35,7 +35,7 @@ type _UniColProps = _UniColRules &
 type _UniCol = Component<_UniColProps>;
 
 /** 流式栅格系统中的列实例 */
-type _UniColInstance = InstanceType<_UniCol>;
+interface _UniColInstance extends InstanceType<_UniCol>{};;
 
 export type {
   _UniColRules as UniColRules,

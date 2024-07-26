@@ -75,7 +75,7 @@ type _UniDataSelectProps = Partial<{
  */
 type _UniDataSelect = Component<_UniDataSelectProps>;
 
-type _UniDataSelectInstance = InstanceType<_UniDataSelect>;
+interface _UniDataSelectInstance extends InstanceType<_UniDataSelect>{};;
 
 export type {
   _UniDataSelectValue as UniDataSelectValue,

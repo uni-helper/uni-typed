@@ -219,7 +219,7 @@ type _NavigatorProps = Partial<{
 type _Navigator = Component<_NavigatorProps>;
 
 /** 页面跳转组件实例 */
-type _NavigatorInstance = InstanceType<_Navigator>;
+interface _NavigatorInstance extends InstanceType<_Navigator>{};
 
 export type {
   _NavigatorOpenType as NavigatorOpenType,

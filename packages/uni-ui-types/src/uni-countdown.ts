@@ -84,7 +84,7 @@ type _UniCountdownProps = Partial<{
 type _UniCountdown = Component<_UniCountdownProps>;
 
 /** 倒计时实例 */
-type _UniCountdownInstance = InstanceType<_UniCountdown>;
+interface _UniCountdownInstance extends InstanceType<_UniCountdown>{};;
 
 export type {
   _UniCountdownOnUpdate as UniCountdownOnUpdate,

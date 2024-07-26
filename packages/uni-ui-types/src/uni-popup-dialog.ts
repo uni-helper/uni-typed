@@ -153,7 +153,7 @@ type _UniPopupDialogProps = Partial<{
 /** 对话框弹窗 */
 type _UniPopupDialog = Component<_UniPopupDialogProps>;
 
-type _UniPopupDialogInstance = InstanceType<_UniPopupDialog>;
+interface _UniPopupDialogInstance extends InstanceType<_UniPopupDialog>{};;
 
 export type {
   _UniPopupDialogType as UniPopupDialogType,

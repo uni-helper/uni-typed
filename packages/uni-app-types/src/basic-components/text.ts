@@ -53,7 +53,7 @@ type _TextProps = Partial<{
 type _Text = Component<_TextProps>;
 
 /** 文本组件实例 */
-type _TextInstance = InstanceType<_Text>;
+interface _TextInstance extends InstanceType<_Text>{};
 
 export type {
   _TextSpace as TextSpace,

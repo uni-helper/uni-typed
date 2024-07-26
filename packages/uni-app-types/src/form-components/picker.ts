@@ -366,7 +366,7 @@ type _PickerProps =
 type _Picker = Component<_PickerProps>;
 
 /** 从底部弹起的滚动选择器实例 */
-type _PickerInstance = InstanceType<_Picker>;
+interface _PickerInstance extends InstanceType<_Picker>{};
 
 export type {
   _SelectorPickerRange as SelectorPickerRange,

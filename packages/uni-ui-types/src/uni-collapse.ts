@@ -76,7 +76,7 @@ type _UniCollapseProps =
 type _UniCollapse = Component<_UniCollapseProps>;
 
 /** 折叠面板实例 */
-type _UniCollapseInstance = InstanceType<_UniCollapse>;
+interface _UniCollapseInstance extends InstanceType<_UniCollapse>{};;
 
 export type {
   _UniCollapseResize as UniCollapseResize,

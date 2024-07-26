@@ -20,7 +20,7 @@ type _UniSwipeActionProps = Partial<{
  */
 type _UniSwipeAction = Component<_UniSwipeActionProps>;
 
-type _UniSwipeActionInstance = InstanceType<_UniSwipeAction>;
+interface _UniSwipeActionInstance extends InstanceType<_UniSwipeAction>{};;
 
 export type {
   _UniSwipeActionResize as UniSwipeActionResize,

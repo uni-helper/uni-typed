@@ -37,7 +37,7 @@ type _CoverImageProps = Partial<{
 type _CoverImage = Component<_CoverImageProps>;
 
 /** 覆盖在原生组件之上的图片视图实例 */
-type _CoverImageInstance = InstanceType<_CoverImage>;
+interface _CoverImageInstance extends InstanceType<_CoverImage>{};
 
 export type {
   _CoverImageOnLoadEvent as CoverImageOnLoadEvent,

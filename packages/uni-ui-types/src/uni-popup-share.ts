@@ -31,7 +31,7 @@ type _UniPopupShareProps = Partial<{
 /** 分享弹窗 */
 type _UniPopupShare = Component<_UniPopupShareProps>;
 
-type _UniPopupShareInstance = InstanceType<_UniPopupShare>;
+interface _UniPopupShareInstance extends InstanceType<_UniPopupShare>{};;
 
 export type {
   _UniPopupShareOnSelectEvent as UniPopupShareOnSelectEvent,

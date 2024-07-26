@@ -85,7 +85,7 @@ type _UniCardProps = Partial<{
 type _UniCard = Component<_UniCardProps>;
 
 /** 卡片组件实例 */
-type _UniCardInstance = InstanceType<_UniCard>;
+interface _UniCardInstance extends InstanceType<_UniCard>{};;
 
 export type {
   _UniCardOnClickType as UniCardOnClickType,

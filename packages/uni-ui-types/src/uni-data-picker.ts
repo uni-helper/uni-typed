@@ -304,7 +304,7 @@ type _UniDataPickerProps = Partial<{
 type _UniDataPicker = Component<_UniDataPickerProps>;
 
 /** 选择类 datacom 组件实例 */
-type _UniDataPickerInstance = InstanceType<_UniDataPicker>;
+interface _UniDataPickerInstance extends InstanceType<_UniDataPicker>{};;
 
 export type {
   _UniDataPickerSpaceInfoProvider as UniDataPickerSpaceInfoProvider,

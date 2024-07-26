@@ -56,7 +56,7 @@ type _AdFullscreenVideoProps = Partial<{
 type _AdFullscreenVideo = Component<_AdFullscreenVideoProps>;
 
 /** 全屏视频广告实例 */
-type _AdFullscreenVideoInstance = InstanceType<_AdFullscreenVideo>;
+interface _AdFullscreenVideoInstance extends InstanceType<_AdFullscreenVideo>{};
 
 export type {
   _AdFullscreenVideoOnLoadEvent as AdFullscreenVideoOnLoadEvent,

@@ -37,7 +37,7 @@ type _CheckboxProps = Partial<{
 type _Checkbox = Component<_CheckboxProps>;
 
 /** 多选项目实例 */
-type _CheckboxInstance = InstanceType<_Checkbox>;
+interface _CheckboxInstance extends InstanceType<_Checkbox>{};
 
 export type {
   _CheckboxValue as CheckboxValue,

@@ -200,7 +200,7 @@ type _UniIconsProps = Partial<{
 type _UniIcons = Component<_UniIconsProps>;
 
 /** 图标实例 */
-type _UniIconsInstance = InstanceType<_UniIcons>;
+interface _UniIconsInstance extends InstanceType<_UniIcons>{};;
 
 export type {
   _UniIconsType as UniIconsType,

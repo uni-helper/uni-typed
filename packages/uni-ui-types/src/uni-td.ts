@@ -32,7 +32,7 @@ type _UniTdProps = Partial<{
 
 type _UniTd = Component<_UniTdProps>;
 
-type _UniTdInstance = InstanceType<_UniTd>;
+interface _UniTdInstance extends InstanceType<_UniTd>{};
 
 export type {
   _UniTdAlign as UniTdAlign,

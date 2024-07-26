@@ -376,7 +376,7 @@ type _UnicloudDbProps = Partial<{
 type _UnicloudDb = Component<_UnicloudDbProps>;
 
 /** 数据库查询组件实例 */
-type _UnicloudDbInstance = InstanceType<_UnicloudDb>;
+interface _UnicloudDbInstance extends InstanceType<_UnicloudDb>{};
 
 export type {
   _UnicloudDbSpaceInfoProvider as UnicloudDbSpaceInfoProvider,

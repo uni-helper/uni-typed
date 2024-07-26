@@ -153,7 +153,7 @@ type _ImageProps = Partial<{
 type _Image = Component<_ImageProps>;
 
 /** 图片实例 */
-type _ImageInstance = InstanceType<_Image>;
+interface _ImageInstance extends InstanceType<_Image>{};
 
 export type {
   _ImageMode as ImageMode,

@@ -215,7 +215,7 @@ type _UniCalendarProps = Partial<{
 type _UniCalendar = Component<_UniCalendarProps>;
 
 /** 日历组件实例 */
-type _UniCalendarInstance = InstanceType<_UniCalendar>;
+interface _UniCalendarInstance extends InstanceType<_UniCalendar>{};;
 
 export type {
   _UniCalendarDate as UniCalendarDate,

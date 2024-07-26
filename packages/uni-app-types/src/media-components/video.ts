@@ -456,7 +456,7 @@ type _VideoProps = Partial<{
 type _Video = Component<_VideoProps>;
 
 /** 视频播放组件实例 */
-type _VideoInstance = InstanceType<_Video>;
+interface _VideoInstance extends InstanceType<_Video>{};
 
 export type {
   _VideoDanmu as VideoDanmu,

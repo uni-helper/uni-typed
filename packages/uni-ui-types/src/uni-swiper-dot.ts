@@ -107,7 +107,7 @@ type _UniSwiperDotProps = Partial<{
 /** 轮播图指示点 */
 type _UniSwiperDot = Component<_UniSwiperDotProps>;
 
-type _UniSwiperDotInstance = InstanceType<_UniSwiperDot>;
+interface _UniSwiperDotInstance extends InstanceType<_UniSwiperDot>{};;
 
 export type {
   _UniSwiperDotMode as UniSwiperDotMode,

@@ -81,7 +81,7 @@ type _UniGoodsNavProps = Partial<{
 /** 商品加入购物车，立即购买 */
 type _UniGoodsNav = Component<_UniGoodsNavProps>;
 
-type _UniGoodsNavInstance = InstanceType<_UniGoodsNav>;
+interface _UniGoodsNavInstance extends InstanceType<_UniGoodsNav>{};;
 
 export type {
   _UniGoodsNavOption as UniGoodsNavOption,

@@ -108,7 +108,7 @@ type _UniPopupProps = Partial<{
 type _UniPopup = Component<_UniPopupProps>;
 
 /** 弹出层实例 */
-type _UniPopupInstance = InstanceType<_UniPopup>;
+interface _UniPopupInstance extends InstanceType<_UniPopup>{};;
 
 export type {
   _UniPopupType as UniPopupType,

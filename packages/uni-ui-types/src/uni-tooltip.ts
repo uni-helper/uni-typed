@@ -8,7 +8,7 @@ type _UniTooltipProps = Partial<{
 /** 提示文字 */
 type _UniTooltip = Component<_UniTooltipProps>;
 
-type _UniTooltipInstance = InstanceType<_UniTooltip>;
+interface _UniTooltipInstance extends InstanceType<_UniTooltip>{};;
 
 export type {
   _UniTooltipProps as UniTooltipProps,

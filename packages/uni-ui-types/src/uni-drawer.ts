@@ -62,7 +62,7 @@ type _UniDrawerProps = Partial<{
 type _UniDrawer = Component<_UniDrawerProps>;
 
 /** 抽屉侧滑菜单实例 */
-type _UniDrawerInstance = InstanceType<_UniDrawer>;
+interface _UniDrawerInstance extends InstanceType<_UniDrawer>{};;
 
 export type {
   _UniDrawerMode as UniDrawerMode,

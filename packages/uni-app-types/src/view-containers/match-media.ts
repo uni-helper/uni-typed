@@ -67,7 +67,7 @@ type _MatchMediaProps = Partial<{
 type _MatchMedia = Component<_MatchMediaProps>;
 
 /** Media query 匹配检测节点实例 */
-type _MatchMediaInstance = InstanceType<_MatchMedia>;
+interface _MatchMediaInstance extends InstanceType<_MatchMedia>{};
 
 export type {
   _MatchMediaOrientation as MatchMediaOrientation,

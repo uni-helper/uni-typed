@@ -20,7 +20,7 @@ type _UniBreadcrumbProps = Partial<{
 type _UniBreadcrumb = Component<_UniBreadcrumbProps>;
 
 /** 面包屑实例 */
-type _UniBreadcrumbInstance = InstanceType<_UniBreadcrumb>;
+interface _UniBreadcrumbInstance extends InstanceType<_UniBreadcrumb>{};;
 
 export type {
   _UniBreadcrumbProps as UniBreadcrumbProps,

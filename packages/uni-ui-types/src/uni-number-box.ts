@@ -81,7 +81,7 @@ type _UniNumberBoxProps = Partial<{
 type _UniNumberBox = Component<_UniNumberBoxProps>;
 
 /** 带加减按钮的数字输入框实例 */
-type _UniNumberBoxInstance = InstanceType<_UniNumberBox>;
+interface _UniNumberBoxInstance extends InstanceType<_UniNumberBox>{};;
 
 export type {
   _UniNumberBoxValue as UniNumberBoxValue,

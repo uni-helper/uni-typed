@@ -34,7 +34,7 @@ type _AdInteractiveProps = Partial<{
 type _AdInteractive = Component<_AdInteractiveProps>;
 
 /** 互动广告实例 */
-type _AdInteractiveInstance = InstanceType<_AdInteractive>;
+interface _AdInteractiveInstance extends InstanceType<_AdInteractive>{};
 
 export type {
   _AdInteractiveOnLoadEvent as AdInteractiveOnLoadEvent,

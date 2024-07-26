@@ -44,7 +44,7 @@ type _SwitchProps = Partial<{
 type _Switch = Component<_SwitchProps>;
 
 /** 开关选择器实例 */
-type _SwitchInstance = InstanceType<_Switch>;
+interface _SwitchInstance extends InstanceType<_Switch>{};
 
 export type {
   _SwitchChecked as SwitchChecked,

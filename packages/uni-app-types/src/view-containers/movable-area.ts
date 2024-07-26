@@ -24,7 +24,7 @@ type _MovableAreaProps = Partial<{
 type _MovableArea = Component<_MovableAreaProps>;
 
 /** 可拖动区域实例 */
-type _MovableAreaInstance = InstanceType<_MovableArea>;
+interface _MovableAreaInstance extends InstanceType<_MovableArea>{};
 
 export type {
   _MovableAreaProps as MovableAreaProps,

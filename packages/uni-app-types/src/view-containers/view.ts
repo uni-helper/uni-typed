@@ -44,7 +44,7 @@ type _ViewProps = Partial<{
 type _View = Component<_ViewProps>;
 
 /** 视图容器实例 */
-type _ViewInstance = InstanceType<_View>;
+interface _ViewInstance extends InstanceType<_View>{};
 
 export type {
   _ViewProps as ViewProps,

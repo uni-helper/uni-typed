@@ -643,7 +643,7 @@ type _LivePusherProps = Partial<{
 type _LivePusher = Component<_LivePusherProps>;
 
 /** 实时音视频录制（直播推流）实例 */
-type _LivePusherInstance = InstanceType<_LivePusher>;
+interface _LivePusherInstance extends InstanceType<_LivePusher>{};
 
 export type {
   _LivePusherMode as LivePusherMode,

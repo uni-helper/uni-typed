@@ -71,7 +71,7 @@ type _UniFavProps = Partial<{
 /** 用于收藏功能，可点击切换选中、不选中的状态 */
 type _UniFav = Component<_UniFavProps>;
 
-type _UniFavInstance = InstanceType<_UniFav>;
+interface _UniFavInstance extends InstanceType<_UniFav>{};;
 
 export type {
   _UniFavContentText as UniFavContentText,
