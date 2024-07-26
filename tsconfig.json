@@ -1,0 +1,19 @@
+{
+  "extends": "@tsconfig/node20",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    "paths": {
+      "@uni-helper/uni-app-types": ["packages/uni-app-types/src/index.ts"],
+      "@uni-helper/uni-cloud-types": ["packages/uni-cloud-types/src/index.ts"],
+      "@uni-helper/uni-ui-types": ["packages/uni-ui-types/src/index.ts"],
+      "@uni-helper/uni-types": ["packages/uni-types/src/index.ts"]
+    },
+    "types": ["node"]
+  },
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/playground/**"]
+}

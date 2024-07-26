@@ -1,0 +1,70 @@
+{
+  "name": "@uni-helper/uni-app-types",
+  "version": "0.0.0",
+  "description": "TypeScript definitions for uni-app built-in components.",
+  "keywords": ["uni-app", "uniapp", "types", "type"],
+  "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-app-types",
+  "bugs": {
+    "url": "https://github.com/uni-helper/uni-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uni-helper/uni-types.git"
+  },
+  "funding": "https://github.com/ModyQyW/sponsors",
+  "license": "MIT",
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui.dev@gmail.com",
+    "url": "https://modyqyw.top"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts"
+      },
+      "require": {
+        "types": "./dist/index.d.cts"
+      }
+    },
+    "./volar-plugin": {
+      "import": {
+        "types": "./dist/volar-plugin.d.mts",
+        "default": "./dist/volar-plugin.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/volar-plugin.cjs"
+      }
+    }
+  },
+  "main": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": ["./dist/*", "./dist/index.d.ts"]
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "devDependencies": {
+    "vue": "^3.4.34"
+  },
+  "peerDependencies": {
+    "typescript": "^4.8.0 || ^5.0.0",
+    "vue": "^3.0.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=14.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

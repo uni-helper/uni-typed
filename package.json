@@ -1,0 +1,62 @@
+{
+  "name": "@monorepo/uni-types",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "uni-app",
+    "uniapp",
+    "uni-cloud",
+    "unicloud",
+    "uni-ui",
+    "uniui",
+    "types",
+    "type"
+  ],
+  "homepage": "https://github.com/uni-helper/uni-types#readme",
+  "bugs": {
+    "url": "https://github.com/uni-helper/uni-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uni-helper/uni-types.git"
+  },
+  "funding": "https://github.com/ModyQyW/sponsors",
+  "license": "MIT",
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui.dev@gmail.com",
+    "url": "https://modyqyw.top"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
+    "build:h5": "pnpm build && pnpm -C playground run build:h5",
+    "build:mp-weixin": "pnpm build && pnpm -C playground run build:mp-weixin",
+    "check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
+    "dev": "pnpm stub",
+    "play:h5": "pnpm dev && pnpm -C playground run dev:h5",
+    "play:mp-weixin": "pnpm dev && pnpm -C playground run dev:mp-weixin",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp",
+    "stub": "pnpm -r --filter=./packages/* --parallel run stub",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@dcloudio/types": "^3.4.12",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.12",
+    "bumpp": "^9.4.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4",
+    "unbuild": "^3.0.0-rc.7",
+    "vitest": "^2.0.4"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=14.18"
+  }
+}
