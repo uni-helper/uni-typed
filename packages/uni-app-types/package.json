@@ -1,7 +1,7 @@
 {
   "name": "@uni-helper/uni-app-types",
   "version": "0.0.0",
-  "description": "TypeScript definitions for uni-app built-in components.",
+  "description": "为 uni-app 内置组件提供 TypeScript 类型支持。",
   "keywords": ["uni-app", "uniapp", "types", "type"],
   "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-app-types",
   "bugs": {
