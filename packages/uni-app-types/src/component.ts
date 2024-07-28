@@ -10,6 +10,7 @@ import type {
   VNodeProps,
 } from "vue";
 
+// Not exported in some Vue versions
 type PublicProps = VNodeProps & AllowedComponentProps & ComponentCustomProps;
 
 type _AnyRecord = Record<string, any>;
