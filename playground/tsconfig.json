@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "noImplicitThis": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": [
+      // uni-app + Vue 3 使用 Vite 构建，需要安装 vite
+      "vite/client",
+      // uni API 相关的 TypeScript 类型
+      "@dcloudio/types",
+      // 为 uni-app 组件、uni-cloud 组件和 uni-ui 组件提供 TypeScript 类型
+      "@uni-helper/uni-types"
+    ]
+  },
+  "vueCompilerOptions": {
+    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "*.d.ts"
+  ]
+}
