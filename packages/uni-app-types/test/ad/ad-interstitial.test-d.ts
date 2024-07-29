@@ -11,6 +11,7 @@ import type {
   AdInterstitialProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("AdInterstitial", () => {
   expectTypeOf<AdInterstitialOnLoadEvent>().toBeObject();
@@ -41,5 +42,9 @@ describe("AdInterstitial", () => {
   expectTypeOf<AdInterstitial>().toEqualTypeOf<UniHelper.AdInterstitial>();
 
   expectTypeOf<AdInterstitialInstance>().not.toBeAny();
+  expectTypeOf<AdInterstitialInstance>().toBeObject();
+  expectTypeOf<AdInterstitialInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdInterstitialInstance>().toEqualTypeOf<UniHelper.AdInterstitialInstance>();
 });

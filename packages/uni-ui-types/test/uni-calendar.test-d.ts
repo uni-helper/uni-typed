@@ -16,6 +16,7 @@ import type {
   UniCalendarSelectedElement,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCalendar", () => {
   expectTypeOf<UniCalendarDate>().toBeString();
@@ -61,5 +62,9 @@ describe("UniCalendar", () => {
   expectTypeOf<UniCalendar>().toEqualTypeOf<UniHelper.UniCalendar>();
 
   expectTypeOf<UniCalendarInstance>().not.toBeAny();
+  expectTypeOf<UniCalendarInstance>().toBeObject();
+  expectTypeOf<UniCalendarInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniCalendarInstance>().toEqualTypeOf<UniHelper.UniCalendarInstance>();
 });

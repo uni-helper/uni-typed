@@ -18,6 +18,7 @@ import type {
   CanvasType,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Canvas", () => {
   expectTypeOf<CanvasType>().toBeString();
@@ -69,5 +70,9 @@ describe("Canvas", () => {
   expectTypeOf<Canvas>().toEqualTypeOf<UniHelper.Canvas>();
 
   expectTypeOf<CanvasInstance>().not.toBeAny();
+  expectTypeOf<CanvasInstance>().toBeObject();
+  expectTypeOf<CanvasInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CanvasInstance>().toEqualTypeOf<UniHelper.CanvasInstance>();
 });

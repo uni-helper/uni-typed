@@ -5,6 +5,7 @@ import type {
   TextSpace,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Text", () => {
   expectTypeOf<TextSpace>().toBeString();
@@ -17,5 +18,9 @@ describe("Text", () => {
   expectTypeOf<Text>().toEqualTypeOf<UniHelper.Text>();
 
   expectTypeOf<TextInstance>().not.toBeAny();
+  expectTypeOf<TextInstance>().toBeObject();
+  expectTypeOf<TextInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<TextInstance>().toEqualTypeOf<UniHelper.TextInstance>();
 });

@@ -9,6 +9,7 @@ import type {
   UniFormsItemSetRules,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniFormsItem", () => {
   expectTypeOf<UniFormsItemRulesRule>().toBeObject();
@@ -33,5 +34,9 @@ describe("UniFormsItem", () => {
   expectTypeOf<UniFormsItem>().toEqualTypeOf<UniHelper.UniFormsItem>();
 
   expectTypeOf<UniFormsItemInstance>().not.toBeAny();
+  expectTypeOf<UniFormsItemInstance>().toBeObject();
+  expectTypeOf<UniFormsItemInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniFormsItemInstance>().toEqualTypeOf<UniHelper.UniFormsItemInstance>();
 });

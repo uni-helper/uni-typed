@@ -8,6 +8,7 @@ import type {
   UniIndexedListProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniIndexedList", () => {
   expectTypeOf<UniIndexedListOption>().toBeObject();
@@ -29,5 +30,9 @@ describe("UniIndexedList", () => {
   expectTypeOf<UniIndexedList>().toEqualTypeOf<UniHelper.UniIndexedList>();
 
   expectTypeOf<UniIndexedListInstance>().not.toBeAny();
+  expectTypeOf<UniIndexedListInstance>().toBeObject();
+  expectTypeOf<UniIndexedListInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniIndexedListInstance>().toEqualTypeOf<UniHelper.UniIndexedListInstance>();
 });

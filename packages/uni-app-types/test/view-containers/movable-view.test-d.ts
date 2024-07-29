@@ -12,6 +12,7 @@ import type {
   MovableViewSource,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("MovableView", () => {
   expectTypeOf<MovableViewDirection>().toBeString();
@@ -45,5 +46,9 @@ describe("MovableView", () => {
   expectTypeOf<MovableView>().toEqualTypeOf<UniHelper.MovableView>();
 
   expectTypeOf<MovableViewInstance>().not.toBeAny();
+  expectTypeOf<MovableViewInstance>().toBeObject();
+  expectTypeOf<MovableViewInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<MovableViewInstance>().toEqualTypeOf<UniHelper.MovableViewInstance>();
 });

@@ -8,6 +8,7 @@ import type {
   UniPaginationProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniPagination", () => {
   expectTypeOf<UniPaginationOnInput>().toBeFunction();
@@ -29,5 +30,9 @@ describe("UniPagination", () => {
   expectTypeOf<UniPagination>().toEqualTypeOf<UniHelper.UniPagination>();
 
   expectTypeOf<UniPaginationInstance>().not.toBeAny();
+  expectTypeOf<UniPaginationInstance>().toBeObject();
+  expectTypeOf<UniPaginationInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniPaginationInstance>().toEqualTypeOf<UniHelper.UniPaginationInstance>();
 });

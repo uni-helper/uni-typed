@@ -9,6 +9,7 @@ import type {
   UniBadgeType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniBadge", () => {
   expectTypeOf<UniBadgeType>().toBeString();
@@ -33,5 +34,9 @@ describe("UniBadge", () => {
   expectTypeOf<UniBadge>().toEqualTypeOf<UniHelper.UniBadge>();
 
   expectTypeOf<UniBadgeInstance>().not.toBeAny();
+  expectTypeOf<UniBadgeInstance>().toBeObject();
+  expectTypeOf<UniBadgeInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniBadgeInstance>().toEqualTypeOf<UniHelper.UniBadgeInstance>();
 });

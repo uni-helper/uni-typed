@@ -10,6 +10,7 @@ import type {
   ImageProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Image", () => {
   expectTypeOf<ImageMode>().toBeString();
@@ -37,5 +38,9 @@ describe("Image", () => {
   expectTypeOf<Image>().toEqualTypeOf<UniHelper.Image>();
 
   expectTypeOf<ImageInstance>().not.toBeAny();
+  expectTypeOf<ImageInstance>().toBeObject();
+  expectTypeOf<ImageInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<ImageInstance>().toEqualTypeOf<UniHelper.ImageInstance>();
 });

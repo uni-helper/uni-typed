@@ -33,6 +33,7 @@ import type {
   ButtonType,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Button", () => {
   expectTypeOf<ButtonSize>().toBeString();
@@ -129,5 +130,9 @@ describe("Button", () => {
   expectTypeOf<Button>().toEqualTypeOf<UniHelper.Button>();
 
   expectTypeOf<ButtonInstance>().not.toBeAny();
+  expectTypeOf<ButtonInstance>().toBeObject();
+  expectTypeOf<ButtonInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<ButtonInstance>().toEqualTypeOf<UniHelper.ButtonInstance>();
 });

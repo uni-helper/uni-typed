@@ -26,6 +26,7 @@ import type {
   LivePlayerSoundMode,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("LivePlayer", () => {
   expectTypeOf<LivePlayerMode>().toBeString();
@@ -101,5 +102,9 @@ describe("LivePlayer", () => {
   expectTypeOf<LivePlayer>().toEqualTypeOf<UniHelper.LivePlayer>();
 
   expectTypeOf<LivePlayerInstance>().not.toBeAny();
+  expectTypeOf<LivePlayerInstance>().toBeObject();
+  expectTypeOf<LivePlayerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<LivePlayerInstance>().toEqualTypeOf<UniHelper.LivePlayerInstance>();
 });

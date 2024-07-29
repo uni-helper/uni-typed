@@ -4,6 +4,7 @@ import type {
   UniTrProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTr", () => {
   expectTypeOf<UniTrProps>().toBeObject();
@@ -13,5 +14,9 @@ describe("UniTr", () => {
   expectTypeOf<UniTr>().toEqualTypeOf<UniHelper.UniTr>();
 
   expectTypeOf<UniTrInstance>().not.toBeAny();
+  expectTypeOf<UniTrInstance>().toBeObject();
+  expectTypeOf<UniTrInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniTrInstance>().toEqualTypeOf<UniHelper.UniTrInstance>();
 });

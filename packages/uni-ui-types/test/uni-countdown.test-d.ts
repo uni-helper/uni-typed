@@ -6,6 +6,7 @@ import type {
   UniCountdownProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCountdown", () => {
   expectTypeOf<UniCountdownOnUpdate>().toBeFunction();
@@ -21,5 +22,9 @@ describe("UniCountdown", () => {
   expectTypeOf<UniCountdown>().toEqualTypeOf<UniHelper.UniCountdown>();
 
   expectTypeOf<UniCountdownInstance>().not.toBeAny();
+  expectTypeOf<UniCountdownInstance>().toBeObject();
+  expectTypeOf<UniCountdownInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniCountdownInstance>().toEqualTypeOf<UniHelper.UniCountdownInstance>();
 });

@@ -6,7 +6,8 @@ import type {
   CheckboxGroupOnChangeEvent,
   CheckboxGroupProps,
 } from "@uni-helper/uni-app-types";
-import { describe, expectTypeOf } from "vitest";
+import { describe, expect, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("CheckboxGroup", () => {
   expectTypeOf<CheckboxGroupOnChangeDetail>().toBeObject();
@@ -25,5 +26,9 @@ describe("CheckboxGroup", () => {
   expectTypeOf<CheckboxGroup>().toEqualTypeOf<UniHelper.CheckboxGroup>();
 
   expectTypeOf<CheckboxGroupInstance>().not.toBeAny();
+  expectTypeOf<CheckboxGroupInstance>().toBeObject();
+  expectTypeOf<CheckboxGroupInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CheckboxGroupInstance>().toEqualTypeOf<UniHelper.CheckboxGroupInstance>();
 });

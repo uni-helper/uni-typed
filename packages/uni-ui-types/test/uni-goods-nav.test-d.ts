@@ -10,6 +10,7 @@ import type {
   UniGoodsNavProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniGoodsNav", () => {
   expectTypeOf<UniGoodsNavOption>().toBeObject();
@@ -37,5 +38,9 @@ describe("UniGoodsNav", () => {
   expectTypeOf<UniGoodsNav>().toEqualTypeOf<UniHelper.UniGoodsNav>();
 
   expectTypeOf<UniGoodsNavInstance>().not.toBeAny();
+  expectTypeOf<UniGoodsNavInstance>().toBeObject();
+  expectTypeOf<UniGoodsNavInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniGoodsNavInstance>().toEqualTypeOf<UniHelper.UniGoodsNavInstance>();
 });

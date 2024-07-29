@@ -8,6 +8,7 @@ import type {
   UniPopupType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniPopup", () => {
   expectTypeOf<UniPopupType>().toBeString();
@@ -29,5 +30,9 @@ describe("UniPopup", () => {
   expectTypeOf<UniPopup>().toEqualTypeOf<UniHelper.UniPopup>();
 
   expectTypeOf<UniPopupInstance>().not.toBeAny();
+  expectTypeOf<UniPopupInstance>().toBeObject();
+  expectTypeOf<UniPopupInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniPopupInstance>().toEqualTypeOf<UniHelper.UniPopupInstance>();
 });

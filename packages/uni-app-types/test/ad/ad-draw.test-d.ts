@@ -9,6 +9,7 @@ import type {
   AdDrawProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("AdDraw", () => {
   expectTypeOf<AdDrawOnLoadEvent>().toBeObject();
@@ -33,5 +34,9 @@ describe("AdDraw", () => {
   expectTypeOf<AdDraw>().toEqualTypeOf<UniHelper.AdDraw>();
 
   expectTypeOf<AdDrawInstance>().not.toBeAny();
+  expectTypeOf<AdDrawInstance>().toBeObject();
+  expectTypeOf<AdDrawInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdDrawInstance>().toEqualTypeOf<UniHelper.AdDrawInstance>();
 });

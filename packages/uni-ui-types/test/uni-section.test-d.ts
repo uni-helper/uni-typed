@@ -6,6 +6,7 @@ import type {
   UniSectionType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSection", () => {
   expectTypeOf<UniSectionType>().toBeString();
@@ -21,5 +22,9 @@ describe("UniSection", () => {
   expectTypeOf<UniSection>().toEqualTypeOf<UniHelper.UniSection>();
 
   expectTypeOf<UniSectionInstance>().not.toBeAny();
+  expectTypeOf<UniSectionInstance>().toBeObject();
+  expectTypeOf<UniSectionInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniSectionInstance>().toEqualTypeOf<UniHelper.UniSectionInstance>();
 });

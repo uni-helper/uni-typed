@@ -21,6 +21,7 @@ import type {
   UniEasyinputValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniEasyinput", () => {
   expectTypeOf<UniEasyinputValue>().toMatchTypeOf<string | number>();
@@ -81,5 +82,6 @@ describe("UniEasyinput", () => {
   expectTypeOf<UniEasyinput>().toEqualTypeOf<UniHelper.UniEasyinput>();
 
   expectTypeOf<UniEasyinputInstance>().not.toBeAny();
+  expectTypeOf<UniEasyinputInstance>().toBeObject();
   expectTypeOf<UniEasyinputInstance>().toEqualTypeOf<UniHelper.UniEasyinputInstance>();
 });

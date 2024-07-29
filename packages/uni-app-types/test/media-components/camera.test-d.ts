@@ -18,6 +18,7 @@ import type {
   CameraResolution,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Camera", () => {
   expectTypeOf<CameraMode>().toBeString();
@@ -69,5 +70,9 @@ describe("Camera", () => {
   expectTypeOf<Camera>().toEqualTypeOf<UniHelper.Camera>();
 
   expectTypeOf<CameraInstance>().not.toBeAny();
+  expectTypeOf<CameraInstance>().toBeObject();
+  expectTypeOf<CameraInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CameraInstance>().toEqualTypeOf<UniHelper.CameraInstance>();
 });

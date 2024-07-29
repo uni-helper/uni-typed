@@ -12,6 +12,7 @@ import type {
   AdRewardedVideoUrlCallback,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("AdRewardedVideo", () => {
   expectTypeOf<AdRewardedVideoUrlCallback>().toBeObject();
@@ -45,5 +46,9 @@ describe("AdRewardedVideo", () => {
   expectTypeOf<AdRewardedVideo>().toEqualTypeOf<UniHelper.AdRewardedVideo>();
 
   expectTypeOf<AdRewardedVideoInstance>().not.toBeAny();
+  expectTypeOf<AdRewardedVideoInstance>().toBeObject();
+  expectTypeOf<AdRewardedVideoInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdRewardedVideoInstance>().toEqualTypeOf<UniHelper.AdRewardedVideoInstance>();
 });

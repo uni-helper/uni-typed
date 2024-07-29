@@ -10,6 +10,7 @@ import type {
   WebViewStyles,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("WebView", () => {
   expectTypeOf<WebViewStyles>().toBeObject();
@@ -37,5 +38,9 @@ describe("WebView", () => {
   expectTypeOf<WebView>().toEqualTypeOf<UniHelper.WebView>();
 
   expectTypeOf<WebViewInstance>().not.toBeAny();
+  expectTypeOf<WebViewInstance>().toBeObject();
+  expectTypeOf<WebViewInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<WebViewInstance>().toEqualTypeOf<UniHelper.WebViewInstance>();
 });

@@ -8,6 +8,7 @@ import type {
   UniDrawerProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDrawer", () => {
   expectTypeOf<UniDrawerMode>().toBeString();
@@ -29,5 +30,9 @@ describe("UniDrawer", () => {
   expectTypeOf<UniDrawer>().toEqualTypeOf<UniHelper.UniDrawer>();
 
   expectTypeOf<UniDrawerInstance>().not.toBeAny();
+  expectTypeOf<UniDrawerInstance>().toBeObject();
+  expectTypeOf<UniDrawerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDrawerInstance>().toEqualTypeOf<UniHelper.UniDrawerInstance>();
 });

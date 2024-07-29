@@ -9,6 +9,7 @@ import type {
   SwitchType,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Switch", () => {
   expectTypeOf<SwitchChecked>().toBeBoolean();
@@ -33,5 +34,9 @@ describe("Switch", () => {
   expectTypeOf<Switch>().toEqualTypeOf<UniHelper.Switch>();
 
   expectTypeOf<SwitchInstance>().not.toBeAny();
+  expectTypeOf<SwitchInstance>().toBeObject();
+  expectTypeOf<SwitchInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<SwitchInstance>().toEqualTypeOf<UniHelper.SwitchInstance>();
 });

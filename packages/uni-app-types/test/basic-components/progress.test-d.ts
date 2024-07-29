@@ -7,6 +7,7 @@ import type {
   ProgressProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Progress", () => {
   expectTypeOf<ProgressActiveMode>().toBeString();
@@ -25,5 +26,9 @@ describe("Progress", () => {
   expectTypeOf<Progress>().toEqualTypeOf<UniHelper.Progress>();
 
   expectTypeOf<ProgressInstance>().not.toBeAny();
+  expectTypeOf<ProgressInstance>().toBeObject();
+  expectTypeOf<ProgressInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<ProgressInstance>().toEqualTypeOf<UniHelper.ProgressInstance>();
 });

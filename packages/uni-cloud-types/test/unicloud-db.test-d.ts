@@ -24,6 +24,7 @@ import type {
   UnicloudDbUpdateOptions,
 } from "@uni-helper/uni-cloud-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UnicloudDb", () => {
   expectTypeOf<UnicloudDbSpaceInfoProvider>().toBeString();
@@ -93,5 +94,9 @@ describe("UnicloudDb", () => {
   expectTypeOf<UnicloudDb>().toEqualTypeOf<UniHelper.UnicloudDb>();
 
   expectTypeOf<UnicloudDbInstance>().not.toBeAny();
+  expectTypeOf<UnicloudDbInstance>().toBeObject();
+  expectTypeOf<UnicloudDbInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UnicloudDbInstance>().toEqualTypeOf<UniHelper.UnicloudDbInstance>();
 });

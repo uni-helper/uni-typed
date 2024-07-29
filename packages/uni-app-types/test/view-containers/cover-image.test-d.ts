@@ -8,6 +8,7 @@ import type {
   CoverImageProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("CoverImage", () => {
   expectTypeOf<CoverImageOnLoadEvent>().toBeObject();
@@ -29,5 +30,9 @@ describe("CoverImage", () => {
   expectTypeOf<CoverImage>().toEqualTypeOf<UniHelper.CoverImage>();
 
   expectTypeOf<CoverImageInstance>().not.toBeAny();
+  expectTypeOf<CoverImageInstance>().toBeObject();
+  expectTypeOf<CoverImageInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CoverImageInstance>().toEqualTypeOf<UniHelper.CoverImageInstance>();
 });

@@ -6,6 +6,7 @@ import type {
   UniRowProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniRow", () => {
   expectTypeOf<UniRowJustify>().toBeString();
@@ -21,5 +22,9 @@ describe("UniRow", () => {
   expectTypeOf<UniRow>().toEqualTypeOf<UniHelper.UniRow>();
 
   expectTypeOf<UniRowInstance>().not.toBeAny();
+  expectTypeOf<UniRowInstance>().toBeObject();
+  expectTypeOf<UniRowInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniRowInstance>().toEqualTypeOf<UniHelper.UniRowInstance>();
 });

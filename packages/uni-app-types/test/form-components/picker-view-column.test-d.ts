@@ -4,6 +4,7 @@ import type {
   PickerViewColumnProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("PickerViewColumn", () => {
   expectTypeOf<PickerViewColumnProps>().not.toBeAny();
@@ -13,5 +14,9 @@ describe("PickerViewColumn", () => {
   expectTypeOf<PickerViewColumn>().toEqualTypeOf<UniHelper.PickerViewColumn>();
 
   expectTypeOf<PickerViewColumnInstance>().not.toBeAny();
+  expectTypeOf<PickerViewColumnInstance>().toBeObject();
+  expectTypeOf<PickerViewColumnInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<PickerViewColumnInstance>().toEqualTypeOf<UniHelper.PickerViewColumnInstance>();
 });

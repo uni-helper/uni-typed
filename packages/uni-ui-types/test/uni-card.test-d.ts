@@ -6,6 +6,7 @@ import type {
   UniCardProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCard", () => {
   expectTypeOf<UniCardOnClickType>().toBeString();
@@ -21,5 +22,9 @@ describe("UniCard", () => {
   expectTypeOf<UniCard>().toEqualTypeOf<UniHelper.UniCard>();
 
   expectTypeOf<UniCardInstance>().not.toBeAny();
+  expectTypeOf<UniCardInstance>().toBeObject();
+  expectTypeOf<UniCardInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniCardInstance>().toEqualTypeOf<UniHelper.UniCardInstance>();
 });

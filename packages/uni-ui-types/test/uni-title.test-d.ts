@@ -6,6 +6,7 @@ import type {
   UniTitleType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTitle", () => {
   expectTypeOf<UniTitleType>().toBeString();
@@ -21,5 +22,9 @@ describe("UniTitle", () => {
   expectTypeOf<UniTitle>().toEqualTypeOf<UniHelper.UniTitle>();
 
   expectTypeOf<UniTitleInstance>().not.toBeAny();
+  expectTypeOf<UniTitleInstance>().toBeObject();
+  expectTypeOf<UniTitleInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniTitleInstance>().toEqualTypeOf<UniHelper.UniTitleInstance>();
 });

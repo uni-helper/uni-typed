@@ -5,6 +5,7 @@ import type {
   MatchMediaProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("MatchMedia", () => {
   expectTypeOf<MatchMediaOrientation>().toBeString();
@@ -17,5 +18,9 @@ describe("MatchMedia", () => {
   expectTypeOf<MatchMedia>().toEqualTypeOf<UniHelper.MatchMedia>();
 
   expectTypeOf<MatchMediaInstance>().not.toBeAny();
+  expectTypeOf<MatchMediaInstance>().toBeObject();
+  expectTypeOf<MatchMediaInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<MatchMediaInstance>().toEqualTypeOf<UniHelper.MatchMediaInstance>();
 });

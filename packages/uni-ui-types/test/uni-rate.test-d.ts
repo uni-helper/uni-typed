@@ -7,6 +7,7 @@ import type {
   UniRateValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniRate", () => {
   expectTypeOf<UniRateValue>().toBeNumber();
@@ -25,5 +26,9 @@ describe("UniRate", () => {
   expectTypeOf<UniRate>().toEqualTypeOf<UniHelper.UniRate>();
 
   expectTypeOf<UniRateInstance>().not.toBeAny();
+  expectTypeOf<UniRateInstance>().toBeObject();
+  expectTypeOf<UniRateInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniRateInstance>().toEqualTypeOf<UniHelper.UniRateInstance>();
 });

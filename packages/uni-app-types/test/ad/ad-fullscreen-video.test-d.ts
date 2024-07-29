@@ -11,6 +11,7 @@ import type {
   AdFullscreenVideoProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("AdFullscreenVideo", () => {
   expectTypeOf<AdFullscreenVideoOnLoadEvent>().toBeObject();
@@ -41,5 +42,9 @@ describe("AdFullscreenVideo", () => {
   expectTypeOf<AdFullscreenVideo>().toEqualTypeOf<UniHelper.AdFullscreenVideo>();
 
   expectTypeOf<AdFullscreenVideoInstance>().not.toBeAny();
+  expectTypeOf<AdFullscreenVideoInstance>().toBeObject();
+  expectTypeOf<AdFullscreenVideoInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdFullscreenVideoInstance>().toEqualTypeOf<UniHelper.AdFullscreenVideoInstance>();
 });

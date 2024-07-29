@@ -11,6 +11,7 @@ import type {
   UniThProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTh", () => {
   expectTypeOf<UniThAlign>().toBeString();
@@ -41,5 +42,9 @@ describe("UniTh", () => {
   expectTypeOf<UniTh>().toEqualTypeOf<UniHelper.UniTh>();
 
   expectTypeOf<UniThInstance>().not.toBeAny();
+  expectTypeOf<UniThInstance>().toBeObject();
+  expectTypeOf<UniThInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniThInstance>().toEqualTypeOf<UniHelper.UniThInstance>();
 });

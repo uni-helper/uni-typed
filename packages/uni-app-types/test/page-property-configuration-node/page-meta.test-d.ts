@@ -13,6 +13,7 @@ import type {
   PageMetaProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("PageMeta", () => {
   expectTypeOf<PageMetaBackgroundTextStyle>().toBeString();
@@ -49,5 +50,9 @@ describe("PageMeta", () => {
   expectTypeOf<PageMeta>().toEqualTypeOf<UniHelper.PageMeta>();
 
   expectTypeOf<PageMetaInstance>().not.toBeAny();
+  expectTypeOf<PageMetaInstance>().toBeObject();
+  expectTypeOf<PageMetaInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<PageMetaInstance>().toEqualTypeOf<UniHelper.PageMetaInstance>();
 });

@@ -7,6 +7,7 @@ import type {
   UniGridProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniGrid", () => {
   expectTypeOf<UniGridOnChangeDetail>().toBeObject();
@@ -25,5 +26,9 @@ describe("UniGrid", () => {
   expectTypeOf<UniGrid>().toEqualTypeOf<UniHelper.UniGrid>();
 
   expectTypeOf<UniGridInstance>().not.toBeAny();
+  expectTypeOf<UniGridInstance>().toBeObject();
+  expectTypeOf<UniGridInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniGridInstance>().toEqualTypeOf<UniHelper.UniGridInstance>();
 });

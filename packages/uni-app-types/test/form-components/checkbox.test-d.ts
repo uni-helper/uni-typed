@@ -5,6 +5,7 @@ import type {
   CheckboxValue,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Checkbox", () => {
   expectTypeOf<CheckboxValue>().toBeString();
@@ -17,5 +18,9 @@ describe("Checkbox", () => {
   expectTypeOf<Checkbox>().toEqualTypeOf<UniHelper.Checkbox>();
 
   expectTypeOf<CheckboxInstance>().not.toBeAny();
+  expectTypeOf<CheckboxInstance>().toBeObject();
+  expectTypeOf<CheckboxInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CheckboxInstance>().toEqualTypeOf<UniHelper.CheckboxInstance>();
 });

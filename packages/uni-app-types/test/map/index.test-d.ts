@@ -48,6 +48,7 @@ import type {
   MapTheme,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Map", () => {
   expectTypeOf<MapDisplay>().toBeString();
@@ -186,5 +187,9 @@ describe("Map", () => {
   expectTypeOf<Map>().toEqualTypeOf<UniHelper.Map>();
 
   expectTypeOf<MapInstance>().not.toBeAny();
+  expectTypeOf<MapInstance>().toBeObject();
+  expectTypeOf<MapInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<MapInstance>().toEqualTypeOf<UniHelper.MapInstance>();
 });

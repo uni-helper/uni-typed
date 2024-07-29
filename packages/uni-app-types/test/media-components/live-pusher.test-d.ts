@@ -30,6 +30,7 @@ import type {
   LiverPusherErrCode,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("LivePusher", () => {
   expectTypeOf<LivePusherMode>().toBeString();
@@ -117,5 +118,9 @@ describe("LivePusher", () => {
   expectTypeOf<LivePusher>().toEqualTypeOf<UniHelper.LivePusher>();
 
   expectTypeOf<LivePusherInstance>().not.toBeAny();
+  expectTypeOf<LivePusherInstance>().toBeObject();
+  expectTypeOf<LivePusherInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<LivePusherInstance>().toEqualTypeOf<UniHelper.LivePusherInstance>();
 });

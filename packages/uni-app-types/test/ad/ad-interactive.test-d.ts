@@ -9,6 +9,7 @@ import type {
   AdInteractiveProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("AdInteractive", () => {
   expectTypeOf<AdInteractiveOnLoadEvent>().toBeObject();
@@ -33,5 +34,9 @@ describe("AdInteractive", () => {
   expectTypeOf<AdInteractive>().toEqualTypeOf<UniHelper.AdInteractive>();
 
   expectTypeOf<AdInteractiveInstance>().not.toBeAny();
+  expectTypeOf<AdInteractiveInstance>().toBeObject();
+  expectTypeOf<AdInteractiveInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdInteractiveInstance>().toEqualTypeOf<UniHelper.AdInteractiveInstance>();
 });

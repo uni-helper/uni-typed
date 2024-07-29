@@ -11,6 +11,7 @@ import type {
   SliderValue,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Slider", () => {
   expectTypeOf<SliderValue>().toBeNumber();
@@ -41,5 +42,9 @@ describe("Slider", () => {
   expectTypeOf<Slider>().toEqualTypeOf<UniHelper.Slider>();
 
   expectTypeOf<SliderInstance>().not.toBeAny();
+  expectTypeOf<SliderInstance>().toBeObject();
+  expectTypeOf<SliderInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<SliderInstance>().toEqualTypeOf<UniHelper.SliderInstance>();
 });

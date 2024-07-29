@@ -50,6 +50,7 @@ import type {
   TimePickerValue,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Picker", () => {
   expectTypeOf<SelectorPickerRange>().toBeArray();
@@ -197,5 +198,9 @@ describe("Picker", () => {
   expectTypeOf<Picker>().toEqualTypeOf<UniHelper.Picker>();
 
   expectTypeOf<PickerInstance>().not.toBeAny();
+  expectTypeOf<PickerInstance>().toBeObject();
+  expectTypeOf<PickerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<PickerInstance>().toEqualTypeOf<UniHelper.PickerInstance>();
 });

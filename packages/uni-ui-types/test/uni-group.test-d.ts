@@ -6,6 +6,7 @@ import type {
   UniGroupProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniGroup", () => {
   expectTypeOf<UniGroupMode>().toBeString();
@@ -21,5 +22,9 @@ describe("UniGroup", () => {
   expectTypeOf<UniGroup>().toEqualTypeOf<UniHelper.UniGroup>();
 
   expectTypeOf<UniGroupInstance>().not.toBeAny();
+  expectTypeOf<UniGroupInstance>().toBeObject();
+  expectTypeOf<UniGroupInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniGroupInstance>().toEqualTypeOf<UniHelper.UniGroupInstance>();
 });

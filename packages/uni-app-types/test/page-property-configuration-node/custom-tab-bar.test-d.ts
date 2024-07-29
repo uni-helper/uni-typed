@@ -7,6 +7,7 @@ import type {
   CustomTabBarProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("CustomTabBar", () => {
   expectTypeOf<CustomTabBarDirection>().toBeString();
@@ -25,5 +26,9 @@ describe("CustomTabBar", () => {
   expectTypeOf<CustomTabBar>().toEqualTypeOf<UniHelper.CustomTabBar>();
 
   expectTypeOf<CustomTabBarInstance>().not.toBeAny();
+  expectTypeOf<CustomTabBarInstance>().toBeObject();
+  expectTypeOf<CustomTabBarInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CustomTabBarInstance>().toEqualTypeOf<UniHelper.CustomTabBarInstance>();
 });

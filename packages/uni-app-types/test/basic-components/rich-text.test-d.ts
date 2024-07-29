@@ -11,6 +11,7 @@ import type {
   RichTextTextNode,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("RichText", () => {
   expectTypeOf<RichTextSpace>().toBeString();
@@ -40,5 +41,9 @@ describe("RichText", () => {
   expectTypeOf<RichText>().toEqualTypeOf<UniHelper.RichText>();
 
   expectTypeOf<RichTextInstance>().not.toBeAny();
+  expectTypeOf<RichTextInstance>().toBeObject();
+  expectTypeOf<RichTextInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<RichTextInstance>().toEqualTypeOf<UniHelper.RichTextInstance>();
 });

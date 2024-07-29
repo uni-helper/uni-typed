@@ -17,6 +17,7 @@ import type {
   EditorProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Editor", () => {
   expectTypeOf<EditorOnReadyEvent>().toBeObject();
@@ -65,5 +66,9 @@ describe("Editor", () => {
   expectTypeOf<Editor>().toEqualTypeOf<UniHelper.Editor>();
 
   expectTypeOf<EditorInstance>().not.toBeAny();
+  expectTypeOf<EditorInstance>().toBeObject();
+  expectTypeOf<EditorInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<EditorInstance>().toEqualTypeOf<UniHelper.EditorInstance>();
 });

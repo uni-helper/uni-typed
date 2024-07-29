@@ -6,6 +6,7 @@ import type {
   UniFavProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniFav", () => {
   expectTypeOf<UniFavContentText>().toBeObject();
@@ -21,5 +22,9 @@ describe("UniFav", () => {
   expectTypeOf<UniFav>().toEqualTypeOf<UniHelper.UniFav>();
 
   expectTypeOf<UniFavInstance>().not.toBeAny();
+  expectTypeOf<UniFavInstance>().toBeObject();
+  expectTypeOf<UniFavInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniFavInstance>().toEqualTypeOf<UniHelper.UniFavInstance>();
 });

@@ -5,6 +5,7 @@ import type {
   UniCollapseItemTitleBorder,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCollapseItem", () => {
   expectTypeOf<UniCollapseItemTitleBorder>().toBeString();
@@ -17,5 +18,9 @@ describe("UniCollapseItem", () => {
   expectTypeOf<UniCollapseItem>().toEqualTypeOf<UniHelper.UniCollapseItem>();
 
   expectTypeOf<UniCollapseItemInstance>().not.toBeAny();
+  expectTypeOf<UniCollapseItemInstance>().toBeObject();
+  expectTypeOf<UniCollapseItemInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniCollapseItemInstance>().toEqualTypeOf<UniHelper.UniCollapseItemInstance>();
 });

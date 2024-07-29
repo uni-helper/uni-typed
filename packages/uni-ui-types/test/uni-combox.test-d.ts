@@ -6,6 +6,7 @@ import type {
   UniComboxValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCombox", () => {
   expectTypeOf<UniComboxValue>().toBeString();
@@ -21,5 +22,9 @@ describe("UniCombox", () => {
   expectTypeOf<UniCombox>().toEqualTypeOf<UniHelper.UniCombox>();
 
   expectTypeOf<UniComboxInstance>().not.toBeAny();
+  expectTypeOf<UniComboxInstance>().toBeObject();
+  expectTypeOf<UniComboxInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniComboxInstance>().toEqualTypeOf<UniHelper.UniComboxInstance>();
 });

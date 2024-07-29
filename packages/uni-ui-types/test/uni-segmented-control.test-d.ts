@@ -8,6 +8,7 @@ import type {
   UniSegmentedControlStyleType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSegmentedControl", () => {
   expectTypeOf<UniSegmentedControlCurrent>().toBeNumber();
@@ -29,5 +30,9 @@ describe("UniSegmentedControl", () => {
   expectTypeOf<UniSegmentedControl>().toEqualTypeOf<UniHelper.UniSegmentedControl>();
 
   expectTypeOf<UniSegmentedControlInstance>().not.toBeAny();
+  expectTypeOf<UniSegmentedControlInstance>().toBeObject();
+  expectTypeOf<UniSegmentedControlInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniSegmentedControlInstance>().toEqualTypeOf<UniHelper.UniSegmentedControlInstance>();
 });

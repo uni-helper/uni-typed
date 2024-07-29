@@ -11,6 +11,7 @@ import type {
   AdProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Ad", () => {
   expectTypeOf<AdOnLoadEvent>().toBeObject();
@@ -41,5 +42,9 @@ describe("Ad", () => {
   expectTypeOf<Ad>().toEqualTypeOf<UniHelper.Ad>();
 
   expectTypeOf<AdInstance>().not.toBeAny();
+  expectTypeOf<AdInstance>().toBeObject();
+  expectTypeOf<AdInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AdInstance>().toEqualTypeOf<UniHelper.AdInstance>();
 });

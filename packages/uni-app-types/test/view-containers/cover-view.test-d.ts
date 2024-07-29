@@ -4,6 +4,7 @@ import type {
   CoverViewProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("CoverView", () => {
   expectTypeOf<CoverViewProps>().toBeObject();
@@ -13,5 +14,9 @@ describe("CoverView", () => {
   expectTypeOf<CoverView>().toEqualTypeOf<UniHelper.CoverView>();
 
   expectTypeOf<CoverViewInstance>().not.toBeAny();
+  expectTypeOf<CoverViewInstance>().toBeObject();
+  expectTypeOf<CoverViewInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<CoverViewInstance>().toEqualTypeOf<UniHelper.CoverViewInstance>();
 });

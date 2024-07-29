@@ -7,6 +7,7 @@ import type {
   UniSwiperDotProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSwiperDot", () => {
   expectTypeOf<UniSwiperDotMode>().toBeString();
@@ -25,5 +26,9 @@ describe("UniSwiperDot", () => {
   expectTypeOf<UniSwiperDot>().toEqualTypeOf<UniHelper.UniSwiperDot>();
 
   expectTypeOf<UniSwiperDotInstance>().not.toBeAny();
+  expectTypeOf<UniSwiperDotInstance>().toBeObject();
+  expectTypeOf<UniSwiperDotInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniSwiperDotInstance>().toEqualTypeOf<UniHelper.UniSwiperDotInstance>();
 });

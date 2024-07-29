@@ -13,6 +13,7 @@ import type {
   PickerViewValueElement,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("PickerView", () => {
   expectTypeOf<PickerViewValueElement>().toBeNumber();
@@ -49,5 +50,9 @@ describe("PickerView", () => {
   expectTypeOf<PickerView>().toEqualTypeOf<UniHelper.PickerView>();
 
   expectTypeOf<PickerViewInstance>().not.toBeAny();
+  expectTypeOf<PickerViewInstance>().toBeObject();
+  expectTypeOf<PickerViewInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<PickerViewInstance>().toEqualTypeOf<UniHelper.PickerViewInstance>();
 });

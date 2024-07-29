@@ -7,6 +7,7 @@ import type {
   UniNoticeBarProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniNoticeBar", () => {
   expectTypeOf<UniNoticeBarOnClick>().toBeFunction();
@@ -25,5 +26,9 @@ describe("UniNoticeBar", () => {
   expectTypeOf<UniNoticeBar>().toEqualTypeOf<UniHelper.UniNoticeBar>();
 
   expectTypeOf<UniNoticeBarInstance>().not.toBeAny();
+  expectTypeOf<UniNoticeBarInstance>().toBeObject();
+  expectTypeOf<UniNoticeBarInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniNoticeBarInstance>().toEqualTypeOf<UniHelper.UniNoticeBarInstance>();
 });

@@ -7,6 +7,7 @@ import type {
   RadioGroupProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("RadioGroup", () => {
   expectTypeOf<RadioGroupOnChangeDetail>().toBeObject();
@@ -25,5 +26,9 @@ describe("RadioGroup", () => {
   expectTypeOf<RadioGroup>().toEqualTypeOf<UniHelper.RadioGroup>();
 
   expectTypeOf<RadioGroupInstance>().not.toBeAny();
+  expectTypeOf<RadioGroupInstance>().toBeObject();
+  expectTypeOf<RadioGroupInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<RadioGroupInstance>().toEqualTypeOf<UniHelper.RadioGroupInstance>();
 });

@@ -24,6 +24,7 @@ import type {
   TextareaValue,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Textarea", () => {
   expectTypeOf<TextareaValue>().toBeString();
@@ -93,5 +94,9 @@ describe("Textarea", () => {
   expectTypeOf<Textarea>().toEqualTypeOf<UniHelper.Textarea>();
 
   expectTypeOf<TextareaInstance>().not.toBeAny();
+  expectTypeOf<TextareaInstance>().toBeObject();
+  expectTypeOf<TextareaInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<TextareaInstance>().toEqualTypeOf<UniHelper.TextareaInstance>();
 });

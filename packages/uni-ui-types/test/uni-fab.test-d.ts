@@ -13,6 +13,7 @@ import type {
   UniFabVertical,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniFab", () => {
   expectTypeOf<UniFabPattern>().toBeObject();
@@ -49,5 +50,9 @@ describe("UniFab", () => {
   expectTypeOf<UniFab>().toEqualTypeOf<UniHelper.UniFab>();
 
   expectTypeOf<UniFabInstance>().not.toBeAny();
+  expectTypeOf<UniFabInstance>().toBeObject();
+  expectTypeOf<UniFabInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniFabInstance>().toEqualTypeOf<UniHelper.UniFabInstance>();
 });

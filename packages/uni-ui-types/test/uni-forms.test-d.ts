@@ -18,6 +18,7 @@ import type {
   UniFormsValidateTrigger,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniForms", () => {
   expectTypeOf<UniFormsFormat>().toBeString();
@@ -69,5 +70,9 @@ describe("UniForms", () => {
   expectTypeOf<UniForms>().toEqualTypeOf<UniHelper.UniForms>();
 
   expectTypeOf<UniFormsInstance>().not.toBeAny();
+  expectTypeOf<UniFormsInstance>().toBeObject();
+  expectTypeOf<UniFormsInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniFormsInstance>().toEqualTypeOf<UniHelper.UniFormsInstance>();
 });

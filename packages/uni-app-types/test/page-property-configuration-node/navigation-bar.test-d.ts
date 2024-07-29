@@ -10,6 +10,7 @@ import type {
   NavigationFrontColor,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("NavigationBar", () => {
   expectTypeOf<NavigationBarSubtitleOverflow>().toBeString();
@@ -37,5 +38,9 @@ describe("NavigationBar", () => {
   expectTypeOf<NavigationBar>().toEqualTypeOf<UniHelper.NavigationBar>();
 
   expectTypeOf<NavigationBarInstance>().not.toBeAny();
+  expectTypeOf<NavigationBarInstance>().toBeObject();
+  expectTypeOf<NavigationBarInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<NavigationBarInstance>().toEqualTypeOf<UniHelper.NavigationBarInstance>();
 });

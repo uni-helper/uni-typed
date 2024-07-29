@@ -20,6 +20,7 @@ import type {
   ScrollViewRefresherDefaultStyle,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("ScrollView", () => {
   expectTypeOf<ScrollViewRefresherDefaultStyle>().toBeString();
@@ -77,5 +78,9 @@ describe("ScrollView", () => {
   expectTypeOf<ScrollView>().toEqualTypeOf<UniHelper.ScrollView>();
 
   expectTypeOf<ScrollViewInstance>().not.toBeAny();
+  expectTypeOf<ScrollViewInstance>().toBeObject();
+  expectTypeOf<ScrollViewInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<ScrollViewInstance>().toEqualTypeOf<UniHelper.ScrollViewInstance>();
 });

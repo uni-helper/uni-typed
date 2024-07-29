@@ -8,6 +8,7 @@ import type {
   UniTagType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTag", () => {
   expectTypeOf<UniTagType>().toBeString();
@@ -29,5 +30,9 @@ describe("UniTag", () => {
   expectTypeOf<UniTag>().toEqualTypeOf<UniHelper.UniTag>();
 
   expectTypeOf<UniTagInstance>().not.toBeAny();
+  expectTypeOf<UniTagInstance>().toBeObject();
+  expectTypeOf<UniTagInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniTagInstance>().toEqualTypeOf<UniHelper.UniTagInstance>();
 });

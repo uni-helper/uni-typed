@@ -6,6 +6,7 @@ import type {
   UniStepsProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSteps", () => {
   expectTypeOf<UniStepsDirection>().toBeString();
@@ -21,5 +22,9 @@ describe("UniSteps", () => {
   expectTypeOf<UniSteps>().toEqualTypeOf<UniHelper.UniSteps>();
 
   expectTypeOf<UniStepsInstance>().not.toBeAny();
+  expectTypeOf<UniStepsInstance>().toBeObject();
+  expectTypeOf<UniStepsInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniStepsInstance>().toEqualTypeOf<UniHelper.UniStepsInstance>();
 });

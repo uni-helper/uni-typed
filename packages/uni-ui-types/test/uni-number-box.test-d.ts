@@ -11,6 +11,7 @@ import type {
   UniNumberBoxValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniNumberBox", () => {
   expectTypeOf<UniNumberBoxValue>().toBeNumber();
@@ -41,5 +42,9 @@ describe("UniNumberBox", () => {
   expectTypeOf<UniNumberBox>().toEqualTypeOf<UniHelper.UniNumberBox>();
 
   expectTypeOf<UniNumberBoxInstance>().not.toBeAny();
+  expectTypeOf<UniNumberBoxInstance>().toBeObject();
+  expectTypeOf<UniNumberBoxInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniNumberBoxInstance>().toEqualTypeOf<UniHelper.UniNumberBoxInstance>();
 });

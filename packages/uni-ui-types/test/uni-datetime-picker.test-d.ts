@@ -14,6 +14,7 @@ import type {
   UniDatetimePickerValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDatetimePicker", () => {
   expectTypeOf<UniDatetimePickerType>().toBeString();
@@ -55,5 +56,9 @@ describe("UniDatetimePicker", () => {
   expectTypeOf<UniDatetimePicker>().toEqualTypeOf<UniHelper.UniDatetimePicker>();
 
   expectTypeOf<UniDatetimePickerInstance>().not.toBeAny();
+  expectTypeOf<UniDatetimePickerInstance>().toBeObject();
+  expectTypeOf<UniDatetimePickerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDatetimePickerInstance>().toEqualTypeOf<UniHelper.UniDatetimePickerInstance>();
 });

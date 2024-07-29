@@ -6,6 +6,7 @@ import type {
   UniPopupShareProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniPopupShare", () => {
   expectTypeOf<UniPopupShareOnSelectEvent>().toBeObject();
@@ -21,5 +22,9 @@ describe("UniPopupShare", () => {
   expectTypeOf<UniPopupShare>().toEqualTypeOf<UniHelper.UniPopupShare>();
 
   expectTypeOf<UniPopupShareInstance>().not.toBeAny();
+  expectTypeOf<UniPopupShareInstance>().toBeObject();
+  expectTypeOf<UniPopupShareInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniPopupShareInstance>().toEqualTypeOf<UniHelper.UniPopupShareInstance>();
 });

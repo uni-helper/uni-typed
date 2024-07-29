@@ -12,6 +12,7 @@ import type {
   UniCollapseResize,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniCollapse", () => {
   expectTypeOf<UniCollapseResize>().toBeFunction();
@@ -45,5 +46,9 @@ describe("UniCollapse", () => {
   expectTypeOf<UniCollapse>().toEqualTypeOf<UniHelper.UniCollapse>();
 
   expectTypeOf<UniCollapseInstance>().not.toBeAny();
+  expectTypeOf<UniCollapseInstance>().toBeObject();
+  expectTypeOf<UniCollapseInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniCollapseInstance>().toEqualTypeOf<UniHelper.UniCollapseInstance>();
 });

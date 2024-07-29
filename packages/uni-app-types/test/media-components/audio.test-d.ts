@@ -16,6 +16,7 @@ import type {
   AudioProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Audio", () => {
   expectTypeOf<AudioOnErrorDetail>().toBeObject();
@@ -61,5 +62,9 @@ describe("Audio", () => {
   expectTypeOf<Audio>().toEqualTypeOf<UniHelper.Audio>();
 
   expectTypeOf<AudioInstance>().not.toBeAny();
+  expectTypeOf<AudioInstance>().toBeObject();
+  expectTypeOf<AudioInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<AudioInstance>().toEqualTypeOf<UniHelper.AudioInstance>();
 });

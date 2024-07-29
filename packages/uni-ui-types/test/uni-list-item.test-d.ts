@@ -14,6 +14,7 @@ import type {
   UniListItemThumbSize,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniListItem", () => {
   expectTypeOf<UniListItemEllipsis>().toBeNumber();
@@ -53,5 +54,9 @@ describe("UniListItem", () => {
   expectTypeOf<UniListItem>().toEqualTypeOf<UniHelper.UniListItem>();
 
   expectTypeOf<UniListItemInstance>().not.toBeAny();
+  expectTypeOf<UniListItemInstance>().toBeObject();
+  expectTypeOf<UniListItemInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniListItemInstance>().toEqualTypeOf<UniHelper.UniListItemInstance>();
 });

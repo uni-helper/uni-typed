@@ -8,6 +8,7 @@ import type {
   UniListChatProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniListChat", () => {
   expectTypeOf<UniListChatLink>().toBeString();
@@ -29,5 +30,9 @@ describe("UniListChat", () => {
   expectTypeOf<UniListChat>().toEqualTypeOf<UniHelper.UniListChat>();
 
   expectTypeOf<UniListChatInstance>().not.toBeAny();
+  expectTypeOf<UniListChatInstance>().toBeObject();
+  expectTypeOf<UniListChatInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniListChatInstance>().toEqualTypeOf<UniHelper.UniListChatInstance>();
 });

@@ -15,6 +15,7 @@ import type {
   SwiperSource,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Swiper", () => {
   expectTypeOf<SwiperSource>().toBeString();
@@ -57,5 +58,9 @@ describe("Swiper", () => {
   expectTypeOf<Swiper>().toEqualTypeOf<UniHelper.Swiper>();
 
   expectTypeOf<SwiperInstance>().not.toBeAny();
+  expectTypeOf<SwiperInstance>().toBeObject();
+  expectTypeOf<SwiperInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<SwiperInstance>().toEqualTypeOf<UniHelper.SwiperInstance>();
 });

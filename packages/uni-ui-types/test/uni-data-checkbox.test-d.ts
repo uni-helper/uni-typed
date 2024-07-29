@@ -19,6 +19,7 @@ import type {
   UniDataCheckboxValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDataCheckbox", () => {
   expectTypeOf<UniDataCheckboxValue>().toMatchTypeOf<string | number>();
@@ -82,5 +83,9 @@ describe("UniDataCheckbox", () => {
   expectTypeOf<UniDataCheckbox>().toEqualTypeOf<UniHelper.UniDataCheckbox>();
 
   expectTypeOf<UniDataCheckboxInstance>().not.toBeAny();
+  expectTypeOf<UniDataCheckboxInstance>().toBeObject();
+  expectTypeOf<UniDataCheckboxInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDataCheckboxInstance>().toEqualTypeOf<UniHelper.UniDataCheckboxInstance>();
 });

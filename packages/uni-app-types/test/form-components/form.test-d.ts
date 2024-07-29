@@ -10,6 +10,7 @@ import type {
   FormProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Form", () => {
   expectTypeOf<FormOnSubmitDetailValue>().toBeObject();
@@ -37,5 +38,9 @@ describe("Form", () => {
   expectTypeOf<Form>().toEqualTypeOf<UniHelper.Form>();
 
   expectTypeOf<FormInstance>().not.toBeAny();
+  expectTypeOf<FormInstance>().toBeObject();
+  expectTypeOf<FormInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<FormInstance>().toEqualTypeOf<UniHelper.FormInstance>();
 });

@@ -8,6 +8,7 @@ import type {
   NavigatorVersion,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Navigator", () => {
   expectTypeOf<NavigatorOpenType>().toBeString();
@@ -29,5 +30,9 @@ describe("Navigator", () => {
   expectTypeOf<Navigator>().toEqualTypeOf<UniHelper.Navigator>();
 
   expectTypeOf<NavigatorInstance>().not.toBeAny();
+  expectTypeOf<NavigatorInstance>().toBeObject();
+  expectTypeOf<NavigatorInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<NavigatorInstance>().toEqualTypeOf<UniHelper.NavigatorInstance>();
 });

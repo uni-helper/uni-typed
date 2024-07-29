@@ -6,6 +6,7 @@ import type {
   UniDateformatProps,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDateformat", () => {
   expectTypeOf<UniDateformatLocale>().toBeString();
@@ -21,5 +22,9 @@ describe("UniDateformat", () => {
   expectTypeOf<UniDateformat>().toEqualTypeOf<UniHelper.UniDateformat>();
 
   expectTypeOf<UniDateformatInstance>().not.toBeAny();
+  expectTypeOf<UniDateformatInstance>().toBeObject();
+  expectTypeOf<UniDateformatInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDateformatInstance>().toEqualTypeOf<UniHelper.UniDateformatInstance>();
 });

@@ -8,6 +8,7 @@ import type {
   UniDataSelectValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDataSelect", () => {
   expectTypeOf<UniDataSelectValue>().toMatchTypeOf<string | number>();
@@ -29,5 +30,9 @@ describe("UniDataSelect", () => {
   expectTypeOf<UniDataSelect>().toEqualTypeOf<UniHelper.UniDataSelect>();
 
   expectTypeOf<UniDataSelectInstance>().not.toBeAny();
+  expectTypeOf<UniDataSelectInstance>().toBeObject();
+  expectTypeOf<UniDataSelectInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDataSelectInstance>().toEqualTypeOf<UniHelper.UniDataSelectInstance>();
 });

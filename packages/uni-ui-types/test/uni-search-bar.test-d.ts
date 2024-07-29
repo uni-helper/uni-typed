@@ -20,6 +20,7 @@ import type {
   UniSearchBarValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSearchBar", () => {
   expectTypeOf<UniSearchBarValue>().toMatchTypeOf<string | number>();
@@ -77,5 +78,9 @@ describe("UniSearchBar", () => {
   expectTypeOf<UniSearchBar>().toEqualTypeOf<UniHelper.UniSearchBar>();
 
   expectTypeOf<UniSearchBarInstance>().not.toBeAny();
+  expectTypeOf<UniSearchBarInstance>().toBeObject();
+  expectTypeOf<UniSearchBarInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniSearchBarInstance>().toEqualTypeOf<UniHelper.UniSearchBarInstance>();
 });

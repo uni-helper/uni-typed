@@ -35,6 +35,7 @@ import type {
   UniFilePickerValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniFilePicker", () => {
   expectTypeOf<UniFilePickerValue>().toBeObject();
@@ -137,5 +138,9 @@ describe("UniFilePicker", () => {
   expectTypeOf<UniFilePicker>().toEqualTypeOf<UniHelper.UniFilePicker>();
 
   expectTypeOf<UniFilePickerInstance>().not.toBeAny();
+  expectTypeOf<UniFilePickerInstance>().toBeObject();
+  expectTypeOf<UniFilePickerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniFilePickerInstance>().toEqualTypeOf<UniHelper.UniFilePickerInstance>();
 });

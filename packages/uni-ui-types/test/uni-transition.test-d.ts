@@ -15,6 +15,7 @@ import type {
   UniTransitionType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTransition", () => {
   expectTypeOf<UniTransitionModeClass>().toBeString();
@@ -57,5 +58,9 @@ describe("UniTransition", () => {
   expectTypeOf<UniTransition>().toEqualTypeOf<UniHelper.UniTransition>();
 
   expectTypeOf<UniTransitionInstance>().not.toBeAny();
+  expectTypeOf<UniTransitionInstance>().toBeObject();
+  expectTypeOf<UniTransitionInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniTransitionInstance>().toEqualTypeOf<UniHelper.UniTransitionInstance>();
 });

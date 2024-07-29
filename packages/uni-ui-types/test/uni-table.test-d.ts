@@ -12,6 +12,7 @@ import type {
   UniTableType,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniTable", () => {
   expectTypeOf<UniTableType>().toBeString();
@@ -45,5 +46,9 @@ describe("UniTable", () => {
   expectTypeOf<UniTable>().toEqualTypeOf<UniHelper.UniTable>();
 
   expectTypeOf<UniTableInstance>().not.toBeAny();
+  expectTypeOf<UniTableInstance>().toBeObject();
+  expectTypeOf<UniTableInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniTableInstance>().toEqualTypeOf<UniHelper.UniTableInstance>();
 });

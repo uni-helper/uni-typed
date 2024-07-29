@@ -10,6 +10,7 @@ import type {
   UniLoadMoreStatus,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniLoadMore", () => {
   expectTypeOf<UniLoadMoreStatus>().toBeString();
@@ -37,5 +38,9 @@ describe("UniLoadMore", () => {
   expectTypeOf<UniLoadMore>().toEqualTypeOf<UniHelper.UniLoadMore>();
 
   expectTypeOf<UniLoadMoreInstance>().not.toBeAny();
+  expectTypeOf<UniLoadMoreInstance>().toBeObject();
+  expectTypeOf<UniLoadMoreInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniLoadMoreInstance>().toEqualTypeOf<UniHelper.UniLoadMoreInstance>();
 });

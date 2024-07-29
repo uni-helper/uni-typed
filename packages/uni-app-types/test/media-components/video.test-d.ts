@@ -47,6 +47,7 @@ import type {
   VideoProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("Video", () => {
   expectTypeOf<VideoDanmu>().toBeObject();
@@ -185,5 +186,9 @@ describe("Video", () => {
   expectTypeOf<Video>().toEqualTypeOf<UniHelper.Video>();
 
   expectTypeOf<VideoInstance>().not.toBeAny();
+  expectTypeOf<VideoInstance>().toBeObject();
+  expectTypeOf<VideoInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<VideoInstance>().toEqualTypeOf<UniHelper.VideoInstance>();
 });

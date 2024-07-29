@@ -21,6 +21,7 @@ import type {
   UniDataPickerValue,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniDataPicker", () => {
   expectTypeOf<UniDataPickerSpaceInfoProvider>().toBeString();
@@ -85,5 +86,9 @@ describe("UniDataPicker", () => {
   expectTypeOf<UniDataPicker>().toEqualTypeOf<UniHelper.UniDataPicker>();
 
   expectTypeOf<UniDataPickerInstance>().not.toBeAny();
+  expectTypeOf<UniDataPickerInstance>().toBeObject();
+  expectTypeOf<UniDataPickerInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniDataPickerInstance>().toEqualTypeOf<UniHelper.UniDataPickerInstance>();
 });

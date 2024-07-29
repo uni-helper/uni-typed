@@ -10,6 +10,7 @@ import type {
   UniSwipeActionItemShow,
 } from "@uni-helper/uni-ui-types";
 import { describe, expectTypeOf } from "vitest";
+import type { ComponentInternalInstance } from "vue";
 
 describe("UniSwipeActionItem", () => {
   expectTypeOf<UniSwipeActionItemShow>().toBeString();
@@ -37,5 +38,9 @@ describe("UniSwipeActionItem", () => {
   expectTypeOf<UniSwipeActionItem>().toEqualTypeOf<UniHelper.UniSwipeActionItem>();
 
   expectTypeOf<UniSwipeActionItemInstance>().not.toBeAny();
+  expectTypeOf<UniSwipeActionItemInstance>().toBeObject();
+  expectTypeOf<UniSwipeActionItemInstance>()
+    .toHaveProperty("$")
+    .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UniSwipeActionItemInstance>().toEqualTypeOf<UniHelper.UniSwipeActionItemInstance>();
 });
