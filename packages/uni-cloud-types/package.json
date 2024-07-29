@@ -1,7 +1,7 @@
 {
   "name": "@uni-helper/uni-cloud-types",
   "version": "0.0.0",
-  "description": "为 uni-cloud 组件提供 TypeScript 类型支持。",
+  "description": "为 uni-cloud 组件提供 TypeScript 类型",
   "keywords": ["uni-app", "uniapp", "uni-cloud", "unicloud", "types", "type"],
   "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-cloud-types",
   "bugs": {
