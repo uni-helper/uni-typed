@@ -39,7 +39,7 @@
     "play:h5": "pnpm dev && pnpm -C playground run dev:h5",
     "play:mp-weixin": "pnpm dev && pnpm -C playground run dev:mp-weixin",
     "prepublishOnly": "pnpm build",
-    "release": "bumpp",
+    "release": "lerna version",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "test": "vitest run --typecheck",
     "typecheck": "tsc --noEmit"
@@ -50,7 +50,6 @@
     "@lerna-lite/cli": "^3.7.1",
     "@lerna-lite/version": "^3.7.1",
     "@types/node": "^20.14.13",
-    "bumpp": "^9.4.1",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.4",
