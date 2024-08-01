@@ -28,7 +28,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: GitHub Release
-        run: nlx changelogen gh release
+        run: pnpx changelogen gh release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
