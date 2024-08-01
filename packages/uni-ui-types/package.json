@@ -1,8 +1,15 @@
 {
   "name": "@uni-helper/uni-ui-types",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "为 uni-ui 组件提供 TypeScript 类型",
-  "keywords": ["uni-app", "uniapp", "uni-ui", "uniui", "types", "type"],
+  "keywords": [
+    "uni-app",
+    "uniapp",
+    "uni-ui",
+    "uniui",
+    "types",
+    "type"
+  ],
   "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-ui-types",
   "bugs": {
     "url": "https://github.com/uni-helper/uni-types/issues"
@@ -34,10 +41,15 @@
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": ["./dist/*", "./dist/index.d.ts"]
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub"
