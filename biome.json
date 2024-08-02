@@ -6,7 +6,8 @@
       "**/.git",
       "**/.DS_Store",
       "**/dist",
-      "./playground"
+      "./playground",
+      "./**/package.json"
     ]
   },
   "organizeImports": {
