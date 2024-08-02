@@ -2,14 +2,7 @@
   "name": "@uni-helper/uni-cloud-types",
   "version": "1.0.0-alpha.0",
   "description": "为 uni-cloud 组件提供 TypeScript 类型",
-  "keywords": [
-    "uni-app",
-    "uniapp",
-    "uni-cloud",
-    "unicloud",
-    "types",
-    "type"
-  ],
+  "keywords": ["uni-app", "uniapp", "uni-cloud", "unicloud", "types", "type"],
   "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-cloud-types",
   "bugs": {
     "url": "https://github.com/uni-helper/uni-types/issues"
@@ -41,24 +34,20 @@
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
+      "*": ["./dist/*", "./dist/index.d.ts"]
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "unbuild",
+    "prepublishOnly": "pnpm build",
     "stub": "unbuild --stub"
   },
   "dependencies": {
     "@uni-helper/uni-app-types": "workspace:*"
   },
   "devDependencies": {
-    "vue": "^3.4.34"
+    "vue": "^3.4.35"
   },
   "peerDependencies": {
     "typescript": "^5.0.0",
