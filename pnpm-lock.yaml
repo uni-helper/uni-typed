@@ -51,9 +51,6 @@ importers:
 
   packages/uni-cloud-types:
     dependencies:
-      '@uni-helper/uni-app-types':
-        specifier: workspace:*
-        version: link:../uni-app-types
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -182,8 +179,8 @@ importers:
         specifier: ^5.3.5
         version: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
       vue-tsc:
-        specifier: ^2.0.29
-        version: 2.0.29(typescript@5.5.4)
+        specifier: 2.0.28
+        version: 2.0.28(typescript@5.5.4)
 
 packages:
 
@@ -2158,6 +2155,14 @@ packages:
 
   '@vue/devtools-api@6.6.3':
     resolution: {integrity: sha512-0MiMsFma/HqA6g3KLKn+AGpL1kgKhFWszC9U29NfpWK5LE7bjeXxySWJrOJ77hBz+TBrBQ7o4QJqbPbqbs8rJw==}
+
+  '@vue/language-core@2.0.28':
+    resolution: {integrity: sha512-0z4tyCCaqqPbdyz0T4yTFQeLpCo4TOM/ZHAC3geGLHeCiFAjVbROB9PiEtrXR1AoLObqUPFHSmKZeWtEMssSqw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@vue/language-core@2.0.29':
     resolution: {integrity: sha512-o2qz9JPjhdoVj8D2+9bDXbaI4q2uZTHQA/dbyZT4Bj1FR9viZxDJnLcKVHfxdn6wsOzRgpqIzJEEmSSvgMvDTQ==}
@@ -5280,6 +5285,15 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
+  vue-template-compiler@2.7.16:
+    resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
+
+  vue-tsc@2.0.28:
+    resolution: {integrity: sha512-PQ/OFDM3NtQVMThaVlQf8plyL0j7UGdak4lb1KkUOSL0uyx/F9Liu6aOclgHiMMBKNGIjJWoiFh3HjIdV6DS/Q==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.0.0'
+
   vue-tsc@2.0.29:
     resolution: {integrity: sha512-MHhsfyxO3mYShZCGYNziSbc63x7cQ5g9kvijV7dRe1TTXBRLxXyL0FnXWpUF1xII2mJ86mwYpYsUmMwkmerq7Q==}
     hasBin: true
@@ -8299,10 +8313,24 @@ snapshots:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
+    optional: true
 
   '@vue/consolidate@1.0.0': {}
 
   '@vue/devtools-api@6.6.3': {}
+
+  '@vue/language-core@2.0.28(typescript@5.5.4)':
+    dependencies:
+      '@volar/language-core': 2.4.0-alpha.18
+      '@vue/compiler-dom': 3.4.35
+      '@vue/shared': 3.4.35
+      computeds: 0.0.1
+      minimatch: 9.0.5
+      muggle-string: 0.4.1
+      path-browserify: 1.0.1
+      vue-template-compiler: 2.7.16
+    optionalDependencies:
+      typescript: 5.5.4
 
   '@vue/language-core@2.0.29(typescript@5.5.4)':
     dependencies:
@@ -8316,6 +8344,7 @@ snapshots:
       path-browserify: 1.0.1
     optionalDependencies:
       typescript: 5.5.4
+    optional: true
 
   '@vue/reactivity@3.4.35':
     dependencies:
@@ -11694,12 +11723,25 @@ snapshots:
       '@vue/devtools-api': 6.6.3
       vue: 3.4.35(typescript@5.5.4)
 
+  vue-template-compiler@2.7.16:
+    dependencies:
+      de-indent: 1.0.2
+      he: 1.2.0
+
+  vue-tsc@2.0.28(typescript@5.5.4):
+    dependencies:
+      '@volar/typescript': 2.4.0-alpha.18
+      '@vue/language-core': 2.0.28(typescript@5.5.4)
+      semver: 7.6.3
+      typescript: 5.5.4
+
   vue-tsc@2.0.29(typescript@5.5.4):
     dependencies:
       '@volar/typescript': 2.4.0-alpha.18
       '@vue/language-core': 2.0.29(typescript@5.5.4)
       semver: 7.6.3
       typescript: 5.5.4
+    optional: true
 
   vue@3.4.35(typescript@5.5.4):
     dependencies:
