@@ -68,7 +68,10 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4020420240722002",
     "@dcloudio/uni-stacktracey": "3.0.0-4020420240722002",
     "@dcloudio/vite-plugin-uni": "3.0.0-4020420240722002",
+    "@uni-helper/uni-app-types": "workspace:*",
+    "@uni-helper/uni-cloud-types": "workspace:*",
     "@uni-helper/uni-types": "workspace:*",
+    "@uni-helper/uni-ui-types": "workspace:*",
     "typescript": "^5.5.4",
     "vite": "^5.3.5",
     "vue-tsc": "^2.0.29"

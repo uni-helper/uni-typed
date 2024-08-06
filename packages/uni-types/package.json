@@ -72,6 +72,9 @@
     "vue": "^3.4.35"
   },
   "peerDependencies": {
+    "@uni-helper/uni-app-types": "workspace:*",
+    "@uni-helper/uni-cloud-types": "workspace:*",
+    "@uni-helper/uni-ui-types": "workspace:*",
     "typescript": "^5.0.0",
     "vue": "^3.0.0"
   },
