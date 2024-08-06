@@ -59,7 +59,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4020420240722002",
     "@dcloudio/uni-mp-xhs": "3.0.0-4020420240722002",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020420240722002",
-    "vue": "^3.4.35",
+    "vue": "3.4.35",
     "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
@@ -72,8 +72,8 @@
     "@uni-helper/uni-cloud-types": "workspace:*",
     "@uni-helper/uni-types": "workspace:*",
     "@uni-helper/uni-ui-types": "workspace:*",
-    "typescript": "^5.5.4",
+    "typescript": "5.5.4",
     "vite": "^5.3.5",
-    "vue-tsc": "^2.0.29"
+    "vue-tsc": "2.0.28"
   }
 }
