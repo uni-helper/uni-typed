@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 弹出方式
@@ -105,7 +105,7 @@ type _UniPopupProps = Partial<{
 }>;
 
 /** 弹出层，在应用中弹出一个消息提示窗口、提示框等 */
-type _UniPopup = Component<_UniPopupProps>;
+type _UniPopup = DefineComponent<_UniPopupProps>;
 
 /** 弹出层实例 */
 type _UniPopupInstance = InstanceType<_UniPopup>;

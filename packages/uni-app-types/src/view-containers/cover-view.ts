@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** 覆盖在原生组件之上的视图属性 */
 type _CoverViewProps = Partial<{
@@ -19,7 +19,7 @@ type _CoverViewProps = Partial<{
  *
  * 为了能正常覆盖原生组件，设计了 cover-view
  */
-type _CoverView = Component<_CoverViewProps>;
+type _CoverView = DefineComponent<_CoverViewProps>;
 
 /** 覆盖在原生组件之上的视图 */
 type _CoverViewInstance = InstanceType<_CoverView>;

@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 对齐方式 */
 type _UniThAlign = "left" | "center" | "right";
@@ -79,7 +79,7 @@ type _UniThProps = Partial<{
   onFilterChange: _UniThOnFilterChange;
 }>;
 
-type _UniTh = Component<_UniThProps>;
+type _UniTh = DefineComponent<_UniThProps>;
 
 type _UniThInstance = InstanceType<_UniTh>;
 

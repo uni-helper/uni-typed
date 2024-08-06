@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 大小尺寸
@@ -100,7 +100,7 @@ type _UniTagProps = Partial<{
 }>;
 
 /** 用于展示一个或多个文字标签，可点击切换选中、不选中的状态 */
-type _UniTag = Component<_UniTagProps>;
+type _UniTag = DefineComponent<_UniTagProps>;
 
 type _UniTagInstance = InstanceType<_UniTag>;
 

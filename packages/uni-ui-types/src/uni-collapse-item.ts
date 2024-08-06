@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 折叠面板标题分隔线
@@ -62,7 +62,7 @@ type _UniCollapseItemProps = Partial<{
   showArrow: boolean;
 }>;
 
-type _UniCollapseItem = Component<_UniCollapseItemProps>;
+type _UniCollapseItem = DefineComponent<_UniCollapseItemProps>;
 
 type _UniCollapseItemInstance = InstanceType<_UniCollapseItem>;
 

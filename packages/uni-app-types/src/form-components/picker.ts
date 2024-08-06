@@ -1,8 +1,8 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 需要展示的内容 */
-type _SelectorPickerRange = string[] | AnyRecord[];
+type _SelectorPickerRange = string[] | Record<string, any>[];
 
 /** 当前选择的下标 */
 type _SelectorPickerValue = number;
@@ -66,7 +66,7 @@ type _SelectorPickerProps = Partial<{
 }>;
 
 /** 需要展示的内容 */
-type _MultiSelectorPickerRange = string[][] | AnyRecord[][];
+type _MultiSelectorPickerRange = string[][] | Record<string, any>[][];
 
 /** 当前某列选择的下标 */
 type _MultiSelectorPickerValueElement = number;
@@ -363,7 +363,7 @@ type _PickerProps =
   | _RegionPickerProps;
 
 /** 从底部弹起的滚动选择器，通过 mode 来区分 */
-type _Picker = Component<_PickerProps>;
+type _Picker = DefineComponent<_PickerProps>;
 
 /** 从底部弹起的滚动选择器实例 */
 type _PickerInstance = InstanceType<_Picker>;

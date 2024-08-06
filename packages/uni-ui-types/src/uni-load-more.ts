@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * loading 的状态
@@ -112,7 +112,7 @@ type _UniLoadMoreProps = Partial<{
 }>;
 
 /** 用于列表中，做滚动加载使用，展示 loading 的各种状态 */
-type _UniLoadMore = Component<_UniLoadMoreProps>;
+type _UniLoadMore = DefineComponent<_UniLoadMoreProps>;
 
 type _UniLoadMoreInstance = InstanceType<_UniLoadMore>;
 

@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 内置过渡动画类型
@@ -305,7 +305,7 @@ type _UniTransitionProps = Partial<{
 }>;
 
 /** 元素过渡动画 */
-type _UniTransition = Component<_UniTransitionProps>;
+type _UniTransition = DefineComponent<_UniTransitionProps>;
 
 type _UniTransitionInstance = InstanceType<_UniTransition>;
 

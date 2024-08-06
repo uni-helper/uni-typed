@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -640,7 +640,7 @@ type _LivePusherProps = Partial<{
 }>;
 
 /** 实时音视频录制（直播推流） */
-type _LivePusher = Component<_LivePusherProps>;
+type _LivePusher = DefineComponent<_LivePusherProps>;
 
 /** 实时音视频录制（直播推流）实例 */
 type _LivePusherInstance = InstanceType<_LivePusher>;

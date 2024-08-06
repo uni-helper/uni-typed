@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 关闭组件
@@ -90,7 +90,7 @@ type _UniSwipeActionItemProps = Partial<{
   onChange: _UniSwipeActionItemOnChange;
 }>;
 
-type _UniSwipeActionItem = Component<_UniSwipeActionItemProps>;
+type _UniSwipeActionItem = DefineComponent<_UniSwipeActionItemProps>;
 
 type _UniSwipeActionItemInstance = InstanceType<_UniSwipeActionItem>;
 

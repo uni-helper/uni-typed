@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 指示点的类型 */
 type _UniSwiperDotMode = "default" | "round" | "nav" | "indexes";
@@ -105,7 +105,7 @@ type _UniSwiperDotProps = Partial<{
 }>;
 
 /** 轮播图指示点 */
-type _UniSwiperDot = Component<_UniSwiperDotProps>;
+type _UniSwiperDot = DefineComponent<_UniSwiperDotProps>;
 
 type _UniSwiperDotInstance = InstanceType<_UniSwiperDot>;
 

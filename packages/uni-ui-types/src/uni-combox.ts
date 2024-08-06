@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 组合框值 */
 type _UniComboxValue = string;
@@ -43,7 +43,7 @@ type _UniComboxProps = Partial<{
 }>;
 
 /** 组合框组件，一般用于可以选择也可以输入的表单项 */
-type _UniCombox = Component<_UniComboxProps>;
+type _UniCombox = DefineComponent<_UniComboxProps>;
 
 /** 组合框组件实例 */
 type _UniComboxInstance = InstanceType<_UniCombox>;

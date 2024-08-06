@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdInterstitialOnLoadEvent = BaseEvent;
@@ -48,7 +48,7 @@ type _AdInterstitialProps = Partial<{
 }>;
 
 /** 插屏广告 */
-type _AdInterstitial = Component<_AdInterstitialProps>;
+type _AdInterstitial = DefineComponent<_AdInterstitialProps>;
 
 /** 插屏广告实例 */
 type _AdInterstitialInstance = InstanceType<_AdInterstitial>;

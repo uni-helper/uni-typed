@@ -1,4 +1,5 @@
-import type { Component, InputType } from "@uni-helper/uni-app-types";
+import type { InputType } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 消息提示主题
@@ -151,7 +152,7 @@ type _UniPopupDialogProps = Partial<{
 }>;
 
 /** 对话框弹窗 */
-type _UniPopupDialog = Component<_UniPopupDialogProps>;
+type _UniPopupDialog = DefineComponent<_UniPopupDialogProps>;
 
 type _UniPopupDialogInstance = InstanceType<_UniPopupDialog>;
 

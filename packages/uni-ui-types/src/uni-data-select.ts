@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniDataSelectValue = string | number;
 
@@ -73,7 +73,7 @@ type _UniDataSelectProps = Partial<{
  *
  * 自动的表单校验：组件绑定了 data，且符合 uni-forms 的表单校验规范，搭配使用会自动实现表单校验
  */
-type _UniDataSelect = Component<_UniDataSelectProps>;
+type _UniDataSelect = DefineComponent<_UniDataSelectProps>;
 
 type _UniDataSelectInstance = InstanceType<_UniDataSelect>;
 

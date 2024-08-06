@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdOnLoadEvent = BaseEvent;
@@ -38,7 +38,7 @@ type _AdProps = Partial<{
    */
   adIntervals: number;
   /** 广告数据，优先级高于 adpid */
-  data: AnyRecord;
+  data: Record<string, any>;
   /** 小程序应用 ID */
   appid: string;
   /** 小程序广告位 ID */
@@ -80,7 +80,7 @@ type _AdProps = Partial<{
 }>;
 
 /** 信息流广告 */
-type _Ad = Component<_AdProps>;
+type _Ad = DefineComponent<_AdProps>;
 
 /** 信息流广告实例 */
 type _AdInstance = InstanceType<_Ad>;

@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniBreadcrumbItemProps = Partial<{
   /** 路由跳转页面路径 */
@@ -11,7 +11,7 @@ type _UniBreadcrumbItemProps = Partial<{
   replace: boolean;
 }>;
 
-type _UniBreadcrumbItem = Component<_UniBreadcrumbItemProps>;
+type _UniBreadcrumbItem = DefineComponent<_UniBreadcrumbItemProps>;
 
 type _UniBreadcrumbItemInstance = InstanceType<_UniBreadcrumbItem>;
 

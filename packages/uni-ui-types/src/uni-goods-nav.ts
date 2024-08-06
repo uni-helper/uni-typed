@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniIconsType } from "./uni-icons";
 
 /** 选项 */
@@ -79,7 +79,7 @@ type _UniGoodsNavProps = Partial<{
 }>;
 
 /** 商品加入购物车，立即购买 */
-type _UniGoodsNav = Component<_UniGoodsNavProps>;
+type _UniGoodsNav = DefineComponent<_UniGoodsNavProps>;
 
 type _UniGoodsNavInstance = InstanceType<_UniGoodsNav>;
 

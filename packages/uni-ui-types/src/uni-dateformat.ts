@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 格式化使用的语言
@@ -81,7 +81,7 @@ type _UniDateformatProps = Partial<{
 }>;
 
 /** 日期格式化组件 */
-type _UniDateformat = Component<_UniDateformatProps>;
+type _UniDateformat = DefineComponent<_UniDateformatProps>;
 
 /** 日期格式化组件实例 */
 type _UniDateformatInstance = InstanceType<_UniDateformat>;

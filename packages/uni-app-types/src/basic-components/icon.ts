@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** 图标属性 */
 type _IconProps = Partial<{
@@ -17,7 +17,7 @@ type _IconProps = Partial<{
 }>;
 
 /** 图标 */
-type _Icon = Component<_IconProps>;
+type _Icon = DefineComponent<_IconProps>;
 
 /** 图标实例 */
 type _IconInstance = InstanceType<_Icon>;

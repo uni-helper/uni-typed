@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -158,7 +158,7 @@ type _ButtonOnErrorEvent = BaseEvent;
 type _ButtonOnError = (event: _ButtonOnErrorEvent) => void;
 
 interface _ButtonOnOpensettingDetail {
-  authSetting: AnyRecord;
+  authSetting: Record<string, any>;
 }
 
 type _ButtonOnOpensettingEvent = CustomEvent<_ButtonOnOpensettingDetail>;
@@ -524,7 +524,7 @@ type _ButtonProps = Partial<{
 }>;
 
 /** 按钮 */
-type _Button = Component<_ButtonProps>;
+type _Button = DefineComponent<_ButtonProps>;
 
 /** 按钮实例 */
 type _ButtonInstance = InstanceType<_Button>;

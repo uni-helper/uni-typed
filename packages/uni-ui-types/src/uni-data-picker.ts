@@ -1,4 +1,5 @@
-import type { BaseEvent, Component } from "@uni-helper/uni-app-types";
+import type { BaseEvent } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 服务商
@@ -301,7 +302,7 @@ type _UniDataPickerProps = Partial<{
  * uni-data-picker 可以通过 JQL 直连 uni-cloud 云数据库，配套 DB Schema，可在 schema2code
  * 中自动生成前端页面，还支持服务器端校验
  */
-type _UniDataPicker = Component<_UniDataPickerProps>;
+type _UniDataPicker = DefineComponent<_UniDataPickerProps>;
 
 /** 选择类 datacom 组件实例 */
 type _UniDataPickerInstance = InstanceType<_UniDataPicker>;

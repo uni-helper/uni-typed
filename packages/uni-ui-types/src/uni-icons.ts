@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 图标类型 */
 type _UniIconsType =
@@ -197,7 +197,7 @@ type _UniIconsProps = Partial<{
 }>;
 
 /** 图标 */
-type _UniIcons = Component<_UniIconsProps>;
+type _UniIcons = DefineComponent<_UniIconsProps>;
 
 /** 图标实例 */
 type _UniIconsInstance = InstanceType<_UniIcons>;

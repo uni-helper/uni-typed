@@ -1,11 +1,11 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniListAdProps = Partial<{
   /** 标题 */
   title: string;
 }>;
 
-type _UniListAd = Component<_UniListAdProps>;
+type _UniListAd = DefineComponent<_UniListAdProps>;
 
 type _UniListAdInstance = InstanceType<_UniListAd>;
 

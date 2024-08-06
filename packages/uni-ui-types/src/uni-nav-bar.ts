@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniIconsType } from "./uni-icons";
 
 /** 导航栏属性 */
@@ -88,7 +88,7 @@ type _UniNavBarProps = Partial<{
 }>;
 
 /** 导航栏组件，主要用于头部导航 */
-type _UniNavBar = Component<_UniNavBarProps>;
+type _UniNavBar = DefineComponent<_UniNavBarProps>;
 
 /** 导航栏组件实例 */
 type _UniNavBarInstance = InstanceType<_UniNavBar>;

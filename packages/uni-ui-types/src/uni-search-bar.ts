@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 绑定值 */
 type _UniSearchBarValue = string | number;
@@ -140,7 +140,7 @@ type _UniSearchBarProps = Partial<{
 }>;
 
 /** 搜索栏 */
-type _UniSearchBar = Component<_UniSearchBarProps>;
+type _UniSearchBar = DefineComponent<_UniSearchBarProps>;
 
 /** 搜索栏实例 */
 type _UniSearchBarInstance = InstanceType<_UniSearchBar>;

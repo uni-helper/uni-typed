@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 宫格项属性 */
 type _UniGridItemProps = Partial<{
@@ -7,7 +7,7 @@ type _UniGridItemProps = Partial<{
 }>;
 
 /** 宫格项 */
-type _UniGridItem = Component<_UniGridItemProps>;
+type _UniGridItem = DefineComponent<_UniGridItemProps>;
 
 /** 宫格项实例 */
 type _UniGridItemInstance = InstanceType<_UniGridItem>;

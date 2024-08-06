@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent } from "../events";
 
 type _CoverImageOnLoadEvent = BaseEvent;
@@ -34,7 +34,7 @@ type _CoverImageProps = Partial<{
  *
  * 支持嵌套在 cover-view 里
  */
-type _CoverImage = Component<_CoverImageProps>;
+type _CoverImage = DefineComponent<_CoverImageProps>;
 
 /** 覆盖在原生组件之上的图片视图实例 */
 type _CoverImageInstance = InstanceType<_CoverImage>;

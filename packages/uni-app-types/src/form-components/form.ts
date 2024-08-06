@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 import type { CheckboxValue } from "./checkbox";
 import type { InputValue } from "./input";
@@ -68,7 +68,7 @@ type _FormProps = Partial<{
  *
  * 将组件内的用户输入的 switch、input、checkbox、slider、radio、picker 提交
  */
-type _Form = Component<_FormProps>;
+type _Form = DefineComponent<_FormProps>;
 
 /** 表单实例 */
 type _FormInstance = InstanceType<_Form>;

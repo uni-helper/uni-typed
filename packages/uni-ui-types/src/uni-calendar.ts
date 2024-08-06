@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 日期
@@ -14,7 +14,7 @@ interface _UniCalendarSelectedElement {
   /** 信息 */
   info: string;
   /** 自定义数据 */
-  data?: AnyRecord;
+  data?: Record<string, any>;
 }
 
 /** 打点 */
@@ -212,7 +212,7 @@ type _UniCalendarProps = Partial<{
  *
  * 常用场景如：酒店日期预订、火车机票选择购买日期、上下班打卡等
  */
-type _UniCalendar = Component<_UniCalendarProps>;
+type _UniCalendar = DefineComponent<_UniCalendarProps>;
 
 /** 日历组件实例 */
 type _UniCalendarInstance = InstanceType<_UniCalendar>;

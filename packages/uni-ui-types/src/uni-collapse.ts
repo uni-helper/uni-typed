@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 更新当前列表高度 */
 type _UniCollapseResize = () => void;
@@ -73,7 +73,7 @@ type _UniCollapseProps =
  *
  * 点击可以展开折叠部分
  */
-type _UniCollapse = Component<_UniCollapseProps>;
+type _UniCollapse = DefineComponent<_UniCollapseProps>;
 
 /** 折叠面板实例 */
 type _UniCollapseInstance = InstanceType<_UniCollapse>;

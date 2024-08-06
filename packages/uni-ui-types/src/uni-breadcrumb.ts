@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 面包屑属性 */
 type _UniBreadcrumbProps = Partial<{
@@ -17,7 +17,7 @@ type _UniBreadcrumbProps = Partial<{
  *
  * 显示当前页面的路径，快速返回之前的任意页面
  */
-type _UniBreadcrumb = Component<_UniBreadcrumbProps>;
+type _UniBreadcrumb = DefineComponent<_UniBreadcrumbProps>;
 
 /** 面包屑实例 */
 type _UniBreadcrumbInstance = InstanceType<_UniBreadcrumb>;

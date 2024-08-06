@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** 是否选中 */
@@ -41,7 +41,7 @@ type _SwitchProps = Partial<{
 }>;
 
 /** 开关选择器 */
-type _Switch = Component<_SwitchProps>;
+type _Switch = DefineComponent<_SwitchProps>;
 
 /** 开关选择器实例 */
 type _SwitchInstance = InstanceType<_Switch>;

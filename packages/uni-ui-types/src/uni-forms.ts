@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 内置校验规则 */
 type _UniFormsFormat =
@@ -118,7 +118,7 @@ type _UniFormsOnValidate = (results: any) => void;
 /** 表单属性 */
 type _UniFormsProps = Partial<{
   /** 表单数据 */
-  model: AnyRecord;
+  model: Record<string, any>;
   /** 表单校验规则 */
   rules: _UniFormsRules;
   /**
@@ -185,7 +185,7 @@ type _UniFormsProps = Partial<{
 }>;
 
 /** 表单，用于提交表单内容，内置了表单验证功能 */
-type _UniForms = Component<_UniFormsProps>;
+type _UniForms = DefineComponent<_UniFormsProps>;
 
 /** 表单实例 */
 type _UniFormsInstance = InstanceType<_UniForms>;

@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -91,7 +91,7 @@ type _PageMetaProps = Partial<{
  *
  * 只能是页面内的第一个节点
  */
-type _PageMeta = Component<_PageMetaProps>;
+type _PageMeta = DefineComponent<_PageMetaProps>;
 
 /** 页面属性配置节点实例 */
 type _PageMetaInstance = InstanceType<_PageMeta>;

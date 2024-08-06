@@ -55,10 +55,14 @@
     "prepublishOnly": "pnpm build",
     "stub": "unbuild --stub"
   },
+  "dependencies": {
+    "@uni-helper/uni-app-types": "workspace:*"
+  },
   "devDependencies": {
     "vue": "^3.4.35"
   },
   "peerDependencies": {
+    "@uni-helper/uni-app-types": "workspace:*",
     "typescript": "^5.5.4",
     "vue": "^3.4.35"
   },

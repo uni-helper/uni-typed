@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 标识
@@ -34,7 +34,7 @@ type _RadioProps = Partial<{
 }>;
 
 /** 单选项目 */
-type _Radio = Component<_RadioProps>;
+type _Radio = DefineComponent<_RadioProps>;
 
 /** 单选项目实例 */
 type _RadioInstance = InstanceType<_Radio>;

@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 标识
@@ -34,7 +34,7 @@ type _CheckboxProps = Partial<{
 }>;
 
 /** 多选项目 */
-type _Checkbox = Component<_CheckboxProps>;
+type _Checkbox = DefineComponent<_CheckboxProps>;
 
 /** 多选项目实例 */
 type _CheckboxInstance = InstanceType<_Checkbox>;

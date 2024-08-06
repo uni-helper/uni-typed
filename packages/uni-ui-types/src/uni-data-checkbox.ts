@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 默认值 */
 type _UniDataCheckboxValue = string | number;
@@ -186,7 +186,7 @@ type _UniDataCheckboxProps =
  * 在 uni-cloud 开发中，DB Schema 中配置了 enum 枚举等类型后，在 web 控制台的自动生成表单功能中，会自动生成
  * uni-data-checkbox 组件并绑定好 data
  */
-type _UniDataCheckbox = Component<_UniDataCheckboxProps>;
+type _UniDataCheckbox = DefineComponent<_UniDataCheckboxProps>;
 
 type _UniDataCheckboxInstance = InstanceType<_UniDataCheckbox>;
 

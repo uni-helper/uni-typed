@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniTooltipProps = Partial<{
   /** 显示内容 */
@@ -6,7 +6,7 @@ type _UniTooltipProps = Partial<{
 }>;
 
 /** 提示文字 */
-type _UniTooltip = Component<_UniTooltipProps>;
+type _UniTooltip = DefineComponent<_UniTooltipProps>;
 
 type _UniTooltipInstance = InstanceType<_UniTooltip>;
 

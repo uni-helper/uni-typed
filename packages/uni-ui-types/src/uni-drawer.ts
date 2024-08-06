@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 抽屉滑出位置
@@ -59,7 +59,7 @@ type _UniDrawerProps = Partial<{
 }>;
 
 /** 抽屉侧滑菜单 */
-type _UniDrawer = Component<_UniDrawerProps>;
+type _UniDrawer = DefineComponent<_UniDrawerProps>;
 
 /** 抽屉侧滑菜单实例 */
 type _UniDrawerInstance = InstanceType<_UniDrawer>;

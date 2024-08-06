@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniIconsType } from "./uni-icons";
 
 /**
@@ -59,7 +59,7 @@ type _UniStepsProps = Partial<{
 }>;
 
 /** 步骤条，常用于显示进度 */
-type _UniSteps = Component<_UniStepsProps>;
+type _UniSteps = DefineComponent<_UniStepsProps>;
 
 /** 步骤条实例 */
 type _UniStepsInstance = InstanceType<_UniSteps>;

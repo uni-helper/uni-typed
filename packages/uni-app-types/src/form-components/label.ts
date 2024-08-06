@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** 表单标签属性 */
 type _LabelProps = Partial<{
@@ -15,7 +15,7 @@ type _LabelProps = Partial<{
  *
  * For 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件
  */
-type _Label = Component<_LabelProps>;
+type _Label = DefineComponent<_LabelProps>;
 
 /** 表单标签实例 */
 type _LabelInstance = InstanceType<_Label>;

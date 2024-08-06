@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 跳转方式
@@ -184,7 +184,7 @@ type _NavigatorProps = Partial<{
    *
    * Target="miniProgram" 时有效
    */
-  extraData: AnyRecord;
+  extraData: Record<string, any>;
   /**
    * 要打开的小程序版本
    *
@@ -216,7 +216,7 @@ type _NavigatorProps = Partial<{
  *
  * 目标页面必须在 pages.json 中注册
  */
-type _Navigator = Component<_NavigatorProps>;
+type _Navigator = DefineComponent<_NavigatorProps>;
 
 /** 页面跳转组件实例 */
 type _NavigatorInstance = InstanceType<_Navigator>;

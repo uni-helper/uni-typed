@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent, TouchCanvasEvent } from "../events";
 
 /** 类型 */
@@ -72,7 +72,7 @@ type _CanvasProps = Partial<{
 }>;
 
 /** 画布 */
-type _Canvas = Component<_CanvasProps>;
+type _Canvas = DefineComponent<_CanvasProps>;
 
 /** 画布实例 */
 type _CanvasInstance = InstanceType<_Canvas>;

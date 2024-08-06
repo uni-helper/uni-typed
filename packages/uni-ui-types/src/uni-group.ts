@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 模式
@@ -45,7 +45,7 @@ type _UniGroupProps = Partial<{
 }>;
 
 /** 分组组件可用于将组件分组，添加间隔，以产生明显的区块 */
-type _UniGroup = Component<_UniGroupProps>;
+type _UniGroup = DefineComponent<_UniGroupProps>;
 
 /** 分组组件实例 */
 type _UniGroupInstance = InstanceType<_UniGroup>;

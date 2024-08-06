@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniFormsRulesRule } from "./uni-forms";
 
 /** 校验规则 */
@@ -55,7 +55,7 @@ type _UniFormsItemProps = Partial<{
   onFieldChange: _UniFormsItemOnFieldChange;
 }>;
 
-type _UniFormsItem = Component<_UniFormsItemProps>;
+type _UniFormsItem = DefineComponent<_UniFormsItemProps>;
 
 type _UniFormsItemInstance = InstanceType<_UniFormsItem>;
 

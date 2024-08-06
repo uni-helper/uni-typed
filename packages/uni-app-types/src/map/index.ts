@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 显示方式 */
@@ -709,7 +709,7 @@ type _MapProps = Partial<{
 }>;
 
 /** 地图组件，用于展示地图 */
-type _Map = Component<_MapProps>;
+type _Map = DefineComponent<_MapProps>;
 
 /** 地图组件实例 */
 type _MapInstance = InstanceType<_Map>;

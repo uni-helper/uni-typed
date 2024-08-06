@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** Movable-view 的移动方向 */
@@ -169,7 +169,7 @@ type _MovableViewProps = Partial<{
  *
  * Movable-area 直接子组件
  */
-type _MovableView = Component<_MovableViewProps>;
+type _MovableView = DefineComponent<_MovableViewProps>;
 
 /** 可移动的视图容器实例 */
 type _MovableViewInstance = InstanceType<_MovableView>;

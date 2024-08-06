@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 import type { RadioValue } from "./radio";
 
@@ -22,7 +22,7 @@ type _RadioGroupProps = Partial<{
  *
  * 通过把多个 radio 包裹在一个 radio-group 下，实现这些 radio 的单选
  */
-type _RadioGroup = Component<_RadioGroupProps>;
+type _RadioGroup = DefineComponent<_RadioGroupProps>;
 
 /** 单项选择器实例 */
 type _RadioGroupInstance = InstanceType<_RadioGroup>;

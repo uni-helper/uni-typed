@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** flex 布局下的水平排列方式 */
 type _UniRowJustify =
@@ -42,7 +42,7 @@ type _UniRowProps = Partial<{
 }>;
 
 /** 流式栅格系统中的行 */
-type _UniRow = Component<_UniRowProps>;
+type _UniRow = DefineComponent<_UniRowProps>;
 
 /** 流式栅格系统中的行实例 */
 type _UniRowInstance = InstanceType<_UniRow>;

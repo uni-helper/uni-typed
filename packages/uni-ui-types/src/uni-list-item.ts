@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniBadgeCustomStyle, UniBadgeType } from "./uni-badge";
 import type { UniIconsProps } from "./uni-icons";
 
@@ -43,7 +43,7 @@ type _UniListItemSwitchChecked = boolean;
 type _UniListItemExtraIcon = Omit<UniIconsProps, "customPrefix">;
 
 interface _UniListItemOnClickEvent {
-  data: AnyRecord;
+  data: Record<string, any>;
 }
 
 /** 点击 uni-list-item 触发，需开启点击反馈 */
@@ -183,14 +183,14 @@ type _UniListItemProps = Partial<{
    *
    * 默认为 { padding: '', backgroundColor: '#FFFFFF' }
    */
-  customStyle: AnyRecord;
+  customStyle: Record<string, any>;
   /** 点击 uni-list-item 触发，需开启点击反馈 */
   onClick: _UniListItemOnClick;
   /** 点击切换 switch 时触发，需显示 switch */
   onSwitchChange: _UniListItemOnSwitchChange;
 }>;
 
-type _UniListItem = Component<_UniListItemProps>;
+type _UniListItem = DefineComponent<_UniListItemProps>;
 
 type _UniListItemInstance = InstanceType<_UniListItem>;
 

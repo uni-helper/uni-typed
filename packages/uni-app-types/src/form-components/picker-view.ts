@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _PickerViewValueElement = number;
@@ -57,7 +57,7 @@ type _PickerViewProps = Partial<{
 }>;
 
 /** 嵌入页面的滚动选择器，比 picker 更灵活 */
-type _PickerView = Component<_PickerViewProps>;
+type _PickerView = DefineComponent<_PickerViewProps>;
 
 /** 嵌入页面的滚动选择器 */
 type _PickerViewInstance = InstanceType<_PickerView>;

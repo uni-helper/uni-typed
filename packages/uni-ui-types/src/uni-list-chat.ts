@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniListChatLink = "navigateTo" | "redirectTo" | "reLaunch" | "switchTab";
 
@@ -6,7 +6,7 @@ type _UniListChatLink = "navigateTo" | "redirectTo" | "reLaunch" | "switchTab";
 type _UniListChatBadgePositon = "left" | "right";
 
 interface _UniListChatOnClickEvent {
-  data: AnyRecord;
+  data: Record<string, any>;
 }
 
 /** 点击时触发 */
@@ -61,7 +61,7 @@ type _UniListChatProps = Partial<{
 }>;
 
 /** 聊天列表 */
-type _UniListChat = Component<_UniListChatProps>;
+type _UniListChat = DefineComponent<_UniListChatProps>;
 
 /** 聊天列表实例 */
 type _UniListChatInstance = InstanceType<_UniListChat>;

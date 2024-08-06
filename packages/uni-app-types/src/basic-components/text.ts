@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 显示连续空格
@@ -50,7 +50,7 @@ type _TextProps = Partial<{
  *
  * 用于包裹文本内容
  */
-type _Text = Component<_TextProps>;
+type _Text = DefineComponent<_TextProps>;
 
 /** 文本组件实例 */
 type _TextInstance = InstanceType<_Text>;

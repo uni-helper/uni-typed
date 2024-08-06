@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** 显示连续空格 */
@@ -14,7 +14,7 @@ interface _RichTextTextNode {
 interface _RichTextNodeNode {
   type?: "node";
   name: string;
-  attrs?: AnyRecord;
+  attrs?: Record<string, any>;
   children?: Array<_RichTextTextNode | _RichTextNodeNode>;
 }
 
@@ -66,7 +66,7 @@ type _RichTextProps = Partial<{
 }>;
 
 /** 富文本 */
-type _RichText = Component<_RichTextProps>;
+type _RichText = DefineComponent<_RichTextProps>;
 
 /** 富文本实例 */
 type _RichTextInstance = InstanceType<_RichText>;

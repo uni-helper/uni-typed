@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 点击页码按钮时触发 */
 type _UniPaginationOnInput = (current: number) => void;
@@ -88,7 +88,7 @@ type _UniPaginationProps = Partial<{
 }>;
 
 /** 分页器组件，用于展示页码、请求数据等 */
-type _UniPagination = Component<_UniPaginationProps>;
+type _UniPagination = DefineComponent<_UniPaginationProps>;
 
 /** 分页器组件实例 */
 type _UniPaginationInstance = InstanceType<_UniPagination>;

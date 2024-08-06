@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 服务器回调透传数据 */
@@ -56,7 +56,7 @@ type _AdRewardedVideoProps = Partial<{
 }>;
 
 /** 激励视频广告 */
-type _AdRewardedVideo = Component<_AdRewardedVideoProps>;
+type _AdRewardedVideo = DefineComponent<_AdRewardedVideoProps>;
 
 /** 激励视频广告实例 */
 type _AdRewardedVideoInstance = InstanceType<_AdRewardedVideo>;

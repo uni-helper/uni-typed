@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 interface _UniPopupShareOnSelectEvent {
   item: {
@@ -29,7 +29,7 @@ type _UniPopupShareProps = Partial<{
 }>;
 
 /** 分享弹窗 */
-type _UniPopupShare = Component<_UniPopupShareProps>;
+type _UniPopupShare = DefineComponent<_UniPopupShareProps>;
 
 type _UniPopupShareInstance = InstanceType<_UniPopupShare>;
 

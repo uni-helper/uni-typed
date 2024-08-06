@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /**
@@ -210,7 +210,7 @@ type _SwiperProps = Partial<{
  *
  * Swiper 下的每个 swiper-item 是一个滑动切换区域，不能停留在 2 个滑动区域之间
  */
-type _Swiper = Component<_SwiperProps>;
+type _Swiper = DefineComponent<_SwiperProps>;
 
 /** 滑块视图容器实例 */
 type _SwiperInstance = InstanceType<_Swiper>;

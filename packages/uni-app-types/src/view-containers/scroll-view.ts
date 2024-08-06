@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -214,7 +214,7 @@ type _ScrollViewProps = Partial<{
  * Scroll-view 是区域滚动，不会触发页面滚动，无法触发 pages.json
  * 配置的下拉刷新、页面触底onReachBottomDistance、titleNView 的 transparent 透明渐变
  */
-type _ScrollView = Component<_ScrollViewProps>;
+type _ScrollView = DefineComponent<_ScrollViewProps>;
 
 /** 可滚动视图区域实例 */
 type _ScrollViewInstance = InstanceType<_ScrollView>;

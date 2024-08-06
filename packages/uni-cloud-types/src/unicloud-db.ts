@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 服务商
@@ -164,7 +164,7 @@ interface _UnicloudDbAddOptions {
 
 /** 新增一个 item */
 type _UnicloudDbAdd = (
-  value: AnyRecord,
+  value: Record<string, any>,
   options?: _UnicloudDbAddOptions,
 ) => void;
 
@@ -214,7 +214,7 @@ interface _UnicloudDbUpdateOptions {
 /** 更新一个 item */
 type _UnicloudDbUpdate = (
   id: _UnicloudDbId,
-  value: AnyRecord,
+  value: Record<string, any>,
   options?: _UnicloudDbUpdateOptions,
 ) => void;
 
@@ -373,7 +373,7 @@ type _UnicloudDbProps = Partial<{
 }>;
 
 /** 数据库查询组件，对 uni-clientdb 的 js 库的再封装 */
-type _UnicloudDb = Component<_UnicloudDbProps>;
+type _UnicloudDb = DefineComponent<_UnicloudDbProps>;
 
 /** 数据库查询组件实例 */
 type _UnicloudDbInstance = InstanceType<_UnicloudDb>;

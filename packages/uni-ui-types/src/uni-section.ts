@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 装饰类型
@@ -69,7 +69,7 @@ type _UniSectionProps = Partial<{
 }>;
 
 /** 标题栏 */
-type _UniSection = Component<_UniSectionProps>;
+type _UniSection = DefineComponent<_UniSectionProps>;
 
 type _UniSectionInstance = InstanceType<_UniSection>;
 

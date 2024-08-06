@@ -1,8 +1,8 @@
 import type {
-  Component,
   InputOnBlurEvent,
   InputOnFocusEvent,
 } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 值 */
 type _UniNumberBoxValue = number;
@@ -78,7 +78,7 @@ type _UniNumberBoxProps = Partial<{
 }>;
 
 /** 带加减按钮的数字输入框 */
-type _UniNumberBox = Component<_UniNumberBoxProps>;
+type _UniNumberBox = DefineComponent<_UniNumberBoxProps>;
 
 /** 带加减按钮的数字输入框实例 */
 type _UniNumberBoxInstance = InstanceType<_UniNumberBox>;

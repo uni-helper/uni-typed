@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** Swiper 直接子组件属性 */
 type _SwiperItemProps = Partial<{
@@ -11,7 +11,7 @@ type _SwiperItemProps = Partial<{
  *
  * 不能被子组件自动撑开
  */
-type _SwiperItem = Component<_SwiperItemProps>;
+type _SwiperItem = DefineComponent<_SwiperItemProps>;
 
 /** Swiper 直接子组件实例 */
 type _SwiperItemInstance = InstanceType<_SwiperItem>;

@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 收藏按钮文字 */
 interface _UniFavContentText {
@@ -69,7 +69,7 @@ type _UniFavProps = Partial<{
 }>;
 
 /** 用于收藏功能，可点击切换选中、不选中的状态 */
-type _UniFav = Component<_UniFavProps>;
+type _UniFav = DefineComponent<_UniFavProps>;
 
 type _UniFavInstance = InstanceType<_UniFav>;
 

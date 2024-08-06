@@ -1,4 +1,5 @@
-import type { Component, CustomEvent } from "@uni-helper/uni-app-types";
+import type { CustomEvent } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 输入内容 */
 type _UniEasyinputValue = string | number;
@@ -286,7 +287,7 @@ type _UniEasyinputProps = Partial<{
 }>;
 
 /** 对原生 input 组件的增强 */
-type _UniEasyinput = Component<_UniEasyinputProps>;
+type _UniEasyinput = DefineComponent<_UniEasyinputProps>;
 
 type _UniEasyinputInstance = InstanceType<_UniEasyinput>;
 

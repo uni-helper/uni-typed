@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _EditorOnReadyEvent = BaseEvent;
@@ -9,7 +9,7 @@ type _EditorOnReady = (event: _EditorOnReadyEvent) => void;
 interface _EditorOnFocusDetail {
   html: string;
   text: string;
-  delta: AnyRecord;
+  delta: Record<string, any>;
 }
 
 type _EditorOnFocusEvent = CustomEvent<_EditorOnFocusDetail>;
@@ -20,7 +20,7 @@ type _EditorOnFocus = (event: _EditorOnFocusEvent) => void;
 interface _EditorOnBlurDetail {
   html: string;
   text: string;
-  delta: AnyRecord;
+  delta: Record<string, any>;
 }
 
 type _EditorOnBlurEvent = CustomEvent<_EditorOnBlurDetail>;
@@ -31,7 +31,7 @@ type _EditorOnBlur = (event: _EditorOnBlurEvent) => void;
 interface _EditorOnInputDetail {
   html: string;
   text: string;
-  delta: AnyRecord;
+  delta: Record<string, any>;
 }
 
 type _EditorOnInputEvent = CustomEvent<_EditorOnInputDetail>;
@@ -93,7 +93,7 @@ type _EditorProps = Partial<{
  *
  * 图片控件仅初始化时设置有效
  */
-type _Editor = Component<_EditorProps>;
+type _Editor = DefineComponent<_EditorProps>;
 
 /** 富文本编辑器实例 */
 type _EditorInstance = InstanceType<_Editor>;

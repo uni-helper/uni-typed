@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 屏幕方向
@@ -64,7 +64,7 @@ type _MatchMediaProps = Partial<{
  *
  * 可以指定一组 media query 媒体查询规则，满足查询条件时，这个组件才会被展示
  */
-type _MatchMedia = Component<_MatchMediaProps>;
+type _MatchMedia = DefineComponent<_MatchMediaProps>;
 
 /** Media query 匹配检测节点实例 */
 type _MatchMediaInstance = InstanceType<_MatchMedia>;

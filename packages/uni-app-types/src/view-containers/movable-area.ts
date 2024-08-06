@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** 可拖动区域属性 */
 type _MovableAreaProps = Partial<{
@@ -21,7 +21,7 @@ type _MovableAreaProps = Partial<{
  *
  * 默认宽高为 10px
  */
-type _MovableArea = Component<_MovableAreaProps>;
+type _MovableArea = DefineComponent<_MovableAreaProps>;
 
 /** 可拖动区域实例 */
 type _MovableAreaInstance = InstanceType<_MovableArea>;

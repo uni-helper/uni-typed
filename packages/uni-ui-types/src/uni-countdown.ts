@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 动态更新时间后，刷新组件显示 */
 type _UniCountdownOnUpdate = () => void;
@@ -81,7 +81,7 @@ type _UniCountdownProps = Partial<{
 }>;
 
 /** 倒计时 */
-type _UniCountdown = Component<_UniCountdownProps>;
+type _UniCountdown = DefineComponent<_UniCountdownProps>;
 
 /** 倒计时实例 */
 type _UniCountdownInstance = InstanceType<_UniCountdown>;

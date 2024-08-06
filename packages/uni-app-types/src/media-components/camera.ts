@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -153,7 +153,7 @@ type _CameraProps = Partial<{
 }>;
 
 /** 页面内嵌的区域相机组件 */
-type _Camera = Component<_CameraProps>;
+type _Camera = DefineComponent<_CameraProps>;
 
 /** 页面内嵌的区域相机组件实例 */
 type _CameraInstance = InstanceType<_Camera>;

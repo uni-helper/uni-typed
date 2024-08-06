@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 空字符串 单选
@@ -98,7 +98,7 @@ type _UniTableProps = Partial<{
 }>;
 
 /** 表格 */
-type _UniTable = Component<_UniTableProps>;
+type _UniTable = DefineComponent<_UniTableProps>;
 
 /** 表格实例 */
 type _UniTableInstance = InstanceType<_UniTable>;

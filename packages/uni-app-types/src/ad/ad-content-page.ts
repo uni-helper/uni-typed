@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdContentPageOnLoadEvent = BaseEvent;
@@ -142,7 +142,7 @@ type _AdContentPageProps = Partial<{
 }>;
 
 /** 短视频内容联盟广告 */
-type _AdContentPage = Component<_AdContentPageProps>;
+type _AdContentPage = DefineComponent<_AdContentPageProps>;
 
 /** 短视频内容联盟广告实例 */
 type _AdContentPageInstance = InstanceType<_AdContentPage>;

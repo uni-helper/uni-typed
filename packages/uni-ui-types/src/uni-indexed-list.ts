@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 数据对象 */
 interface _UniIndexedListOption {
@@ -46,7 +46,7 @@ type _UniIndexedListProps = Partial<{
 }>;
 
 /** 索引列表 */
-type _UniIndexedList = Component<_UniIndexedListProps>;
+type _UniIndexedList = DefineComponent<_UniIndexedListProps>;
 
 /** 索引列表实例 */
 type _UniIndexedListInstance = InstanceType<_UniIndexedList>;

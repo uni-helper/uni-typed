@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** 输入框的内容 */
@@ -363,7 +363,7 @@ type _InputProps = Partial<{
 }>;
 
 /** 输入框 */
-type _Input = Component<_InputProps>;
+type _Input = DefineComponent<_InputProps>;
 
 /** 输入框实例 */
 type _InputInstance = InstanceType<_Input>;

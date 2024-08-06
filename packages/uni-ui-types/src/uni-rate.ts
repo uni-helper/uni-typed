@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 评分 */
 type _UniRateValue = number;
@@ -95,7 +95,7 @@ type _UniRateProps = Partial<{
 }>;
 
 /** 评分组件，多用于购买商品后，对商品进行评价等场景 */
-type _UniRate = Component<_UniRateProps>;
+type _UniRate = DefineComponent<_UniRateProps>;
 
 /** 评分组件实例 */
 type _UniRateInstance = InstanceType<_UniRate>;

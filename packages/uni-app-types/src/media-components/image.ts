@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -150,7 +150,7 @@ type _ImageProps = Partial<{
 }>;
 
 /** 图片 */
-type _Image = Component<_ImageProps>;
+type _Image = DefineComponent<_ImageProps>;
 
 /** 图片实例 */
 type _ImageInstance = InstanceType<_Image>;

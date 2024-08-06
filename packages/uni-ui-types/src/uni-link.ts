@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 外部网页超链接组件属性 */
 type _UniLinkProps = Partial<{
@@ -45,7 +45,7 @@ type _UniLinkProps = Partial<{
  *
  * 在 H5 端打开新网页
  */
-type _UniLink = Component<_UniLinkProps>;
+type _UniLink = DefineComponent<_UniLinkProps>;
 
 /** 外部网页超链接组件实例 */
 type _UniLinkInstance = InstanceType<_UniLink>;

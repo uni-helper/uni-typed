@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 标题类型 */
 type _UniTitleType = "h1" | "h2" | "h3" | "h4" | "h5";
@@ -52,7 +52,7 @@ type _UniTitleProps = Partial<{
  *
  * 使用当前组件，uni-app 如果开启统计，将会自动统计页面标题
  */
-type _UniTitle = Component<_UniTitleProps>;
+type _UniTitle = DefineComponent<_UniTitleProps>;
 
 type _UniTitleInstance = InstanceType<_UniTitle>;
 

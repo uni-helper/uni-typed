@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 import type { CheckboxValue } from "./checkbox";
 
@@ -18,7 +18,7 @@ type _CheckboxGroupProps = Partial<{
 }>;
 
 /** 多项选择器，内部由多个 checkbox 组成 */
-type _CheckboxGroup = Component<_CheckboxGroupProps>;
+type _CheckboxGroup = DefineComponent<_CheckboxGroupProps>;
 
 /** 多项选择器实例 */
 type _CheckboxGroupInstance = InstanceType<_CheckboxGroup>;

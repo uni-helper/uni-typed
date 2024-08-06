@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 单元格对齐方式 */
 type _UniTdAlign = "left" | "center" | "right";
@@ -30,7 +30,7 @@ type _UniTdProps = Partial<{
   colspan: number | string;
 }>;
 
-type _UniTd = Component<_UniTdProps>;
+type _UniTd = DefineComponent<_UniTdProps>;
 
 type _UniTdInstance = InstanceType<_UniTd>;
 

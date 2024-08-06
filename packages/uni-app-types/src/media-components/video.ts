@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 弹幕 */
@@ -411,7 +411,7 @@ type _VideoProps = Partial<{
    */
   playStrategy: _VideoPlayStrategy;
   /** HTTP 请求 Header */
-  header: AnyRecord;
+  header: Record<string, any>;
   /** 开始/继续播放时触发 */
   onPlay: _VideoOnPlay;
   /** 暂停播放时触发 */
@@ -453,7 +453,7 @@ type _VideoProps = Partial<{
  *
  * 默认宽度 300px、高度 225px，可通过 css 设置宽高
  */
-type _Video = Component<_VideoProps>;
+type _Video = DefineComponent<_VideoProps>;
 
 /** 视频播放组件实例 */
 type _VideoInstance = InstanceType<_Video>;

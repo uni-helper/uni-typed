@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 选项的排列方向
@@ -52,7 +52,7 @@ type _CustomTabBarProps = Partial<{
 }>;
 
 /** 自定义 tabBar 组件 */
-type _CustomTabBar = Component<_CustomTabBarProps>;
+type _CustomTabBar = DefineComponent<_CustomTabBarProps>;
 
 /** 自定义 tabBar 组件实例 */
 type _CustomTabBarInstance = InstanceType<_CustomTabBar>;

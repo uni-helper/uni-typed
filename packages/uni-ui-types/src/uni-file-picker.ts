@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 interface _UniFilePickerValue {
   name: string;
@@ -463,7 +463,7 @@ type _UniFilePickerObjectProps = _UniFilePickerBaseProps &
 type _UniFilePickerProps = _UniFilePickerArrayProps | _UniFilePickerObjectProps;
 
 /** 文件选择上传组件，可以选择图片、视频等任意文件并上传到当前绑定的服务空间 */
-type _UniFilePicker = Component<_UniFilePickerProps>;
+type _UniFilePicker = DefineComponent<_UniFilePickerProps>;
 
 /** 文件选择上传组件属性 */
 type _UniFilePickerInstance = InstanceType<_UniFilePicker>;

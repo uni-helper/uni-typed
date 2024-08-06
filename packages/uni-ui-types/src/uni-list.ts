@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 列表属性 */
 type _UniListProps = Partial<{
@@ -25,7 +25,7 @@ type _UniListProps = Partial<{
  *
  * 涉及很多大图或丰富内容的列表，比如类今日头条的新闻列表、类淘宝的电商列表，需要通过扩展插槽实现
  */
-type _UniList = Component<_UniListProps>;
+type _UniList = DefineComponent<_UniListProps>;
 
 /** 列表实例 */
 type _UniListInstance = InstanceType<_UniList>;

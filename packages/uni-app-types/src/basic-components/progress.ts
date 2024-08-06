@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent } from "../events";
 
 /**
@@ -92,7 +92,7 @@ type _ProgressProps = Partial<{
 }>;
 
 /** 进度条 */
-type _Progress = Component<_ProgressProps>;
+type _Progress = DefineComponent<_ProgressProps>;
 
 /** 进度条实例 */
 type _ProgressInstance = InstanceType<_Progress>;

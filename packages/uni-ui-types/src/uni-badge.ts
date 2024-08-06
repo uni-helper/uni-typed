@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 角标颜色类型
@@ -25,7 +25,7 @@ type _UniBadgeType = "default" | "primary" | "success" | "warning" | "error";
 type _UniBadgeSize = "normal" | "small";
 
 /** 自定义样式 */
-type _UniBadgeCustomStyle = AnyRecord;
+type _UniBadgeCustomStyle = Record<string, any>;
 
 /**
  * 开启绝对定位，角标将定位到其包裹的标签的四个角上
@@ -134,7 +134,7 @@ type _UniBadgeProps = Partial<{
  *
  * 一般和其它控件（列表、九宫格等）配合使用，用于进行数量提示，默认为实心灰色背景
  */
-type _UniBadge = Component<_UniBadgeProps>;
+type _UniBadge = DefineComponent<_UniBadgeProps>;
 
 /** 数字角标实例 */
 type _UniBadgeInstance = InstanceType<_UniBadge>;

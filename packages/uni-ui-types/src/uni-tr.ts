@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniTrProps = Partial<{
   /**
@@ -10,7 +10,7 @@ type _UniTrProps = Partial<{
   keyValue: string | number;
 }>;
 
-type _UniTr = Component<_UniTrProps>;
+type _UniTr = DefineComponent<_UniTrProps>;
 
 type _UniTrInstance = InstanceType<_UniTr>;
 

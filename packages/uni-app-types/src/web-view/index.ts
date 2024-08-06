@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 样式 */
@@ -52,7 +52,7 @@ type _WebViewProps = Partial<{
 }>;
 
 /** Web 浏览器组件，可承载网页 */
-type _WebView = Component<_WebViewProps>;
+type _WebView = DefineComponent<_WebViewProps>;
 
 /** Web 浏览器组件实例 */
 type _WebViewInstance = InstanceType<_WebView>;

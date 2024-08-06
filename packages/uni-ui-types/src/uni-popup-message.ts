@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 消息提示主题
@@ -48,7 +48,7 @@ type _UniPopupMessageProps = Partial<{
 }>;
 
 /** 消息弹窗 */
-type _UniPopupMessage = Component<_UniPopupMessageProps>;
+type _UniPopupMessage = DefineComponent<_UniPopupMessageProps>;
 
 type _UniPopupMessageInstance = InstanceType<_UniPopupMessage>;
 

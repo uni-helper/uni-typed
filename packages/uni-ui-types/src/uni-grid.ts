@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 interface _UniGridOnChangeDetail {
   index: number;
@@ -48,7 +48,7 @@ type _UniGridProps = Partial<{
 }>;
 
 /** 宫格 */
-type _UniGrid = Component<_UniGridProps>;
+type _UniGrid = DefineComponent<_UniGridProps>;
 
 /** 宫格属性 */
 type _UniGridInstance = InstanceType<_UniGrid>;

@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** 输入框内容 */
@@ -236,7 +236,7 @@ type _TextareaProps = Partial<{
 }>;
 
 /** 多行输入框 */
-type _Textarea = Component<_TextareaProps>;
+type _Textarea = DefineComponent<_TextareaProps>;
 
 /** 多行输入框实例 */
 type _TextareaInstance = InstanceType<_Textarea>;

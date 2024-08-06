@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /**
  * 选择器类型
@@ -138,7 +138,7 @@ type _UniDatetimePickerProps = Partial<{
 }>;
 
 /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间 */
-type _UniDatetimePicker = Component<_UniDatetimePickerProps>;
+type _UniDatetimePicker = DefineComponent<_UniDatetimePickerProps>;
 
 type _UniDatetimePickerInstance = InstanceType<_UniDatetimePicker>;
 

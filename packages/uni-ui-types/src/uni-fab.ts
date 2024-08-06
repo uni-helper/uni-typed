@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 import type { UniIconsCustomType, UniIconsType } from "./uni-icons";
 
 /** 可选样式配置项 */
@@ -142,7 +142,7 @@ type _UniFabProps = Partial<{
 }>;
 
 /** 点击可展开一个图形按钮菜单 */
-type _UniFab = Component<_UniFabProps>;
+type _UniFab = DefineComponent<_UniFabProps>;
 
 type _UniFabInstance = InstanceType<_UniFab>;
 

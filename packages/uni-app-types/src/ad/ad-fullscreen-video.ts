@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdFullscreenVideoOnLoadEvent = BaseEvent;
@@ -53,7 +53,7 @@ type _AdFullscreenVideoProps = Partial<{
 }>;
 
 /** 全屏视频广告 */
-type _AdFullscreenVideo = Component<_AdFullscreenVideoProps>;
+type _AdFullscreenVideo = DefineComponent<_AdFullscreenVideoProps>;
 
 /** 全屏视频广告实例 */
 type _AdFullscreenVideoInstance = InstanceType<_AdFullscreenVideo>;

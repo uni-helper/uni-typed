@@ -1,8 +1,9 @@
 // https://github.com/wechat-miniprogram/api-typings/blob/5dab2fb5f471f683ad297de32c0e33ede295dcff/types/wx/lib.wx.event.d.ts
-import type { AnyRecord } from "../component";
 
 /** 组件的一些属性值集合 */
-interface _EventTarget<Dataset extends AnyRecord = AnyRecord> {
+interface _EventTarget<
+  Dataset extends Record<string, any> = Record<string, any>,
+> {
   /** 事件源组件的id */
   id?: string;
   /** 当前组件的类型 */
@@ -18,9 +19,9 @@ interface _EventTarget<Dataset extends AnyRecord = AnyRecord> {
 
 /** 基础事件 */
 interface _BaseEvent<
-  Mark extends AnyRecord = AnyRecord,
-  CurrentTargetDataset extends AnyRecord = AnyRecord,
-  TargetDataset extends AnyRecord = CurrentTargetDataset,
+  Mark extends Record<string, any> = Record<string, any>,
+  CurrentTargetDataset extends Record<string, any> = Record<string, any>,
+  TargetDataset extends Record<string, any> = CurrentTargetDataset,
 > {
   /** 事件类型 */
   type?: string;
@@ -37,10 +38,10 @@ interface _BaseEvent<
 
 /** 自定义事件 */
 interface _CustomEvent<
-  Detail extends AnyRecord = AnyRecord,
-  Mark extends AnyRecord = AnyRecord,
-  CurrentTargetDataset extends AnyRecord = AnyRecord,
-  TargetDataset extends AnyRecord = CurrentTargetDataset,
+  Detail extends Record<string, any> = Record<string, any>,
+  Mark extends Record<string, any> = Record<string, any>,
+  CurrentTargetDataset extends Record<string, any> = Record<string, any>,
+  TargetDataset extends Record<string, any> = CurrentTargetDataset,
 > extends _BaseEvent<Mark, CurrentTargetDataset, TargetDataset> {
   /** 额外信息 */
   detail: Detail;
@@ -73,11 +74,11 @@ interface _TouchCanvasDetail {
 
 /** 触摸事件 */
 interface _BaseTouchEvent<
-  Detail extends AnyRecord = AnyRecord,
+  Detail extends Record<string, any> = Record<string, any>,
   T extends _TouchDetail | _TouchCanvasDetail = _TouchDetail,
-  Mark extends AnyRecord = AnyRecord,
-  CurrentTargetDataset extends AnyRecord = AnyRecord,
-  TargetDataset extends AnyRecord = CurrentTargetDataset,
+  Mark extends Record<string, any> = Record<string, any>,
+  CurrentTargetDataset extends Record<string, any> = Record<string, any>,
+  TargetDataset extends Record<string, any> = CurrentTargetDataset,
 > extends _CustomEvent<Detail, Mark, CurrentTargetDataset, TargetDataset> {
   /** 当前停留在屏幕中的触摸点信息的数组 */
   touches: T[];
@@ -87,10 +88,10 @@ interface _BaseTouchEvent<
 
 /** 触摸事件响应 */
 interface _TouchEvent<
-  Detail extends AnyRecord = AnyRecord,
-  Mark extends AnyRecord = AnyRecord,
-  CurrentTargetDataset extends AnyRecord = AnyRecord,
-  TargetDataset extends AnyRecord = CurrentTargetDataset,
+  Detail extends Record<string, any> = Record<string, any>,
+  Mark extends Record<string, any> = Record<string, any>,
+  CurrentTargetDataset extends Record<string, any> = Record<string, any>,
+  TargetDataset extends Record<string, any> = CurrentTargetDataset,
 > extends _BaseTouchEvent<
     Detail,
     _TouchDetail,
@@ -101,8 +102,8 @@ interface _TouchEvent<
 
 /** canvas 触摸事件响应 */
 interface _TouchCanvasEvent<
-  Mark extends AnyRecord = AnyRecord,
-  TargetDataset extends AnyRecord = AnyRecord,
+  Mark extends Record<string, any> = Record<string, any>,
+  TargetDataset extends Record<string, any> = Record<string, any>,
 > extends _BaseTouchEvent<
     never,
     _TouchCanvasDetail,

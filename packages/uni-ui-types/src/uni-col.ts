@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 栅格规则 */
 type _UniColRules = Partial<{
@@ -32,7 +32,7 @@ type _UniColProps = _UniColRules &
   }>;
 
 /** 流式栅格系统中的列 */
-type _UniCol = Component<_UniColProps>;
+type _UniCol = DefineComponent<_UniColProps>;
 
 /** 流式栅格系统中的列实例 */
 type _UniColInstance = InstanceType<_UniCol>;

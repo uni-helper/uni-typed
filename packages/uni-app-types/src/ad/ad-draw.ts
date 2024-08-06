@@ -1,4 +1,4 @@
-import type { AnyRecord, Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdDrawOnLoadEvent = BaseEvent;
@@ -23,7 +23,7 @@ type _AdDrawProps = Partial<{
   /** APP 广告位 id */
   adpid: string;
   /** 广告数据 */
-  data: AnyRecord;
+  data: Record<string, any>;
   /** 广告加载成功的回调 */
   onLoad: _AdDrawOnLoad;
   /** 广告加载失败的回调 */
@@ -31,7 +31,7 @@ type _AdDrawProps = Partial<{
 }>;
 
 /** 沉浸视频流广告 */
-type _AdDraw = Component<_AdDrawProps>;
+type _AdDraw = DefineComponent<_AdDrawProps>;
 
 /** 沉浸视频流广告实例 */
 type _AdDrawInstance = InstanceType<_AdDraw>;

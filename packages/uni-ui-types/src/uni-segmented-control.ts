@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 当前选中的索引 */
 type _UniSegmentedControlCurrent = number;
@@ -52,7 +52,7 @@ type _UniSegmentedControlProps = Partial<{
 }>;
 
 /** 分段器，用作不同视图的显示 */
-type _UniSegmentedControl = Component<_UniSegmentedControlProps>;
+type _UniSegmentedControl = DefineComponent<_UniSegmentedControlProps>;
 
 /** 分段器实例 */
 type _UniSegmentedControlInstance = InstanceType<_UniSegmentedControl>;

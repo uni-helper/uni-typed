@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /** 视图容器属性 */
 type _ViewProps = Partial<{
@@ -41,7 +41,7 @@ type _ViewProps = Partial<{
  *
  * 如果使用 div，会编译成 view
  */
-type _View = Component<_ViewProps>;
+type _View = DefineComponent<_ViewProps>;
 
 /** 视图容器实例 */
 type _ViewInstance = InstanceType<_View>;

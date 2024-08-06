@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 type _UniCardOnClickType = "cover" | "title" | "extra" | "content" | "actions";
 
@@ -82,7 +82,7 @@ type _UniCardProps = Partial<{
  *
  * 卡片通常是更复杂和更详细信息的入口点
  */
-type _UniCard = Component<_UniCardProps>;
+type _UniCard = DefineComponent<_UniCardProps>;
 
 /** 卡片组件实例 */
 type _UniCardInstance = InstanceType<_UniCard>;

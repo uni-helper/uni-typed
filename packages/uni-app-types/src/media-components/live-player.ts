@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -388,7 +388,7 @@ type _LivePlayerProps = Partial<{
 }>;
 
 /** 实时音视频播放（直播拉流） */
-type _LivePlayer = Component<_LivePlayerProps>;
+type _LivePlayer = DefineComponent<_LivePlayerProps>;
 
 /** 实时音视频播放（直播拉流）实例 */
 type _LivePlayerInstance = InstanceType<_LivePlayer>;

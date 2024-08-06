@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 点击触发 */
 type _UniNoticeBarOnClick = () => void;
@@ -92,7 +92,7 @@ type _UniNoticeBarProps = Partial<{
 }>;
 
 /** 通告栏 */
-type _UniNoticeBar = Component<_UniNoticeBarProps>;
+type _UniNoticeBar = DefineComponent<_UniNoticeBarProps>;
 
 /** 通告栏实例 */
 type _UniNoticeBarInstance = InstanceType<_UniNoticeBar>;

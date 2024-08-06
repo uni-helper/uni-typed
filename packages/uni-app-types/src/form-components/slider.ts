@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { CustomEvent } from "../events";
 
 /** 取值 */
@@ -95,7 +95,7 @@ type _SliderProps = Partial<{
 }>;
 
 /** 滑动选择器 */
-type _Slider = Component<_SliderProps>;
+type _Slider = DefineComponent<_SliderProps>;
 
 /** 滑动选择器实例 */
 type _SliderInstance = InstanceType<_Slider>;

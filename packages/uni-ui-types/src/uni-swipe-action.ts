@@ -1,4 +1,4 @@
-import type { Component } from "@uni-helper/uni-app-types";
+import type { DefineComponent } from "vue";
 
 /** 动态添加数据后，如不能正常滑动，需要主动调用此方法 */
 type _UniSwipeActionResize = () => void;
@@ -18,7 +18,7 @@ type _UniSwipeActionProps = Partial<{
  *
  * 通过滑动触发选项的容器
  */
-type _UniSwipeAction = Component<_UniSwipeActionProps>;
+type _UniSwipeAction = DefineComponent<_UniSwipeActionProps>;
 
 type _UniSwipeActionInstance = InstanceType<_UniSwipeAction>;
 

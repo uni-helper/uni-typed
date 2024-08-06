@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 import type { BaseEvent, CustomEvent } from "../events";
 
 interface _AudioOnErrorDetail {
@@ -99,7 +99,7 @@ type _AudioProps = Partial<{
 }>;
 
 /** 音频 */
-type _Audio = Component<_AudioProps>;
+type _Audio = DefineComponent<_AudioProps>;
 
 /** 音频实例 */
 type _AudioInstance = InstanceType<_Audio>;

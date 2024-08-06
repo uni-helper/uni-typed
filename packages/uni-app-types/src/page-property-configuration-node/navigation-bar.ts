@@ -1,4 +1,4 @@
-import type { Component } from "../component";
+import type { DefineComponent } from "vue";
 
 /**
  * 副标题文字超出显示区域时处理方式
@@ -187,7 +187,7 @@ type _NavigationBarProps = Partial<{
  *
  * 只能是 page-meta 组件内的第一个节点，需要配合 page-meta 一同使用
  */
-type _NavigationBar = Component<_NavigationBarProps>;
+type _NavigationBar = DefineComponent<_NavigationBarProps>;
 
 /** 页面导航条配置节点实例 */
 type _NavigationBarInstance = InstanceType<_NavigationBar>;
