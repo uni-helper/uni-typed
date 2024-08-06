@@ -21,8 +21,8 @@
 
 请参考 [这里](https://cn.vuejs.org/guide/typescript/overview.html) 将 Volar（Vue 语言服务工具）添加到你的编辑器或 IDE，配置完毕后请重启你的编辑器或 IDE 以确保服务启动。
 
-> [!WARNING]
-> Volar 需要 v2.0.22 或更高版本，对应地，TypeScript 需要 v5.0.0 或更高版本。
+> [!TIP]
+> 截至 2024-08-06，经实测确定，版本组合 Volar v2.0.28、TypeScript v5.5.4、Vue v3.4.35 可正常实现类型提示。
 
 ### 安装依赖
 
@@ -30,7 +30,7 @@
 npm i -D @uni-helper/uni-app-types
 ```
 
-此外你需要确保项目已经安装 Vue v3.0.0 或更高版本，以及 TypeScript v5 或更高版本。
+此外你需要确保项目已经安装 Vue 和 TypeScript。
 
 > [!TIP]
 > 为了避免幽灵依赖（又称幻影依赖，详见 [这篇文章](https://rushjs.io/zh-cn/pages/advanced/phantom_deps/)），请检查你的包管理器。
@@ -50,9 +50,7 @@ npm i -D @uni-helper/uni-app-types
 以下是一个 `tsconfig.json` 示例，你可以直接复制它并粘贴到项目内。请注意，你可能需要稍微调整以匹配你的开发需求，相关依赖需要自行安装。
 
 > [!WARNING]
-> 再次提醒，TypeScript 需要 v5.0.0 或更高版本。
->
-> 截至 2024-07-28，uni-app 官方提供的 Vue3 + Vite + TypeScript 模板版本相对落后，如果你正在使用它，你需要手动升级。
+> 截至 2024-07-28，uni-app 官方提供的 Vue v3 + Vite + TypeScript 模板版本相对落后，如果你正在使用它，请手动升级 TypeScript 和 Vue 版本，[playground/package.json](https://github.com/uni-helper/uni-types/blob/main/playground/package.json) 可供参考。
 >
 > 你也可以在这里获取 [社区模板](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 以起步。
 
@@ -161,22 +159,26 @@ const onScroll = (text: string, event: ScrollViewOnScrollEvent) => {
 
 请查看 [src](./src) 了解所有类型。
 
-## 其它
+## FAQ
 
 ### Vue 2 支持情况
 
-如果你正在使用 Vue 2、需要组件 TypeScript 类型支持，请使用 Volar v2.0.21 和 @uni-helper/uni-app-types v0.5，这是最后已知可用的版本组合。
+如果你正在使用 Vue 2、需要组件 TypeScript 类型支持，请使用 Volar v2.0.21、@uni-helper/uni-app-types v0.5 和 TypeScript v5.4.5，这是最后已知可用的版本组合。
 
 > [👉 点击获取 Volar v2.0.21 VS Code Extension](../../assets/Vue.volar-2.0.21.vsix)
 
-如果你正在使用 Vue 2、无需组件 TypeScript 类型支持，请使用 [Vetur](https://github.com/vuejs/vetur)。
+如果你正在使用 Vue 2、无需组件 TypeScript 类型支持，请使用 [Vetur](https://github.com/vuejs/vetur) 和 [@dcloudio/uni-helper-json](https://www.npmjs.com/package/@dcloudio/uni-helper-json)。
 
 > [!WARNING]
 > Volar 和 Vetur 不可共存，请只启用其中一个。
 
-### 类型与文档冲突或类型不正确
+### 类型不正确
 
-类型与官方文档的冲突之处，请以官方文档为准。如果发现类型冲突或类型不正确等问题，请考虑在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
+该项目强依赖 Volar、TypeScript 和 Vue 内部类型和处理，更改内部类型和处理不会对使用者造成破坏性更新，但可能会对开发者造成破坏性更新，对因此更新三者任一依赖后，可能无法正常显示本身是 HTML 自带但被占用的元素的 TypeScript 类型（如 SVG 相关元素 view、image、text、输入框元素 input 等），我们强烈建议锁定依赖版本以避免类似问题。如果你遇到了类似的问题，请先回退并锁定版本，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
+
+### 类型与文档冲突或
+
+类型与官方文档的冲突之处，请以官方文档为准，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
 
 ## 致谢
 
