@@ -6,11 +6,5 @@
   "vueCompilerOptions": {
     "plugins": ["@uni-helper/uni-types/volar-plugin"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "*.d.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.vue", "*.d.ts"]
 }
