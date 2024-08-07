@@ -7,6 +7,9 @@
     "target": "ESNext",
     "resolveJsonModule": true,
     "paths": {
+      "@uni-helper/uni-app-components": [
+        "./packages/uni-app-components/src/index.ts"
+      ],
       "@uni-helper/uni-app-types": ["./packages/uni-app-types/src/index.ts"],
       "@uni-helper/uni-cloud-types": [
         "./packages/uni-cloud-types/src/index.ts"

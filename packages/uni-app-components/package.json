@@ -1,0 +1,82 @@
+{
+  "name": "@uni-helper/uni-app-components",
+  "version": "0.0.0",
+  "description": "WIP 带有 TypeScript 类型的 uni-app 组件",
+  "keywords": [
+    "uni-app",
+    "uniapp",
+    "types",
+    "type",
+    "component"
+  ],
+  "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-app-components",
+  "bugs": {
+    "url": "https://github.com/uni-helper/uni-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uni-helper/uni-types.git"
+  },
+  "funding": "https://github.com/ModyQyW/sponsors",
+  "license": "MIT",
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui.dev@gmail.com",
+    "url": "https://modyqyw.top"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/index.d.ts",
+        "dist/components/index.d.ts",
+        "dist/components/*/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "components.d.ts",
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "pnpm build",
+    "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@uni-helper/uni-app-types": "workspace:*"
+  },
+  "devDependencies": {
+    "vue": "^3.4.36"
+  },
+  "peerDependencies": {
+    "@uni-helper/uni-app-types": "workspace:*",
+    "typescript": "^5.5.4",
+    "vue": "^3.4.35"
+  },
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=14.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
