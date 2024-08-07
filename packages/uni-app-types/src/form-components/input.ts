@@ -94,7 +94,8 @@ interface _InputOnInputDetail {
 type _InputOnInputEvent = CustomEvent<_InputOnInputDetail>;
 
 /** 输入时触发 */
-type _InputOnInput = (event: _InputOnInputEvent) => string | undefined;
+// biome-ignore lint/suspicious/noConfusingVoidType: as expected
+type _InputOnInput = (event: _InputOnInputEvent) => string | void;
 
 interface _InputOnFocusDetail {
   value: _InputValue;

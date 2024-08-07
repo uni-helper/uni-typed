@@ -60,7 +60,8 @@ interface _TextareaOnInputDetail {
 type _TextareaOnInputEvent = CustomEvent<_TextareaOnInputDetail>;
 
 /** 输入时触发 */
-type _TextareaOnInput = (event: _TextareaOnInputEvent) => string | undefined;
+// biome-ignore lint/suspicious/noConfusingVoidType: as expected
+type _TextareaOnInput = (event: _TextareaOnInputEvent) => string | void;
 
 interface _TextareaOnConfirmDetail {
   value: _TextareaValue;
