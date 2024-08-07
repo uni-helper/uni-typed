@@ -22,7 +22,7 @@
 请参考 [这里](https://cn.vuejs.org/guide/typescript/overview.html) 将 Volar（Vue 语言服务工具）添加到你的编辑器或 IDE，配置完毕后请重启你的编辑器或 IDE 以确保服务启动。
 
 > [!TIP]
-> 截至 2024-08-06，经实测确定，版本组合 Volar v2.0.28、TypeScript v5.5.4、Vue v3.4.35 可正常实现类型提示。
+> 截至 2024-08-07，经实测确定，版本组合 Volar v2.0.28、TypeScript v5.5.4、Vue v3.4.36 可正常实现类型提示。
 
 ### 安装依赖
 

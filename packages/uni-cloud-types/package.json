@@ -56,13 +56,13 @@
     "stub": "unbuild --stub"
   },
   "devDependencies": {
-    "vue": "^3.4.35"
+    "vue": "^3.4.36"
   },
   "peerDependencies": {
     "typescript": "^5.5.4",
-    "vue": "^3.4.35"
+    "vue": "^3.4.36"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=14.18"
   },
