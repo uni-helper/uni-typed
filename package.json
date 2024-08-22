@@ -41,7 +41,7 @@
     "release": "lerna version",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "test": "vitest run --typecheck",
-    "typecheck": "tsc --noEmit"
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
