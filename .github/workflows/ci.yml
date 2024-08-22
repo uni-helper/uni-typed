@@ -1,3 +1,4 @@
+# https://github.com/unocss/unocss/blob/fe83a90b59cf4599be57ea825166bb74d92b104c/.github/workflows/ci.yml
 name: CI
 
 on:
@@ -38,7 +39,10 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           cache: pnpm
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org
+
+      - name: Setup corepack
+        run: corepack enable
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -49,5 +53,5 @@ jobs:
       - name: Test
         run: pnpm test
 
-      - name: Typecheck
-        run: pnpm typecheck
+      - name: Type Check
+        run: pnpm type-check

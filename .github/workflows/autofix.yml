@@ -1,3 +1,4 @@
+# https://github.com/unocss/unocss/blob/fe83a90b59cf4599be57ea825166bb74d92b104c/.github/workflows/autofix.yml
 name: autofix.ci
 
 on:
@@ -24,17 +25,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: pnpm
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org
 
       - name: Setup corepack
         run: corepack enable
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          CYPRESS_INSTALL_BINARY: 0
 
       - name: Check
         run: pnpm check
