@@ -14,8 +14,15 @@
       "@uni-helper/uni-cloud-types": [
         "./packages/uni-cloud-types/src/index.ts"
       ],
+      "@uni-helper/uni-cloud-components": [
+        "./packages/uni-cloud-components/src/index.ts"
+      ],
       "@uni-helper/uni-ui-types": ["./packages/uni-ui-types/src/index.ts"],
-      "@uni-helper/uni-types": ["./packages/uni-types/src/index.ts"]
+      "@uni-helper/uni-ui-components": [
+        "./packages/uni-ui-components/src/index.ts"
+      ],
+      "@uni-helper/uni-types": ["./packages/uni-types/src/index.ts"],
+      "@uni-helper/uni-components": ["./packages/uni-components/src/index.ts"]
     },
     "strict": true,
     "esModuleInterop": true,
@@ -23,5 +30,6 @@
     "skipDefaultLibCheck": true,
     "types": ["node"]
   },
+  "include": ["packages/**/*.ts", "packages/**/*.d.ts"],
   "exclude": ["**/node_modules/**", "**/dist/**", "**/playground/**"]
 }
