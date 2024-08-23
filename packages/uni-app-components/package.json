@@ -9,13 +9,13 @@
     "type",
     "component"
   ],
-  "homepage": "https://github.com/uni-helper/uni-types/tree/main/packages/uni-app-components",
+  "homepage": "https://github.com/uni-helper/typed/tree/main/packages/uni-app-components",
   "bugs": {
-    "url": "https://github.com/uni-helper/uni-types/issues"
+    "url": "https://github.com/uni-helper/typed/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uni-helper/uni-types.git"
+    "url": "git+https://github.com/uni-helper/typed.git"
   },
   "funding": "https://github.com/ModyQyW/sponsors",
   "license": "MIT",
@@ -64,14 +64,14 @@
     "@uni-helper/uni-app-types": "workspace:*"
   },
   "devDependencies": {
-    "vue": "3.4.36"
+    "vue": "3.4.38"
   },
   "peerDependencies": {
     "@uni-helper/uni-app-types": "workspace:*",
     "typescript": "^5.5.4",
     "vue": "^3.4.21"
   },
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.8.0",
   "engines": {
     "node": ">=14.18"
   },
