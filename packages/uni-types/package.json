@@ -1,7 +1,7 @@
 {
   "name": "@uni-helper/uni-types",
   "version": "1.0.0-alpha.3",
-  "description": "为 uni-app 组件、uni-ui 组件和 uni-cloud 组件提供 TypeScript 类型",
+  "description": "为 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型",
   "keywords": [
     "uni-app",
     "uniapp",

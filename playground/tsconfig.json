@@ -19,7 +19,7 @@
       "vite/client",
       // uni API 相关的 TypeScript 类型
       "@dcloudio/types",
-      // 为 uni-app 组件、uni-cloud 组件和 uni-ui 组件提供 TypeScript 类型
+      // 为 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型
       "@uni-helper/uni-types"
     ]
   },
