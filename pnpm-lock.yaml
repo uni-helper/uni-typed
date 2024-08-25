@@ -48,7 +48,7 @@ importers:
         specifier: workspace:*
         version: link:../uni-app-types
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.0.0
         version: 5.5.4
     devDependencies:
       vue:
@@ -58,7 +58,7 @@ importers:
   packages/uni-app-types:
     dependencies:
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.0.0
         version: 5.5.4
     devDependencies:
       vue:
@@ -68,7 +68,7 @@ importers:
   packages/uni-cloud-types:
     dependencies:
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.0.0
         version: 5.5.4
     devDependencies:
       vue:
@@ -87,7 +87,7 @@ importers:
         specifier: workspace:*
         version: link:../uni-ui-types
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.0.0
         version: 5.5.4
     devDependencies:
       vue:
@@ -100,7 +100,7 @@ importers:
         specifier: workspace:*
         version: link:../uni-app-types
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.0.0
         version: 5.5.4
     devDependencies:
       vue:
