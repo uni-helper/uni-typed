@@ -43,6 +43,13 @@ export default defineConfig({
           { text: "FAQ", link: "/guide/faq" },
         ],
       },
+      {
+        text: "其它",
+        items: [
+          { text: "从 v0 迁移到 v1", link: "/other/migrate-v0-to-v1" },
+          { text: "常见问题", link: "/other/faq" },
+        ],
+      },
     ],
     outline: "deep",
     editLink: {
