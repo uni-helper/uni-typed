@@ -1,4 +1,4 @@
-// https://github.com/wechat-miniprogram/api-typings/blob/5dab2fb5f471f683ad297de32c0e33ede295dcff/types/wx/lib.wx.event.d.ts
+// https://github.com/wechat-miniprogram/api-typings/blob/74d259783a1538f03d63ded23090fca45b9cb239/types/wx/lib.wx.event.d.ts
 
 /** 组件的一些属性值集合 */
 interface _EventTarget<
