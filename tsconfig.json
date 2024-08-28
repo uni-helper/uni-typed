@@ -28,7 +28,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "types": ["node"]
+    "types": ["node", "@dcloudio/types"]
   },
   "include": ["packages/**/*.ts", "packages/**/*.d.ts"],
   "exclude": ["**/node_modules/**", "**/dist/**", "**/playground/**"]
