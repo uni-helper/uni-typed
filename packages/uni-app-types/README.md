@@ -1,8 +1,8 @@
 # @uni-helper/uni-app-types
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-  <a href="https://github.com/uni-helper/typed/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/uni-helper/typed?style=for-the-badge" alt="License" />
+  <a href="https://github.com/uni-helper/uni-typed/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/uni-helper/uni-typed?style=for-the-badge" alt="License" />
   </a>
   <a href="https://www.npmjs.com/package/@uni-helper/uni-app-types">
     <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-app-types?style=for-the-badge" alt="npm" />
@@ -14,7 +14,7 @@
 
 ## 介绍
 
-这个包是 `@uni-helper/typed` 项目的一部分，为 Vue v3 uni-app 组件提供 TypeScript 类型，请 [👉 查看文档](https://uni-typed.netlify.app/) 了解具体用法和示例。
+这个包是 `@uni-helper/uni-typed` 项目的一部分，为 Vue v3 uni-app 组件提供 TypeScript 类型，请 [👉 查看文档](https://uni-typed.netlify.app/) 了解具体用法和示例。
 
 ## 致谢
 
@@ -26,7 +26,7 @@
 
 该项目由 [ModyQyW](https://github.com/ModyQyW) 创建。
 
-感谢 [所有贡献者](https://github.com/uni-helper/typed/graphs/contributors) 的付出！
+感谢 [所有贡献者](https://github.com/uni-helper/uni-typed/graphs/contributors) 的付出！
 
 ## 赞助
 

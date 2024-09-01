@@ -2,7 +2,7 @@
 
 ## 概览
 
-`@uni-helper/typed` 是一个为 [uni-app](https://uniapp.dcloud.io/) 打造的 TypeScript 支持库，包含几个子包：
+`@uni-helper/uni-typed` 是一个为 [uni-app](https://uniapp.dcloud.io/) 打造的 TypeScript 支持库，包含几个子包：
 
 |名称|描述|
 |---|---|
@@ -25,7 +25,7 @@
 
 该项目由 [ModyQyW](https://github.com/ModyQyW) 创建。
 
-感谢 [所有贡献者](https://github.com/uni-helper/typed/graphs/contributors) 的付出！
+感谢 [所有贡献者](https://github.com/uni-helper/uni-typed/graphs/contributors) 的付出！
 
 ## 赞助
 

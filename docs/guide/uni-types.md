@@ -2,7 +2,7 @@
 
 ## 介绍
 
-这个包是 `@uni-helper/typed` 项目的一部分，为 Vue v3 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型。
+这个包是 `@uni-helper/uni-typed` 项目的一部分，为 Vue v3 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型。
 
 ## 安装与配置
 
@@ -175,7 +175,7 @@ const onScroll = (text: string, event: ScrollViewOnScrollEvent) => {
 </template>
 ```
 
-请查看 [源代码](https://github.com/uni-helper/typed/tree/main/packages/uni-types/src) 了解所有类型。
+请查看 [源代码](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-types/src) 了解所有类型。
 
 ## 致谢
 
@@ -187,7 +187,7 @@ const onScroll = (text: string, event: ScrollViewOnScrollEvent) => {
 
 该项目由 [ModyQyW](https://github.com/ModyQyW) 创建。
 
-感谢 [所有贡献者](https://github.com/uni-helper/typed/graphs/contributors) 的付出！
+感谢 [所有贡献者](https://github.com/uni-helper/uni-typed/graphs/contributors) 的付出！
 
 ## 赞助
 

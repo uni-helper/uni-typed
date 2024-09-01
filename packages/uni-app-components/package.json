@@ -9,13 +9,13 @@
     "type",
     "component"
   ],
-  "homepage": "https://github.com/uni-helper/typed/tree/main/packages/uni-app-components",
+  "homepage": "https://github.com/uni-helper/uni-typed/tree/main/packages/uni-app-components",
   "bugs": {
-    "url": "https://github.com/uni-helper/typed/issues"
+    "url": "https://github.com/uni-helper/uni-typed/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uni-helper/typed.git"
+    "url": "git+https://github.com/uni-helper/uni-typed.git"
   },
   "funding": "https://github.com/ModyQyW/sponsors",
   "license": "MIT",

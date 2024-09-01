@@ -2,13 +2,13 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "@uni-helper/typed",
+  title: "@uni-helper/uni-typed",
   description: "为 uni-app 打造的 TypeScript 支持项目",
   head: [
     ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:locale", content: "zh-cn" }],
-    ["meta", { name: "og:site_name", content: "@uni-helper/typed" }],
+    ["meta", { name: "og:site_name", content: "@uni-helper/uni-typed" }],
     [
       "meta",
       {
@@ -27,7 +27,7 @@ export default defineConfig({
         items: [
           {
             text: "更新日志",
-            link: "https://github.com/uni-helper/typed/tree/main/CHANGELOG.md",
+            link: "https://github.com/uni-helper/uni-typed/tree/main/CHANGELOG.md",
           },
         ],
       },
@@ -36,7 +36,7 @@ export default defineConfig({
       {
         text: "指南",
         items: [
-          { text: "为什么是 @uni-helper/typed？", link: "/guide/why" },
+          { text: "为什么是 @uni-helper/uni-typed？", link: "/guide/why" },
           { text: "起步", link: "/guide/getting-started" },
           { text: "uni-app-types", link: "/guide/uni-app-types" },
           { text: "uni-cloud-types", link: "/guide/uni-cloud-types" },
@@ -58,11 +58,11 @@ export default defineConfig({
     ],
     outline: "deep",
     editLink: {
-      pattern: "https://github.com/uni-helper/typed/edit/main/docs/:path",
+      pattern: "https://github.com/uni-helper/uni-typed/edit/main/docs/:path",
     },
     lastUpdated: {},
     socialLinks: [
-      { icon: "github", link: "https://github.com/uni-helper/typed" },
+      { icon: "github", link: "https://github.com/uni-helper/uni-typed" },
     ],
     search: {
       provider: "local",

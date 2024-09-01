@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "@uni-helper/typed"
+  name: "@uni-helper/uni-typed"
   tagline: "为 uni-app 打造的 TypeScript 支持库"
   actions:
     - theme: brand

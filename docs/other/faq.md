@@ -8,7 +8,7 @@ import { version } from '../../lerna.json'
 
 Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C Web 标准、ECMA 规范等）保持一致，这意味着它们对小程序、uni-app 等非开放标准支持度较低。你可以在 [这里](https://github.com/vueuse/vueuse/pull/1073) 了解这一观点。
 
-`@uni-helper/typed` 项目严重依赖 Volar、TypeScript 和 Vue，因此更新其中任一依赖后，编辑器或 IDE 可能无法正常提示部分元素的的 TypeScript 类型（本身是 HTML 自带但被占用的元素，如 SVG 相关元素 view、image、text、输入框元素 input 等），我们强烈建议锁定依赖版本以避免类似问题。
+`@uni-helper/uni-typed` 项目严重依赖 Volar、TypeScript 和 Vue，因此更新其中任一依赖后，编辑器或 IDE 可能无法正常提示部分元素的的 TypeScript 类型（本身是 HTML 自带但被占用的元素，如 SVG 相关元素 view、image、text、输入框元素 input 等），我们强烈建议锁定依赖版本以避免类似问题。
 
 如果你遇到了类似的问题，请先回退并锁定版本，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
 
@@ -49,7 +49,7 @@ Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C We
 
 ## Vue 2 支持情况
 
-如果你正在使用 Vue 2 且需要组件 TypeScript 类型支持，请参考以下版本组合，这是最后已知可用的版本组合。请使用 [Volar v2.0.21](https://cdn.jsdelivr.net/gh/uni-helper/typed/assets/Vue.volar-2.0.21.vsix)、Vue v2.6.14、[@uni-helper/uni-ui-types v0.5](https://github.com/uni-helper/uni-ui-types) 和 TypeScript v5.4.5，这是最后已知可用的版本组合。
+如果你正在使用 Vue 2 且需要组件 TypeScript 类型支持，请参考以下版本组合，这是最后已知可用的版本组合。请使用 [Volar v2.0.21](https://cdn.jsdelivr.net/gh/uni-helper/uni-typed/assets/Vue.volar-2.0.21.vsix)、Vue v2.6.14、[@uni-helper/uni-ui-types v0.5](https://github.com/uni-helper/uni-ui-types) 和 TypeScript v5.4.5，这是最后已知可用的版本组合。
 
 |依赖|版本|
 |---|---|
