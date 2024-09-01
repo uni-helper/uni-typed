@@ -35,7 +35,7 @@ type _AdFullscreenVideoProps = Partial<{
   /**
    * 是否在页面就绪后加载广告数据
    *
-   * 默认为 true
+   * 默认为 `true`
    */
   preload: boolean;
   /**
