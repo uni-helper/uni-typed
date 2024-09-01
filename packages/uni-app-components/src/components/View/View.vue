@@ -9,5 +9,7 @@ const props = defineProps<ViewProps>();
 </script>
 
 <template>
-  <view :props></view>
+  <view :props>
+    <slot></slot>
+  </view>
 </template>

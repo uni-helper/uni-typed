@@ -9,5 +9,7 @@ const props = defineProps<InputProps>();
 </script>
 
 <template>
-  <input :props></input>
+  <input :props>
+    <slot></slot>
+  </input>
 </template>

@@ -9,5 +9,7 @@ const props = defineProps<AdContentPageProps>();
 </script>
 
 <template>
-  <ad-content-page :props></ad-content-page>
+  <ad-content-page :props>
+    <slot></slot>
+  </ad-content-page>
 </template>

@@ -9,5 +9,7 @@ const props = defineProps<AdInteractiveProps>();
 </script>
 
 <template>
-  <ad-draw :props></ad-draw>
+  <ad-draw :props>
+    <slot></slot>
+  </ad-draw>
 </template>
