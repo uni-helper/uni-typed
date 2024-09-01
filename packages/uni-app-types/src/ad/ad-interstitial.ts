@@ -30,13 +30,13 @@ type _AdInterstitialProps = Partial<{
   /**
    * 是否在页面就绪后加载广告数据
    *
-   * 默认为 true
+   * 默认为 `true`
    */
   preload: boolean;
   /**
    * 是否自动加载下一条广告数据
    *
-   * 默认为 false
+   * 默认为 `false`
    */
   loadnext: boolean;
   /** 广告加载成功的回调 */
