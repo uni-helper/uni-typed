@@ -1,4 +1,6 @@
-# 介绍
+# 起步
+
+## 概览
 
 `@uni-helper/typed` 是一个为 [uni-app](https://uniapp.dcloud.io/) 打造的 TypeScript 支持库，包含几个子包：
 

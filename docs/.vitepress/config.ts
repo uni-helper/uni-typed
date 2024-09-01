@@ -21,17 +21,23 @@ export default defineConfig({
   themeConfig: {
     logo: { src: "/logo.png", width: 24, height: 24 },
     nav: [
-      { text: "指南", link: "/guide/introduction" },
+      { text: "指南", link: "/guide/getting-started", activeMatch: "/guide/" },
       {
-        text: "更新日志",
-        link: "https://github.com/uni-helper/typed/tree/main/CHANGELOG.md",
+        text: "资源",
+        items: [
+          {
+            text: "更新日志",
+            link: "https://github.com/uni-helper/typed/tree/main/CHANGELOG.md",
+          },
+        ],
       },
     ],
     sidebar: [
       {
         text: "指南",
         items: [
-          { text: "介绍", link: "/guide/introduction" },
+          { text: "为什么是 @uni-helper/typed？", link: "/guide/why" },
+          { text: "起步", link: "/guide/getting-started" },
           { text: "uni-app-types", link: "/guide/uni-app-types" },
           { text: "uni-cloud-types", link: "/guide/uni-cloud-types" },
           { text: "uni-ui-types", link: "/guide/uni-ui-types" },
