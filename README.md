@@ -1,6 +1,6 @@
 # @uni-helper/typed
 
-👇 请查看文档 了解具体用法和示例。
+👇 请查看文档了解具体用法和示例。
 
 [Netlify](https://uni-typed.netlify.app/) | [Cloudflare Pages](https://uni-typed.pages.dev/)
 

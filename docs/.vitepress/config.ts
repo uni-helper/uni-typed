@@ -40,7 +40,6 @@ export default defineConfig({
           { text: "uni-cloud-components", link: "/guide/uni-cloud-components" },
           { text: "uni-ui-components", link: "/guide/uni-ui-components" },
           { text: "uni-components", link: "/guide/uni-components" },
-          { text: "FAQ", link: "/guide/faq" },
         ],
       },
       {
