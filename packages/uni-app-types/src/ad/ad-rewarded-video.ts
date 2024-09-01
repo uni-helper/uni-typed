@@ -36,13 +36,13 @@ type _AdRewardedVideoProps = Partial<{
   /**
    * 是否在页面就绪后加载广告数据
    *
-   * 默认为 true
+   * 默认为 `true`
    */
   preload: boolean;
   /**
    * 是否自动加载下一条广告数据
    *
-   * 默认为 false
+   * 默认为 `false`
    */
   loadnext: boolean;
   /** 服务器回调透传数据 */
