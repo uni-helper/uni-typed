@@ -16,7 +16,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uni-helper/uni-typed.git"
+    "url": "git+https://github.com/uni-helper/uni-typed.git",
+    "directory": "packages/uni-cloud-types"
   },
   "funding": "https://github.com/ModyQyW/sponsors",
   "license": "MIT",
