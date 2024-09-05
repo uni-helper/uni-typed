@@ -6,7 +6,10 @@
       "**/.git",
       "**/.DS_Store",
       "**/dist",
-      "./playground",
+      "**/cache",
+      "**/coverage",
+      "**/manifest.json",
+      "**/pages.json",
       "./**/package.json",
       "./lerna.json"
     ]
