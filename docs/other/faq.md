@@ -16,7 +16,7 @@ Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C We
 
 |依赖|版本|
 |---|---|
-|Volar|v2.0.28、v2.1.2、v2.1.4|
+|Volar|v2.0.28、v2.1.2、v2.1.4、v2.1.6|
 |TypeScript|v5.5.4|
 |Vue|v3.4.38|
 |@dcloudio/*|v3.0.0-4020420240722002|
