@@ -4,5 +4,6 @@ export * from "./AdFullscreenVideo";
 export * from "./AdInteractive";
 export * from "./AdInterstitial";
 export * from "./AdRewardedVideo";
+export * from "./Ad";
 export * from "./View";
 export * from "./Input";
