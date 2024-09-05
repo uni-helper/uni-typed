@@ -3,6 +3,7 @@
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
+      <input v-model="title"></input>
     </view>
   </view>
 </template>
