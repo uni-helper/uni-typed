@@ -5,8 +5,10 @@ export default defineConfig({
   title: "@uni-helper/uni-typed",
   description: "为 uni-app 打造的 TypeScript 支持项目",
   head: [
+    // icon
     ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
     ["meta", { name: "og:type", content: "website" }],
+    // Open Graph
     ["meta", { name: "og:locale", content: "zh-cn" }],
     ["meta", { name: "og:site_name", content: "@uni-helper/uni-typed" }],
     [
@@ -16,6 +18,22 @@ export default defineConfig({
         content:
           "https://github.com/uni-helper/website/raw/main/.github/assets/uni-helper-banner.png",
       },
+    ],
+    // Google Analytics
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-C9FNSD07XV",
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C9FNSD07XV');`,
     ],
   ],
   themeConfig: {
