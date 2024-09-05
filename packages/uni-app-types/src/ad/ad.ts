@@ -34,7 +34,7 @@ type _AdProps = Partial<{
    *
    * 该参数不传入时 Banner 广告不会自动刷新
    *
-   * 单位为 s
+   * 单位为 `s`
    */
   adIntervals: number;
   /** 广告数据，优先级高于 adpid */
@@ -46,27 +46,27 @@ type _AdProps = Partial<{
   /**
    * Type 为 feeds 时广告左边距，必须大于 0
    *
-   * 单位为 px
+   * 单位为 `px`
    */
   adLeft: number;
   /**
    * Type 为 feeds 时广告上边距，必须大于 0
    *
-   * 单位为 px
+   * 单位为 `px`
    */
   adTop: number;
   /**
    * Type 为 feeds 时广告宽度，最大值为屏幕宽度，最小值为 265
    *
-   * 单位为 px
+   * 单位为 `px`
    *
-   * 默认为 100%
+   * 默认为 `100%`
    */
   adWidth: number;
   /**
    * Type 为 feeds 时广告高度，最大值为 160，最小值为 85
    *
-   * 单位为 px
+   * 单位为 `px`
    */
   adHeight: number;
   /** 广告类型 */
