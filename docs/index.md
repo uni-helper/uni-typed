@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 介绍 →
-      link: /guide/introduction
+      link: /guide/getting-started
   image:
     src: /logo.png
     alt: Uni Helper
