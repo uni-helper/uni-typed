@@ -6,7 +6,7 @@ import { version } from '../../lerna.json'
 
 ## 我项目里类型报错，怎么办？
 
-Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C Web 标准、ECMA 规范等）保持一致，这意味着它们对小程序、uni-app 等非开放标准支持度较低。你可以在 [这里](https://github.com/vueuse/vueuse/pull/1073) 了解这一观点。
+Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C Web 标准、ECMA 规范等）保持一致，这意味着它们对小程序、uni-app 等非开放标准支持度较低。你可以在 [vueuse/vueuse#1073](https://github.com/vueuse/vueuse/pull/1073) 了解这一观点。
 
 `@uni-helper/uni-typed` 项目严重依赖 Volar、TypeScript 和 Vue，因此更新其中任一依赖后，编辑器或 IDE 可能无法正常提示部分元素的的 TypeScript 类型（本身是 HTML 自带但被占用的元素，如 SVG 相关元素 view、image、text、输入框元素 input 等），我们强烈建议锁定依赖版本以避免类似问题。
 

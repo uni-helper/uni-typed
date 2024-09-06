@@ -19,7 +19,7 @@
 
 ### 配置编辑器/IDE
 
-请参考 [这里](https://cn.vuejs.org/guide/typescript/overview.html) 将 Volar（Vue 语言服务工具）添加到你的编辑器或 IDE，配置完毕后请重启你的编辑器或 IDE 以确保服务启动。
+请参考 [搭配 TypeScript 使用 Vue](https://cn.vuejs.org/guide/typescript/overview.html) 将 Volar（Vue 语言服务工具）添加到你的编辑器或 IDE，配置完毕后请重启你的编辑器或 IDE 以确保服务启动。
 
 > [!TIP]
 > 截至 2024-08-07，经实测确定，版本组合 Volar v2.0.28、TypeScript v5.5.4、Vue v3.4.38 可正常实现类型提示。
