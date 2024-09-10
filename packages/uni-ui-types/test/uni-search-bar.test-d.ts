@@ -15,7 +15,6 @@ import type {
   UniSearchBarOnFocus,
   UniSearchBarOnFocusEvent,
   UniSearchBarOnInput,
-  UniSearchBarOnInputEvent,
   UniSearchBarProps,
   UniSearchBarValue,
 } from "@uni-helper/uni-ui-types";
@@ -40,9 +39,6 @@ describe("UniSearchBar", () => {
 
   expectTypeOf<UniSearchBarOnConfirm>().toBeObject();
   expectTypeOf<UniSearchBarOnConfirm>().toEqualTypeOf<UniHelper.UniSearchBarOnConfirm>();
-
-  expectTypeOf<UniSearchBarOnInputEvent>().toBeObject();
-  expectTypeOf<UniSearchBarOnInputEvent>().toEqualTypeOf<UniHelper.UniSearchBarOnInputEvent>();
 
   expectTypeOf<UniSearchBarOnInput>().toBeObject();
   expectTypeOf<UniSearchBarOnInput>().toEqualTypeOf<UniHelper.UniSearchBarOnInput>();

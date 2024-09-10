@@ -34,10 +34,8 @@ type _UniSearchBarOnConfirmEvent = _UniSearchBarBaseEvent;
 /** 确认时触发 */
 type _UniSearchBarOnConfirm = (event: _UniSearchBarOnConfirmEvent) => void;
 
-type _UniSearchBarOnInputEvent = _UniSearchBarBaseEvent;
-
 /** value 改变时触发 */
-type _UniSearchBarOnInput = (event: _UniSearchBarOnInputEvent) => void;
+type _UniSearchBarOnInput = (value: _UniSearchBarValue) => void;
 
 type _UniSearchBarOnCancelEvent = _UniSearchBarBaseEvent;
 
@@ -152,7 +150,6 @@ export type {
   _UniSearchBarBaseEvent as UniSearchBarBaseEvent,
   _UniSearchBarOnConfirmEvent as UniSearchBarOnConfirmEvent,
   _UniSearchBarOnConfirm as UniSearchBarOnConfirm,
-  _UniSearchBarOnInputEvent as UniSearchBarOnInputEvent,
   _UniSearchBarOnInput as UniSearchBarOnInput,
   _UniSearchBarOnCancelEvent as UniSearchBarOnCancelEvent,
   _UniSearchBarOnCancel as UniSearchBarOnCancel,
@@ -195,7 +192,6 @@ declare global {
     export type UniSearchBarOnConfirmEvent = _UniSearchBarOnConfirmEvent;
     /** 确认时触发 */
     export interface UniSearchBarOnConfirm extends _UniSearchBarOnConfirm {}
-    export type UniSearchBarOnInputEvent = _UniSearchBarOnInputEvent;
     /** value 改变时触发 */
     export interface UniSearchBarOnInput extends _UniSearchBarOnInput {}
     export type UniSearchBarOnCancelEvent = _UniSearchBarOnCancelEvent;
