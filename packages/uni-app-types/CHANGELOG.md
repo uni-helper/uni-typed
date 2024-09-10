@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-alpha.4](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2024-09-10)
+
+### Bug Fixes
+
+* loose peerDependencies ([cb6c14b](https://github.com/uni-helper/uni-typed/commit/cb6c14bbbf02e8bd408861e394ab2fd93697ee6b)) - by @ModyQyW
+* **uat:** [Ad] better jsdoc styles ([ab2f5c5](https://github.com/uni-helper/uni-typed/commit/ab2f5c56d355c8bdfbc15bfbc131f60e995045eb)) - by @ModyQyW
+* **uat:** [AdInterstitial] better jsdoc styles ([0e76de1](https://github.com/uni-helper/uni-typed/commit/0e76de15a0e363868780097866da5582d18d2777)) - by @ModyQyW
+* **uat:** [AdRewardedVideo] better jsdoc styles ([1056746](https://github.com/uni-helper/uni-typed/commit/1056746924c60cca2dee02cb6d5fd1a70beb51d8)) - by @ModyQyW
+* **uni-app-types:** [AdContentPage] better jsdoc styles ([794ee03](https://github.com/uni-helper/uni-typed/commit/794ee034e25a583d25297d68ce55a1543d847190)) - by @ModyQyW
+* **uni-app-types:** [AdFullScreenVideo] better jsdoc styles ([01222ce](https://github.com/uni-helper/uni-typed/commit/01222ce2ce023858996675aeeebcd56200b8345d)) - by @ModyQyW
+
 ## [1.0.0-alpha.3](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2024-08-07)
 
 ### Bug Fixes
