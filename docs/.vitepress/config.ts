@@ -54,7 +54,7 @@ export default defineConfig({
       {
         text: "指南",
         items: [
-          { text: "为什么是 @uni-helper/uni-typed？", link: "/guide/why" },
+          { text: "为什么？", link: "/guide/why" },
           { text: "起步", link: "/guide/getting-started" },
           { text: "uni-app-types", link: "/guide/uni-app-types" },
           { text: "uni-cloud-types", link: "/guide/uni-cloud-types" },
