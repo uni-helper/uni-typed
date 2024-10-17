@@ -3,8 +3,7 @@
   "version": "1.0.0-alpha.4",
   "npmClient": "pnpm",
   "packages": [
-    "packages/*",
-    "playground"
+    "packages/*"
   ],
   "command": {
     "version": {
