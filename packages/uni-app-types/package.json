@@ -1,6 +1,6 @@
 {
   "name": "@uni-helper/uni-app-types",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "为 uni-app 组件提供 TypeScript 类型",
   "keywords": [
     "uni-app",
