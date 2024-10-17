@@ -70,7 +70,7 @@
     "@uni-helper/uni-ui-types": "workspace:*"
   },
   "devDependencies": {
-    "vue": "3.4.38"
+    "vue": "3.5.12"
   },
   "peerDependencies": {
     "@uni-helper/uni-app-types": "workspace:*",

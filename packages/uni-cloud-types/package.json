@@ -57,7 +57,7 @@
     "stub": "unbuild --stub"
   },
   "devDependencies": {
-    "vue": "3.4.38"
+    "vue": "3.5.12"
   },
   "peerDependencies": {
     "typescript": "^5.0.0",
