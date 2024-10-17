@@ -60,7 +60,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4020920240930001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020920240930001",
     "@uni-helper/uni-app-components": "workspace:*",
-    "vue": "3.4.38",
+    "vue": "3.5.12",
     "vue-i18n": "^9.14.1"
   },
   "devDependencies": {
@@ -73,7 +73,7 @@
     "@uni-helper/uni-cloud-types": "workspace:*",
     "@uni-helper/uni-types": "workspace:*",
     "@uni-helper/uni-ui-types": "workspace:*",
-    "typescript": "5.5.4",
+    "typescript": "5.6.3",
     "vite": "^5.4.9",
     "vue-tsc": "2.1.6"
   }
