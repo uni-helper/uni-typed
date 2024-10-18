@@ -105,6 +105,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * 标题栏组件，主要用于文章、列表详情等标题展示。
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-section.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniSection: _UniSection;
   }
 }

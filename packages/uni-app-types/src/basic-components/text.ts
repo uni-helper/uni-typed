@@ -80,6 +80,10 @@ declare global {
      * 文本组件
      *
      * 用于包裹文本内容
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     export type Text = _Text;
     /** 文本组件实例 */
@@ -93,8 +97,12 @@ declare module "vue" {
      * 文本组件
      *
      * 用于包裹文本内容
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Text: _Text;
+    text: _Text;
   }
 }
 
@@ -106,6 +114,10 @@ declare global {
        * 文本组件
        *
        * 用于包裹文本内容
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       text: _Text;
     }
@@ -121,6 +133,10 @@ declare module "vue/jsx-runtime" {
        * 文本组件
        *
        * 用于包裹文本内容
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       text: _Text;
     }

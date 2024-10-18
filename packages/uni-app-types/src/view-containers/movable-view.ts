@@ -235,6 +235,10 @@ declare module "vue" {
      * 可移动的视图容器，在页面中可以拖拽滑动或双指缩放
      *
      * Movable-area 直接子组件
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/movable-view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     MovableView: _MovableView;
   }

@@ -112,7 +112,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 导航栏组件，主要用于头部导航 */
+    /** 导航栏组件，主要用于头部导航
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-nav-bar.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniNavBar: _UniNavBar;
   }
 }

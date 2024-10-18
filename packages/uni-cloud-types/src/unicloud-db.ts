@@ -406,7 +406,13 @@ export type {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 数据库查询组件，对 uni-clientdb 的 js 库的再封装 */
+    /**
+     * 数据库查询组件，对 uni-clientdb 的 js 库的再封装
+     ***
+     * [👉🏻点击查看组件文档](https://doc.dcloud.net.cn/uniCloud/unicloud-db.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UnicloudDb: _UnicloudDb;
   }
 }

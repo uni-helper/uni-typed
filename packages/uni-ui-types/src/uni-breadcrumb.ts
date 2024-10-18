@@ -49,6 +49,10 @@ declare module "vue" {
      * 面包屑
      *
      * 显示当前页面的路径，快速返回之前的任意页面
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-breadcrumb.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniBreadcrumb: _UniBreadcrumb;
   }

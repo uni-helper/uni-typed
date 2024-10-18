@@ -67,7 +67,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 沉浸视频流广告 */
+    /**
+     * 沉浸视频流广告
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/uni-ad/ad-draw.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     AdDraw: _AdDraw;
   }
 }

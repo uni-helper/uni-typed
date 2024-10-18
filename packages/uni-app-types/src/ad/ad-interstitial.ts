@@ -90,7 +90,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 插屏广告 */
+    /**
+     * 插屏广告
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/uni-ad/ad-interstitial.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     AdInterstitial: _AdInterstitial;
   }
 }

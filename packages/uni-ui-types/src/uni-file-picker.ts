@@ -623,7 +623,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 文件选择上传组件，可以选择图片、视频等任意文件并上传到当前绑定的服务空间 */
+    /** 文件选择上传组件，可以选择图片、视频等任意文件并上传到当前绑定的服务空间
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-file-picker.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniFilePicker: _UniFilePicker;
   }
 }

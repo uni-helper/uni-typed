@@ -158,6 +158,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * 弹出层组件，在应用中弹出一个消息提示窗口、提示框等
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-popup.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniPopup: _UniPopup;
   }
 }

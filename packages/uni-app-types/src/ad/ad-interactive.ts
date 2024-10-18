@@ -68,7 +68,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 互动广告 */
+    /**
+     * 互动广告
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/uni-ad/ad-interactive.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     AdInteractive: _AdInteractive;
   }
 }

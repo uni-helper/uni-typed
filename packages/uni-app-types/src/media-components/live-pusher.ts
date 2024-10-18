@@ -870,7 +870,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 实时音视频录制（直播推流） */
+    /** 实时音视频录制（直播推流)
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/live-pusher.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     LivePusher: _LivePusher;
   }
 }

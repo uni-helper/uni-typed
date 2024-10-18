@@ -95,7 +95,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 步骤条 */
+    /** 步骤条
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-steps.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniSteps: _UniSteps;
   }
 }

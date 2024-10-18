@@ -77,6 +77,10 @@ declare module "vue" {
      * 内置属性可以覆盖的场景包括：导航列表、设置列表、小图标列表、通信录列表、聊天记录列表
      *
      * 涉及很多大图或丰富内容的列表，比如类今日头条的新闻列表、类淘宝的电商列表，需要通过扩展插槽实现
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-list.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniList: _UniList;
   }

@@ -31,6 +31,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * `<uni-breadcrumb />`子组件，用于展示面包屑的每一项
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-breadcrumb.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniBreadcrumbItem: _UniBreadcrumbItem;
   }
 }

@@ -421,6 +421,10 @@ declare module "vue" {
      *
      * uni-data-picker 可以通过 JQL 直连 uni-cloud 云数据库，配套 DB Schema，可在 schema2code
      * 中自动生成前端页面，还支持服务器端校验
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-data-picker.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniDataPicker: _UniDataPicker;
   }

@@ -104,6 +104,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * 当选项过多时，使用下拉菜单展示并选择内容
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-data-select.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniDataSelect: _UniDataSelect;
   }
 }

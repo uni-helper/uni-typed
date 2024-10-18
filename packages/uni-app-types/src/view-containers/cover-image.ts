@@ -80,6 +80,10 @@ declare module "vue" {
      * 可覆盖的原生组件同 cover-view
      *
      * 支持嵌套在 cover-view 里
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/cover-image.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     CoverImage: _CoverImage;
   }

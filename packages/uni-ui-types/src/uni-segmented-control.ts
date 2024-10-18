@@ -95,7 +95,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 分段器，用作不同视图的显示 */
+    /** 分段器，用作不同视图的显示
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-segmented-control.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniSegmentedControl: _UniSegmentedControl;
   }
 }

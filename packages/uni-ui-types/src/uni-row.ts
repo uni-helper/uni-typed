@@ -72,7 +72,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 流式栅格系统中的行 */
+    /** 流式栅格系统中的行
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-row.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniRow: _UniRow;
   }
 }

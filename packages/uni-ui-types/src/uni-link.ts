@@ -85,6 +85,10 @@ declare module "vue" {
      * 在 APP 内打开外部浏览器
      *
      * 在 H5 端打开新网页
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-link.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniLink: _UniLink;
   }

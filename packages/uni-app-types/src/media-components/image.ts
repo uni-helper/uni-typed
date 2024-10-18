@@ -219,8 +219,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 图片 */
-    Image: _Image;
+    /** 图片
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/image.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    image: _Image;
   }
 }
 
@@ -228,7 +233,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 图片 */
+      /** 图片
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/image.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       image: _Image;
     }
   }
@@ -239,7 +249,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 图片 */
+      /** 图片
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/image.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       image: _Image;
     }
   }

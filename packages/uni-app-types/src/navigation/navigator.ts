@@ -304,7 +304,11 @@ declare module "vue" {
      * 该组件类似 HTML 中的 a 组件，但只能跳转本地页面
      *
      * 目标页面必须在 pages.json 中注册
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/navigator.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Navigator: _Navigator;
+    navigator: _Navigator;
   }
 }

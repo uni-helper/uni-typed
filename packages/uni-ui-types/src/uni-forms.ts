@@ -267,7 +267,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 表单，用于提交表单内容，内置了表单验证功能 */
+    /** 表单，用于提交表单内容，内置了表单验证功能
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-forms.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniForms: _UniForms;
   }
 }

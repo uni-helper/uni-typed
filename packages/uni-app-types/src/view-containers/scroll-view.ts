@@ -318,6 +318,10 @@ declare module "vue" {
      *
      * Scroll-view 是区域滚动，不会触发页面滚动，无法触发 pages.json 配置的下拉刷新、页面触底
      * onReachBottomDistance、titleNView 的 transparent 透明渐变
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/scroll-view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     ScrollView: _ScrollView;
   }

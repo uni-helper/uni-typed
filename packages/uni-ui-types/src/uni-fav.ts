@@ -96,7 +96,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 用于收藏功能，可点击切换选中、不选中的状态 */
+    /** 用于收藏功能，可点击切换选中、不选中的状态
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-fav.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniFav: _UniFav;
   }
 }

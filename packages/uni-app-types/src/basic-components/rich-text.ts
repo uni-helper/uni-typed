@@ -110,7 +110,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 富文本 */
+    /**
+     * 富文本
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/rich-text.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     RichText: _RichText;
   }
 }

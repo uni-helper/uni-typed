@@ -95,7 +95,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 聊天列表 */
+    /** 聊天列表
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-list.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniListChat: _UniListChat;
   }
 }

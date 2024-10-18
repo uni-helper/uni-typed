@@ -130,8 +130,14 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 进度条 */
-    Progress: _Progress;
+    /**
+     * 进度条
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/progress.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    progress: _Progress;
   }
 }
 
@@ -139,7 +145,13 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 进度条 */
+      /**
+       * 进度条
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/progress.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       progress: _Progress;
     }
   }
@@ -150,7 +162,13 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 进度条 */
+      /**
+       * 进度条
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/progress.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       progress: _Progress;
     }
   }

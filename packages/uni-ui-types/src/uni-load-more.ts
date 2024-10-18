@@ -168,7 +168,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 用于列表中，做滚动加载使用，展示 loading 的各种状态 */
+    /** 用于列表中，做滚动加载使用，展示 loading 的各种状态
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-load-more.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniLoadMore: _UniLoadMore;
   }
 }

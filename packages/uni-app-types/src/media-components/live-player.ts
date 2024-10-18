@@ -561,7 +561,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 实时音视频播放（直播拉流） */
+    /** 实时音视频播放（直播拉流）
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/live-player.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     LivePlayer: _LivePlayer;
   }
 }

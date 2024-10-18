@@ -291,6 +291,10 @@ declare module "vue" {
      *
      * 在 uni-cloud 开发中，DB Schema 中配置了 enum 枚举等类型后，在 web 控制台的自动生成表单功能中，会自动生成
      * uni-data-checkbox 组件并绑定好 data
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-data-checkbox.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniDataCheckbox: _UniDataCheckbox;
   }

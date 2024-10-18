@@ -493,8 +493,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 输入框 */
-    Input: _Input;
+    /** 输入框
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/input.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    input: _Input;
   }
 }
 
@@ -502,7 +507,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 输入框 */
+      /** 输入框
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/input.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       input: _Input;
     }
   }
@@ -513,7 +523,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 输入框 */
+      /** 输入框
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/input.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       input: _Input;
     }
   }

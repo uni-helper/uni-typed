@@ -80,7 +80,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 索引列表 */
+    /** 索引列表
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-indexed-list.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniIndexedList: _UniIndexedList;
   }
 }

@@ -125,7 +125,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 通告栏 */
+    /** 通告栏
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-notice-bar.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniNoticeBar: _UniNoticeBar;
   }
 }

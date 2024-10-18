@@ -131,8 +131,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 画布 */
-    Canvas: _Canvas;
+    /** 画布
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/canvas.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    canvas: _Canvas;
   }
 }
 
@@ -140,7 +145,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 画布 */
+      /** 画布
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/canvas.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       canvas: _Canvas;
     }
   }
@@ -151,7 +161,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 画布 */
+      /** 画布
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/canvas.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       canvas: _Canvas;
     }
   }

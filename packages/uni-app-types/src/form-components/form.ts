@@ -143,6 +143,10 @@ declare module "vue/jsx-runtime" {
        * 表单
        *
        * 将组件内的用户输入的 switch、input、checkbox、slider、radio、picker 提交
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/form.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       form: _Form;
     }

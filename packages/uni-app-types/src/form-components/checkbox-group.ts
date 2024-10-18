@@ -50,7 +50,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 多项选择器，内部由多个 checkbox 组成 */
+    /** 多项选择器，内部由多个 checkbox 组成
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/checkbox.html#checkbox-group)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     CheckboxGroup: _CheckboxGroup;
   }
 }

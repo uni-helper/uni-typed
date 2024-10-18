@@ -80,7 +80,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 分组组件可用于将组件分组，添加间隔，以产生明显的区块 */
+    /** 分组组件可用于将组件分组，添加间隔，以产生明显的区块
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-group.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniGroup: _UniGroup;
   }
 }

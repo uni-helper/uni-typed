@@ -325,8 +325,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 多行输入框 */
-    Textarea: _Textarea;
+    /** 多行输入框
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/textarea.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    textarea: _Textarea;
   }
 }
 
@@ -334,7 +339,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 多行输入框 */
+      /** 多行输入框
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/textarea.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       textarea: _Textarea;
     }
   }
@@ -345,7 +355,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 多行输入框 */
+      /** 多行输入框
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/textarea.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       textarea: _Textarea;
     }
   }

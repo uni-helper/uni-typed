@@ -122,7 +122,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 分页器组件，用于展示页码、请求数据等 */
+    /** 分页器组件，用于展示页码、请求数据等
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-pagination.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniPagination: _UniPagination;
   }
 }
