@@ -91,7 +91,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** Web 浏览器组件，可承载网页 */
+    /**
+     * Web 浏览器组件，可承载网页
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/web-view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     WebView: _WebView;
   }
 }

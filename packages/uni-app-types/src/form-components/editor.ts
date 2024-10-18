@@ -166,7 +166,11 @@ declare module "vue" {
      * 进行插入
      *
      * 图片控件仅初始化时设置有效
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/editor.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Editor: _Editor;
+    editor: _Editor;
   }
 }

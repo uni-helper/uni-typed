@@ -283,7 +283,11 @@ declare module "vue" {
      * 注意滑动切换和滚动的区别，滑动切换是一屏一屏的切换
      *
      * Swiper 下的每个 swiper-item 是一个滑动切换区域，不能停留在 2 个滑动区域之间
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/swiper.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Swiper: _Swiper;
+    swiper: _Swiper;
   }
 }

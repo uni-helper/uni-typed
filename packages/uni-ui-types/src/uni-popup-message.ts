@@ -83,6 +83,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * 提示信息
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-popup.html#uni-popup-message-%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniPopupMessage: _UniPopupMessage;
   }
 }

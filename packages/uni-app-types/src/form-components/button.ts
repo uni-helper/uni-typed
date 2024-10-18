@@ -756,8 +756,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 按钮 */
-    Button: _Button;
+    /** 画布
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    button: _Button;
   }
 }
 
@@ -765,7 +770,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 按钮 */
+      /** 画布
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       button: _Button;
     }
   }
@@ -776,7 +786,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 按钮 */
+      /** 画布
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       button: _Button;
     }
   }

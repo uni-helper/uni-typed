@@ -155,6 +155,10 @@ declare module "vue" {
      * 可部分替代 pages.json
      *
      * 只能是页面内的第一个节点
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/page-meta.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     PageMeta: _PageMeta;
   }

@@ -136,7 +136,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 滑动选择器 */
-    Slider: _Slider;
+    /** 滑动选择器
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/slider.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    slider: _Slider;
   }
 }

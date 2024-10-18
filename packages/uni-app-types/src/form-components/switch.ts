@@ -78,8 +78,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 开关选择器 */
-    Switch: _Switch;
+    /** 开关选择器
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/switch.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    switch: _Switch;
   }
 }
 
@@ -87,7 +92,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 开关选择器 */
+      /** 开关选择器
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/switch.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       switch: _Switch;
     }
   }
@@ -98,7 +108,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 开关选择器 */
+      /** 开关选择器
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/switch.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       switch: _Switch;
     }
   }

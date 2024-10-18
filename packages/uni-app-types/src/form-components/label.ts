@@ -55,8 +55,12 @@ declare module "vue" {
      * 使用 for 属性找到对应的 id，或者将控件放在该标签下，当点击时，就会触发对应的控件
      *
      * For 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/label.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Label: _Label;
+    label: _Label;
   }
 }
 
@@ -72,6 +76,10 @@ declare global {
        * 使用 for 属性找到对应的 id，或者将控件放在该标签下，当点击时，就会触发对应的控件
        *
        * For 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/label.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       label: _Label;
     }
@@ -91,6 +99,10 @@ declare module "vue/jsx-runtime" {
        * 使用 for 属性找到对应的 id，或者将控件放在该标签下，当点击时，就会触发对应的控件
        *
        * For 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/label.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       label: _Label;
     }

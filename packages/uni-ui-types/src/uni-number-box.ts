@@ -121,7 +121,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 带加减按钮的数字输入框 */
+    /** 带加减按钮的数字输入框
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-number-box.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniNumberBox: _UniNumberBox;
   }
 }

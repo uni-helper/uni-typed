@@ -101,7 +101,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 抽屉侧滑菜单 */
+    /**
+     * 抽屉侧滑菜单
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-drawer.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniDrawer: _UniDrawer;
   }
 }

@@ -91,6 +91,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /**
+     * 每个要校验的表单项，不管input还是checkbox，都必须放在`<uni-forms-item>`组件中，且一个`<uni-forms-item>`组件只能放置一个表单项。
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-forms.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniFormsItem: _UniFormsItem;
   }
 }

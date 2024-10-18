@@ -540,7 +540,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 从底部弹起的滚动选择器，通过 mode 来区分 */
-    Picker: _Picker;
+    /**
+     * 从底部弹起的滚动选择器，通过 mode 来区分
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/picker.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    picker: _Picker;
   }
 }

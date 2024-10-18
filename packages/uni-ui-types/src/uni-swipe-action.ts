@@ -53,6 +53,10 @@ declare module "vue" {
      * 滑动操作
      *
      * 通过滑动触发选项的容器
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-swipe-action.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniSwipeAction: _UniSwipeAction;
   }

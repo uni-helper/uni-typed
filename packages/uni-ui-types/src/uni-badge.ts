@@ -209,6 +209,10 @@ declare module "vue" {
      * 数字角标
      *
      * 一般和其它控件（列表、九宫格等）配合使用，用于进行数量提示，默认为实心灰色背景
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-badge.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniBadge: _UniBadge;
   }

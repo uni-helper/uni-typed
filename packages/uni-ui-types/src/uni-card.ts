@@ -123,6 +123,10 @@ declare module "vue" {
      * 例如一篇文章的预览图、作者信息、时间等
      *
      * 卡片通常是更复杂和更详细信息的入口点
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-card.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniCard: _UniCard;
   }

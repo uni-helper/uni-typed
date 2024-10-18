@@ -97,7 +97,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 全屏视频广告 */
+    /**
+     * 全屏视频广告
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/uni-ad/ad-fullscreen-video.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     AdFullscreenVideo: _AdFullscreenVideo;
   }
 }

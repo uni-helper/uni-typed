@@ -65,6 +65,10 @@ declare module "vue" {
      * 也可以不拖动，而使用代码来触发 movable-view 在 movable-area 里的移动缩放
      *
      * 默认宽高为 10px
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/movable-area.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     MovableArea: _MovableArea;
   }

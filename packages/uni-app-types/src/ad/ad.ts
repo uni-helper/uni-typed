@@ -121,7 +121,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 信息流广告 */
+    /**
+     * 信息流广告
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/uni-ad/ad-component.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     Ad: _Ad;
   }
 }

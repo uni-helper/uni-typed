@@ -152,8 +152,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 音频 */
-    Audio: _Audio;
+    /** 音频
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/audio.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    audio: _Audio;
   }
 }
 
@@ -161,7 +166,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 音频 */
+      /** 音频
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/audio.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       audio: _Audio;
     }
   }
@@ -172,7 +182,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 音频 */
+      /** 音频
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/audio.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       audio: _Audio;
     }
   }

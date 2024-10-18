@@ -41,7 +41,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 图标 */
-    Icon: _Icon;
+    /**
+     * 图标
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/icon.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    icon: _Icon;
   }
 }

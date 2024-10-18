@@ -127,7 +127,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 评分组件，多用于购买商品后，对商品进行评价等场景 */
+    /** 评分组件，多用于购买商品后，对商品进行评价等场景
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-rate.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniRate: _UniRate;
   }
 }

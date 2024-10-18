@@ -62,6 +62,10 @@ declare global {
      * 包裹文字建议使用 text
      *
      * 如果使用 div，会编译成 view
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     export type View = _View;
     /** 视图容器实例 */
@@ -77,8 +81,12 @@ declare module "vue" {
      * 包裹文字建议使用 text
      *
      * 如果使用 div，会编译成 view
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    View: _View;
+    view: _View;
   }
 }
 
@@ -92,6 +100,10 @@ declare global {
        * 包裹文字建议使用 text
        *
        * 如果使用 div，会编译成 view
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       view: _View;
     }
@@ -109,6 +121,10 @@ declare module "vue/jsx-runtime" {
        * 包裹文字建议使用 text
        *
        * 如果使用 div，会编译成 view
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       view: _View;
     }

@@ -401,7 +401,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 对原生 input 组件的增强 */
+    /** 对原生 input 组件的增强
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-easyinput.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniEasyinput: _UniEasyinput;
   }
 }

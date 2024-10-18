@@ -213,7 +213,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间 */
+    /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-datetime-picker.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniDatetimePicker: _UniDatetimePicker;
   }
 }

@@ -892,8 +892,13 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 地图组件，用于展示地图 */
-    Map: _Map;
+    /** 地图组件，用于展示地图
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    map: _Map;
   }
 }
 
@@ -901,7 +906,12 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 地图组件，用于展示地图 */
+      /** 地图组件，用于展示地图
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       map: _Map;
     }
   }
@@ -912,7 +922,12 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 地图组件，用于展示地图 */
+      /** 地图组件，用于展示地图
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
+       */
       map: _Map;
     }
   }
