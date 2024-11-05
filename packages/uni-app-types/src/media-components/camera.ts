@@ -39,7 +39,7 @@ type _CameraDevicePosition = "front" | "back";
  *
  * Off 关闭
  *
- * Torch 常亮(微信小程序>=2.8.0)
+ * Torch 常亮
  */
 type _CameraFlash = "auto" | "on" | "off" | "torch";
 
@@ -125,7 +125,7 @@ type _CameraProps = Partial<{
    *
    * Off 关闭
    *
-   * Torch 常亮(微信小程序>=2.8.0)
+   * Torch 常亮
    *
    * 默认为 auto
    */
@@ -219,7 +219,7 @@ declare global {
      *
      * Off 关闭
      *
-     * Torch 常亮(微信小程序>=2.8.0)
+     * Torch 常亮
      */
     export type CameraFlash = _CameraFlash;
     /**
