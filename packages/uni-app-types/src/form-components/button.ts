@@ -756,7 +756,7 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 画布
+    /** 按钮
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
      * |
@@ -770,7 +770,7 @@ declare module "vue" {
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      /** 画布
+      /** 按钮
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
        * |
@@ -786,7 +786,7 @@ declare global {
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
-      /** 画布
+      /** 按钮
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/button.html)
        * |

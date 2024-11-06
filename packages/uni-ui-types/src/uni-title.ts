@@ -93,7 +93,7 @@ declare module "vue" {
   export interface GlobalComponents {
     /** 用于展示一个或多个文字标签，可点击切换选中、不选中的状态
      * ***
-     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-table.html)
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-title.html)
      * |
      * [使用说明](https://uni-typed.netlify.app/)
      */

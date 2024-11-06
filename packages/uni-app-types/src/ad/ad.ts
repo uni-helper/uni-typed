@@ -128,6 +128,6 @@ declare module "vue" {
      * |
      * [使用说明](https://uni-typed.netlify.app/)
      */
-    Ad: _Ad;
+    ad: _Ad;
   }
 }
