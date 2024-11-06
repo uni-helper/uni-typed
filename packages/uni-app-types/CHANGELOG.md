@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-alpha.6](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2024-11-06)
+
+### Bug Fixes
+
+* add CommonProps, close https://github.com/uni-helper/uni-typed/issues/22 ([3ed358f](https://github.com/uni-helper/uni-typed/commit/3ed358ffd6ae5f02354f7fbb6cc51160e0ea394e)) - by @
+* CameraFlash torch option ([#23](https://github.com/uni-helper/uni-typed/issues/23)) ([aa87524](https://github.com/uni-helper/uni-typed/commit/aa87524555225bfc3d176722bb2a826e92a49207)) - by @wtto00
+* fix tsdocs ([#21](https://github.com/uni-helper/uni-typed/issues/21)) ([fc0877a](https://github.com/uni-helper/uni-typed/commit/fc0877a5dad635e7bfd2f984e51a19ca2c34acb1)) - by @FliPPeDround
+
 ## [1.0.0-alpha.5](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2024-10-17)
 
 **Note:** Version bump only for package @uni-helper/uni-app-types
