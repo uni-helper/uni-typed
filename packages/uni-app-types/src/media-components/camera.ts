@@ -38,8 +38,10 @@ type _CameraDevicePosition = "front" | "back";
  * On 打开
  *
  * Off 关闭
+ *
+ * Torch 常亮
  */
-type _CameraFlash = "auto" | "on" | "off";
+type _CameraFlash = "auto" | "on" | "off" | "torch";
 
 /**
  * 期望的相机帧数据尺寸
@@ -122,6 +124,8 @@ type _CameraProps = Partial<{
    * On 打开
    *
    * Off 关闭
+   *
+   * Torch 常亮
    *
    * 默认为 auto
    */
@@ -214,6 +218,8 @@ declare global {
      * On 打开
      *
      * Off 关闭
+     *
+     * Torch 常亮
      */
     export type CameraFlash = _CameraFlash;
     /**
