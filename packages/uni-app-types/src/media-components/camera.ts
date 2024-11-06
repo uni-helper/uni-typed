@@ -254,7 +254,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 页面内嵌的区域相机组件 */
-    Camera: _Camera;
+    /** 页面内嵌的区域相机组件
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/camera.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    camera: _Camera;
   }
 }

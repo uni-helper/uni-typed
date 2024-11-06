@@ -73,7 +73,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 组合框组件，一般用于可以选择也可以输入的表单项 */
+    /** 组合框组件，一般用于可以选择也可以输入的表单项
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-combox.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniCombox: _UniCombox;
   }
 }

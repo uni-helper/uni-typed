@@ -207,7 +207,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 点击可展开一个图形按钮菜单 */
+    /** 点击可展开一个图形按钮菜单
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-fab.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniFab: _UniFab;
   }
 }

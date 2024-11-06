@@ -143,6 +143,10 @@ declare module "vue" {
      * 通常是在多内容分类项使用，折叠不重要的内容，显示重要内容
      *
      * 点击可以展开折叠部分
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-collapse.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     UniCollapse: _UniCollapse;
   }

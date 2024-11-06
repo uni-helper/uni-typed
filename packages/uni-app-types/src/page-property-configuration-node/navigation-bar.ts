@@ -274,6 +274,10 @@ declare module "vue" {
      * 页面导航条配置节点，用于指定导航栏的一些属性
      *
      * 只能是 page-meta 组件内的第一个节点，需要配合 page-meta 一同使用
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/navigation-bar.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     NavigationBar: _NavigationBar;
   }

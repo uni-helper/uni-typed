@@ -103,7 +103,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 嵌入页面的滚动选择器，比 picker 更灵活 */
+    /** 嵌入页面的滚动选择器，比 picker 更灵活
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/picker-view.html#picker-view)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     PickerView: _PickerView;
   }
 }

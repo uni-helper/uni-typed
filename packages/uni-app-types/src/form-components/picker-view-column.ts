@@ -22,6 +22,14 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
+    /** `<picker-view />` 的子组件，仅可放置于 `<picker-view />` 中
+     *
+     * 其子节点的高度会自动设置成与 `<picker-view>` 的选中框的高度一致。
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/picker-view.html#picker-view-column)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     PickerViewColumn: _PickerViewColumn;
   }
 }

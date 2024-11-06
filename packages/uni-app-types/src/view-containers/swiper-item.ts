@@ -43,6 +43,10 @@ declare module "vue" {
      * Swiper 直接子组件，宽高自动设置为父组件的 100%
      *
      * 不能被子组件自动撑开
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/scroll-item.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     SwiperItem: _SwiperItem;
   }

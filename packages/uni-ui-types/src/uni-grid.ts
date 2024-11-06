@@ -79,7 +79,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 宫格 */
+    /** 宫格
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-grid.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
     UniGrid: _UniGrid;
   }
 }

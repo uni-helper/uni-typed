@@ -65,7 +65,12 @@ declare global {
 
 declare module "vue" {
   export interface GlobalComponents {
-    /** 单选项目 */
-    Radio: _Radio;
+    /** 单选项目
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/radio.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    radio: _Radio;
   }
 }

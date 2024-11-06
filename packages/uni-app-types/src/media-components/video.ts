@@ -644,8 +644,12 @@ declare module "vue" {
      * 视频播放组件
      *
      * 默认宽度 300px、高度 225px，可通过 css 设置宽高
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/video.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
-    Video: _Video;
+    video: _Video;
   }
 }
 
@@ -657,6 +661,10 @@ declare global {
        * 视频播放组件
        *
        * 默认宽度 300px、高度 225px，可通过 css 设置宽高
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/video.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       video: _Video;
     }
@@ -672,6 +680,10 @@ declare module "vue/jsx-runtime" {
        * 视频播放组件
        *
        * 默认宽度 300px、高度 225px，可通过 css 设置宽高
+       * ***
+       * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/video.html)
+       * |
+       * [使用说明](https://uni-typed.netlify.app/)
        */
       video: _Video;
     }

@@ -62,6 +62,10 @@ declare module "vue" {
      * 单项选择器，内部由多个 radio 组成
      *
      * 通过把多个 radio 包裹在一个 radio-group 下，实现这些 radio 的单选
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/radio.html#radio-group)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
      */
     RadioGroup: _RadioGroup;
   }
