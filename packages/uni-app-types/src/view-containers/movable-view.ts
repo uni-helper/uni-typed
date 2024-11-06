@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 
 /** Movable-view 的移动方向 */
@@ -65,104 +66,105 @@ type _MovableViewOnScaleEvent = CustomEvent<_MovableViewOnScaleDetail>;
 type _MovableViewOnScale = (event: _MovableViewOnScaleEvent) => void;
 
 /** 可移动的视图容器属性 */
-type _MovableViewProps = Partial<{
-  /**
-   * Movable-view 的移动方向
-   *
-   * 默认为 none
-   */
-  direction: _MovableViewDirection;
-  /**
-   * 是否带有惯性
-   *
-   * 默认为 false
-   */
-  inertia: boolean;
-  /**
-   * 超过可移动区域后，是否还可以移动
-   *
-   * 默认为 false
-   */
-  outOfBounds: boolean;
-  /**
-   * 定义 x 轴方向的偏移
-   *
-   * 如果 x 的值不在可移动范围内，会自动移动到可移动范围
-   *
-   * 改变 x 的值会触发动画
-   */
-  x: string | number;
-  /**
-   * 定义 y 轴方向的偏移
-   *
-   * 如果 y 的值不在可移动范围内，会自动移动到可移动范围
-   *
-   * 改变 y 的值会触发动画
-   */
-  y: string | number;
-  /**
-   * 阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画
-   *
-   * 值越大移动越快
-   *
-   * 默认为 20
-   */
-  damping: number;
-  /**
-   * 摩擦系数，用于控制惯性滑动的动画
-   *
-   * 值越大摩擦力越大，滑动越快停止
-   *
-   * 必须大于 0，否则会被设置成默认值
-   *
-   * 默认为 2
-   */
-  friction: number;
-  /**
-   * 是否禁用
-   *
-   * 默认为 false
-   */
-  disabled: boolean;
-  /**
-   * 是否支持双指缩放
-   *
-   * 默认缩放手势生效区域是在 movable-view 内
-   *
-   * 默认为 false
-   */
-  scale: boolean;
-  /**
-   * 定义缩放倍数最小值
-   *
-   * 默认为 0.5
-   */
-  scaleMin: number;
-  /**
-   * 定义缩放倍数最大值
-   *
-   * 默认为 10
-   */
-  scaleMax: number;
-  /**
-   * 定义缩放倍数
-   *
-   * 取值范围为 0.5 - 10
-   *
-   * 默认为 1
-   */
-  scaleValue: number;
-  /**
-   * 是否使用动画
-   *
-   * 默认为 true
-   */
-  animation: boolean;
-  /** 拖动过程中触发 */
-  onChange: _MovableViewOnChange;
-  /** 缩放过程中触发 */
-  onScale: _MovableViewOnScale;
-}>;
+type _MovableViewProps = CommonProps &
+  Partial<{
+    /**
+     * Movable-view 的移动方向
+     *
+     * 默认为 none
+     */
+    direction: _MovableViewDirection;
+    /**
+     * 是否带有惯性
+     *
+     * 默认为 false
+     */
+    inertia: boolean;
+    /**
+     * 超过可移动区域后，是否还可以移动
+     *
+     * 默认为 false
+     */
+    outOfBounds: boolean;
+    /**
+     * 定义 x 轴方向的偏移
+     *
+     * 如果 x 的值不在可移动范围内，会自动移动到可移动范围
+     *
+     * 改变 x 的值会触发动画
+     */
+    x: string | number;
+    /**
+     * 定义 y 轴方向的偏移
+     *
+     * 如果 y 的值不在可移动范围内，会自动移动到可移动范围
+     *
+     * 改变 y 的值会触发动画
+     */
+    y: string | number;
+    /**
+     * 阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画
+     *
+     * 值越大移动越快
+     *
+     * 默认为 20
+     */
+    damping: number;
+    /**
+     * 摩擦系数，用于控制惯性滑动的动画
+     *
+     * 值越大摩擦力越大，滑动越快停止
+     *
+     * 必须大于 0，否则会被设置成默认值
+     *
+     * 默认为 2
+     */
+    friction: number;
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
+    disabled: boolean;
+    /**
+     * 是否支持双指缩放
+     *
+     * 默认缩放手势生效区域是在 movable-view 内
+     *
+     * 默认为 false
+     */
+    scale: boolean;
+    /**
+     * 定义缩放倍数最小值
+     *
+     * 默认为 0.5
+     */
+    scaleMin: number;
+    /**
+     * 定义缩放倍数最大值
+     *
+     * 默认为 10
+     */
+    scaleMax: number;
+    /**
+     * 定义缩放倍数
+     *
+     * 取值范围为 0.5 - 10
+     *
+     * 默认为 1
+     */
+    scaleValue: number;
+    /**
+     * 是否使用动画
+     *
+     * 默认为 true
+     */
+    animation: boolean;
+    /** 拖动过程中触发 */
+    onChange: _MovableViewOnChange;
+    /** 缩放过程中触发 */
+    onScale: _MovableViewOnScale;
+  }>;
 
 /**
  * 可移动的视图容器，在页面中可以拖拽滑动或双指缩放

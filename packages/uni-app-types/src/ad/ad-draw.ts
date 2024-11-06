@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdDrawOnLoadEvent = BaseEvent;
@@ -19,16 +20,17 @@ type _AdDrawOnErrorEvent = CustomEvent<_AdDrawOnErrorDetail>;
 type _AdDrawOnError = (event: _AdDrawOnErrorEvent) => void;
 
 /** 沉浸视频流广告属性 */
-type _AdDrawProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string;
-  /** 广告数据 */
-  data: Record<string, any>;
-  /** 广告加载成功的回调 */
-  onLoad: _AdDrawOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdDrawOnError;
-}>;
+type _AdDrawProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string;
+    /** 广告数据 */
+    data: Record<string, any>;
+    /** 广告加载成功的回调 */
+    onLoad: _AdDrawOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdDrawOnError;
+  }>;
 
 /** 沉浸视频流广告 */
 type _AdDraw = DefineComponent<_AdDrawProps>;

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 
 /** 显示连续空格 */
@@ -30,40 +31,41 @@ type _RichTextOnItemclickEvent = CustomEvent<{ node: _RichTextNode }>;
 type _RichTextOnItemclick = (event: _RichTextOnItemclickEvent) => void;
 
 /** 富文本属性 */
-type _RichTextProps = Partial<{
-  /** 节点列表 */
-  nodes: _RichTextNodes;
-  /**
-   * 显示连续空格
-   *
-   * 没有默认值
-   */
-  space: _RichTextSpace;
-  /**
-   * 富文本是否可以长按选中
-   *
-   * 默认为 true
-   */
-  selectable: boolean;
-  /**
-   * 是否阻止长按图片时弹起默认菜单
-   *
-   * 只在初始化时有效，不支持动态修改
-   *
-   * 默认为 false
-   */
-  imageMenuPrevent: boolean;
-  /**
-   * 富文本中的图片是否可点击预览
-   *
-   * 在不设置的情况下，若 rich-text 未监听点击事件，则默认开启
-   *
-   * 未显示设置 preview 时会进行点击默认预览判断，建议显示设置 preview
-   */
-  preview: boolean;
-  /** 拦截点击事件，支持 a 和 img 标签 */
-  onItemclick: _RichTextOnItemclick;
-}>;
+type _RichTextProps = CommonProps &
+  Partial<{
+    /** 节点列表 */
+    nodes: _RichTextNodes;
+    /**
+     * 显示连续空格
+     *
+     * 没有默认值
+     */
+    space: _RichTextSpace;
+    /**
+     * 富文本是否可以长按选中
+     *
+     * 默认为 true
+     */
+    selectable: boolean;
+    /**
+     * 是否阻止长按图片时弹起默认菜单
+     *
+     * 只在初始化时有效，不支持动态修改
+     *
+     * 默认为 false
+     */
+    imageMenuPrevent: boolean;
+    /**
+     * 富文本中的图片是否可点击预览
+     *
+     * 在不设置的情况下，若 rich-text 未监听点击事件，则默认开启
+     *
+     * 未显示设置 preview 时会进行点击默认预览判断，建议显示设置 preview
+     */
+    preview: boolean;
+    /** 拦截点击事件，支持 a 和 img 标签 */
+    onItemclick: _RichTextOnItemclick;
+  }>;
 
 /** 富文本 */
 type _RichText = DefineComponent<_RichTextProps>;

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /**
  * 显示连续空格
@@ -12,38 +13,39 @@ import type { DefineComponent } from "vue";
 type _TextSpace = "ensp" | "emsp" | "nbsp";
 
 /** 文本组件属性 */
-type _TextProps = Partial<{
-  /**
-   * 文本是否可选
-   *
-   * 默认为 false
-   */
-  selectable: boolean;
-  /**
-   * 文本是否可选，可能会使文本节点显示为 inline-block
-   *
-   * 默认为 false
-   */
-  userSelect: boolean;
-  /**
-   * 显示连续空格
-   *
-   * Ensp 中文字符空格一半大小
-   *
-   * Emsp 中文字符空格大小
-   *
-   * Nbsp 根据字体设置的空格大小
-   *
-   * 没有默认值
-   */
-  space: _TextSpace;
-  /**
-   * 是否解码
-   *
-   * 默认为 false
-   */
-  decode: boolean;
-}>;
+type _TextProps = CommonProps &
+  Partial<{
+    /**
+     * 文本是否可选
+     *
+     * 默认为 false
+     */
+    selectable: boolean;
+    /**
+     * 文本是否可选，可能会使文本节点显示为 inline-block
+     *
+     * 默认为 false
+     */
+    userSelect: boolean;
+    /**
+     * 显示连续空格
+     *
+     * Ensp 中文字符空格一半大小
+     *
+     * Emsp 中文字符空格大小
+     *
+     * Nbsp 根据字体设置的空格大小
+     *
+     * 没有默认值
+     */
+    space: _TextSpace;
+    /**
+     * 是否解码
+     *
+     * 默认为 false
+     */
+    decode: boolean;
+  }>;
 
 /**
  * 文本组件

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /**
  * 屏幕方向
@@ -10,52 +11,53 @@ import type { DefineComponent } from "vue";
 type _MatchMediaOrientation = "landscape" | "portrait";
 
 /** Media query 匹配检测节点属性 */
-type _MatchMediaProps = Partial<{
-  /**
-   * 页面最小宽度
-   *
-   * 单位为 px
-   */
-  minWidth: number;
-  /**
-   * 页面最大宽度
-   *
-   * 单位为 px
-   */
-  maxWidth: number;
-  /**
-   * 页面宽度
-   *
-   * 单位为 px
-   */
-  width: number;
-  /**
-   * 页面最小高度
-   *
-   * 单位为 px
-   */
-  minHeight: number;
-  /**
-   * 页面最大高度
-   *
-   * 单位为 px
-   */
-  maxHeight: number;
-  /**
-   * 页面高度
-   *
-   * 单位为 px
-   */
-  height: number;
-  /**
-   * 屏幕方向
-   *
-   * Landscape 横向
-   *
-   * Portrait 纵向
-   */
-  orientation: _MatchMediaOrientation;
-}>;
+type _MatchMediaProps = CommonProps &
+  Partial<{
+    /**
+     * 页面最小宽度
+     *
+     * 单位为 px
+     */
+    minWidth: number;
+    /**
+     * 页面最大宽度
+     *
+     * 单位为 px
+     */
+    maxWidth: number;
+    /**
+     * 页面宽度
+     *
+     * 单位为 px
+     */
+    width: number;
+    /**
+     * 页面最小高度
+     *
+     * 单位为 px
+     */
+    minHeight: number;
+    /**
+     * 页面最大高度
+     *
+     * 单位为 px
+     */
+    maxHeight: number;
+    /**
+     * 页面高度
+     *
+     * 单位为 px
+     */
+    height: number;
+    /**
+     * 屏幕方向
+     *
+     * Landscape 横向
+     *
+     * Portrait 纵向
+     */
+    orientation: _MatchMediaOrientation;
+  }>;
 
 /**
  * Media query 匹配检测节点

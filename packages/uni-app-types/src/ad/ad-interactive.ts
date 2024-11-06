@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdInteractiveOnLoadEvent = BaseEvent;
@@ -19,16 +20,17 @@ type _AdInteractiveOnErrorEvent = CustomEvent<_AdInteractiveOnErrorDetail>;
 type _AdInteractiveOnError = (event: _AdInteractiveOnErrorEvent) => void;
 
 /** 互动广告属性 */
-type _AdInteractiveProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string;
-  /** 点击广告后打开的页面路径 */
-  openPagePath: string;
-  /** 广告加载成功的回调 */
-  onLoad: _AdInteractiveOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdInteractiveOnError;
-}>;
+type _AdInteractiveProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string;
+    /** 点击广告后打开的页面路径 */
+    openPagePath: string;
+    /** 广告加载成功的回调 */
+    onLoad: _AdInteractiveOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdInteractiveOnError;
+  }>;
 
 /** 互动广告 */
 type _AdInteractive = DefineComponent<_AdInteractiveProps>;

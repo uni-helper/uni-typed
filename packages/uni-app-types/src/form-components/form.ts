@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 import type { CheckboxValue } from "./checkbox";
 import type { InputValue } from "./input";
@@ -36,32 +37,33 @@ type _FormOnResetEvent = BaseEvent;
 type _FormOnReset = (event: _FormOnResetEvent) => void;
 
 /** 表单属性 */
-type _FormProps = Partial<{
-  /**
-   * 是否返回 formId 用于发送模板消息
-   *
-   * 默认为 false
-   */
-  reportSubmit: boolean;
-  /**
-   * 等待一段时间以确认 formId 是否生效
-   *
-   * 如果未指定这个参数，formId 有很小的概率无效（网络问题）
-   *
-   * 指定这个参数将可以检测 formId 是否有效，以这个参数的时间作为这项检测的超时时间
-   *
-   * 如果无效，将返回 requestFormId:fail 开头的 formId
-   *
-   * 单位为 ms
-   *
-   * 默认为 0
-   */
-  reportSubmitTimeout: number;
-  /** 表单提交时触发 */
-  onSubmit: _FormOnSubmit;
-  /** 表单重置时触发 */
-  onReset: _FormOnReset;
-}>;
+type _FormProps = CommonProps &
+  Partial<{
+    /**
+     * 是否返回 formId 用于发送模板消息
+     *
+     * 默认为 false
+     */
+    reportSubmit: boolean;
+    /**
+     * 等待一段时间以确认 formId 是否生效
+     *
+     * 如果未指定这个参数，formId 有很小的概率无效（网络问题）
+     *
+     * 指定这个参数将可以检测 formId 是否有效，以这个参数的时间作为这项检测的超时时间
+     *
+     * 如果无效，将返回 requestFormId:fail 开头的 formId
+     *
+     * 单位为 ms
+     *
+     * 默认为 0
+     */
+    reportSubmitTimeout: number;
+    /** 表单提交时触发 */
+    onSubmit: _FormOnSubmit;
+    /** 表单重置时触发 */
+    onReset: _FormOnReset;
+  }>;
 
 /**
  * 表单

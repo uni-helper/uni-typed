@@ -1,10 +1,12 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /** Swiper 直接子组件属性 */
-type _SwiperItemProps = Partial<{
-  /** 标识符 */
-  itemId: string;
-}>;
+type _SwiperItemProps = CommonProps &
+  Partial<{
+    /** 标识符 */
+    itemId: string;
+  }>;
 
 /**
  * Swiper 直接子组件，宽高自动设置为父组件的 100%

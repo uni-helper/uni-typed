@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 
 /** 是否选中 */
@@ -17,28 +18,29 @@ type _SwitchOnChangeEvent = CustomEvent<_SwitchOnChangeDetail>;
 type _SwitchOnChange = (event: _SwitchOnChangeEvent) => void;
 
 /** 开关选择器属性 */
-type _SwitchProps = Partial<{
-  /** 在 form 中作为 key */
-  name: string;
-  /**
-   * 是否选中
-   *
-   * 默认为 false
-   */
-  checked: _SwitchChecked;
-  /**
-   * 是否禁用
-   *
-   * 默认为 false
-   */
-  disabled: boolean;
-  /** 样式 */
-  type: _SwitchType;
-  /** 颜色 */
-  color: string;
-  /** Checked 改变时触发 */
-  onChange: _SwitchOnChange;
-}>;
+type _SwitchProps = CommonProps &
+  Partial<{
+    /** 在 form 中作为 key */
+    name: string;
+    /**
+     * 是否选中
+     *
+     * 默认为 false
+     */
+    checked: _SwitchChecked;
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
+    disabled: boolean;
+    /** 样式 */
+    type: _SwitchType;
+    /** 颜色 */
+    color: string;
+    /** Checked 改变时触发 */
+    onChange: _SwitchOnChange;
+  }>;
 
 /** 开关选择器 */
 type _Switch = DefineComponent<_SwitchProps>;

@@ -1,14 +1,16 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /** 可拖动区域属性 */
-type _MovableAreaProps = Partial<{
-  /**
-   * 当里面的 movable-view 设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个 movable-area
-   *
-   * 默认为 false
-   */
-  scaleArea: boolean;
-}>;
+type _MovableAreaProps = CommonProps &
+  Partial<{
+    /**
+     * 当里面的 movable-view 设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个 movable-area
+     *
+     * 默认为 false
+     */
+    scaleArea: boolean;
+  }>;
 
 /**
  * 可拖动区域

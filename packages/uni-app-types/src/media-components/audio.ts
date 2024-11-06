@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 interface _AudioOnErrorDetail {
@@ -47,56 +48,57 @@ type _AudioOnEndedEvent = BaseEvent;
 type _AudioOnEnded = (event: _AudioOnEndedEvent) => void;
 
 /** 音频属性 */
-type _AudioProps = Partial<{
-  /** Audio 组件的唯一标识符 */
-  id: string;
-  /** 要播放音频的资源地址 */
-  src: string;
-  /**
-   * 是否循环播放
-   *
-   * 默认为 false
-   */
-  loop: boolean;
-  /**
-   * 是否显示默认控件
-   *
-   * 默认为 false
-   */
-  controls: boolean;
-  /**
-   * 默认控件上的音频封面的图片资源地址
-   *
-   * 如果 controls 值为 false 则无效
-   */
-  poster: string;
-  /**
-   * 默认控件上的音频名字
-   *
-   * 如果 controls 值为 false 则无效
-   *
-   * 默认为“未知音频”
-   */
-  name: string;
-  /**
-   * 默认控件上的作者名字
-   *
-   * 如果 controls 值为 false 则无效
-   *
-   * 默认为“未知作者”
-   */
-  author: string;
-  /** 发生错误时触发 */
-  onError: _AudioOnError;
-  /** 开始/继续播放时触发 */
-  onPlay: _AudioOnPlay;
-  /** 暂停播放时触发 */
-  onPause: _AudioOnPause;
-  /** 播放进度改变时触发 */
-  onTimeupdate: _AudioOnTimeupdate;
-  /** 播放到末尾时触发 */
-  onEnded: _AudioOnEnded;
-}>;
+type _AudioProps = CommonProps &
+  Partial<{
+    /** Audio 组件的唯一标识符 */
+    id: string;
+    /** 要播放音频的资源地址 */
+    src: string;
+    /**
+     * 是否循环播放
+     *
+     * 默认为 false
+     */
+    loop: boolean;
+    /**
+     * 是否显示默认控件
+     *
+     * 默认为 false
+     */
+    controls: boolean;
+    /**
+     * 默认控件上的音频封面的图片资源地址
+     *
+     * 如果 controls 值为 false 则无效
+     */
+    poster: string;
+    /**
+     * 默认控件上的音频名字
+     *
+     * 如果 controls 值为 false 则无效
+     *
+     * 默认为“未知音频”
+     */
+    name: string;
+    /**
+     * 默认控件上的作者名字
+     *
+     * 如果 controls 值为 false 则无效
+     *
+     * 默认为“未知作者”
+     */
+    author: string;
+    /** 发生错误时触发 */
+    onError: _AudioOnError;
+    /** 开始/继续播放时触发 */
+    onPlay: _AudioOnPlay;
+    /** 暂停播放时触发 */
+    onPause: _AudioOnPause;
+    /** 播放进度改变时触发 */
+    onTimeupdate: _AudioOnTimeupdate;
+    /** 播放到末尾时触发 */
+    onEnded: _AudioOnEnded;
+  }>;
 
 /** 音频 */
 type _Audio = DefineComponent<_AudioProps>;

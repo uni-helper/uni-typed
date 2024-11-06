@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 import type { RadioValue } from "./radio";
 
@@ -12,10 +13,11 @@ type _RadioGroupOnChangeEvent = CustomEvent<_RadioGroupOnChangeDetail>;
 type _RadioGroupOnChange = (event: _RadioGroupOnChangeEvent) => void;
 
 /** 单项选择器属性 */
-type _RadioGroupProps = Partial<{
-  /** 选中项发生变化时触发 */
-  onChange: _RadioGroupOnChange;
-}>;
+type _RadioGroupProps = CommonProps &
+  Partial<{
+    /** 选中项发生变化时触发 */
+    onChange: _RadioGroupOnChange;
+  }>;
 
 /**
  * 单项选择器，内部由多个 radio 组成

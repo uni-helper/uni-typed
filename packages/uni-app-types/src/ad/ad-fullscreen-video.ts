@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdFullscreenVideoOnLoadEvent = BaseEvent;
@@ -29,28 +30,29 @@ type _AdFullscreenVideoOnClose = (
 ) => void;
 
 /** 全屏视频广告属性 */
-type _AdFullscreenVideoProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string | number | (string | number)[];
-  /**
-   * 是否在页面就绪后加载广告数据
-   *
-   * 默认为 `true`
-   */
-  preload: boolean;
-  /**
-   * 是否自动加载下一条广告数据
-   *
-   * 默认为 false
-   */
-  loadnext: boolean;
-  /** 广告加载成功的回调 */
-  onLoad: _AdFullscreenVideoOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdFullscreenVideoOnError;
-  /** 广告关闭的回调 */
-  onClose: _AdFullscreenVideoOnClose;
-}>;
+type _AdFullscreenVideoProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string | number | (string | number)[];
+    /**
+     * 是否在页面就绪后加载广告数据
+     *
+     * 默认为 `true`
+     */
+    preload: boolean;
+    /**
+     * 是否自动加载下一条广告数据
+     *
+     * 默认为 false
+     */
+    loadnext: boolean;
+    /** 广告加载成功的回调 */
+    onLoad: _AdFullscreenVideoOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdFullscreenVideoOnError;
+    /** 广告关闭的回调 */
+    onClose: _AdFullscreenVideoOnClose;
+  }>;
 
 /** 全屏视频广告 */
 type _AdFullscreenVideo = DefineComponent<_AdFullscreenVideoProps>;

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdInterstitialOnLoadEvent = BaseEvent;
@@ -24,28 +25,29 @@ type _AdInterstitialOnCloseEvent = BaseEvent;
 type _AdInterstitialOnClose = (event: _AdInterstitialOnCloseEvent) => void;
 
 /** 插屏广告属性 */
-type _AdInterstitialProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string | number | (string | number)[];
-  /**
-   * 是否在页面就绪后加载广告数据
-   *
-   * 默认为 `true`
-   */
-  preload: boolean;
-  /**
-   * 是否自动加载下一条广告数据
-   *
-   * 默认为 `false`
-   */
-  loadnext: boolean;
-  /** 广告加载成功的回调 */
-  onLoad: _AdInterstitialOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdInterstitialOnError;
-  /** 广告关闭的回调 */
-  onClose: _AdInterstitialOnClose;
-}>;
+type _AdInterstitialProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string | number | (string | number)[];
+    /**
+     * 是否在页面就绪后加载广告数据
+     *
+     * 默认为 `true`
+     */
+    preload: boolean;
+    /**
+     * 是否自动加载下一条广告数据
+     *
+     * 默认为 `false`
+     */
+    loadnext: boolean;
+    /** 广告加载成功的回调 */
+    onLoad: _AdInterstitialOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdInterstitialOnError;
+    /** 广告关闭的回调 */
+    onClose: _AdInterstitialOnClose;
+  }>;
 
 /** 插屏广告 */
 type _AdInterstitial = DefineComponent<_AdInterstitialProps>;

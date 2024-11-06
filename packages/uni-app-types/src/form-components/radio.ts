@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /**
  * 标识
@@ -8,30 +9,31 @@ import type { DefineComponent } from "vue";
 type _RadioValue = string;
 
 /** 单选项目属性 */
-type _RadioProps = Partial<{
-  /** 在 form 中作为 key */
-  name: string;
-  /**
-   * 标识
-   *
-   * 被选中时，radio-group 的 change 事件会携带该 value
-   */
-  value: _RadioValue;
-  /**
-   * 当前是否选中
-   *
-   * 默认为 false
-   */
-  checked: boolean;
-  /**
-   * 是否禁用
-   *
-   * 默认为 false
-   */
-  disabled: boolean;
-  /** 颜色 */
-  color: string;
-}>;
+type _RadioProps = CommonProps &
+  Partial<{
+    /** 在 form 中作为 key */
+    name: string;
+    /**
+     * 标识
+     *
+     * 被选中时，radio-group 的 change 事件会携带该 value
+     */
+    value: _RadioValue;
+    /**
+     * 当前是否选中
+     *
+     * 默认为 false
+     */
+    checked: boolean;
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
+    disabled: boolean;
+    /** 颜色 */
+    color: string;
+  }>;
 
 /** 单选项目 */
 type _Radio = DefineComponent<_RadioProps>;

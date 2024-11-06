@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _AdContentPageOnLoadEvent = BaseEvent;
@@ -124,22 +125,23 @@ type _AdContentPageOnCompleteEvent =
 type _AdContentPageOnComplete = (event: _AdContentPageOnCompleteEvent) => void;
 
 /** 短视频内容联盟广告属性 */
-type _AdContentPageProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string;
-  /** 广告加载成功的回调 */
-  onLoad: _AdContentPageOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdContentPageOnError;
-  /** 广告开始播放时触发 */
-  onStart: _AdContentPageOnStart;
-  /** 广告暂停播放时触发 */
-  onPause: _AdContentPageOnPause;
-  /** 广告恢复播放时触发 */
-  onResume: _AdContentPageOnResume;
-  /** 广告完成播放时触发 */
-  onComplete: _AdContentPageOnComplete;
-}>;
+type _AdContentPageProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string;
+    /** 广告加载成功的回调 */
+    onLoad: _AdContentPageOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdContentPageOnError;
+    /** 广告开始播放时触发 */
+    onStart: _AdContentPageOnStart;
+    /** 广告暂停播放时触发 */
+    onPause: _AdContentPageOnPause;
+    /** 广告恢复播放时触发 */
+    onResume: _AdContentPageOnResume;
+    /** 广告完成播放时触发 */
+    onComplete: _AdContentPageOnComplete;
+  }>;
 
 /** 短视频内容联盟广告 */
 type _AdContentPage = DefineComponent<_AdContentPageProps>;

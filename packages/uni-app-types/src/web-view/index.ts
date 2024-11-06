@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 样式 */
@@ -34,22 +35,23 @@ type _WebViewOnOnPostMessageEvent = BaseEvent;
 type _WebViewOnOnPostMessage = (event: _WebViewOnOnPostMessageEvent) => void;
 
 /** Web 浏览器组件属性 */
-type _WebViewProps = Partial<{
-  /** 指向网页的链接 */
-  src: string;
-  /** 用于为 iframe 指定其特征策略 */
-  allow: string;
-  /** 该属性对呈现在 iframe 框架中的内容启用一些额外的限制条件 */
-  sandbox: string;
-  /** 样式 */
-  webviewStyles: _WebViewStyles;
-  /** 是否自动更新当前页面标题 */
-  updateTitle: boolean;
-  /** 网页向应用 postMessage 时，会在特定时机（后退、组件销毁、分享）触发并收到消息 */
-  onMessage: _WebViewOnMessage;
-  /** 网页向应用实时 postMessage */
-  onOnPostMessage: _WebViewOnOnPostMessage;
-}>;
+type _WebViewProps = CommonProps &
+  Partial<{
+    /** 指向网页的链接 */
+    src: string;
+    /** 用于为 iframe 指定其特征策略 */
+    allow: string;
+    /** 该属性对呈现在 iframe 框架中的内容启用一些额外的限制条件 */
+    sandbox: string;
+    /** 样式 */
+    webviewStyles: _WebViewStyles;
+    /** 是否自动更新当前页面标题 */
+    updateTitle: boolean;
+    /** 网页向应用 postMessage 时，会在特定时机（后退、组件销毁、分享）触发并收到消息 */
+    onMessage: _WebViewOnMessage;
+    /** 网页向应用实时 postMessage */
+    onOnPostMessage: _WebViewOnOnPostMessage;
+  }>;
 
 /** Web 浏览器组件，可承载网页 */
 type _WebView = DefineComponent<_WebViewProps>;

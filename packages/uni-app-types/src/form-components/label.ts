@@ -1,10 +1,12 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /** 表单标签属性 */
-type _LabelProps = Partial<{
-  /** 绑定控件的 id */
-  for: string;
-}>;
+type _LabelProps = CommonProps &
+  Partial<{
+    /** 绑定控件的 id */
+    for: string;
+  }>;
 
 /**
  * 表单标签

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent } from "../events";
 
 type _CoverImageOnLoadEvent = BaseEvent;
@@ -12,20 +13,21 @@ type _CoverImageOnErrorEvent = BaseEvent;
 type _CoverImageOnError = (event: _CoverImageOnErrorEvent) => void;
 
 /** 覆盖在原生组件之上的图片视图属性 */
-type _CoverImageProps = Partial<{
-  /**
-   * 图片路径
-   *
-   * 支持本地路径、网络路径
-   *
-   * 不支持 base64 格式
-   */
-  src: string;
-  /** 图片加载成功时触发 */
-  onLoad: _CoverImageOnLoad;
-  /** 图片加载失败时触发 */
-  onError: _CoverImageOnError;
-}>;
+type _CoverImageProps = CommonProps &
+  Partial<{
+    /**
+     * 图片路径
+     *
+     * 支持本地路径、网络路径
+     *
+     * 不支持 base64 格式
+     */
+    src: string;
+    /** 图片加载成功时触发 */
+    onLoad: _CoverImageOnLoad;
+    /** 图片加载失败时触发 */
+    onError: _CoverImageOnError;
+  }>;
 
 /**
  * 覆盖在原生组件之上的图片视图

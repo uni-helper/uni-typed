@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 服务器回调透传数据 */
@@ -30,30 +31,31 @@ type _AdRewardedVideoOnCloseEvent = BaseEvent;
 type _AdRewardedVideoOnClose = (event: _AdRewardedVideoOnCloseEvent) => void;
 
 /** 激励视频广告属性 */
-type _AdRewardedVideoProps = Partial<{
-  /** APP 广告位 id */
-  adpid: string | number | (string | number)[];
-  /**
-   * 是否在页面就绪后加载广告数据
-   *
-   * 默认为 `true`
-   */
-  preload: boolean;
-  /**
-   * 是否自动加载下一条广告数据
-   *
-   * 默认为 `false`
-   */
-  loadnext: boolean;
-  /** 服务器回调透传数据 */
-  urlCallback: _AdRewardedVideoUrlCallback;
-  /** 广告加载成功的回调 */
-  onLoad: _AdRewardedVideoOnLoad;
-  /** 广告加载失败的回调 */
-  onError: _AdRewardedVideoOnError;
-  /** 广告关闭的回调 */
-  onClose: _AdRewardedVideoOnClose;
-}>;
+type _AdRewardedVideoProps = CommonProps &
+  Partial<{
+    /** APP 广告位 id */
+    adpid: string | number | (string | number)[];
+    /**
+     * 是否在页面就绪后加载广告数据
+     *
+     * 默认为 `true`
+     */
+    preload: boolean;
+    /**
+     * 是否自动加载下一条广告数据
+     *
+     * 默认为 `false`
+     */
+    loadnext: boolean;
+    /** 服务器回调透传数据 */
+    urlCallback: _AdRewardedVideoUrlCallback;
+    /** 广告加载成功的回调 */
+    onLoad: _AdRewardedVideoOnLoad;
+    /** 广告加载失败的回调 */
+    onError: _AdRewardedVideoOnError;
+    /** 广告关闭的回调 */
+    onClose: _AdRewardedVideoOnClose;
+  }>;
 
 /** 激励视频广告 */
 type _AdRewardedVideo = DefineComponent<_AdRewardedVideoProps>;

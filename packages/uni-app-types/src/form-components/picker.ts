@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 需要展示的内容 */
@@ -24,46 +25,47 @@ type _SelectorPickerOnCancelEvent = BaseEvent;
 /** 取消选择时触发 */
 type _SelectorPickerOnCancel = (event: _SelectorPickerOnCancelEvent) => void;
 
-type _SelectorPickerProps = Partial<{
-  /** 在 form 中作为 key */
-  name: string;
-  /** 设置为普通选择器 */
-  mode?: "selector";
-  /**
-   * 需要展示的内容
-   *
-   * 默认为 []
-   */
-  range: _SelectorPickerRange;
-  /** 当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容 */
-  rangeKey: string;
-  /**
-   * 当前选择的下标
-   *
-   * 默认为 0
-   */
-  value: _SelectorPickerValue;
-  /**
-   * 大屏时 UI 类型，支持 picker、select、auto
-   *
-   * 默认在 iPad 以 picker 样式展示
-   *
-   * 默认在 PC 以 select 样式展示
-   *
-   * 默认为 auto
-   */
-  selectorType: _SelectorPickerSelectorType;
-  /**
-   * 是否禁用
-   *
-   * 默认为 false
-   */
-  disabled: boolean;
-  /** Value 改变时触发 */
-  onChange: _SelectorPickerOnChange;
-  /** 取消选择时触发 */
-  onCancel: _SelectorPickerOnCancel;
-}>;
+type _SelectorPickerProps = CommonProps &
+  Partial<{
+    /** 在 form 中作为 key */
+    name: string;
+    /** 设置为普通选择器 */
+    mode?: "selector";
+    /**
+     * 需要展示的内容
+     *
+     * 默认为 []
+     */
+    range: _SelectorPickerRange;
+    /** 当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容 */
+    rangeKey: string;
+    /**
+     * 当前选择的下标
+     *
+     * 默认为 0
+     */
+    value: _SelectorPickerValue;
+    /**
+     * 大屏时 UI 类型，支持 picker、select、auto
+     *
+     * 默认在 iPad 以 picker 样式展示
+     *
+     * 默认在 PC 以 select 样式展示
+     *
+     * 默认为 auto
+     */
+    selectorType: _SelectorPickerSelectorType;
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
+    disabled: boolean;
+    /** Value 改变时触发 */
+    onChange: _SelectorPickerOnChange;
+    /** 取消选择时触发 */
+    onCancel: _SelectorPickerOnCancel;
+  }>;
 
 /** 需要展示的内容 */
 type _MultiSelectorPickerRange = string[][] | Record<string, any>[][];

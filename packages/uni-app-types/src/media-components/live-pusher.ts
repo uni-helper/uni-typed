@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -436,208 +437,209 @@ type _LivePusherOnBgmcompleteEvent = BaseEvent;
 type _LivePusherOnBgmcomplete = (event: _LivePusherOnBgmcompleteEvent) => void;
 
 /** 实时音视频录制（直播推流）属性 */
-type _LivePusherProps = Partial<{
-  /** 推流地址，支持 RTMP 协议 */
-  url: string;
-  /**
-   * 推流视频模式
-   *
-   * SD 标清
-   *
-   * HD 高清
-   *
-   * FHD 超清
-   *
-   * 默认为 SD
-   */
-  mode: _LivePusherMode;
-  /**
-   * 是否自动推流
-   *
-   * 默认为 false
-   */
-  autopush: boolean;
-  /**
-   * 视频宽高比例
-   *
-   * 默认为 3:2
-   */
-  aspect: number;
-  /**
-   * 是否静音
-   *
-   * 默认为 false
-   */
-  muted: boolean;
-  /**
-   * 是否开启摄像头
-   *
-   * 默认为 true
-   */
-  enableCamera: boolean;
-  /**
-   * 自动聚焦
-   *
-   * 默认为 true
-   */
-  autoFocus: boolean;
-  /**
-   * 美颜
-   *
-   * 取值范围为 0 - 9
-   *
-   * 默认为 0
-   */
-  beauty: number;
-  /**
-   * 美白
-   *
-   * 取值范围为 0 - 9
-   *
-   * 默认为 0
-   */
-  whiteness: number;
-  /**
-   * 画面方向
-   *
-   * Vertical 纵向
-   *
-   * Horizontal 横向
-   *
-   * 默认为 vertical
-   */
-  orientation: _LivePusherOrientation;
-  /**
-   * 最小码率
-   *
-   * 默认为 200
-   */
-  minBitrate: number;
-  /**
-   * 最大码率
-   *
-   * 默认为 1000
-   */
-  maxBitrate: number;
-  /**
-   * 音质
-   *
-   * High 高音质 48KHz
-   *
-   * Low 低音质 16KHz
-   *
-   * 默认为 high
-   */
-  audioQuality: _LivePusherAudioQuality;
-  /** 进入后台时推流的等待画面 */
-  waitingImage: string;
-  /** 等待画面资源的 MD5 值 */
-  waitingImageMd5: string;
-  /**
-   * 是否调整焦距
-   *
-   * 默认为 false
-   */
-  zoom: boolean;
-  /**
-   * 使用的摄像头
-   *
-   * Front 前置摄像头
-   *
-   * Back 后置摄像头
-   *
-   * 默认为 front
-   */
-  devicePosition: _LivePusherDevicePosition;
-  /**
-   * 进入后台时是否静音
-   *
-   * 默认为 false
-   */
-  backgroundMute: boolean;
-  /**
-   * 设置推流画面是否镜像，产生的效果在 live-player 呈现
-   *
-   * 默认为 false
-   */
-  remoteMirror: boolean;
-  /**
-   * 控制本地预览画面是否镜像
-   *
-   * Auto 前置摄像头镜像，后置摄像头不镜像
-   *
-   * Enable 前后置摄像头均镜像
-   *
-   * Disable 前后置摄像头均不镜像
-   *
-   * 默认为 auto
-   */
-  localMirror: _LivePusherLocalMirror;
-  /**
-   * 音频混响类型
-   *
-   * 0 关闭
-   *
-   * 1 KTV
-   *
-   * 2 小房间
-   *
-   * 3 大会堂
-   *
-   * 4 低沉
-   *
-   * 5 洪亮
-   *
-   * 6 金属声
-   *
-   * 7 磁性
-   *
-   * 默认为 0
-   */
-  audioReverbType: _LivePusherAudioReverbType;
-  /**
-   * 是否开启麦克风
-   *
-   * 默认为 true
-   */
-  enableMic: boolean;
-  /**
-   * 是否开启音频自动增益
-   *
-   * 默认为 false
-   */
-  enableAgc: boolean;
-  /**
-   * 是否开启音频噪声抑制
-   *
-   * 默认为 false
-   */
-  enableAns: boolean;
-  /**
-   * 音量类型
-   *
-   * Auto 自动
-   *
-   * Media 媒体音量
-   *
-   * Voicecall 通话音量
-   *
-   * 默认为 auto
-   */
-  audioVolumeType: _LivePusherAudioVolumeType;
-  /** 播放状态变化时触发 */
-  onStatechange: _LivePusherOnStatechange;
-  /** 网络状态变化时触发 */
-  onNetstatus: _LivePusherOnNetstatus;
-  /** 渲染错误时触发 */
-  onError: _LivePusherOnError;
-  /** 背景音开始播放时触发 */
-  onBgmstart: _LivePusherOnBgmstart;
-  /** 背景音进度变化时触发 */
-  onBgmprogress: _LivePusherOnBgmprogress;
-  /** 背景音播放完成时触发 */
-  onBgmcomplete: _LivePusherOnBgmcomplete;
-}>;
+type _LivePusherProps = CommonProps &
+  Partial<{
+    /** 推流地址，支持 RTMP 协议 */
+    url: string;
+    /**
+     * 推流视频模式
+     *
+     * SD 标清
+     *
+     * HD 高清
+     *
+     * FHD 超清
+     *
+     * 默认为 SD
+     */
+    mode: _LivePusherMode;
+    /**
+     * 是否自动推流
+     *
+     * 默认为 false
+     */
+    autopush: boolean;
+    /**
+     * 视频宽高比例
+     *
+     * 默认为 3:2
+     */
+    aspect: number;
+    /**
+     * 是否静音
+     *
+     * 默认为 false
+     */
+    muted: boolean;
+    /**
+     * 是否开启摄像头
+     *
+     * 默认为 true
+     */
+    enableCamera: boolean;
+    /**
+     * 自动聚焦
+     *
+     * 默认为 true
+     */
+    autoFocus: boolean;
+    /**
+     * 美颜
+     *
+     * 取值范围为 0 - 9
+     *
+     * 默认为 0
+     */
+    beauty: number;
+    /**
+     * 美白
+     *
+     * 取值范围为 0 - 9
+     *
+     * 默认为 0
+     */
+    whiteness: number;
+    /**
+     * 画面方向
+     *
+     * Vertical 纵向
+     *
+     * Horizontal 横向
+     *
+     * 默认为 vertical
+     */
+    orientation: _LivePusherOrientation;
+    /**
+     * 最小码率
+     *
+     * 默认为 200
+     */
+    minBitrate: number;
+    /**
+     * 最大码率
+     *
+     * 默认为 1000
+     */
+    maxBitrate: number;
+    /**
+     * 音质
+     *
+     * High 高音质 48KHz
+     *
+     * Low 低音质 16KHz
+     *
+     * 默认为 high
+     */
+    audioQuality: _LivePusherAudioQuality;
+    /** 进入后台时推流的等待画面 */
+    waitingImage: string;
+    /** 等待画面资源的 MD5 值 */
+    waitingImageMd5: string;
+    /**
+     * 是否调整焦距
+     *
+     * 默认为 false
+     */
+    zoom: boolean;
+    /**
+     * 使用的摄像头
+     *
+     * Front 前置摄像头
+     *
+     * Back 后置摄像头
+     *
+     * 默认为 front
+     */
+    devicePosition: _LivePusherDevicePosition;
+    /**
+     * 进入后台时是否静音
+     *
+     * 默认为 false
+     */
+    backgroundMute: boolean;
+    /**
+     * 设置推流画面是否镜像，产生的效果在 live-player 呈现
+     *
+     * 默认为 false
+     */
+    remoteMirror: boolean;
+    /**
+     * 控制本地预览画面是否镜像
+     *
+     * Auto 前置摄像头镜像，后置摄像头不镜像
+     *
+     * Enable 前后置摄像头均镜像
+     *
+     * Disable 前后置摄像头均不镜像
+     *
+     * 默认为 auto
+     */
+    localMirror: _LivePusherLocalMirror;
+    /**
+     * 音频混响类型
+     *
+     * 0 关闭
+     *
+     * 1 KTV
+     *
+     * 2 小房间
+     *
+     * 3 大会堂
+     *
+     * 4 低沉
+     *
+     * 5 洪亮
+     *
+     * 6 金属声
+     *
+     * 7 磁性
+     *
+     * 默认为 0
+     */
+    audioReverbType: _LivePusherAudioReverbType;
+    /**
+     * 是否开启麦克风
+     *
+     * 默认为 true
+     */
+    enableMic: boolean;
+    /**
+     * 是否开启音频自动增益
+     *
+     * 默认为 false
+     */
+    enableAgc: boolean;
+    /**
+     * 是否开启音频噪声抑制
+     *
+     * 默认为 false
+     */
+    enableAns: boolean;
+    /**
+     * 音量类型
+     *
+     * Auto 自动
+     *
+     * Media 媒体音量
+     *
+     * Voicecall 通话音量
+     *
+     * 默认为 auto
+     */
+    audioVolumeType: _LivePusherAudioVolumeType;
+    /** 播放状态变化时触发 */
+    onStatechange: _LivePusherOnStatechange;
+    /** 网络状态变化时触发 */
+    onNetstatus: _LivePusherOnNetstatus;
+    /** 渲染错误时触发 */
+    onError: _LivePusherOnError;
+    /** 背景音开始播放时触发 */
+    onBgmstart: _LivePusherOnBgmstart;
+    /** 背景音进度变化时触发 */
+    onBgmprogress: _LivePusherOnBgmprogress;
+    /** 背景音播放完成时触发 */
+    onBgmcomplete: _LivePusherOnBgmcomplete;
+  }>;
 
 /** 实时音视频录制（直播推流） */
 type _LivePusher = DefineComponent<_LivePusherProps>;

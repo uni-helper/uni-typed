@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 弹幕 */
@@ -188,265 +189,266 @@ type _VideoOnControlstoggleEvent = CustomEvent<_VideoOnControlstoggleDetail>;
 type _VideoOnControlstoggle = (event: _VideoOnControlstoggleEvent) => void;
 
 /** 视频播放组件属性 */
-type _VideoProps = Partial<{
-  /** 要播放视频的资源地址 */
-  src: string;
-  /**
-   * 是否自动播放
-   *
-   * 默认为 false
-   */
-  autoplay: boolean;
-  /**
-   * 是否循环播放
-   *
-   * 默认为 false
-   */
-  loop: boolean;
-  /**
-   * 是否静音播放
-   *
-   * 默认为 false
-   */
-  muted: boolean;
-  /**
-   * 指定视频初始播放位置
-   *
-   * 单位为 s
-   */
-  initialTime: number;
-  /**
-   * 指定视频长度
-   *
-   * 单位为 s
-   */
-  duration: number;
-  /**
-   * 是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
-   *
-   * 默认为 true
-   */
-  controls: boolean;
-  /** 弹幕列表 */
-  danmuList: _VideoDanmu[];
-  /**
-   * 是否显示弹幕按钮，不支持动态修改
-   *
-   * 默认为 false
-   */
-  danmuBtn: boolean;
-  /**
-   * 是否展示弹幕，不支持动态修改
-   *
-   * 默认为 false
-   */
-  enableDanmu: boolean;
-  /**
-   * 在非全屏模式下，是否开启亮度与音量调节手势
-   *
-   * 默认为 false
-   */
-  pageGesture: boolean;
-  /**
-   * 设置全屏时视频的方向，不指定则根据宽高比自动判断
-   *
-   * 0 正常竖向
-   *
-   * 90 屏幕逆时针 90 度
-   *
-   * -90 屏幕顺时针 90 度
-   *
-   * 默认根据宽高比自动判断
-   */
-  direction: _VideoDirection;
-  /**
-   * 若不设置，宽度大于 240 时才会显示
-   *
-   * 默认为 true
-   */
-  showProgress: boolean;
-  /**
-   * 是否显示全屏按钮
-   *
-   * 默认为 true
-   */
-  showFullscreenBtn: boolean;
-  /**
-   * 是否显示视频底部控制栏的播放按钮
-   *
-   * 默认为 true
-   */
-  showPlayBtn: boolean;
-  /**
-   * 是否显示视频中间的播放按钮
-   *
-   * 默认为 true
-   */
-  showCenterPlayBtn: boolean;
-  /**
-   * 是否显示 loading 控件
-   *
-   * 默认为 true
-   */
-  showLoading: boolean;
-  /**
-   * 是否开启控制进度的手势
-   *
-   * 默认为 true
-   */
-  enableProgressGesture: boolean;
-  /**
-   * 当视频大小与 video 容器大小不一致时，视频的表现形式
-   *
-   * Contain 包含
-   *
-   * Fill 填充
-   *
-   * Cover 覆盖
-   *
-   * 默认为 contain
-   */
-  objectFit: _VideoObjectFit;
-  /**
-   * 视频封面的图片网络资源地址
-   *
-   * 如果 controls 值为 false 则无效
-   */
-  poster: string;
-  /**
-   * 是否显示静音按钮
-   *
-   * @decs 默认为 false
-   */
-  showMuteBtn: boolean;
-  /** 视频的标题，全屏时在顶部展示 */
-  title: string;
-  /**
-   * 播放按钮的位置
-   *
-   * Bottom 控制栏上
-   *
-   * Center 视频中间
-   *
-   * 默认为 bottom
-   */
-  playBtnPosition: _VideoPlayBtnPosition;
-  /**
-   * 移动网络提醒样式
-   *
-   * 0 不提醒
-   *
-   * 1 提醒
-   *
-   * 默认为 1
-   */
-  mobilenetHintType: _VideoMobilenetHintType;
-  /**
-   * 是否开启播放手势，即双击切换播放、暂停
-   *
-   * 默认为 false
-   */
-  enablePlayGesture: boolean;
-  /**
-   * 当跳转到其它小程序页面时，是否自动暂停本页面的视频
-   *
-   * 默认为 true
-   */
-  autoPauseIfNavigate: boolean;
-  /**
-   * 当跳转到其它微信原生页面时，是否自动暂停本页面的视频
-   *
-   * 默认为 true
-   */
-  autoPauseIfOpenNative: boolean;
-  /**
-   * 在非全屏模式下，是否开启亮度与音量调节手势（同 page-gesture）
-   *
-   * 默认为 false
-   */
-  vslideGesture: boolean;
-  /**
-   * 在全屏模式下，是否开启亮度与音量调节手势
-   *
-   * 默认为 true
-   */
-  vslideGestureInFullscreen: boolean;
-  /** 视频前贴广告单元ID */
-  adUnitId: string;
-  /**
-   * 用于给搜索等场景作为视频封面展示
-   *
-   * 建议使用无播放 icon 的视频封面图
-   *
-   * 只支持网络地址
-   */
-  posterForCrawler: string;
-  /**
-   * 解码器选择
-   *
-   * Hardware 硬件解码
-   *
-   * Software 软件解码
-   *
-   * 默认为 hardware
-   */
-  codec: _VideoCodec;
-  /**
-   * 是否对 http、https 视频源开启本地缓存
-   *
-   * 默认为 true
-   */
-  httpCache: boolean;
-  /**
-   * 播放策略
-   *
-   * 0 普通模式，适合绝大部分视频播放场景
-   *
-   * 1 平滑播放模式（降级），增加缓冲区大小，采用 open sl
-   * 解码音频，避免音视频脱轨的问题，可能会降低首屏展现速度、视频帧率，出现开屏音频延迟等，适用于高码率视频的极端场景
-   *
-   * 2 M3U8 优化模式，增加缓冲区大小，提升视频加载速度和流畅度，可能会降低首屏展现速度，适用于 M3U8 在线播放的场景
-   *
-   * 默认为 0
-   */
-  playStrategy: _VideoPlayStrategy;
-  /** HTTP 请求 Header */
-  header: Record<string, any>;
-  /** 开始/继续播放时触发 */
-  onPlay: _VideoOnPlay;
-  /** 暂停播放时触发 */
-  onPause: _VideoOnPause;
-  /** 播放到末尾时触发 */
-  onEnded: _VideoOnEnded;
-  /**
-   * 播放进度变化时触发
-   *
-   * 250ms 一次
-   */
-  onTimeupdate: _VideoOnTimeupdate;
-  /** 视频进入和退出全屏时触发 */
-  onFullscreenchange: _VideoOnFullscreenchange;
-  /** 视频缓冲时触发 */
-  onWaiting: _VideoOnWaiting;
-  /** 视频播放出错时触发 */
-  onError: _VideoOnError;
-  /** 加载进度变化时触发 */
-  onProgress: _VideoOnProgress;
-  /** 视频资源开始加载时触发 */
-  onLoadeddata: _VideoOnLoadeddata;
-  /** 开始加载数据时触发 */
-  onLoadstart: _VideoOnLoadstart;
-  /** 拖动进度条结束时触发 */
-  onSeeked: _VideoOnSeeked;
-  /** 拖动进度条时触发 */
-  onSeeking: _VideoOnSeeking;
-  /** 视频元数据加载完成时触发 */
-  onLoadedmetadata: _VideoOnLoadedmetadata;
-  /** 视频播放全屏播放点击时触发 */
-  onFullscreenclick: _VideoOnFullscreenclick;
-  /** 切换 controls 显示隐藏时触发 */
-  onControlstoggle: _VideoOnControlstoggle;
-}>;
+type _VideoProps = CommonProps &
+  Partial<{
+    /** 要播放视频的资源地址 */
+    src: string;
+    /**
+     * 是否自动播放
+     *
+     * 默认为 false
+     */
+    autoplay: boolean;
+    /**
+     * 是否循环播放
+     *
+     * 默认为 false
+     */
+    loop: boolean;
+    /**
+     * 是否静音播放
+     *
+     * 默认为 false
+     */
+    muted: boolean;
+    /**
+     * 指定视频初始播放位置
+     *
+     * 单位为 s
+     */
+    initialTime: number;
+    /**
+     * 指定视频长度
+     *
+     * 单位为 s
+     */
+    duration: number;
+    /**
+     * 是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
+     *
+     * 默认为 true
+     */
+    controls: boolean;
+    /** 弹幕列表 */
+    danmuList: _VideoDanmu[];
+    /**
+     * 是否显示弹幕按钮，不支持动态修改
+     *
+     * 默认为 false
+     */
+    danmuBtn: boolean;
+    /**
+     * 是否展示弹幕，不支持动态修改
+     *
+     * 默认为 false
+     */
+    enableDanmu: boolean;
+    /**
+     * 在非全屏模式下，是否开启亮度与音量调节手势
+     *
+     * 默认为 false
+     */
+    pageGesture: boolean;
+    /**
+     * 设置全屏时视频的方向，不指定则根据宽高比自动判断
+     *
+     * 0 正常竖向
+     *
+     * 90 屏幕逆时针 90 度
+     *
+     * -90 屏幕顺时针 90 度
+     *
+     * 默认根据宽高比自动判断
+     */
+    direction: _VideoDirection;
+    /**
+     * 若不设置，宽度大于 240 时才会显示
+     *
+     * 默认为 true
+     */
+    showProgress: boolean;
+    /**
+     * 是否显示全屏按钮
+     *
+     * 默认为 true
+     */
+    showFullscreenBtn: boolean;
+    /**
+     * 是否显示视频底部控制栏的播放按钮
+     *
+     * 默认为 true
+     */
+    showPlayBtn: boolean;
+    /**
+     * 是否显示视频中间的播放按钮
+     *
+     * 默认为 true
+     */
+    showCenterPlayBtn: boolean;
+    /**
+     * 是否显示 loading 控件
+     *
+     * 默认为 true
+     */
+    showLoading: boolean;
+    /**
+     * 是否开启控制进度的手势
+     *
+     * 默认为 true
+     */
+    enableProgressGesture: boolean;
+    /**
+     * 当视频大小与 video 容器大小不一致时，视频的表现形式
+     *
+     * Contain 包含
+     *
+     * Fill 填充
+     *
+     * Cover 覆盖
+     *
+     * 默认为 contain
+     */
+    objectFit: _VideoObjectFit;
+    /**
+     * 视频封面的图片网络资源地址
+     *
+     * 如果 controls 值为 false 则无效
+     */
+    poster: string;
+    /**
+     * 是否显示静音按钮
+     *
+     * @decs 默认为 false
+     */
+    showMuteBtn: boolean;
+    /** 视频的标题，全屏时在顶部展示 */
+    title: string;
+    /**
+     * 播放按钮的位置
+     *
+     * Bottom 控制栏上
+     *
+     * Center 视频中间
+     *
+     * 默认为 bottom
+     */
+    playBtnPosition: _VideoPlayBtnPosition;
+    /**
+     * 移动网络提醒样式
+     *
+     * 0 不提醒
+     *
+     * 1 提醒
+     *
+     * 默认为 1
+     */
+    mobilenetHintType: _VideoMobilenetHintType;
+    /**
+     * 是否开启播放手势，即双击切换播放、暂停
+     *
+     * 默认为 false
+     */
+    enablePlayGesture: boolean;
+    /**
+     * 当跳转到其它小程序页面时，是否自动暂停本页面的视频
+     *
+     * 默认为 true
+     */
+    autoPauseIfNavigate: boolean;
+    /**
+     * 当跳转到其它微信原生页面时，是否自动暂停本页面的视频
+     *
+     * 默认为 true
+     */
+    autoPauseIfOpenNative: boolean;
+    /**
+     * 在非全屏模式下，是否开启亮度与音量调节手势（同 page-gesture）
+     *
+     * 默认为 false
+     */
+    vslideGesture: boolean;
+    /**
+     * 在全屏模式下，是否开启亮度与音量调节手势
+     *
+     * 默认为 true
+     */
+    vslideGestureInFullscreen: boolean;
+    /** 视频前贴广告单元ID */
+    adUnitId: string;
+    /**
+     * 用于给搜索等场景作为视频封面展示
+     *
+     * 建议使用无播放 icon 的视频封面图
+     *
+     * 只支持网络地址
+     */
+    posterForCrawler: string;
+    /**
+     * 解码器选择
+     *
+     * Hardware 硬件解码
+     *
+     * Software 软件解码
+     *
+     * 默认为 hardware
+     */
+    codec: _VideoCodec;
+    /**
+     * 是否对 http、https 视频源开启本地缓存
+     *
+     * 默认为 true
+     */
+    httpCache: boolean;
+    /**
+     * 播放策略
+     *
+     * 0 普通模式，适合绝大部分视频播放场景
+     *
+     * 1 平滑播放模式（降级），增加缓冲区大小，采用 open sl
+     * 解码音频，避免音视频脱轨的问题，可能会降低首屏展现速度、视频帧率，出现开屏音频延迟等，适用于高码率视频的极端场景
+     *
+     * 2 M3U8 优化模式，增加缓冲区大小，提升视频加载速度和流畅度，可能会降低首屏展现速度，适用于 M3U8 在线播放的场景
+     *
+     * 默认为 0
+     */
+    playStrategy: _VideoPlayStrategy;
+    /** HTTP 请求 Header */
+    header: Record<string, any>;
+    /** 开始/继续播放时触发 */
+    onPlay: _VideoOnPlay;
+    /** 暂停播放时触发 */
+    onPause: _VideoOnPause;
+    /** 播放到末尾时触发 */
+    onEnded: _VideoOnEnded;
+    /**
+     * 播放进度变化时触发
+     *
+     * 250ms 一次
+     */
+    onTimeupdate: _VideoOnTimeupdate;
+    /** 视频进入和退出全屏时触发 */
+    onFullscreenchange: _VideoOnFullscreenchange;
+    /** 视频缓冲时触发 */
+    onWaiting: _VideoOnWaiting;
+    /** 视频播放出错时触发 */
+    onError: _VideoOnError;
+    /** 加载进度变化时触发 */
+    onProgress: _VideoOnProgress;
+    /** 视频资源开始加载时触发 */
+    onLoadeddata: _VideoOnLoadeddata;
+    /** 开始加载数据时触发 */
+    onLoadstart: _VideoOnLoadstart;
+    /** 拖动进度条结束时触发 */
+    onSeeked: _VideoOnSeeked;
+    /** 拖动进度条时触发 */
+    onSeeking: _VideoOnSeeking;
+    /** 视频元数据加载完成时触发 */
+    onLoadedmetadata: _VideoOnLoadedmetadata;
+    /** 视频播放全屏播放点击时触发 */
+    onFullscreenclick: _VideoOnFullscreenclick;
+    /** 切换 controls 显示隐藏时触发 */
+    onControlstoggle: _VideoOnControlstoggle;
+  }>;
 
 /**
  * 视频播放组件

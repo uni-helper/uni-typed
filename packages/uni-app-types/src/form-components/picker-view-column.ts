@@ -1,6 +1,7 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
-type _PickerViewColumnProps = Partial<{}>;
+type _PickerViewColumnProps = CommonProps & Partial<{}>;
 
 type _PickerViewColumn = DefineComponent<_PickerViewColumnProps>;
 

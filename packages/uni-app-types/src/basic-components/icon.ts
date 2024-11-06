@@ -1,20 +1,22 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /** 图标属性 */
-type _IconProps = Partial<{
-  /** 类型 */
-  type: string;
-  /**
-   * 大小
-   *
-   * 单位为 px
-   *
-   * 默认为 23
-   */
-  size: number;
-  /** 颜色 */
-  color: string;
-}>;
+type _IconProps = CommonProps &
+  Partial<{
+    /** 类型 */
+    type: string;
+    /**
+     * 大小
+     *
+     * 单位为 px
+     *
+     * 默认为 23
+     */
+    size: number;
+    /** 颜色 */
+    color: string;
+  }>;
 
 /** 图标 */
 type _Icon = DefineComponent<_IconProps>;

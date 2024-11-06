@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -83,78 +84,79 @@ type _CameraOnScancodeEvent = BaseEvent;
 type _CameraOnScancode = (event: _CameraOnScancodeEvent) => void;
 
 /** 页面内嵌的区域相机组件属性 */
-type _CameraProps = Partial<{
-  /**
-   * 应用模式，不支持动态修改
-   *
-   * Normal 普通
-   *
-   * ScanCode 扫码
-   *
-   * 默认为 normal
-   */
-  mode: _CameraMode;
-  /**
-   * 分辨率，不支持动态修改
-   *
-   * Low 低
-   *
-   * Medium 中等
-   *
-   * High 高
-   *
-   * 默认为 medium
-   */
-  resolution: _CameraResolution;
-  /**
-   * 摄像头朝向
-   *
-   * Front 前置摄像头
-   *
-   * Back 后置摄像头
-   *
-   * 默认为 back
-   */
-  devicePosition: _CameraDevicePosition;
-  /**
-   * 闪光灯
-   *
-   * Auto 自动
-   *
-   * On 打开
-   *
-   * Off 关闭
-   *
-   * Torch 常亮
-   *
-   * 默认为 auto
-   */
-  flash: _CameraFlash;
-  /**
-   * 期望的相机帧数据尺寸
-   *
-   * Small 小
-   *
-   * Medium 中
-   *
-   * Large 大
-   *
-   * 默认为 medium
-   */
-  frameSize: _CameraFrameSize;
-  /** 摄像头在非正常终止时触发 */
-  onStop: _CameraOnStop;
-  /** 用户不允许使用摄像头时触发 */
-  onError: _CameraOnError;
-  /** 相机初始化完成时触发 */
-  onInitdone: _CameraOnInitdone;
-  /**
-   * 扫码识别成功时触发
-   *
-   * Mode="scanCode" 时有效
-   */
-  onScancode: _CameraOnScancode;
-}>;
+type _CameraProps = CommonProps &
+  Partial<{
+    /**
+     * 应用模式，不支持动态修改
+     *
+     * Normal 普通
+     *
+     * ScanCode 扫码
+     *
+     * 默认为 normal
+     */
+    mode: _CameraMode;
+    /**
+     * 分辨率，不支持动态修改
+     *
+     * Low 低
+     *
+     * Medium 中等
+     *
+     * High 高
+     *
+     * 默认为 medium
+     */
+    resolution: _CameraResolution;
+    /**
+     * 摄像头朝向
+     *
+     * Front 前置摄像头
+     *
+     * Back 后置摄像头
+     *
+     * 默认为 back
+     */
+    devicePosition: _CameraDevicePosition;
+    /**
+     * 闪光灯
+     *
+     * Auto 自动
+     *
+     * On 打开
+     *
+     * Off 关闭
+     *
+     * Torch 常亮
+     *
+     * 默认为 auto
+     */
+    flash: _CameraFlash;
+    /**
+     * 期望的相机帧数据尺寸
+     *
+     * Small 小
+     *
+     * Medium 中
+     *
+     * Large 大
+     *
+     * 默认为 medium
+     */
+    frameSize: _CameraFrameSize;
+    /** 摄像头在非正常终止时触发 */
+    onStop: _CameraOnStop;
+    /** 用户不允许使用摄像头时触发 */
+    onError: _CameraOnError;
+    /** 相机初始化完成时触发 */
+    onInitdone: _CameraOnInitdone;
+    /**
+     * 扫码识别成功时触发
+     *
+     * Mode="scanCode" 时有效
+     */
+    onScancode: _CameraOnScancode;
+  }>;
 
 /** 页面内嵌的区域相机组件 */
 type _Camera = DefineComponent<_CameraProps>;

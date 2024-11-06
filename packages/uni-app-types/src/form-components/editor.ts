@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 type _EditorOnReadyEvent = BaseEvent;
@@ -45,44 +46,45 @@ type _EditorOnStatuschangeEvent = BaseEvent;
 type _EditorOnStatuschange = (event: _EditorOnStatuschangeEvent) => void;
 
 /** 编辑器属性 */
-type _EditorProps = Partial<{
-  /**
-   * 是否只读
-   *
-   * 默认为 false
-   */
-  readOnly: boolean;
-  /** 提示信息 */
-  placeholder: string;
-  /**
-   * 点击图片时是否显示图片大小控件
-   *
-   * 默认为 false
-   */
-  showImgSize: boolean;
-  /**
-   * 点击图片时是否显示工具栏控件
-   *
-   * 默认为 false
-   */
-  showImgToolbar: boolean;
-  /**
-   * 点击图片时是否显示修改尺寸控件
-   *
-   * 默认为 false
-   */
-  showImgResize: string;
-  /** 编辑器初始化完成时触发 */
-  onReady: _EditorOnReady;
-  /** 编辑器聚焦时触发 */
-  onFocus: _EditorOnFocus;
-  /** 编辑器失焦时触发 */
-  onBlur: _EditorOnBlur;
-  /** 编辑器内容改变时触发 */
-  onInput: _EditorOnInput;
-  /** 通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式 */
-  onStatuschange: _EditorOnStatuschange;
-}>;
+type _EditorProps = CommonProps &
+  Partial<{
+    /**
+     * 是否只读
+     *
+     * 默认为 false
+     */
+    readOnly: boolean;
+    /** 提示信息 */
+    placeholder: string;
+    /**
+     * 点击图片时是否显示图片大小控件
+     *
+     * 默认为 false
+     */
+    showImgSize: boolean;
+    /**
+     * 点击图片时是否显示工具栏控件
+     *
+     * 默认为 false
+     */
+    showImgToolbar: boolean;
+    /**
+     * 点击图片时是否显示修改尺寸控件
+     *
+     * 默认为 false
+     */
+    showImgResize: string;
+    /** 编辑器初始化完成时触发 */
+    onReady: _EditorOnReady;
+    /** 编辑器聚焦时触发 */
+    onFocus: _EditorOnFocus;
+    /** 编辑器失焦时触发 */
+    onBlur: _EditorOnBlur;
+    /** 编辑器内容改变时触发 */
+    onInput: _EditorOnInput;
+    /** 通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式 */
+    onStatuschange: _EditorOnStatuschange;
+  }>;
 
 /**
  * 富文本编辑器，可以对图片、文字进行编辑和混排

@@ -1,14 +1,16 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 
 /** 覆盖在原生组件之上的视图属性 */
-type _CoverViewProps = Partial<{
-  /**
-   * 设置顶部滚动偏移量
-   *
-   * 仅在设置了 overflow-y: scroll 成为滚动元素后生效
-   */
-  scrollTop: number | string;
-}>;
+type _CoverViewProps = CommonProps &
+  Partial<{
+    /**
+     * 设置顶部滚动偏移量
+     *
+     * 仅在设置了 overflow-y: scroll 成为滚动元素后生效
+     */
+    scrollTop: number | string;
+  }>;
 
 /**
  * 覆盖在原生组件之上的视图

@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent, TouchCanvasEvent } from "../events";
 
 /** 类型 */
@@ -40,36 +41,37 @@ type _CanvasOnErrorEvent = CustomEvent<_CanvasOnErrorDetail>;
 type _CanvasOnError = (event: _CanvasOnErrorEvent) => void;
 
 /** 画布属性 */
-type _CanvasProps = Partial<{
-  /** 类型 */
-  type: _CanvasType;
-  /** 唯一标识符 */
-  canvasId: string;
-  /**
-   * 当在 canvas 中移动时且有绑定手势事件时，是否禁止屏幕滚动以及下拉刷新
-   *
-   * 默认为 false
-   */
-  disableScroll: boolean;
-  /**
-   * 是否启用高清处理
-   *
-   * 默认为 true
-   */
-  hidpi: boolean;
-  /** 手指触摸动作开始时触发 */
-  onTouchstart: _CanvasOnTouchstart;
-  /** 手指触摸后移动时触发 */
-  onTouchmove: _CanvasOnTouchmove;
-  /** 手指触摸动作结束时触发 */
-  onTouchend: _CanvasOnTouchend;
-  /** 手指触摸动作被打断时触发 */
-  onTouchcancel: _CanvasOnTouchcancel;
-  /** 手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 */
-  onLongtap: _CanvasOnLongtap;
-  /** 发生错误时触发 */
-  onError: _CanvasOnError;
-}>;
+type _CanvasProps = CommonProps &
+  Partial<{
+    /** 类型 */
+    type: _CanvasType;
+    /** 唯一标识符 */
+    canvasId: string;
+    /**
+     * 当在 canvas 中移动时且有绑定手势事件时，是否禁止屏幕滚动以及下拉刷新
+     *
+     * 默认为 false
+     */
+    disableScroll: boolean;
+    /**
+     * 是否启用高清处理
+     *
+     * 默认为 true
+     */
+    hidpi: boolean;
+    /** 手指触摸动作开始时触发 */
+    onTouchstart: _CanvasOnTouchstart;
+    /** 手指触摸后移动时触发 */
+    onTouchmove: _CanvasOnTouchmove;
+    /** 手指触摸动作结束时触发 */
+    onTouchend: _CanvasOnTouchend;
+    /** 手指触摸动作被打断时触发 */
+    onTouchcancel: _CanvasOnTouchcancel;
+    /** 手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 */
+    onLongtap: _CanvasOnLongtap;
+    /** 发生错误时触发 */
+    onError: _CanvasOnError;
+  }>;
 
 /** 画布 */
 type _Canvas = DefineComponent<_CanvasProps>;

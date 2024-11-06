@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /**
@@ -290,102 +291,103 @@ type _LivePlayerOnLeavepictureinpicture = (
 ) => void;
 
 /** 实时音视频播放（直播拉流）属性 */
-type _LivePlayerProps = Partial<{
-  /** 唯一标志符 */
-  id: string;
-  /** 音视频地址 */
-  src: string;
-  /**
-   * 实时模式
-   *
-   * RTC 实时通话，该模式时延更低
-   *
-   * 默认为 live
-   *
-   * @dec live 直播
-   */
-  mode: _LivePlayerMode;
-  /**
-   * 是否自动播放
-   *
-   * 默认为 false
-   */
-  autoplay: boolean;
-  /**
-   * 是否静音
-   *
-   * 默认为 false
-   */
-  muted: boolean;
-  /**
-   * 画面方向
-   *
-   * Vertical 纵向
-   *
-   * Horizontal 横向
-   *
-   * 默认为 vertical
-   */
-  orientation: _LivePlayerOrientation;
-  /**
-   * 填充模式
-   *
-   * Contain 图像长边填满屏幕，短边区域会被填充⿊⾊
-   *
-   * FillCrop 图像铺满屏幕，超出显示区域的部分将被截掉
-   *
-   * 默认为 contain
-   */
-  objectFit: _LivePlayerObjectFit;
-  /**
-   * 进入后台时是否静音
-   *
-   * 默认为 false
-   */
-  backgroundMute: boolean;
-  /**
-   * 声音输出方式
-   *
-   * Speaker 扬声器
-   *
-   * Ear 听筒
-   *
-   * 默认为 speaker
-   */
-  soundMode: _LivePlayerSoundMode;
-  /**
-   * 最小缓冲区
-   *
-   * 单位为 s
-   *
-   * 默认为 1
-   */
-  minCache: number;
-  /**
-   * 最大缓冲区
-   *
-   * 单位为 s
-   *
-   * 默认为 3
-   */
-  maxCache: number;
-  /** 设置小窗模式，空字符串或通过数组形式设置多种模式 */
-  pictureInPictureMode:
-    | _LivePlayerPictureInPictureMode
-    | _LivePlayerPictureInPictureMode[];
-  /** 播放状态变化时触发 */
-  onStatechange: _LivePlayerOnStatechange;
-  /** 网络状态变化时触发 */
-  onNetstatus: _LivePlayerOnNetstatus;
-  /** 全屏变化时触发 */
-  onFullscreenchange: _LivePlayerOnFullscreenchange;
-  /** 播放音量变化时触发 */
-  onAudiovolumenotify: _LivePlayerOnAudiovolumenotify;
-  /** 播放器进入小窗时触发 */
-  onEnterpictureinpicture: _LivePlayerOnEnterpictureinpicture;
-  /** 播放器退出小窗时触发 */
-  onLeavepictureinpicture: _LivePlayerOnLeavepictureinpicture;
-}>;
+type _LivePlayerProps = CommonProps &
+  Partial<{
+    /** 唯一标志符 */
+    id: string;
+    /** 音视频地址 */
+    src: string;
+    /**
+     * 实时模式
+     *
+     * RTC 实时通话，该模式时延更低
+     *
+     * 默认为 live
+     *
+     * @dec live 直播
+     */
+    mode: _LivePlayerMode;
+    /**
+     * 是否自动播放
+     *
+     * 默认为 false
+     */
+    autoplay: boolean;
+    /**
+     * 是否静音
+     *
+     * 默认为 false
+     */
+    muted: boolean;
+    /**
+     * 画面方向
+     *
+     * Vertical 纵向
+     *
+     * Horizontal 横向
+     *
+     * 默认为 vertical
+     */
+    orientation: _LivePlayerOrientation;
+    /**
+     * 填充模式
+     *
+     * Contain 图像长边填满屏幕，短边区域会被填充⿊⾊
+     *
+     * FillCrop 图像铺满屏幕，超出显示区域的部分将被截掉
+     *
+     * 默认为 contain
+     */
+    objectFit: _LivePlayerObjectFit;
+    /**
+     * 进入后台时是否静音
+     *
+     * 默认为 false
+     */
+    backgroundMute: boolean;
+    /**
+     * 声音输出方式
+     *
+     * Speaker 扬声器
+     *
+     * Ear 听筒
+     *
+     * 默认为 speaker
+     */
+    soundMode: _LivePlayerSoundMode;
+    /**
+     * 最小缓冲区
+     *
+     * 单位为 s
+     *
+     * 默认为 1
+     */
+    minCache: number;
+    /**
+     * 最大缓冲区
+     *
+     * 单位为 s
+     *
+     * 默认为 3
+     */
+    maxCache: number;
+    /** 设置小窗模式，空字符串或通过数组形式设置多种模式 */
+    pictureInPictureMode:
+      | _LivePlayerPictureInPictureMode
+      | _LivePlayerPictureInPictureMode[];
+    /** 播放状态变化时触发 */
+    onStatechange: _LivePlayerOnStatechange;
+    /** 网络状态变化时触发 */
+    onNetstatus: _LivePlayerOnNetstatus;
+    /** 全屏变化时触发 */
+    onFullscreenchange: _LivePlayerOnFullscreenchange;
+    /** 播放音量变化时触发 */
+    onAudiovolumenotify: _LivePlayerOnAudiovolumenotify;
+    /** 播放器进入小窗时触发 */
+    onEnterpictureinpicture: _LivePlayerOnEnterpictureinpicture;
+    /** 播放器退出小窗时触发 */
+    onLeavepictureinpicture: _LivePlayerOnLeavepictureinpicture;
+  }>;
 
 /** 实时音视频播放（直播拉流） */
 type _LivePlayer = DefineComponent<_LivePlayerProps>;

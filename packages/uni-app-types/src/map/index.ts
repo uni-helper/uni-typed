@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
 /** 显示方式 */
@@ -553,160 +554,161 @@ type _MapOnPoitapEvent = CustomEvent<_MapOnPoitapDetail>;
 type _MapOnPoitap = (event: _MapOnPoitapEvent) => void;
 
 /** 地图属性 */
-type _MapProps = Partial<{
-  /**
-   * 中心纬度
-   *
-   * 取值范围为 -90 - 90
-   */
-  latitude: _MapLatitude;
-  /**
-   * 中心经度
-   *
-   * 取值范围为 -180 - 180
-   */
-  longitude: _MapLongitude;
-  /**
-   * 缩放级别
-   *
-   * 默认为 16
-   */
-  scale: number;
-  /**
-   * 主题
-   *
-   * 只在初始化时有效，不能动态变更
-   *
-   * 仅 Android 支持
-   *
-   * Normal 正常
-   *
-   * Satellite 卫星图
-   *
-   * 默认为 normal
-   */
-  theme: _MapTheme;
-  /**
-   * 最小缩放级别
-   *
-   * 默认为 3
-   */
-  minScale: number;
-  /**
-   * 最大缩放级别
-   *
-   * 默认为 20
-   */
-  maxScale: number;
-  /**
-   * 个性化地图配置的 style，不支持动态修改
-   *
-   * 默认为 1
-   */
-  layerStyle: string | number;
-  /** 标记点数组 */
-  markers: _MapMarker[];
-  /** 路线 */
-  polyline: _MapPolyline[];
-  /** 圆 */
-  circles: _MapCircle[];
-  /** 控件 */
-  controls: _MapControl[];
-  /** 缩放视野以包含所有给定的坐标点 */
-  includePoints: _MapPoint[];
-  /**
-   * 是否显示 3D 楼块
-   *
-   * 默认为 false
-   */
-  enable3D: boolean;
-  /**
-   * 是否显示指南针
-   *
-   * 默认为 false
-   */
-  showCompass: boolean;
-  /**
-   * 是否支持缩放
-   *
-   * 默认为 true
-   */
-  enableZoom: boolean;
-  /**
-   * 是否支持拖动
-   *
-   * 默认为 true
-   */
-  enableScroll: boolean;
-  /**
-   * 是否支持旋转
-   *
-   * 默认为 false
-   */
-  enableRotate: boolean;
-  /**
-   * 是否开启俯视
-   *
-   * 默认为 false
-   */
-  enableOverlooking: boolean;
-  /**
-   * 是否开启卫星图
-   *
-   * 默认为 false
-   */
-  enableSatellite: boolean;
-  /**
-   * 是否开启实时路况
-   *
-   * 默认为 false
-   */
-  enableTraffic: boolean;
-  /**
-   * 是否展示 POI 点
-   *
-   * 默认为 false
-   */
-  enablePoi: boolean;
-  /**
-   * 是否展示建筑物
-   *
-   * 默认为 false
-   */
-  enableBuilding: boolean;
-  /**
-   * 是否显示带有方向的当前定位点
-   *
-   * 默认为 false
-   */
-  showLocation: boolean;
-  /** 多边形 */
-  polygons: _MapPolygon[];
-  /**
-   * 是否展示室内地图
-   *
-   * 默认为 false
-   */
-  enableIndoorMap: boolean;
-  /** 点击标记点时触发 */
-  onMarkertap: _MapOnMarkertap;
-  /** 点击 label 时触发 */
-  onLabeltap: _MapOnLabeltap;
-  /** 点击标记点对应的气泡时触发 */
-  onCallouttap: _MapOnCallouttap;
-  /** 点击控件时触发 */
-  onControltap: _MapOnControltap;
-  /** 视野发生变化时触发 */
-  onRegionchange: _MapOnRegionchange;
-  /** 点击地图时触发 */
-  onTap: _MapOnTap;
-  /** 地图渲染更新完成时触发 */
-  onUpdated: _MapOnUpdated;
-  /** 点击定位标时触发 */
-  onAnchorpointtap: _MapOnAnchorpointtap;
-  /** 点击地图 poi 点时触发 */
-  onPoitap: _MapOnPoitap;
-}>;
+type _MapProps = CommonProps &
+  Partial<{
+    /**
+     * 中心纬度
+     *
+     * 取值范围为 -90 - 90
+     */
+    latitude: _MapLatitude;
+    /**
+     * 中心经度
+     *
+     * 取值范围为 -180 - 180
+     */
+    longitude: _MapLongitude;
+    /**
+     * 缩放级别
+     *
+     * 默认为 16
+     */
+    scale: number;
+    /**
+     * 主题
+     *
+     * 只在初始化时有效，不能动态变更
+     *
+     * 仅 Android 支持
+     *
+     * Normal 正常
+     *
+     * Satellite 卫星图
+     *
+     * 默认为 normal
+     */
+    theme: _MapTheme;
+    /**
+     * 最小缩放级别
+     *
+     * 默认为 3
+     */
+    minScale: number;
+    /**
+     * 最大缩放级别
+     *
+     * 默认为 20
+     */
+    maxScale: number;
+    /**
+     * 个性化地图配置的 style，不支持动态修改
+     *
+     * 默认为 1
+     */
+    layerStyle: string | number;
+    /** 标记点数组 */
+    markers: _MapMarker[];
+    /** 路线 */
+    polyline: _MapPolyline[];
+    /** 圆 */
+    circles: _MapCircle[];
+    /** 控件 */
+    controls: _MapControl[];
+    /** 缩放视野以包含所有给定的坐标点 */
+    includePoints: _MapPoint[];
+    /**
+     * 是否显示 3D 楼块
+     *
+     * 默认为 false
+     */
+    enable3D: boolean;
+    /**
+     * 是否显示指南针
+     *
+     * 默认为 false
+     */
+    showCompass: boolean;
+    /**
+     * 是否支持缩放
+     *
+     * 默认为 true
+     */
+    enableZoom: boolean;
+    /**
+     * 是否支持拖动
+     *
+     * 默认为 true
+     */
+    enableScroll: boolean;
+    /**
+     * 是否支持旋转
+     *
+     * 默认为 false
+     */
+    enableRotate: boolean;
+    /**
+     * 是否开启俯视
+     *
+     * 默认为 false
+     */
+    enableOverlooking: boolean;
+    /**
+     * 是否开启卫星图
+     *
+     * 默认为 false
+     */
+    enableSatellite: boolean;
+    /**
+     * 是否开启实时路况
+     *
+     * 默认为 false
+     */
+    enableTraffic: boolean;
+    /**
+     * 是否展示 POI 点
+     *
+     * 默认为 false
+     */
+    enablePoi: boolean;
+    /**
+     * 是否展示建筑物
+     *
+     * 默认为 false
+     */
+    enableBuilding: boolean;
+    /**
+     * 是否显示带有方向的当前定位点
+     *
+     * 默认为 false
+     */
+    showLocation: boolean;
+    /** 多边形 */
+    polygons: _MapPolygon[];
+    /**
+     * 是否展示室内地图
+     *
+     * 默认为 false
+     */
+    enableIndoorMap: boolean;
+    /** 点击标记点时触发 */
+    onMarkertap: _MapOnMarkertap;
+    /** 点击 label 时触发 */
+    onLabeltap: _MapOnLabeltap;
+    /** 点击标记点对应的气泡时触发 */
+    onCallouttap: _MapOnCallouttap;
+    /** 点击控件时触发 */
+    onControltap: _MapOnControltap;
+    /** 视野发生变化时触发 */
+    onRegionchange: _MapOnRegionchange;
+    /** 点击地图时触发 */
+    onTap: _MapOnTap;
+    /** 地图渲染更新完成时触发 */
+    onUpdated: _MapOnUpdated;
+    /** 点击定位标时触发 */
+    onAnchorpointtap: _MapOnAnchorpointtap;
+    /** 点击地图 poi 点时触发 */
+    onPoitap: _MapOnPoitap;
+  }>;
 
 /** 地图组件，用于展示地图 */
 type _Map = DefineComponent<_MapProps>;

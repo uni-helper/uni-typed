@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 import type { CheckboxValue } from "./checkbox";
 
@@ -12,10 +13,11 @@ type _CheckboxGroupOnChangeEvent = CustomEvent<_CheckboxGroupOnChangeDetail>;
 type _CheckboxGroupOnChange = (event: _CheckboxGroupOnChangeEvent) => void;
 
 /** 多项选择器属性 */
-type _CheckboxGroupProps = Partial<{
-  /** 选中项发生改变时触发 */
-  onChange: _CheckboxGroupOnChange;
-}>;
+type _CheckboxGroupProps = CommonProps &
+  Partial<{
+    /** 选中项发生改变时触发 */
+    onChange: _CheckboxGroupOnChange;
+  }>;
 
 /** 多项选择器，内部由多个 checkbox 组成 */
 type _CheckboxGroup = DefineComponent<_CheckboxGroupProps>;

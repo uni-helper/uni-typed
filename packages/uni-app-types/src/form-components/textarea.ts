@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue";
+import type { CommonProps } from "../common";
 import type { CustomEvent } from "../events";
 
 /** 输入框内容 */
@@ -86,155 +87,156 @@ type _TextareaOnKeyboardheightchange = (
 ) => void;
 
 /** 多行输入框属性 */
-type _TextareaProps = Partial<{
-  /** 输入框的内容 */
-  value: string;
-  /** 输入框为空时占位符 */
-  placeholder: string;
-  /** 指定 placeholder 的样式 */
-  placeholderStyle: string;
-  /**
-   * 指定 placeholder 的样式类
-   *
-   * 默认为 textarea-placeholder
-   */
-  placeholderClass: string;
-  /**
-   * 是否禁用
-   *
-   * 默认为 false
-   */
-  disabled: boolean;
-  /**
-   * 最大输入长度，设置为 -1 的时候不限制最大长度
-   *
-   * 默认为 140
-   */
-  maxlength: number;
-  /**
-   * 是否获取焦点
-   *
-   * 默认为 false
-   */
-  focus: boolean;
-  /**
-   * 是否自动聚焦，拉起键盘
-   *
-   * 默认为 false
-   */
-  autoFocus: boolean;
-  /**
-   * 是否自动增高
-   *
-   * 设置时，样式里的 height 不生效
-   *
-   * 默认为 false
-   */
-  autoHeight: boolean;
-  /**
-   * 如果 textarea 在 position: fixed 的区域内，需要指定为 true
-   *
-   * 默认为 false
-   */
-  fixed: boolean;
-  /**
-   * 指定光标与键盘的距离
-   *
-   * 取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离
-   *
-   * 单位为 px
-   *
-   * 默认为 0
-   */
-  cursorSpacing: number;
-  /** 指定 focus 时的光标位置 */
-  cursor: number;
-  /**
-   * 设置键盘右下角按钮的文字
-   *
-   * Send 发送
-   *
-   * Search 搜索
-   *
-   * Next 下一个
-   *
-   * Go 前往
-   *
-   * Done 完成
-   *
-   * 默认为 done
-   */
-  confirmType: _TextareaConfirmType;
-  /**
-   * 点击键盘右下角按钮时是否保持键盘不收起
-   *
-   * 默认为 false
-   */
-  confirmHold: boolean;
-  /**
-   * 是否显示键盘上方带有”完成“按钮那一栏
-   *
-   * 默认为 true
-   */
-  showConfirmBar: boolean;
-  /**
-   * 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用
-   *
-   * 默认为 -1
-   */
-  selectionStart: number;
-  /**
-   * 光标结束位置，自动聚焦时有效，需与 selection-start 搭配使用
-   *
-   * 默认为 -1
-   */
-  selectionEnd: number;
-  /**
-   * 键盘弹起时，是否自动上推页面
-   *
-   * 默认为 true
-   */
-  adjustPosition: boolean;
-  /**
-   * 是否去掉 iOS 下的默认内边距
-   *
-   * 默认为 false
-   */
-  disableDefaultPadding: boolean;
-  /**
-   * 聚焦时点击页面的时候是否不收起键盘
-   *
-   * 默认为 false
-   */
-  holdKeyboard: boolean;
-  /**
-   * 键盘收起时是否自动失焦
-   *
-   * 默认为 false
-   */
-  autoBlur: boolean;
-  /**
-   * 是否忽略组件内对文本合成系统事件的处理
-   *
-   * 为 false 时将触发 compositionstart、compositionend、compositionupdate
-   * 事件，且在文本合成期间会触发 input 事件
-   *
-   * 默认为 true
-   */
-  ignoreCompositionEvent: boolean;
-  /** 聚焦时触发 */
-  onFocus: _TextareaOnFocus;
-  /** 失焦时触发 */
-  onBlur: _TextareaOnBlur;
-  /** 输入框行数变化时触发 */
-  onLinechange: _TextareaOnLinechange;
-  /** 输入时触发 */
-  onInput: _TextareaOnInput;
-  /** 点击完成按钮时触发 */
-  onConfirm: _TextareaOnConfirm;
-  /** 键盘高度变化时触发 */
-  onKeyboardheightchange: _TextareaOnKeyboardheightchange;
-}>;
+type _TextareaProps = CommonProps &
+  Partial<{
+    /** 输入框的内容 */
+    value: string;
+    /** 输入框为空时占位符 */
+    placeholder: string;
+    /** 指定 placeholder 的样式 */
+    placeholderStyle: string;
+    /**
+     * 指定 placeholder 的样式类
+     *
+     * 默认为 textarea-placeholder
+     */
+    placeholderClass: string;
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
+    disabled: boolean;
+    /**
+     * 最大输入长度，设置为 -1 的时候不限制最大长度
+     *
+     * 默认为 140
+     */
+    maxlength: number;
+    /**
+     * 是否获取焦点
+     *
+     * 默认为 false
+     */
+    focus: boolean;
+    /**
+     * 是否自动聚焦，拉起键盘
+     *
+     * 默认为 false
+     */
+    autoFocus: boolean;
+    /**
+     * 是否自动增高
+     *
+     * 设置时，样式里的 height 不生效
+     *
+     * 默认为 false
+     */
+    autoHeight: boolean;
+    /**
+     * 如果 textarea 在 position: fixed 的区域内，需要指定为 true
+     *
+     * 默认为 false
+     */
+    fixed: boolean;
+    /**
+     * 指定光标与键盘的距离
+     *
+     * 取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离
+     *
+     * 单位为 px
+     *
+     * 默认为 0
+     */
+    cursorSpacing: number;
+    /** 指定 focus 时的光标位置 */
+    cursor: number;
+    /**
+     * 设置键盘右下角按钮的文字
+     *
+     * Send 发送
+     *
+     * Search 搜索
+     *
+     * Next 下一个
+     *
+     * Go 前往
+     *
+     * Done 完成
+     *
+     * 默认为 done
+     */
+    confirmType: _TextareaConfirmType;
+    /**
+     * 点击键盘右下角按钮时是否保持键盘不收起
+     *
+     * 默认为 false
+     */
+    confirmHold: boolean;
+    /**
+     * 是否显示键盘上方带有”完成“按钮那一栏
+     *
+     * 默认为 true
+     */
+    showConfirmBar: boolean;
+    /**
+     * 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用
+     *
+     * 默认为 -1
+     */
+    selectionStart: number;
+    /**
+     * 光标结束位置，自动聚焦时有效，需与 selection-start 搭配使用
+     *
+     * 默认为 -1
+     */
+    selectionEnd: number;
+    /**
+     * 键盘弹起时，是否自动上推页面
+     *
+     * 默认为 true
+     */
+    adjustPosition: boolean;
+    /**
+     * 是否去掉 iOS 下的默认内边距
+     *
+     * 默认为 false
+     */
+    disableDefaultPadding: boolean;
+    /**
+     * 聚焦时点击页面的时候是否不收起键盘
+     *
+     * 默认为 false
+     */
+    holdKeyboard: boolean;
+    /**
+     * 键盘收起时是否自动失焦
+     *
+     * 默认为 false
+     */
+    autoBlur: boolean;
+    /**
+     * 是否忽略组件内对文本合成系统事件的处理
+     *
+     * 为 false 时将触发 compositionstart、compositionend、compositionupdate
+     * 事件，且在文本合成期间会触发 input 事件
+     *
+     * 默认为 true
+     */
+    ignoreCompositionEvent: boolean;
+    /** 聚焦时触发 */
+    onFocus: _TextareaOnFocus;
+    /** 失焦时触发 */
+    onBlur: _TextareaOnBlur;
+    /** 输入框行数变化时触发 */
+    onLinechange: _TextareaOnLinechange;
+    /** 输入时触发 */
+    onInput: _TextareaOnInput;
+    /** 点击完成按钮时触发 */
+    onConfirm: _TextareaOnConfirm;
+    /** 键盘高度变化时触发 */
+    onKeyboardheightchange: _TextareaOnKeyboardheightchange;
+  }>;
 
 /** 多行输入框 */
 type _Textarea = DefineComponent<_TextareaProps>;
