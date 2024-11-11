@@ -501,6 +501,11 @@ declare global {
     /** 键盘高度变化时触发 */
     export interface InputOnKeyboardheightchange
       extends _InputOnKeyboardheightchange {}
+    export interface InputOnNicknamereviewDetail
+      extends _InputOnNicknamereviewDetail {}
+    export type InputOnNicknamereviewEvent = _InputOnNicknamereviewEvent;
+    /** 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效 */
+    export interface InputOnNicknamereview extends _InputOnNicknamereview {}
     /** 输入框属性 */
     export type InputProps = _InputProps;
     /** 输入框 */
