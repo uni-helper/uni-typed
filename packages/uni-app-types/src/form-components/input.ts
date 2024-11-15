@@ -141,6 +141,18 @@ type _InputOnKeyboardheightchange = (
   event: _InputOnKeyboardheightchangeEvent,
 ) => void;
 
+interface _InputOnNicknamereviewDetail {
+  /** 昵称审核是否通过 */
+  pass: boolean;
+  /** 是否超时 */
+  timeout: boolean;
+}
+
+type _InputOnNicknamereviewEvent = CustomEvent<_InputOnNicknamereviewDetail>;
+
+/** 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效 */
+type _InputOnNicknamereview = (event: _InputOnNicknamereviewEvent) => void;
+
 /** 输入框属性 */
 type _InputProps = CommonProps &
   Partial<{
@@ -363,6 +375,8 @@ type _InputProps = CommonProps &
     onConfirm: _InputOnConfirm;
     /** 键盘高度变化时触发 */
     onKeyboardheightchange: _InputOnKeyboardheightchange;
+    /** 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效 */
+    onNicknamereview: _InputOnNicknamereview;
   }>;
 
 /** 输入框 */
@@ -392,6 +406,9 @@ export type {
   _InputOnKeyboardheightchangeDetail as InputOnKeyboardheightchangeDetail,
   _InputOnKeyboardheightchangeEvent as InputOnKeyboardheightchangeEvent,
   _InputOnKeyboardheightchange as InputOnKeyboardheightchange,
+  _InputOnNicknamereviewDetail as InputOnNicknamereviewDetail,
+  _InputOnNicknamereviewEvent as InputOnNicknamereviewEvent,
+  _InputOnNicknamereview as InputOnNicknamereview,
   _InputProps as InputProps,
   _Input as Input,
   _InputInstance as InputInstance,
@@ -484,6 +501,11 @@ declare global {
     /** 键盘高度变化时触发 */
     export interface InputOnKeyboardheightchange
       extends _InputOnKeyboardheightchange {}
+    export interface InputOnNicknamereviewDetail
+      extends _InputOnNicknamereviewDetail {}
+    export type InputOnNicknamereviewEvent = _InputOnNicknamereviewEvent;
+    /** 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效 */
+    export interface InputOnNicknamereview extends _InputOnNicknamereview {}
     /** 输入框属性 */
     export type InputProps = _InputProps;
     /** 输入框 */
