@@ -17,8 +17,10 @@ type _TextareaValue = string;
  * Go 前往
  *
  * Done 完成
+ *
+ * Return 换行
  */
-type _TextareaConfirmType = "send" | "search" | "next" | "go" | "done";
+type _TextareaConfirmType = "send" | "search" | "next" | "go" | "done" | "return";
 
 interface _TextareaOnFocusDetail {
   value: _TextareaValue;
