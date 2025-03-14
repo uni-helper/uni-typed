@@ -174,7 +174,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      audio: _Audio;
+      audio: _AudioProps;
     }
   }
 }
@@ -190,7 +190,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      audio: _Audio;
+      audio: _AudioProps;
     }
   }
 }

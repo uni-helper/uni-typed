@@ -668,7 +668,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      video: _Video;
+      video: _VideoProps;
     }
   }
 }
@@ -687,7 +687,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      video: _Video;
+      video: _VideoProps;
     }
   }
 }

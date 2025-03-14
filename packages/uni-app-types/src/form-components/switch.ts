@@ -100,7 +100,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      switch: _Switch;
+      switch: _SwitchProps;
     }
   }
 }
@@ -116,7 +116,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      switch: _Switch;
+      switch: _SwitchProps;
     }
   }
 }

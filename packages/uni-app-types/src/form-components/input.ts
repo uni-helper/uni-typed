@@ -537,7 +537,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      input: _Input;
+      input: _InputProps;
     }
   }
 }
@@ -553,7 +553,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      input: _Input;
+      input: _InputProps;
     }
   }
 }
