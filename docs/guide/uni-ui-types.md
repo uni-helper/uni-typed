@@ -102,6 +102,45 @@ npm i -D @uni-helper/uni-app-types @uni-helper/uni-ui-types
 }
 ```
 
+> [!TIP]
+>
+> 关于 `tsconfig.json` 中的一系列的 `compilerOptions.types` 数组的配置，你可以使用 `三斜线指令` 的方式来实现，详见 [`triple-slash-directives`](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)，具体配置如下（相关注释可自行选择去除）：
+>
+> 1. 在项目中新建一个类型文件，目前就以 `src/global.d.ts` 为例。
+>
+> 2. 在 `src/global.d.ts` 文件 **头部** 中添加以下内容：
+> ```ts
+> // src/global.d.ts
+> // uni-app + Vue 3 使用 Vite 构建，需要安装 vite
+> /// <reference types="vite/client" />
+> // uni API 相关的 TypeScript 类型，需要安装 @dcloudio/types
+> /// <reference types="@dcloudio/types" />
+> // my API 相关的 TypeScript 类型，需要安装 @mini-types/alipay
+> /// <reference types="@mini-types/alipay" />
+> // wx API 相关的 TypeScript 类型，需要安装 miniprogram-api-typings
+> /// <reference types="miniprogram-api-typings" />
+> // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-app-types
+> /// <reference types="@uni-helper/uni-app-types" />
+> // 为 uni-ui 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-ui-types
+> /// <reference types="@uni-helper/uni-ui-types" />
+> ```
+>
+> 3. 在 `tsconfig.json` 中添加 `include` 字段，将 `src/global.d.ts` 包含进去，如：
+> ```json
+> // tsconfig.json
+> {
+>   "include": ["src/**/*.d.ts", /** 其余配置 */]
+> }
+> ```
+>
+> ---
+>
+> 相信你大概能够体会出上面的做法的便利性：
+>
+> ts 项目大多会在 `tsconfig.json` 的 `include` 字段中包含 `src/**/*.d.ts`，所以在 `src` 目录下新建任意的 `*.d.ts` 文件；
+>
+> 然后在其头部中添加 `/// <reference types="..." />` 就能命中 `types` 的配置，尽可能实现最简配置。
+
 再次重启你的编辑器或 IDE 以确保服务启动并正确加载配置。如果一切顺利，你应该可以看到类似的 TypeScript 类型提示。
 
 ![示例](/uni-ui-types-example.png)
