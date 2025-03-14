@@ -355,7 +355,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      textarea: _Textarea;
+      textarea: _TextareaProps;
     }
   }
 }
@@ -371,7 +371,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      textarea: _Textarea;
+      textarea: _TextareaProps;
     }
   }
 }

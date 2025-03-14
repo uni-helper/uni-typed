@@ -153,7 +153,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      canvas: _Canvas;
+      canvas: _CanvasProps;
     }
   }
 }
@@ -169,7 +169,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      canvas: _Canvas;
+      canvas: _CanvasProps;
     }
   }
 }

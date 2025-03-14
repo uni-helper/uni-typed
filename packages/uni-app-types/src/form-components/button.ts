@@ -778,7 +778,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      button: _Button;
+      button: _ButtonProps;
     }
   }
 }
@@ -794,7 +794,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      button: _Button;
+      button: _ButtonProps;
     }
   }
 }

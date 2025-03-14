@@ -131,7 +131,7 @@ declare global {
        *
        * 将组件内的用户输入的 switch、input、checkbox、slider、radio、picker 提交
        */
-      form: _Form;
+      form: _FormProps;
     }
   }
 }
@@ -150,7 +150,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      form: _Form;
+      form: _FormProps;
     }
   }
 }
