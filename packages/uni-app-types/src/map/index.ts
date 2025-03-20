@@ -914,7 +914,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      map: _Map;
+      map: _MapProps;
     }
   }
 }
@@ -930,7 +930,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      map: _Map;
+      map: _MapProps;
     }
   }
 }

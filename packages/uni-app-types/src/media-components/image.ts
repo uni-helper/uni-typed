@@ -241,7 +241,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      image: _Image;
+      image: _ImageProps;
     }
   }
 }
@@ -257,7 +257,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      image: _Image;
+      image: _ImageProps;
     }
   }
 }
