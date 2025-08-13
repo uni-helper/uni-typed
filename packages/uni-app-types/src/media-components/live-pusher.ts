@@ -464,7 +464,7 @@ type _LivePusherProps = CommonProps &
      *
      * 默认为 3:2
      */
-    aspect: number;
+    aspect: string;
     /**
      * 是否静音
      *
