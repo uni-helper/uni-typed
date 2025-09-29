@@ -156,13 +156,27 @@ type _ButtonOnGetphonenumberEvent = CustomEvent<_ButtonOnGetphonenumberDetail>;
  */
 type _ButtonOnGetphonenumber = (event: _ButtonOnGetphonenumberEvent) => void;
 
+interface _ButtonOnGetrealtimephonenumberDetail {
+  /** 错误信息 */
+  errMsg?: string;
+  /** 错误码（失败时返回） */
+  errno?: number;
+  /** 动态令牌 */
+  code?: string;
+  /** 敏感数据对应的云 ID，开通云开发的小程序才会返回，可通过云调用直接获取开放数据 */
+  cloudID?: string;
+}
+
+type _ButtonOnGetrealtimephonenumberEvent =
+  CustomEvent<_ButtonOnGetrealtimephonenumberDetail>;
+
 /**
  * 手机号实时验证回调
  *
  * Open-type="getRealtimePhoneNumber" 时有效
  */
 type _ButtonOnGetrealtimephonenumber = (
-  event: _ButtonOnGetphonenumberEvent,
+  event: _ButtonOnGetrealtimephonenumberEvent,
 ) => void;
 
 type _ButtonOnErrorEvent = BaseEvent;
@@ -568,6 +582,8 @@ export type {
   _ButtonOnGetphonenumberDetail as ButtonOnGetphonenumberDetail,
   _ButtonOnGetphonenumberEvent as ButtonOnGetphonenumberEvent,
   _ButtonOnGetphonenumber as ButtonOnGetphonenumber,
+  _ButtonOnGetrealtimephonenumberDetail as ButtonOnGetrealtimephonenumberDetail,
+  _ButtonOnGetrealtimephonenumberEvent as ButtonOnGetrealtimephonenumberEvent,
   _ButtonOnGetrealtimephonenumber as ButtonOnGetrealtimephonenumber,
   _ButtonOnErrorEvent as ButtonOnErrorEvent,
   _ButtonOnError as ButtonOnError,
@@ -706,6 +722,10 @@ declare global {
      * Open-type="getPhoneNumber" 时有效
      */
     export interface ButtonOnGetphonenumber extends _ButtonOnGetphonenumber {}
+    export interface ButtonOnGetrealtimephonenumberDetail
+      extends _ButtonOnGetrealtimephonenumberDetail {}
+    export type ButtonOnGetrealtimephonenumberEvent =
+      _ButtonOnGetrealtimephonenumberEvent;
     /**
      * 手机号实时验证回调
      *
