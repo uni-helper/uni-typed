@@ -18,6 +18,7 @@ import type {
   ButtonOnGetphonenumber,
   ButtonOnGetphonenumberDetail,
   ButtonOnGetphonenumberEvent,
+  ButtonOnGetrealtimephonenumber,
   ButtonOnLaunchapp,
   ButtonOnLaunchappEvent,
   ButtonOnLogin,
@@ -59,6 +60,9 @@ describe("Button", () => {
 
   expectTypeOf<ButtonOnGetphonenumber>().toBeFunction();
   expectTypeOf<ButtonOnGetphonenumber>().toEqualTypeOf<UniHelper.ButtonOnGetphonenumber>();
+
+  expectTypeOf<ButtonOnGetrealtimephonenumber>().toBeFunction();
+  expectTypeOf<ButtonOnGetrealtimephonenumber>().toEqualTypeOf<UniHelper.ButtonOnGetrealtimephonenumber>();
 
   expectTypeOf<ButtonOnErrorEvent>().toBeObject();
   expectTypeOf<ButtonOnErrorEvent>().toEqualTypeOf<UniHelper.ButtonOnErrorEvent>();
