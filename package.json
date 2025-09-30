@@ -48,8 +48,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
     "@dcloudio/types": "^3.4.12",
-    "@lerna-lite/cli": "^3.10.0",
-    "@lerna-lite/version": "^3.10.0",
+    "@lerna-lite/cli": "^4.0.0",
+    "@lerna-lite/version": "^4.0.0",
     "@types/node": "^20.16.12",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "lint-staged": "^15.2.10",
