@@ -50,7 +50,7 @@
     "@dcloudio/types": "^3.4.12",
     "@lerna-lite/cli": "^3.10.0",
     "@lerna-lite/version": "^3.10.0",
-    "@types/node": "^20.16.12",
+    "@types/node": "^22.0.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "lint-staged": "^15.2.10",
     "rimraf": "^6.0.1",
