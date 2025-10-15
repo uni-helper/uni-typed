@@ -154,7 +154,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      progress: _Progress;
+      progress: _ProgressProps;
     }
   }
 }
@@ -171,7 +171,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      progress: _Progress;
+      progress: _ProgressProps;
     }
   }
 }

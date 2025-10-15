@@ -83,7 +83,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      label: _Label;
+      label: _LabelProps;
     }
   }
 }
@@ -106,7 +106,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      label: _Label;
+      label: _LabelProps;
     }
   }
 }

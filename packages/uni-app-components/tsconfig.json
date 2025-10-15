@@ -3,8 +3,5 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "vueCompilerOptions": {
-    "plugins": ["@uni-helper/uni-types/volar-plugin"]
-  },
   "include": ["src/**/*.ts", "src/**/*.vue", "*.d.ts"]
 }

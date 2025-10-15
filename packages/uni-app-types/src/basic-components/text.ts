@@ -121,7 +121,7 @@ declare global {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      text: _Text;
+      text: _TextProps;
     }
   }
 }
@@ -140,7 +140,7 @@ declare module "vue/jsx-runtime" {
        * |
        * [使用说明](https://uni-typed.netlify.app/)
        */
-      text: _Text;
+      text: _TextProps;
     }
   }
 }
