@@ -45,6 +45,8 @@ type _ButtonFormType = "submit" | "reset";
  *
  * GetPhoneNumber 获取用户手机号，可以从 `@getphonenumber` 回调中获取到用户信息
  *
+ * GetRealtimePhoneNumber 手机号实时验证，可以从 `@getrealtimephonenumber` 回调中获取到用户信息
+ *
  * LaunchApp 小程序中打开APP，可以通过 `app-parameter` 属性设定向 APP 传的参数
  *
  * OpenSetting 打开授权设置页
@@ -97,6 +99,7 @@ type _ButtonOpenType =
   | "getUserInfo"
   | "contact"
   | "getPhoneNumber"
+  | "getRealtimePhoneNumber"
   | "launchApp"
   | "openSetting"
   | "chooseAvatar"
@@ -152,6 +155,29 @@ type _ButtonOnGetphonenumberEvent = CustomEvent<_ButtonOnGetphonenumberDetail>;
  * Open-type="getPhoneNumber" 时有效
  */
 type _ButtonOnGetphonenumber = (event: _ButtonOnGetphonenumberEvent) => void;
+
+interface _ButtonOnGetrealtimephonenumberDetail {
+  /** 错误信息 */
+  errMsg?: string;
+  /** 错误码（失败时返回） */
+  errno?: number;
+  /** 动态令牌 */
+  code?: string;
+  /** 敏感数据对应的云 ID，开通云开发的小程序才会返回，可通过云调用直接获取开放数据 */
+  cloudID?: string;
+}
+
+type _ButtonOnGetrealtimephonenumberEvent =
+  CustomEvent<_ButtonOnGetrealtimephonenumberDetail>;
+
+/**
+ * 手机号实时验证回调
+ *
+ * Open-type="getRealtimePhoneNumber" 时有效
+ */
+type _ButtonOnGetrealtimephonenumber = (
+  event: _ButtonOnGetrealtimephonenumberEvent,
+) => void;
 
 type _ButtonOnErrorEvent = BaseEvent;
 
@@ -310,6 +336,8 @@ type _ButtonProps = CommonProps &
      *
      * GetPhoneNumber 获取用户手机号，可以从 `@getphonenumber` 回调中获取到用户信息
      *
+     * GetRealtimePhoneNumber 手机号实时验证，可以从 `@getrealtimephonenumber` 回调中获取到用户信息
+     *
      * LaunchApp 小程序中打开APP，可以通过 `app-parameter` 属性设定向 APP 传的参数
      *
      * OpenSetting 打开授权设置页
@@ -355,6 +383,14 @@ type _ButtonProps = CommonProps &
      * OpenProfile 触发打开用户主页
      */
     openType: _ButtonOpenType;
+    /**
+     * 当手机号快速验证或手机号实时验证额度用尽时，
+     * 是否对用户展示“申请获取你的手机号，但该功能
+     * 使用次数已达当前小程序上限，暂时无法使用”的
+     * 提示。
+     * @default true
+     */
+    phoneNumberNoQuotaToast?: boolean;
     /**
      * 指定按下去的样式类
      *
@@ -467,6 +503,12 @@ type _ButtonProps = CommonProps &
      * Open-type="getPhoneNumber" 时有效
      */
     onGetphonenumber: _ButtonOnGetphonenumber;
+    /**
+     * 手机号实时验证回调
+     *
+     * Open-type="getRealtimePhoneNumber" 时有效
+     */
+    onGetrealtimephonenumber: _ButtonOnGetrealtimephonenumber;
     /** 使用开放能力发生错误时回调 */
     onError: _ButtonOnError;
     /**
@@ -540,6 +582,9 @@ export type {
   _ButtonOnGetphonenumberDetail as ButtonOnGetphonenumberDetail,
   _ButtonOnGetphonenumberEvent as ButtonOnGetphonenumberEvent,
   _ButtonOnGetphonenumber as ButtonOnGetphonenumber,
+  _ButtonOnGetrealtimephonenumberDetail as ButtonOnGetrealtimephonenumberDetail,
+  _ButtonOnGetrealtimephonenumberEvent as ButtonOnGetrealtimephonenumberEvent,
+  _ButtonOnGetrealtimephonenumber as ButtonOnGetrealtimephonenumber,
   _ButtonOnErrorEvent as ButtonOnErrorEvent,
   _ButtonOnError as ButtonOnError,
   _ButtonOnOpensettingDetail as ButtonOnOpensettingDetail,
@@ -609,6 +654,8 @@ declare global {
      *
      * GetPhoneNumber 获取用户手机号，可以从 `@getphonenumber` 回调中获取到用户信息
      *
+     * GetRealtimePhoneNumber 手机号实时验证，可以从 `@getrealtimephonenumber` 回调中获取到用户信息
+     *
      * LaunchApp 小程序中打开APP，可以通过 `app-parameter` 属性设定向 APP 传的参数
      *
      * OpenSetting 打开授权设置页
@@ -675,6 +722,17 @@ declare global {
      * Open-type="getPhoneNumber" 时有效
      */
     export interface ButtonOnGetphonenumber extends _ButtonOnGetphonenumber {}
+    export interface ButtonOnGetrealtimephonenumberDetail
+      extends _ButtonOnGetrealtimephonenumberDetail {}
+    export type ButtonOnGetrealtimephonenumberEvent =
+      _ButtonOnGetrealtimephonenumberEvent;
+    /**
+     * 手机号实时验证回调
+     *
+     * Open-type="getRealtimePhoneNumber" 时有效
+     */
+    export interface ButtonOnGetrealtimephonenumber
+      extends _ButtonOnGetrealtimephonenumber {}
     export type ButtonOnErrorEvent = _ButtonOnErrorEvent;
     /** 使用开放能力发生错误时回调 */
     export interface ButtonOnError extends _ButtonOnError {}
