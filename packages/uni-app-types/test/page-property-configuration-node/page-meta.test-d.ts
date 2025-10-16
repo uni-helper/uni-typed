@@ -7,9 +7,9 @@ import type {
   PageMetaOnResizeEvent,
   PageMetaOnScroll,
   PageMetaOnScrollDetail,
-  PageMetaOnScrollEvent,
   PageMetaOnScrolldone,
   PageMetaOnScrolldoneEvent,
+  PageMetaOnScrollEvent,
   PageMetaProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
