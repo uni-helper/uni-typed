@@ -1,21 +1,26 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
   "files": {
-    "ignore": [
-      "**/node_modules",
-      "**/.git",
-      "**/.DS_Store",
-      "**/dist",
-      "**/cache",
-      "**/coverage",
-      "**/manifest.json",
-      "**/pages.json",
-      "./**/package.json",
-      "./lerna.json"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.git",
+      "!**/.DS_Store",
+      "!**/dist",
+      "!**/cache",
+      "!**/coverage",
+      "!**/manifest.json",
+      "!**/pages.json",
+      "!**/package.json",
+      "!lerna.json"
     ]
   },
-  "organizeImports": {
-    "enabled": true
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
   "linter": {
     "enabled": true,
@@ -32,5 +37,22 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.vue"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
 }

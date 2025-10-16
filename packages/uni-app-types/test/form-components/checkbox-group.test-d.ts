@@ -6,7 +6,7 @@ import type {
   CheckboxGroupOnChangeEvent,
   CheckboxGroupProps,
 } from "@uni-helper/uni-app-types";
-import { describe, expect, expectTypeOf } from "vitest";
+import { describe, expectTypeOf } from "vitest";
 import type { ComponentInternalInstance } from "vue";
 
 describe("CheckboxGroup", () => {

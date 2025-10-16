@@ -33,6 +33,7 @@
     "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "build:h5": "pnpm build && pnpm -C playground run build:h5",
     "build:mp-weixin": "pnpm build && pnpm -C playground run build:mp-weixin",
+    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true",
     "check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
     "dev": "pnpm stub",
     "docs:build": "pnpm -C docs run build",
@@ -46,7 +47,7 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3",
+    "@biomejs/biome": "^2.2.6",
     "@dcloudio/types": "^3.4.12",
     "@lerna-lite/cli": "^3.10.0",
     "@lerna-lite/version": "^3.10.0",
