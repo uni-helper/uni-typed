@@ -4,6 +4,7 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
       <input v-model="title"></input>
+      <button @click="handleClick">Click</button>
     </view>
   </view>
 </template>
@@ -12,6 +13,10 @@
 import { ref } from "vue";
 
 const title = ref("Hello");
+
+const handleClick = () => {
+  console.log("You clicked the button.");
+};
 </script>
 
 <style>
