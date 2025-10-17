@@ -48,16 +48,18 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.6",
-    "@dcloudio/types": "^3.4.12",
+    "@dcloudio/types": "^3.4.24",
     "@lerna-lite/cli": "^4.9.0",
     "@lerna-lite/version": "^4.9.0",
-    "@types/node": "^20.16.12",
+    "@types/node": "^22.18.10",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^16.2.4",
     "rimraf": "^6.0.1",
-    "typescript": "^5.6.3",
-    "unbuild": "^3.0.0-rc.11",
-    "vitest": "^2.1.3"
+    "tsdown": "^0.15.7",
+    "typescript": "^5.9.3",
+    "unplugin-vue": "^7.0.2",
+    "vitest": "^3.2.4",
+    "vue-tsc": "3.1.1"
   },
-  "packageManager": "pnpm@9.12.2"
+  "packageManager": "pnpm@10.18.3"
 }

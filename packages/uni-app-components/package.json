@@ -29,18 +29,28 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./components": {
-      "types": "./dist/components/index.d.ts",
-      "import": "./dist/components/index.mjs",
-      "require": "./dist/components/index.js"
+      "import": {
+        "types": "./dist/components/index.d.ts",
+        "default": "./dist/components/index.js"
+      },
+      "require": {
+        "types": "./dist/components/index.d.cts",
+        "default": "./dist/components/index.cjs"
+      }
     }
   },
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -57,9 +67,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsdown",
     "prepublishOnly": "pnpm build",
-    "stub": "unbuild --stub"
+    "stub": "tsdown --watch"
   },
   "dependencies": {
     "@uni-helper/uni-app-types": "workspace:*"
@@ -72,7 +82,7 @@
     "typescript": "^5.0.0",
     "vue": "^3.4.21"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@10.18.3",
   "engines": {
     "node": ">=14.18"
   },

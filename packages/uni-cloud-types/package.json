@@ -31,7 +31,7 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.mts"
+        "types": "./dist/index.d.ts"
       },
       "require": {
         "types": "./dist/index.d.cts"
@@ -52,9 +52,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsdown",
     "prepublishOnly": "pnpm build",
-    "stub": "unbuild --stub"
+    "stub": "tsdown --watch"
   },
   "devDependencies": {
     "vue": "3.4.38"
@@ -63,7 +63,7 @@
     "typescript": "^5.0.0",
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@10.18.3",
   "engines": {
     "node": ">=14.18"
   },
