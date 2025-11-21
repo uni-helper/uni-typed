@@ -1,6 +1,6 @@
 {
   "name": "@uni-helper/uni-cloud-types",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "为 uni-cloud 组件提供 TypeScript 类型",
   "keywords": [
     "uni-app",

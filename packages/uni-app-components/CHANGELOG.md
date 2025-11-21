@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-alpha.7](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2025-11-21)
+
+### Bug Fixes
+
+* **uat:** 修正组件类型定义，去除一系列 JSX.IntrinsicElements 组件类型定义的 DefineComponent 泛型包裹 ([#32](https://github.com/uni-helper/uni-typed/issues/32)) ([3626dd8](https://github.com/uni-helper/uni-typed/commit/3626dd8765447712e3aa5fd9a485b983a98c0c2b)) - by @Vanisper
+
 ## [1.0.0-alpha.6](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2024-11-06)
 
 **Note:** Version bump only for package @uni-helper/uni-app-components
