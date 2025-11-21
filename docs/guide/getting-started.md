@@ -21,6 +21,8 @@
 
 基于 [这个 PR](https://github.com/satrong/uni-base-components-types/pull/5) 完成。
 
+特别感谢 [Volar.js](https://github.com/volarjs/) 和 [Vue Language Tools](https://github.com/vuejs/language-tools) 所有贡献者！没有他们的努力，就不会有该库的诞生！
+
 ## 贡献者们
 
 该项目由 [ModyQyW](https://github.com/ModyQyW) 创建。
