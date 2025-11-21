@@ -164,7 +164,7 @@ declare module "vue" {
   }
 }
 
-// 3.0 <= Vue <= 3.2
+// 3.0 <= Vue < 3.3
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -179,7 +179,7 @@ declare global {
   }
 }
 
-// 3.3 <= Vue
+// 3.3 <= Vue < 3.4
 // @ts-expect-error Invalid module name in augmentation, module cannot be found.
 declare module "vue/jsx-runtime" {
   namespace JSX {
@@ -192,5 +192,18 @@ declare module "vue/jsx-runtime" {
        */
       audio: _AudioProps;
     }
+  }
+}
+
+// 3.4 <= Vue
+declare module "vue" {
+  interface IntrinsicElementAttributes {
+    /** 音频
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/audio.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    audio: _AudioProps;
   }
 }

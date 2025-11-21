@@ -655,7 +655,7 @@ declare module "vue" {
   }
 }
 
-// 3.0 <= Vue <= 3.2
+// 3.0 <= Vue < 3.3
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -673,7 +673,7 @@ declare global {
   }
 }
 
-// 3.3 <= Vue
+// 3.3 <= Vue < 3.4
 // @ts-expect-error Invalid module name in augmentation, module cannot be found.
 declare module "vue/jsx-runtime" {
   namespace JSX {
@@ -689,5 +689,21 @@ declare module "vue/jsx-runtime" {
        */
       video: _VideoProps;
     }
+  }
+}
+
+// 3.4 <= Vue
+declare module "vue" {
+  interface IntrinsicElementAttributes {
+    /**
+     * 视频播放组件
+     *
+     * 默认宽度 300px、高度 225px，可通过 css 设置宽高
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/video.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    video: _VideoProps;
   }
 }

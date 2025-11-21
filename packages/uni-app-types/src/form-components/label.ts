@@ -66,7 +66,7 @@ declare module "vue" {
   }
 }
 
-// 3.0 <= Vue <= 3.2
+// 3.0 <= Vue < 3.3
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -88,7 +88,7 @@ declare global {
   }
 }
 
-// 3.3 <= Vue
+// 3.3 <= Vue < 3.4
 // @ts-expect-error Invalid module name in augmentation, module cannot be found.
 declare module "vue/jsx-runtime" {
   namespace JSX {
@@ -108,5 +108,25 @@ declare module "vue/jsx-runtime" {
        */
       label: _LabelProps;
     }
+  }
+}
+
+// 3.4 <= Vue
+declare module "vue" {
+  interface IntrinsicElementAttributes {
+    /**
+     * 表单标签
+     *
+     * 用来改进表单组件的可用性
+     *
+     * 使用 for 属性找到对应的 id，或者将控件放在该标签下，当点击时，就会触发对应的控件
+     *
+     * For 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/label.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    label: _LabelProps;
   }
 }

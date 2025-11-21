@@ -92,7 +92,7 @@ declare module "vue" {
   }
 }
 
-// 3.0 <= Vue <= 3.2
+// 3.0 <= Vue < 3.3
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -112,7 +112,7 @@ declare global {
   }
 }
 
-// 3.3 <= Vue
+// 3.3 <= Vue < 3.4
 // @ts-expect-error Invalid module name in augmentation, module cannot be found.
 declare module "vue/jsx-runtime" {
   namespace JSX {
@@ -130,5 +130,23 @@ declare module "vue/jsx-runtime" {
        */
       view: _ViewProps;
     }
+  }
+}
+
+// 3.4 <= Vue
+declare module "vue" {
+  interface IntrinsicElementAttributes {
+    /**
+     * 视图容器，和 div 类似，用于包裹各种元素内容
+     *
+     * 包裹文字建议使用 text
+     *
+     * 如果使用 div，会编译成 view
+     * ***
+     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
+     * |
+     * [使用说明](https://uni-typed.netlify.app/)
+     */
+    view: _ViewProps;
   }
 }
