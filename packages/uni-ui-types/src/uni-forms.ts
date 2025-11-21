@@ -49,6 +49,8 @@ interface _UniFormsRulesRule {
   maximum?: number;
   /** 校验最小值 */
   minimum?: number;
+  /** 校验数据最小长度 */
+  minLength?: number;
   /** 校验数据最大长度 */
   maxLength?: number;
   /** 校验失败提示信息语 */
