@@ -56,7 +56,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/checkbox.html#checkbox-group)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     CheckboxGroup: _CheckboxGroup;
   }

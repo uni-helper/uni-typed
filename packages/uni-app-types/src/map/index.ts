@@ -898,7 +898,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     map: _Map;
   }
@@ -912,7 +914,9 @@ declare global {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       map: _MapProps;
     }
@@ -928,7 +932,9 @@ declare module "vue/jsx-runtime" {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       map: _MapProps;
     }
@@ -942,7 +948,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/map.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     map: _MapProps;
   }

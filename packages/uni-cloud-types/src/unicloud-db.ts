@@ -411,7 +411,9 @@ declare module "vue" {
      ***
      * [👉🏻点击查看组件文档](https://doc.dcloud.net.cn/uniCloud/unicloud-db.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     UnicloudDb: _UnicloudDb;
   }

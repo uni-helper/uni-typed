@@ -67,7 +67,9 @@ declare global {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     export type View = _View;
     /** 视图容器实例 */
@@ -86,7 +88,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     view: _View;
   }
@@ -105,7 +109,9 @@ declare global {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       view: _ViewProps;
     }
@@ -126,7 +132,9 @@ declare module "vue/jsx-runtime" {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       view: _ViewProps;
     }
@@ -145,7 +153,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/view.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     view: _ViewProps;
   }

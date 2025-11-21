@@ -214,7 +214,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-popup.html#uni-popup-dialog-%E5%AF%B9%E8%AF%9D%E6%A1%86)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     UniPopupDialog: _UniPopupDialog;
   }

@@ -85,7 +85,9 @@ declare global {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     export type Text = _Text;
     /** 文本组件实例 */
@@ -102,7 +104,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     text: _Text;
   }
@@ -119,7 +123,9 @@ declare global {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       text: _TextProps;
     }
@@ -138,7 +144,9 @@ declare module "vue/jsx-runtime" {
        * ***
        * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/text.html)
        * |
-       * [使用说明](https://uni-typed.netlify.app/)
+       * [Netlify 使用说明](https://uni-typed.netlify.app/)
+       * |
+       * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
        */
       text: _TextProps;
     }
@@ -153,7 +161,9 @@ declare module "vue" {
      * ***
      * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/progress.html)
      * |
-     * [使用说明](https://uni-typed.netlify.app/)
+     * [Netlify 使用说明](https://uni-typed.netlify.app/)
+     * |
+     * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
     text: _TextProps;
   }

@@ -14,7 +14,7 @@
 
 ## 介绍
 
-这个包是 `@uni-helper/uni-typed` 项目的一部分，为 Vue v3 uni-app 组件提供 TypeScript 类型，请 [👉 查看文档](https://uni-typed.netlify.app/) 了解具体用法和示例。
+这个包是 `@uni-helper/uni-typed` 项目的一部分，为 Vue v3 uni-app 组件提供 TypeScript 类型，请 [👉 查看 Netlify 文档](https://uni-typed.netlify.app/) 或 [👉 查看 Cloudflare 文档](https://uni-typed.pages.dev/) 了解具体用法和示例。
 
 ## 致谢
 
