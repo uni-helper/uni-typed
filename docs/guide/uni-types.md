@@ -56,7 +56,7 @@ npm i -D @uni-helper/uni-types
 
 - `compilerOptions.moduleResolution` 为 Bundler
 - `compilerOptions.types` 包含 @uni-helper/uni-types
-- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-types/volar-plugin
+- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-types/volar-plugin（v1.0.0-alpha.7 起可选）
 - `include` 包含 Vue 相关源码文件
 
 以下是一个 `tsconfig.json` 示例，你可以直接复制它并粘贴到项目内。请注意，你可能需要稍微调整以匹配你的开发需求，相关依赖需要自行安装。
@@ -92,10 +92,11 @@ npm i -D @uni-helper/uni-types
       "@uni-helper/uni-types"
     ]
   },
-  "vueCompilerOptions": {
-    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
-    "plugins": ["@uni-helper/uni-types/volar-plugin"]
-  },
+  // v1.0.0-alpha.7 开始不再需要配置
+  // "vueCompilerOptions": {
+  //   // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+  //   "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  // },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.d.ts"]
 }
 ```
