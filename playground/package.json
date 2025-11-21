@@ -61,10 +61,10 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-4070620250821001",
     "@uni-helper/uni-app-components": "workspace:*",
     "vue": "3.4.38",
-    "vue-i18n": "^9.14.1"
+    "vue-i18n": "^9.14.5"
   },
   "devDependencies": {
-    "@dcloudio/types": "^3.4.24",
+    "@dcloudio/types": "^3.4.28",
     "@dcloudio/uni-automator": "3.0.0-4070620250821001",
     "@dcloudio/uni-cli-shared": "3.0.0-4070620250821001",
     "@dcloudio/uni-stacktracey": "3.0.0-4070620250821001",
@@ -73,8 +73,8 @@
     "@uni-helper/uni-cloud-types": "workspace:*",
     "@uni-helper/uni-types": "workspace:*",
     "@uni-helper/uni-ui-types": "workspace:*",
-    "typescript": "5.5.4",
-    "vite": "^5.4.20",
-    "vue-tsc": "3.1.1"
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vue-tsc": "^3.1.4"
   }
 }

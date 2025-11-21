@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { unlink } from "node:fs/promises";
 import { defineConfig } from "tsdown";
 
@@ -8,7 +9,9 @@ export default defineConfig({
   hooks: {
     "build:done": async () => {
       await Promise.all(
-        ["./dist/index.cjs", "./dist/index.js"].map((path) => unlink(path)),
+        ["./dist/index.cjs", "./dist/index.mjs"]
+          .filter((path) => existsSync(path))
+          .map((path) => unlink(path)),
       );
     },
   },
