@@ -52,7 +52,7 @@
     "@lerna-lite/cli": "^4.9.3",
     "@lerna-lite/version": "^4.9.3",
     "@types/node": "^22.19.1",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
     "lint-staged": "^16.2.7",
     "rimraf": "^6.1.2",
     "tsdown": "^0.16.6",
