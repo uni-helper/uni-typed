@@ -33,33 +33,35 @@
     "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "build:h5": "pnpm build && pnpm -C playground run build:h5",
     "build:mp-weixin": "pnpm build && pnpm -C playground run build:mp-weixin",
-    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true",
     "check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
     "dev": "pnpm stub",
     "docs:build": "pnpm -C docs run build",
     "docs:dev": "pnpm -C docs run dev",
     "docs:preview": "pnpm -C docs run preview",
+    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true",
     "play:h5": "pnpm dev && pnpm -C playground run dev:h5",
     "play:mp-weixin": "pnpm dev && pnpm -C playground run dev:mp-weixin",
+    "prepare": "is-ci || lefthook install",
     "release": "lerna version",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "test": "vitest run --typecheck",
-    "type-check": "tsc --noEmit"
+    "type-check": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.7",
+    "@biomejs/biome": "^2.3.10",
     "@dcloudio/types": "^3.4.28",
-    "@lerna-lite/cli": "^4.9.3",
-    "@lerna-lite/version": "^4.9.3",
-    "@types/node": "^22.19.1",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
-    "lint-staged": "^16.2.7",
+    "@lerna-lite/cli": "^4.10.2",
+    "@lerna-lite/version": "^4.10.2",
+    "@types/node": "^24.10.4",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "is-ci": "^4.1.0",
+    "lefthook": "^2.0.12",
     "rimraf": "^6.1.2",
-    "tsdown": "^0.16.6",
+    "tsdown": "^0.18.1",
     "typescript": "^5.9.3",
-    "unplugin-vue": "^7.0.8",
-    "vitest": "^3.2.4",
-    "vue-tsc": "^3.1.4"
+    "unplugin-vue": "^7.1.0",
+    "vitest": "^4.0.16",
+    "vue-tsc": "^3.1.8"
   },
-  "packageManager": "pnpm@10.23.0"
+  "packageManager": "pnpm@10.26.0"
 }
