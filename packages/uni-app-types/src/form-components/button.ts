@@ -238,8 +238,10 @@ type _ButtonOnErrorEvent = BaseEvent;
 type _ButtonOnError = (event: _ButtonOnErrorEvent) => void;
 
 interface _ButtonOnCreateliveactivityDetail {
+  /** 错误信息 */
+  errMsg?: string;
   /** 动态更新令牌，用于后续调用服务端接口更新卡片状态 */
-  code: string;
+  code?: string;
 }
 
 type _ButtonOnCreateliveactivityEvent =
