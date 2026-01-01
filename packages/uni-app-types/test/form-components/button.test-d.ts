@@ -1,5 +1,6 @@
 import type {
   Button,
+  ButtonActivityType,
   ButtonFormType,
   ButtonInstance,
   ButtonLang,
@@ -13,6 +14,9 @@ import type {
   ButtonOnChooseavatarEvent,
   ButtonOnChooseinvoicetitle,
   ButtonOnChooseinvoicetitleEvent,
+  ButtonOnCreateliveactivity,
+  ButtonOnCreateliveactivityDetail,
+  ButtonOnCreateliveactivityEvent,
   ButtonOnError,
   ButtonOnErrorEvent,
   ButtonOnGetphonenumber,
@@ -54,6 +58,9 @@ describe("Button", () => {
   expectTypeOf<ButtonLang>().toBeString();
   expectTypeOf<ButtonLang>().toEqualTypeOf<UniHelper.ButtonLang>();
 
+  expectTypeOf<ButtonActivityType>().toBeString();
+  expectTypeOf<ButtonActivityType>().toEqualTypeOf<UniHelper.ButtonActivityType>();
+
   expectTypeOf<ButtonOnGetphonenumberDetail>().toBeObject();
   expectTypeOf<ButtonOnGetphonenumberDetail>().toEqualTypeOf<UniHelper.ButtonOnGetphonenumberDetail>();
 
@@ -77,6 +84,15 @@ describe("Button", () => {
 
   expectTypeOf<ButtonOnError>().toBeFunction();
   expectTypeOf<ButtonOnError>().toEqualTypeOf<UniHelper.ButtonOnError>();
+
+  expectTypeOf<ButtonOnCreateliveactivityDetail>().toBeObject();
+  expectTypeOf<ButtonOnCreateliveactivityDetail>().toEqualTypeOf<UniHelper.ButtonOnCreateliveactivityDetail>();
+
+  expectTypeOf<ButtonOnCreateliveactivityEvent>().toBeObject();
+  expectTypeOf<ButtonOnCreateliveactivityEvent>().toEqualTypeOf<UniHelper.ButtonOnCreateliveactivityEvent>();
+
+  expectTypeOf<ButtonOnCreateliveactivity>().toBeFunction();
+  expectTypeOf<ButtonOnCreateliveactivity>().toEqualTypeOf<UniHelper.ButtonOnCreateliveactivity>();
 
   expectTypeOf<ButtonOnOpensettingDetail>().toBeObject();
   expectTypeOf<ButtonOnOpensettingDetail>().toEqualTypeOf<UniHelper.ButtonOnOpensettingDetail>();
