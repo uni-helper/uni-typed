@@ -94,21 +94,25 @@ type _UniPopupProps = Partial<{
    * 默认为 true
    */
   safeArea: boolean;
-  /** 打开弹出层 */
-  open: (type?: _UniPopupType) => void;
-  /** 关闭弹出层 */
-  close: () => void;
   /** 状态变化时触发 */
   onChange: _UniPopupOnChange;
   /** 点击遮罩层触发 */
   onMaskClick: _UniPopupOnMaskClick;
 }>;
 
+/** 弹出层方法 */
+type _UniPopupExpose = {
+  /** 打开弹出层 */
+  open: (type?: _UniPopupType) => void;
+  /** 关闭弹出层 */
+  close: () => void;
+};
+
 /** 弹出层，在应用中弹出一个消息提示窗口、提示框等 */
 type _UniPopup = DefineComponent<_UniPopupProps>;
 
 /** 弹出层实例 */
-type _UniPopupInstance = InstanceType<_UniPopup>;
+type _UniPopupInstance = InstanceType<_UniPopup> & _UniPopupExpose;
 
 export type {
   _UniPopupType as UniPopupType,
