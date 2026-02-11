@@ -73,7 +73,7 @@ type _EditorProps = CommonProps &
      *
      * 默认为 false
      */
-    showImgResize: string;
+    showImgResize: boolean;
     /** 编辑器初始化完成时触发 */
     onReady: _EditorOnReady;
     /** 编辑器聚焦时触发 */
