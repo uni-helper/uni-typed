@@ -53,6 +53,8 @@ type _ButtonFormType = "submit" | "reset";
  *
  * ChooseAvatar 获取用户头像，可以从 `@chooseavatar` 回调中获取到头像信息
  *
+ * LiveActivity 通过前端获取新的一次性订阅消息下发机制使用的 code
+ *
  * GetAuthorize 支持小程序授权
  *
  * Lifestyle 关注生活号
@@ -105,6 +107,7 @@ type _ButtonOpenType =
   | "chooseAvatar"
   | "getAuthorize"
   | "lifestyle"
+  | "liveActivity"
   | "contactShare"
   | "openGroupProfile"
   | "openGuildProfile"
@@ -133,6 +136,56 @@ type _ButtonOpenType =
  * En 英文
  */
 type _ButtonLang = "zh_CN" | "zh_TW" | "en";
+
+/**
+ * 卡片业态类型，用于一次性订阅消息
+ *
+ * 1001 打车服务
+ *
+ * 1003 同城配送服务
+ *
+ * 1004 取餐等候服务
+ *
+ * 1005 餐厅排队服务
+ *
+ * 2001 购物（实体物流）服务
+ *
+ * 2002 购物（自提）服务
+ *
+ * 2003 购物（虚拟发货）服务
+ *
+ * 2004 快递寄送服务
+ *
+ * 2005 保险购买服务
+ *
+ * 2006 购物&餐饮（同城配送）服务
+ *
+ * 2007 购物&餐饮&本地生活（等候领取）服务
+ *
+ * 2008 酒店预订服务
+ *
+ * 2009 机票服务
+ *
+ * 2010 火车票、汽车票、船票服务
+ *
+ * 2011 景区门票服务
+ */
+type _ButtonActivityType =
+  | "1001"
+  | "1003"
+  | "1004"
+  | "1005"
+  | "2001"
+  | "2002"
+  | "2003"
+  | "2004"
+  | "2005"
+  | "2006"
+  | "2007"
+  | "2008"
+  | "2009"
+  | "2010"
+  | "2011";
 
 interface _ButtonOnGetphonenumberDetail {
   /** 错误信息 */
@@ -183,6 +236,25 @@ type _ButtonOnErrorEvent = BaseEvent;
 
 /** 使用开放能力发生错误时回调 */
 type _ButtonOnError = (event: _ButtonOnErrorEvent) => void;
+
+interface _ButtonOnCreateliveactivityDetail {
+  /** 错误信息 */
+  errMsg?: string;
+  /** 动态更新令牌，用于后续调用服务端接口更新卡片状态 */
+  code?: string;
+}
+
+type _ButtonOnCreateliveactivityEvent =
+  CustomEvent<_ButtonOnCreateliveactivityDetail>;
+
+/**
+ * 获取一次性订阅消息的动态令牌回调
+ *
+ * Open-type="liveActivity" 时有效
+ */
+type _ButtonOnCreateliveactivity = (
+  event: _ButtonOnCreateliveactivityEvent,
+) => void;
 
 interface _ButtonOnOpensettingDetail {
   authSetting: Record<string, any>;
@@ -498,6 +570,12 @@ type _ButtonProps = CommonProps &
      */
     publicId: string;
     /**
+     * 卡片业态类型，用于一次性订阅消息
+     *
+     * Open-type="liveActivity" 时有效
+     */
+    activityType: _ButtonActivityType;
+    /**
      * 获取用户手机号时回调
      *
      * Open-type="getPhoneNumber" 时有效
@@ -529,6 +607,12 @@ type _ButtonProps = CommonProps &
      * Open-type="chooseAvatar" 时有效
      */
     onChooseavatar: _ButtonOnChooseavatar;
+    /**
+     * 获取一次性订阅消息的动态令牌回调
+     *
+     * Open-type="liveActivity" 时有效
+     */
+    onCreateliveactivity: _ButtonOnCreateliveactivity;
     /**
      * 添加群应用回调
      *
@@ -579,6 +663,7 @@ export type {
   _ButtonFormType as ButtonFormType,
   _ButtonOpenType as ButtonOpenType,
   _ButtonLang as ButtonLang,
+  _ButtonActivityType as ButtonActivityType,
   _ButtonOnGetphonenumberDetail as ButtonOnGetphonenumberDetail,
   _ButtonOnGetphonenumberEvent as ButtonOnGetphonenumberEvent,
   _ButtonOnGetphonenumber as ButtonOnGetphonenumber,
@@ -587,6 +672,9 @@ export type {
   _ButtonOnGetrealtimephonenumber as ButtonOnGetrealtimephonenumber,
   _ButtonOnErrorEvent as ButtonOnErrorEvent,
   _ButtonOnError as ButtonOnError,
+  _ButtonOnCreateliveactivityDetail as ButtonOnCreateliveactivityDetail,
+  _ButtonOnCreateliveactivityEvent as ButtonOnCreateliveactivityEvent,
+  _ButtonOnCreateliveactivity as ButtonOnCreateliveactivity,
   _ButtonOnOpensettingDetail as ButtonOnOpensettingDetail,
   _ButtonOnOpensettingEvent as ButtonOnOpensettingEvent,
   _ButtonOnOpensetting as ButtonOnOpensetting,
@@ -713,6 +801,40 @@ declare global {
      * En 英文
      */
     export type ButtonLang = _ButtonLang;
+    /**
+     * 卡片业态类型，用于一次性订阅消息
+     *
+     * 1001 打车服务
+     *
+     * 1003 同城配送服务
+     *
+     * 1004 取餐等候服务
+     *
+     * 1005 餐厅排队服务
+     *
+     * 2001 购物（实体物流）服务
+     *
+     * 2002 购物（自提）服务
+     *
+     * 2003 购物（虚拟发货）服务
+     *
+     * 2004 快递寄送服务
+     *
+     * 2005 保险购买服务
+     *
+     * 2006 购物&餐饮（同城配送）服务
+     *
+     * 2007 购物&餐饮&本地生活（等候领取）服务
+     *
+     * 2008 酒店预订服务
+     *
+     * 2009 机票服务
+     *
+     * 2010 火车票、汽车票、船票服务
+     *
+     * 2011 景区门票服务
+     */
+    export type ButtonActivityType = _ButtonActivityType;
     export interface ButtonOnGetphonenumberDetail
       extends _ButtonOnGetphonenumberDetail {}
     export type ButtonOnGetphonenumberEvent = _ButtonOnGetphonenumberEvent;
@@ -736,6 +858,17 @@ declare global {
     export type ButtonOnErrorEvent = _ButtonOnErrorEvent;
     /** 使用开放能力发生错误时回调 */
     export interface ButtonOnError extends _ButtonOnError {}
+    export interface ButtonOnCreateliveactivityDetail
+      extends _ButtonOnCreateliveactivityDetail {}
+    export type ButtonOnCreateliveactivityEvent =
+      _ButtonOnCreateliveactivityEvent;
+    /**
+     * 获取一次性订阅消息的动态令牌回调
+     *
+     * Open-type="liveActivity" 时有效
+     */
+    export interface ButtonOnCreateliveactivity
+      extends _ButtonOnCreateliveactivity {}
     export interface ButtonOnOpensettingDetail
       extends _ButtonOnOpensettingDetail {}
     export type ButtonOnOpensettingEvent = _ButtonOnOpensettingEvent;
