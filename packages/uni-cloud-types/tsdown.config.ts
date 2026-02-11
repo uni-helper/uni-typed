@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { unlink } from "node:fs/promises";
+import { rm } from "node:fs/promises";
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
@@ -11,7 +11,7 @@ export default defineConfig({
       await Promise.all(
         ["./dist/index.cjs", "./dist/index.mjs"]
           .filter((path) => existsSync(path))
-          .map((path) => unlink(path)),
+          .map((path) => rm(path, { force: true })),
       );
     },
   },
