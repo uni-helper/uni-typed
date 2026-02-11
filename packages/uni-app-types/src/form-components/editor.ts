@@ -40,7 +40,9 @@ type _EditorOnInputEvent = CustomEvent<_EditorOnInputDetail>;
 /** 编辑器内容改变时触发 */
 type _EditorOnInput = (event: _EditorOnInputEvent) => void;
 
-type _EditorOnStatuschangeEvent = BaseEvent;
+type _EditorOnStatuschangeDetail = Record<string, any>;
+
+type _EditorOnStatuschangeEvent = CustomEvent<_EditorOnStatuschangeDetail>;
 
 /** 通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式 */
 type _EditorOnStatuschange = (event: _EditorOnStatuschangeEvent) => void;
@@ -73,7 +75,7 @@ type _EditorProps = CommonProps &
      *
      * 默认为 false
      */
-    showImgResize: string;
+    showImgResize: boolean;
     /** 编辑器初始化完成时触发 */
     onReady: _EditorOnReady;
     /** 编辑器聚焦时触发 */
@@ -112,6 +114,7 @@ export type {
   _EditorOnInputDetail as EditorOnInputDetail,
   _EditorOnInputEvent as EditorOnInputEvent,
   _EditorOnInput as EditorOnInput,
+  _EditorOnStatuschangeDetail as EditorOnStatuschangeDetail,
   _EditorOnStatuschangeEvent as EditorOnStatuschangeEvent,
   _EditorOnStatuschange as EditorOnStatuschange,
   _EditorProps as EditorProps,
@@ -136,6 +139,7 @@ declare global {
     export type EditorOnInputEvent = _EditorOnInputEvent;
     /** 编辑器内容改变时触发 */
     export interface EditorOnInput extends _EditorOnInput {}
+    export type EditorOnStatuschangeDetail = _EditorOnStatuschangeDetail;
     export type EditorOnStatuschangeEvent = _EditorOnStatuschangeEvent;
     /** 通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式 */
     export interface EditorOnStatuschange extends _EditorOnStatuschange {}
