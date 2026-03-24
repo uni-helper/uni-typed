@@ -53,11 +53,9 @@ interface _MovableViewOnScaleDetail {
   x: number;
   y: number;
   /**
-   * 是否支持双指缩放
-   *
-   * 默认缩放手势生效区域是在 movable-view 内
+   * 缩放倍数
    */
-  scale: boolean;
+  scale: number;
 }
 
 type _MovableViewOnScaleEvent = CustomEvent<_MovableViewOnScaleDetail>;
@@ -208,13 +206,11 @@ declare global {
      * 空字符串 setData
      */
     export type MovableViewSource = _MovableViewSource;
-    export interface MovableViewOnChangeDetail
-      extends _MovableViewOnChangeDetail {}
+    export interface MovableViewOnChangeDetail extends _MovableViewOnChangeDetail {}
     export type MovableViewOnChangeEvent = _MovableViewOnChangeEvent;
     /** 拖动过程中触发 */
     export interface MovableViewOnChange extends _MovableViewOnChange {}
-    export interface MovableViewOnScaleDetail
-      extends _MovableViewOnScaleDetail {}
+    export interface MovableViewOnScaleDetail extends _MovableViewOnScaleDetail {}
     export type MovableViewOnScaleEvent = _MovableViewOnScaleEvent;
     /** 缩放过程中触发 */
     export interface MovableViewOnScale extends _MovableViewOnScale {}
