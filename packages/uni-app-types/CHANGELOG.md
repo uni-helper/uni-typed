@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-alpha.8](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2026-04-06)
+
+### Features
+
+* **button:** 完善 ButtonOnCreateliveactivityDetail 类型定义 ([363abb6](https://github.com/uni-helper/uni-typed/commit/363abb68198a9c17abdddbe3daa057a293dfb7fb)) - by @TAYUN
+* **button:** add support for liveActivity open-type ([6d509ef](https://github.com/uni-helper/uni-typed/commit/6d509efbfcf2ab0317b6353340d8491bf0dd037f)) - by @TAYUN
+
+### Bug Fixes
+
+* 修复 build:done 的 ENOENT 错误 ([#54](https://github.com/uni-helper/uni-typed/issues/54)) ([d5861bf](https://github.com/uni-helper/uni-typed/commit/d5861bfbb4604a732ca85aa4a59769ad8e6da207)) - by @xiaohe0601
+* **uat:** 修复 editor 的相关类型错误 ([#53](https://github.com/uni-helper/uni-typed/issues/53)) ([14b43c3](https://github.com/uni-helper/uni-typed/commit/14b43c322cd98ed9c56b38e04ac535e3bc6853e6)) - by @xiaohe0601
+* **uat:** fix movable-view onScaleDetail scale type ([#55](https://github.com/uni-helper/uni-typed/issues/55)) ([5038831](https://github.com/uni-helper/uni-typed/commit/503883194c80f5a9798ef01b3af6c14c1c5c938a)) - by @SuperTylerX
+
 ## [1.0.0-alpha.7](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2025-11-21)
 
 ### Features

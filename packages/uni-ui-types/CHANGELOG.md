@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0-alpha.8](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2026-04-06)
+
+### Bug Fixes
+
+* 修复 build:done 的 ENOENT 错误 ([#54](https://github.com/uni-helper/uni-typed/issues/54)) ([d5861bf](https://github.com/uni-helper/uni-typed/commit/d5861bfbb4604a732ca85aa4a59769ad8e6da207)) - by @xiaohe0601
+* **uni-ui-types:** correct UniPopup instance type definition ([b610b61](https://github.com/uni-helper/uni-typed/commit/b610b618f83d22fbfb2d22946ee6fbdf74958fac)) - by @wjw020206
+
 ## [1.0.0-alpha.7](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2025-11-21)
 
 ### Bug Fixes
