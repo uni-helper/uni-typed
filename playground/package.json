@@ -64,7 +64,7 @@
     "vue-i18n": "^9.14.5"
   },
   "devDependencies": {
-    "@dcloudio/types": "^3.4.28",
+    "@dcloudio/types": "^3.4.30",
     "@dcloudio/uni-automator": "3.0.0-4080520251106001",
     "@dcloudio/uni-cli-shared": "3.0.0-4080520251106001",
     "@dcloudio/uni-stacktracey": "3.0.0-4080520251106001",
@@ -75,6 +75,6 @@
     "@uni-helper/uni-ui-types": "workspace:*",
     "typescript": "^5.9.3",
     "vite": "^5.4.21",
-    "vue-tsc": "^3.1.8"
+    "vue-tsc": "^3.2.6"
   }
 }

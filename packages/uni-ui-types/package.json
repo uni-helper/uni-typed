@@ -53,6 +53,7 @@
   ],
   "scripts": {
     "build": "tsdown",
+    "build-post": "exit 0",
     "prepublishOnly": "pnpm build",
     "stub": "tsdown --watch"
   },
@@ -67,7 +68,7 @@
     "typescript": "^5.0.0",
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@10.26.0",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "node": ">=14.18"
   },
