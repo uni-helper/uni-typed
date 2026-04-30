@@ -76,14 +76,14 @@
     "@uni-helper/uni-app-types": "workspace:*"
   },
   "devDependencies": {
-    "vue": "3.4.38"
+    "vue": "3.5.33"
   },
   "peerDependencies": {
     "@uni-helper/uni-app-types": "workspace:*",
     "typescript": "^5.0.0",
     "vue": "^3.4.21"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.2",
   "engines": {
     "node": ">=14.18"
   },
