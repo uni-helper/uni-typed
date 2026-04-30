@@ -73,7 +73,7 @@
     "@uni-helper/uni-cloud-types": "workspace:*",
     "@uni-helper/uni-types": "workspace:*",
     "@uni-helper/uni-ui-types": "workspace:*",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.0",
     "vite": "^5.4.21",
     "vue-tsc": "^3.2.6"
   }
