@@ -2,7 +2,7 @@
 
 ## 概览
 
-`@uni-helper/uni-typed` 是一个为 [uni-app](https://uniapp.dcloud.io/) 打造的 TypeScript 支持库，包含几个子包：
+`@uni-helper/uni-typed` 是一个为 [uni-app](https://uniapp.dcloud.net.cn/) 打造的 TypeScript 支持库，包含几个子包：
 
 |名称|描述|
 |---|---|

@@ -12,14 +12,14 @@ Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C We
 
 如果你遇到了类似的问题，请先回退并锁定版本，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
 
-截至 2025-11-21，经实测确定，以下版本组合可正常实现类型提示。
+截至 2026-05-09，经实测确定，以下版本组合可正常实现类型提示。
 
 |依赖|版本|
 |---|---|
-|Volar|v3.1.4|
+|Volar|v3.2.8|
 |TypeScript|v5.9.3|
 |Vue|v3.4.38|
-|@dcloudio/*|v3.0.0-4080520251106001|
+|@dcloudio/*|v3.0.0-5000720260410001|
 |@uni-helper/uni-app-types|{{version}}|
 |@uni-helper/uni-cloud-types|{{version}}|
 |@uni-helper/uni-ui-types|{{version}}|

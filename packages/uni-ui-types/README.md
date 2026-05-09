@@ -49,7 +49,7 @@ npm i -D @uni-helper/uni-ui-types
 以下是一个 `tsconfig.json` 示例，你可以直接复制它并粘贴到项目内。请注意，你可能需要稍微调整以匹配你的开发需求，相关依赖需要自行安装。
 
 > [!WARNING]
-> 截至 2024-07-28，uni-app 官方提供的 Vue v3 + Vite + TypeScript 模板版本相对落后，如果你正在使用它，请手动升级 TypeScript 和 Vue 版本，[playground/package.json](https://github.com/uni-helper/uni-typed/blob/main/playground/package.json) 可供参考。
+> 截至 2026-05-09，uni-app 官方提供的 Vue v3 + Vite + TypeScript 模板版本相对落后，如果你正在使用它，请手动升级 TypeScript 和 Vue 版本，[playground/package.json](https://github.com/uni-helper/uni-typed/blob/main/playground/package.json) 可供参考。
 >
 > 你也可以在这里获取 [社区模板](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 以起步。
 
