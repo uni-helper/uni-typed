@@ -18,6 +18,46 @@ interface _UniDataSelectLocaldataItem {
 /** 本地数据 */
 type _UniDataSelectLocaldata = _UniDataSelectLocaldataItem[];
 
+/**
+ * 弹出位置
+ *
+ * top 顶部弹出
+ *
+ * bottom 底部弹出
+ */
+type _UniDataSelectPlacement = "top" | "bottom";
+
+/**
+ * 选择文字的位置
+ *
+ * left 左侧
+ *
+ * center 居中
+ *
+ * right 右侧
+ */
+type _UniDataSelectAlign = "left" | "center" | "right";
+
+/**
+ * 边框样式
+ *
+ * default 四周边框
+ *
+ * underline 下边框
+ *
+ * none 无边框
+ */
+type _UniDataSelectMode = "default" | "underline" | "none";
+
+/** 选择框开启时触发 */
+type _UniDataSelectOnOpen = () => void;
+
+/** 选择框关闭时触发 */
+type _UniDataSelectOnClose = () => void;
+
+/** 点击清除按钮后触发 */
+type _UniDataSelectOnClear = () => void;
+
 /** 改变时触发 */
 type _UniDataSelectOnChange = (value: _UniDataSelectValue) => void;
 
@@ -58,8 +98,66 @@ type _UniDataSelectProps = Partial<{
    * 默认为 false
    */
   disabled: boolean;
+  /**
+   * 是否多选模式
+   *
+   * 默认为 false
+   */
+  multiple: boolean;
+  /**
+   * 是否允许选中文本换行显示
+   *
+   * 默认为 false
+   */
+  wrap: boolean;
+  /**
+   * 弹出位置
+   *
+   * top 顶部弹出
+   *
+   * bottom 底部弹出
+   *
+   * 默认为 bottom
+   */
+  placement: _UniDataSelectPlacement;
+  /**
+   * 选择文字的位置
+   *
+   * left 左侧
+   *
+   * center 居中
+   *
+   * right 右侧
+   *
+   * 默认为 left
+   */
+  align: _UniDataSelectAlign;
+  /**
+   * 是否隐藏右侧按钮
+   *
+   * 默认为 false
+   */
+  hideRight: boolean;
+  /**
+   * 边框样式
+   *
+   * default 四周边框
+   *
+   * underline 下边框
+   *
+   * none 无边框
+   *
+   * 默认为 default
+   */
+  mode: _UniDataSelectMode;
   /** 格式化输出 */
   format: string;
+  /** 选择框开启时触发 */
+  onOpen: _UniDataSelectOnOpen;
+  /** 选择框关闭时触发 */
+  onClose: _UniDataSelectOnClose;
+  /** 点击清除按钮后触发 */
+  onClear: _UniDataSelectOnClear;
   /** 改变时触发 */
   onChange: _UniDataSelectOnChange;
 }>;
@@ -78,13 +176,19 @@ type _UniDataSelect = DefineComponent<_UniDataSelectProps>;
 type _UniDataSelectInstance = InstanceType<_UniDataSelect>;
 
 export type {
-  _UniDataSelectValue as UniDataSelectValue,
-  _UniDataSelectLocaldataItem as UniDataSelectLocaldataItem,
-  _UniDataSelectLocaldata as UniDataSelectLocaldata,
-  _UniDataSelectOnChange as UniDataSelectOnChange,
-  _UniDataSelectProps as UniDataSelectProps,
   _UniDataSelect as UniDataSelect,
+  _UniDataSelectAlign as UniDataSelectAlign,
   _UniDataSelectInstance as UniDataSelectInstance,
+  _UniDataSelectLocaldata as UniDataSelectLocaldata,
+  _UniDataSelectLocaldataItem as UniDataSelectLocaldataItem,
+  _UniDataSelectMode as UniDataSelectMode,
+  _UniDataSelectOnChange as UniDataSelectOnChange,
+  _UniDataSelectOnClear as UniDataSelectOnClear,
+  _UniDataSelectOnClose as UniDataSelectOnClose,
+  _UniDataSelectOnOpen as UniDataSelectOnOpen,
+  _UniDataSelectPlacement as UniDataSelectPlacement,
+  _UniDataSelectProps as UniDataSelectProps,
+  _UniDataSelectValue as UniDataSelectValue,
 };
 
 declare global {
@@ -94,6 +198,40 @@ declare global {
       extends _UniDataSelectLocaldataItem {}
     /** 本地数据 */
     export type UniDataSelectLocaldata = _UniDataSelectLocaldata;
+    /**
+     * 弹出位置
+     *
+     * top 顶部弹出
+     *
+     * bottom 底部弹出
+     */
+    export type UniDataSelectPlacement = _UniDataSelectPlacement;
+    /**
+     * 选择文字的位置
+     *
+     * left 左侧
+     *
+     * center 居中
+     *
+     * right 右侧
+     */
+    export type UniDataSelectAlign = _UniDataSelectAlign;
+    /**
+     * 边框样式
+     *
+     * default 四周边框
+     *
+     * underline 下边框
+     *
+     * none 无边框
+     */
+    export type UniDataSelectMode = _UniDataSelectMode;
+    /** 选择框开启时触发 */
+    export interface UniDataSelectOnOpen extends _UniDataSelectOnOpen {}
+    /** 选择框关闭时触发 */
+    export interface UniDataSelectOnClose extends _UniDataSelectOnClose {}
+    /** 点击清除按钮后触发 */
+    export interface UniDataSelectOnClear extends _UniDataSelectOnClear {}
     /** 改变时触发 */
     export interface UniDataSelectOnChange extends _UniDataSelectOnChange {}
     export type UniDataSelectProps = _UniDataSelectProps;

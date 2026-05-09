@@ -94,6 +94,12 @@ type _UniPopupProps = Partial<{
    * 默认为 true
    */
   safeArea: boolean;
+  /**
+   * 设置圆角
+   *
+   * 示例: "10px 10px 10px 10px"
+   */
+  borderRadius: string;
   /** 状态变化时触发 */
   onChange: _UniPopupOnChange;
   /** 点击遮罩层触发 */
@@ -115,13 +121,13 @@ type _UniPopup = DefineComponent<_UniPopupProps>;
 type _UniPopupInstance = InstanceType<_UniPopup> & _UniPopupExpose;
 
 export type {
-  _UniPopupType as UniPopupType,
-  _UniPopupOnChangeEvent as UniPopupOnChangeEvent,
-  _UniPopupOnChange as UniPopupOnChange,
-  _UniPopupOnMaskClick as UniPopupOnMaskClick,
-  _UniPopupProps as UniPopupProps,
   _UniPopup as UniPopup,
   _UniPopupInstance as UniPopupInstance,
+  _UniPopupOnChange as UniPopupOnChange,
+  _UniPopupOnChangeEvent as UniPopupOnChangeEvent,
+  _UniPopupOnMaskClick as UniPopupOnMaskClick,
+  _UniPopupProps as UniPopupProps,
+  _UniPopupType as UniPopupType,
 };
 
 declare global {

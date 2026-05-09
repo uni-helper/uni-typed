@@ -197,6 +197,12 @@ type _UniIconsProps = Partial<{
    * 默认为 空字符串
    */
   customPrefix: string;
+  /**
+   * 自定义字体
+   *
+   * 默认为 空字符串
+   */
+  fontFamily: string;
 }>;
 
 /** 图标 */
@@ -206,11 +212,11 @@ type _UniIcons = DefineComponent<_UniIconsProps>;
 type _UniIconsInstance = InstanceType<_UniIcons>;
 
 export type {
-  _UniIconsType as UniIconsType,
-  _UniIconsCustomType as UniIconsCustomType,
-  _UniIconsProps as UniIconsProps,
   _UniIcons as UniIcons,
+  _UniIconsCustomType as UniIconsCustomType,
   _UniIconsInstance as UniIconsInstance,
+  _UniIconsProps as UniIconsProps,
+  _UniIconsType as UniIconsType,
 };
 
 declare global {

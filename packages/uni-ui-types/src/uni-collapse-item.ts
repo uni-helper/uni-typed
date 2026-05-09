@@ -12,6 +12,12 @@ import type { DefineComponent } from "vue";
 type _UniCollapseItemTitleBorder = "auto" | "none" | "show";
 
 type _UniCollapseItemProps = Partial<{
+  /**
+   * 唯一标志符
+   *
+   * 默认为 空字符串
+   */
+  name: string | number;
   /** 标题文字 */
   title: string;
   /** 标题左侧缩略图 */
@@ -67,10 +73,10 @@ type _UniCollapseItem = DefineComponent<_UniCollapseItemProps>;
 type _UniCollapseItemInstance = InstanceType<_UniCollapseItem>;
 
 export type {
-  _UniCollapseItemTitleBorder as UniCollapseItemTitleBorder,
-  _UniCollapseItemProps as UniCollapseItemProps,
   _UniCollapseItem as UniCollapseItem,
   _UniCollapseItemInstance as UniCollapseItemInstance,
+  _UniCollapseItemProps as UniCollapseItemProps,
+  _UniCollapseItemTitleBorder as UniCollapseItemTitleBorder,
 };
 
 declare global {

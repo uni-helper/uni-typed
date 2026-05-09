@@ -247,6 +247,20 @@ type _UniEasyinputProps = Partial<{
    */
   trim: _UniEasyinputTrim;
   /**
+   * 指定光标与键盘的距离
+   *
+   * 单位为 px
+   *
+   * 默认为 0
+   */
+  cursorSpacing: number;
+  /**
+   * 当键盘弹起时，是否上推内容
+   *
+   * 默认为 true
+   */
+  adjustPosition: boolean;
+  /**
    * 是否显示输入框边框
    *
    * 默认为 true
@@ -292,26 +306,26 @@ type _UniEasyinput = DefineComponent<_UniEasyinputProps>;
 type _UniEasyinputInstance = InstanceType<_UniEasyinput>;
 
 export type {
-  _UniEasyinputValue as UniEasyinputValue,
-  _UniEasyinputType as UniEasyinputType,
-  _UniEasyinputOnConfirmType as UniEasyinputOnConfirmType,
-  _UniEasyinputTrim as UniEasyinputTrim,
-  _UniEasyinputStyles as UniEasyinputStyles,
+  _UniEasyinput as UniEasyinput,
   _UniEasyinputIconPosition as UniEasyinputIconPosition,
-  _UniEasyinputOnInput as UniEasyinputOnInput,
-  _UniEasyinputOnClear as UniEasyinputOnClear,
-  _UniEasyinputOnFocusDetail as UniEasyinputOnFocusDetail,
-  _UniEasyinputOnFocusEvent as UniEasyinputOnFocusEvent,
-  _UniEasyinputOnFocus as UniEasyinputOnFocus,
+  _UniEasyinputInstance as UniEasyinputInstance,
+  _UniEasyinputOnBlur as UniEasyinputOnBlur,
   _UniEasyinputOnBlurDetail as UniEasyinputOnBlurDetail,
   _UniEasyinputOnBlurEvent as UniEasyinputOnBlurEvent,
-  _UniEasyinputOnBlur as UniEasyinputOnBlur,
-  _UniEasyinputOnConfirm as UniEasyinputOnConfirm,
-  _UniEasyinputOnIconClick as UniEasyinputOnIconClick,
   _UniEasyinputOnChange as UniEasyinputOnChange,
+  _UniEasyinputOnClear as UniEasyinputOnClear,
+  _UniEasyinputOnConfirm as UniEasyinputOnConfirm,
+  _UniEasyinputOnConfirmType as UniEasyinputOnConfirmType,
+  _UniEasyinputOnFocus as UniEasyinputOnFocus,
+  _UniEasyinputOnFocusDetail as UniEasyinputOnFocusDetail,
+  _UniEasyinputOnFocusEvent as UniEasyinputOnFocusEvent,
+  _UniEasyinputOnIconClick as UniEasyinputOnIconClick,
+  _UniEasyinputOnInput as UniEasyinputOnInput,
   _UniEasyinputProps as UniEasyinputProps,
-  _UniEasyinput as UniEasyinput,
-  _UniEasyinputInstance as UniEasyinputInstance,
+  _UniEasyinputStyles as UniEasyinputStyles,
+  _UniEasyinputTrim as UniEasyinputTrim,
+  _UniEasyinputType as UniEasyinputType,
+  _UniEasyinputValue as UniEasyinputValue,
 };
 
 declare global {

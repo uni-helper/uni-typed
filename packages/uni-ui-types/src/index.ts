@@ -10,6 +10,7 @@ export * from "./uni-combox";
 export * from "./uni-countdown";
 export * from "./uni-data-checkbox";
 export * from "./uni-data-picker";
+export * from "./uni-data-pickerview";
 export * from "./uni-data-select";
 export * from "./uni-dateformat";
 export * from "./uni-datetime-picker";
