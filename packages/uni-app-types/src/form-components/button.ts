@@ -94,6 +94,10 @@ type _ButtonFormType = "submit" | "reset";
  * OpenProfile 触发打开用户主页
  *
  * AgreePrivacyAuthorization 用户同意隐私协议按钮
+ *
+ * UploadDouyinVideo 发布抖音视频
+ *
+ * Im 跳转抖音 IM 客服
  */
 type _ButtonOpenType =
   | "feedback"
@@ -124,7 +128,9 @@ type _ButtonOpenType =
   | "favorite"
   | "watchLater"
   | "openProfile"
-  | "agreePrivacyAuthorization";
+  | "agreePrivacyAuthorization"
+  | "uploadDouyinVideo"
+  | "im";
 
 /**
  * 返回用户信息的语言
@@ -345,6 +351,33 @@ type _ButtonOnAgreeprivacyauthorization = (
   event: _ButtonOnAgreeprivacyauthorizationEvent,
 ) => void;
 
+type _ButtonOnGetuserinfoEvent = BaseEvent;
+
+/**
+ * 获取用户信息回调
+ *
+ * Open-type="getUserInfo" 时有效
+ */
+type _ButtonOnGetuserinfo = (event: _ButtonOnGetuserinfoEvent) => void;
+
+type _ButtonOnContactEvent = BaseEvent;
+
+/**
+ * 客服消息回调
+ *
+ * Open-type="contact" 时有效
+ */
+type _ButtonOnContact = (event: _ButtonOnContactEvent) => void;
+
+type _ButtonOnImEvent = BaseEvent;
+
+/**
+ * 跳转抖音 IM 客服回调
+ *
+ * Open-type="im" 时有效
+ */
+type _ButtonOnIm = (event: _ButtonOnImEvent) => void;
+
 /** 按钮属性 */
 type _ButtonProps = CommonProps &
   Partial<{
@@ -398,7 +431,7 @@ type _ButtonProps = CommonProps &
     /**
      * 开放能力
      *
-     * Feedback 打开“意见反馈”页面，用户可提交反馈内容并上传日志
+     * Feedback 打开”意见反馈”页面，用户可提交反馈内容并上传日志
      *
      * Share 触发用户转发
      *
@@ -453,6 +486,10 @@ type _ButtonProps = CommonProps &
      * WatchLater 触发用户稍后再看
      *
      * OpenProfile 触发打开用户主页
+     *
+     * UploadDouyinVideo 发布抖音视频
+     *
+     * Im 跳转抖音 IM 客服
      */
     openType: _ButtonOpenType;
     /**
@@ -649,6 +686,24 @@ type _ButtonProps = CommonProps &
      * Open-type="agreePrivacyAuthorization" 时有效
      */
     onAgreeprivacyauthorization: _ButtonOnAgreeprivacyauthorization;
+    /**
+     * 获取用户信息回调
+     *
+     * Open-type="getUserInfo" 时有效
+     */
+    onGetuserinfo: _ButtonOnGetuserinfo;
+    /**
+     * 客服消息回调
+     *
+     * Open-type="contact" 时有效
+     */
+    onContact: _ButtonOnContact;
+    /**
+     * 跳转抖音 IM 客服回调
+     *
+     * Open-type="im" 时有效
+     */
+    onIm: _ButtonOnIm;
   }>;
 
 /** 按钮 */
@@ -658,45 +713,51 @@ type _Button = DefineComponent<_ButtonProps>;
 type _ButtonInstance = InstanceType<_Button>;
 
 export type {
-  _ButtonSize as ButtonSize,
-  _ButtonType as ButtonType,
-  _ButtonFormType as ButtonFormType,
-  _ButtonOpenType as ButtonOpenType,
-  _ButtonLang as ButtonLang,
+  _Button as Button,
   _ButtonActivityType as ButtonActivityType,
-  _ButtonOnGetphonenumberDetail as ButtonOnGetphonenumberDetail,
-  _ButtonOnGetphonenumberEvent as ButtonOnGetphonenumberEvent,
-  _ButtonOnGetphonenumber as ButtonOnGetphonenumber,
-  _ButtonOnGetrealtimephonenumberDetail as ButtonOnGetrealtimephonenumberDetail,
-  _ButtonOnGetrealtimephonenumberEvent as ButtonOnGetrealtimephonenumberEvent,
-  _ButtonOnGetrealtimephonenumber as ButtonOnGetrealtimephonenumber,
-  _ButtonOnErrorEvent as ButtonOnErrorEvent,
-  _ButtonOnError as ButtonOnError,
+  _ButtonFormType as ButtonFormType,
+  _ButtonInstance as ButtonInstance,
+  _ButtonLang as ButtonLang,
+  _ButtonOnAddgroupapp as ButtonOnAddgroupapp,
+  _ButtonOnAddgroupappEvent as ButtonOnAddgroupappEvent,
+  _ButtonOnAgreeprivacyauthorization as ButtonOnAgreeprivacyauthorization,
+  _ButtonOnAgreeprivacyauthorizationEvent as ButtonOnAgreeprivacyauthorizationEvent,
+  _ButtonOnChooseaddress as ButtonOnChooseaddress,
+  _ButtonOnChooseaddressEvent as ButtonOnChooseaddressEvent,
+  _ButtonOnChooseavatar as ButtonOnChooseavatar,
+  _ButtonOnChooseavatarEvent as ButtonOnChooseavatarEvent,
+  _ButtonOnChooseinvoicetitle as ButtonOnChooseinvoicetitle,
+  _ButtonOnChooseinvoicetitleEvent as ButtonOnChooseinvoicetitleEvent,
+  _ButtonOnContact as ButtonOnContact,
+  _ButtonOnContactEvent as ButtonOnContactEvent,
+  _ButtonOnCreateliveactivity as ButtonOnCreateliveactivity,
   _ButtonOnCreateliveactivityDetail as ButtonOnCreateliveactivityDetail,
   _ButtonOnCreateliveactivityEvent as ButtonOnCreateliveactivityEvent,
-  _ButtonOnCreateliveactivity as ButtonOnCreateliveactivity,
+  _ButtonOnError as ButtonOnError,
+  _ButtonOnErrorEvent as ButtonOnErrorEvent,
+  _ButtonOnGetphonenumber as ButtonOnGetphonenumber,
+  _ButtonOnGetphonenumberDetail as ButtonOnGetphonenumberDetail,
+  _ButtonOnGetphonenumberEvent as ButtonOnGetphonenumberEvent,
+  _ButtonOnGetrealtimephonenumber as ButtonOnGetrealtimephonenumber,
+  _ButtonOnGetrealtimephonenumberDetail as ButtonOnGetrealtimephonenumberDetail,
+  _ButtonOnGetrealtimephonenumberEvent as ButtonOnGetrealtimephonenumberEvent,
+  _ButtonOnGetuserinfo as ButtonOnGetuserinfo,
+  _ButtonOnGetuserinfoEvent as ButtonOnGetuserinfoEvent,
+  _ButtonOnIm as ButtonOnIm,
+  _ButtonOnImEvent as ButtonOnImEvent,
+  _ButtonOnLaunchapp as ButtonOnLaunchapp,
+  _ButtonOnLaunchappEvent as ButtonOnLaunchappEvent,
+  _ButtonOnLogin as ButtonOnLogin,
+  _ButtonOnLoginEvent as ButtonOnLoginEvent,
+  _ButtonOnOpensetting as ButtonOnOpensetting,
   _ButtonOnOpensettingDetail as ButtonOnOpensettingDetail,
   _ButtonOnOpensettingEvent as ButtonOnOpensettingEvent,
-  _ButtonOnOpensetting as ButtonOnOpensetting,
-  _ButtonOnLaunchappEvent as ButtonOnLaunchappEvent,
-  _ButtonOnLaunchapp as ButtonOnLaunchapp,
-  _ButtonOnChooseavatarEvent as ButtonOnChooseavatarEvent,
-  _ButtonOnChooseavatar as ButtonOnChooseavatar,
-  _ButtonOnAddgroupappEvent as ButtonOnAddgroupappEvent,
-  _ButtonOnAddgroupapp as ButtonOnAddgroupapp,
-  _ButtonOnChooseaddressEvent as ButtonOnChooseaddressEvent,
-  _ButtonOnChooseaddress as ButtonOnChooseaddress,
-  _ButtonOnChooseinvoicetitleEvent as ButtonOnChooseinvoicetitleEvent,
-  _ButtonOnChooseinvoicetitle as ButtonOnChooseinvoicetitle,
-  _ButtonOnSubscribeEvent as ButtonOnSubscribeEvent,
   _ButtonOnSubscribe as ButtonOnSubscribe,
-  _ButtonOnLoginEvent as ButtonOnLoginEvent,
-  _ButtonOnLogin as ButtonOnLogin,
-  _ButtonOnAgreeprivacyauthorizationEvent as ButtonOnAgreeprivacyauthorizationEvent,
-  _ButtonOnAgreeprivacyauthorization as ButtonOnAgreeprivacyauthorization,
+  _ButtonOnSubscribeEvent as ButtonOnSubscribeEvent,
+  _ButtonOpenType as ButtonOpenType,
   _ButtonProps as ButtonProps,
-  _Button as Button,
-  _ButtonInstance as ButtonInstance,
+  _ButtonSize as ButtonSize,
+  _ButtonType as ButtonType,
 };
 
 declare global {
@@ -732,7 +793,7 @@ declare global {
     /**
      * 开放能力
      *
-     * Feedback 打开“意见反馈”页面，用户可提交反馈内容并上传日志
+     * Feedback 打开”意见反馈”页面，用户可提交反馈内容并上传日志
      *
      * Share 触发用户转发
      *
@@ -789,6 +850,10 @@ declare global {
      * OpenProfile 触发打开用户主页
      *
      * AgreePrivacyAuthorization 用户同意隐私协议
+     *
+     * UploadDouyinVideo 发布抖音视频
+     *
+     * Im 跳转抖音 IM 客服
      */
     export type ButtonOpenType = _ButtonOpenType;
     /**
@@ -938,6 +1003,27 @@ declare global {
      */
     export interface ButtonOnAgreeprivacyauthorization
       extends _ButtonOnAgreeprivacyauthorization {}
+    export type ButtonOnGetuserinfoEvent = _ButtonOnGetuserinfoEvent;
+    /**
+     * 获取用户信息回调
+     *
+     * Open-type="getUserInfo" 时有效
+     */
+    export interface ButtonOnGetuserinfo extends _ButtonOnGetuserinfo {}
+    export type ButtonOnContactEvent = _ButtonOnContactEvent;
+    /**
+     * 客服消息回调
+     *
+     * Open-type="contact" 时有效
+     */
+    export interface ButtonOnContact extends _ButtonOnContact {}
+    export type ButtonOnImEvent = _ButtonOnImEvent;
+    /**
+     * 跳转抖音 IM 客服回调
+     *
+     * Open-type="im" 时有效
+     */
+    export interface ButtonOnIm extends _ButtonOnIm {}
     /** 按钮属性 */
     export type ButtonProps = _ButtonProps;
     /** 按钮 */

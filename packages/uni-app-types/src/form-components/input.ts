@@ -21,6 +21,18 @@ type _InputValue = string;
  * Safe-password 密码安全输入键盘
  *
  * Nickname 昵称输入键盘
+ *
+ * None 无虚拟键盘
+ *
+ * Decimal 小数输入键盘
+ *
+ * Numeric 数字输入键盘
+ *
+ * Search 搜索输入键盘
+ *
+ * Email 邮件地址输入键盘
+ *
+ * Url 网址输入键盘
  */
 type _InputType =
   | "text"
@@ -29,7 +41,13 @@ type _InputType =
   | "digit"
   | "tel"
   | "safe-password"
-  | "nickname";
+  | "nickname"
+  | "none"
+  | "decimal"
+  | "numeric"
+  | "search"
+  | "email"
+  | "url";
 
 /**
  * 文本区域的语义，根据类型自动填充
@@ -176,6 +194,18 @@ type _InputProps = CommonProps &
      * Safe-password 密码安全输入键盘
      *
      * Nickname 昵称输入键盘
+     *
+     * None 无虚拟键盘
+     *
+     * Decimal 小数输入键盘
+     *
+     * Numeric 数字输入键盘
+     *
+     * Search 搜索输入键盘
+     *
+     * Email 邮件地址输入键盘
+     *
+     * Url 网址输入键盘
      *
      * 默认为 text
      */
@@ -386,32 +416,32 @@ type _Input = DefineComponent<_InputProps>;
 type _InputInstance = InstanceType<_Input>;
 
 export type {
-  _InputValue as InputValue,
-  _InputType as InputType,
-  _InputTextContentType as InputTextContentType,
+  _Input as Input,
   _InputConfirmType as InputConfirmType,
   _InputInputMode as InputInputMode,
-  _InputOnInputDetail as InputOnInputDetail,
-  _InputOnInputEvent as InputOnInputEvent,
-  _InputOnInput as InputOnInput,
-  _InputOnFocusDetail as InputOnFocusDetail,
-  _InputOnFocusEvent as InputOnFocusEvent,
-  _InputOnFocus as InputOnFocus,
+  _InputInstance as InputInstance,
+  _InputOnBlur as InputOnBlur,
   _InputOnBlurDetail as InputOnBlurDetail,
   _InputOnBlurEvent as InputOnBlurEvent,
-  _InputOnBlur as InputOnBlur,
+  _InputOnConfirm as InputOnConfirm,
   _InputOnConfirmDetail as InputOnConfirmDetail,
   _InputOnConfirmEvent as InputOnConfirmEvent,
-  _InputOnConfirm as InputOnConfirm,
+  _InputOnFocus as InputOnFocus,
+  _InputOnFocusDetail as InputOnFocusDetail,
+  _InputOnFocusEvent as InputOnFocusEvent,
+  _InputOnInput as InputOnInput,
+  _InputOnInputDetail as InputOnInputDetail,
+  _InputOnInputEvent as InputOnInputEvent,
+  _InputOnKeyboardheightchange as InputOnKeyboardheightchange,
   _InputOnKeyboardheightchangeDetail as InputOnKeyboardheightchangeDetail,
   _InputOnKeyboardheightchangeEvent as InputOnKeyboardheightchangeEvent,
-  _InputOnKeyboardheightchange as InputOnKeyboardheightchange,
+  _InputOnNicknamereview as InputOnNicknamereview,
   _InputOnNicknamereviewDetail as InputOnNicknamereviewDetail,
   _InputOnNicknamereviewEvent as InputOnNicknamereviewEvent,
-  _InputOnNicknamereview as InputOnNicknamereview,
   _InputProps as InputProps,
-  _Input as Input,
-  _InputInstance as InputInstance,
+  _InputTextContentType as InputTextContentType,
+  _InputType as InputType,
+  _InputValue as InputValue,
 };
 
 declare global {
@@ -434,6 +464,18 @@ declare global {
      * Safe-password 密码安全输入键盘
      *
      * Nickname 昵称输入键盘
+     *
+     * None 无虚拟键盘
+     *
+     * Decimal 小数输入键盘
+     *
+     * Numeric 数字输入键盘
+     *
+     * Search 搜索输入键盘
+     *
+     * Email 邮件地址输入键盘
+     *
+     * Url 网址输入键盘
      */
     export type InputType = _InputType;
     /**
