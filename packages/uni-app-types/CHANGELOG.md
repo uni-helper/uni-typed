@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.0](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.8...v1.0.0) (2026-05-09)
+
+### Features
+
+* **uat:** add types ([fc7663b](https://github.com/uni-helper/uni-typed/commit/fc7663b6392e6465f9e78685812fe321da279993)) - by @
+
 ## [1.0.0-alpha.8](https://github.com/uni-helper/uni-typed/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2026-04-06)
 
 ### Features
