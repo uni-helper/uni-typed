@@ -1,5 +1,7 @@
 # @uni-helper/uni-typed
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/uni-helper/uni-typed)
+
 👇 请查看文档了解具体用法和示例。
 
 [Netlify](https://uni-typed.netlify.app/) | [Cloudflare Pages](https://uni-typed.pages.dev/)
