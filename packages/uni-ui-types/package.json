@@ -64,8 +64,6 @@
     "vue": "catalog:"
   },
   "peerDependencies": {
-    "@uni-helper/uni-app-types": "workspace:*",
-    "typescript": "^5.0.0",
     "vue": "^3.0.0"
   },
   "packageManager": "pnpm@10.33.4",
