@@ -58,10 +58,10 @@ type _Text = DefineComponent<_TextProps>;
 type _TextInstance = InstanceType<_Text>;
 
 export type {
-  _TextSpace as TextSpace,
-  _TextProps as TextProps,
   _Text as Text,
   _TextInstance as TextInstance,
+  _TextProps as TextProps,
+  _TextSpace as TextSpace,
 };
 
 declare global {
@@ -165,6 +165,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     text: _TextProps;
   }
 }

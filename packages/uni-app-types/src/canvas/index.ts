@@ -80,23 +80,23 @@ type _Canvas = DefineComponent<_CanvasProps>;
 type _CanvasInstance = InstanceType<_Canvas>;
 
 export type {
-  _CanvasType as CanvasType,
-  _CanvasOnTouchstartEvent as CanvasOnTouchstartEvent,
-  _CanvasOnTouchstart as CanvasOnTouchstart,
-  _CanvasOnTouchmoveEvent as CanvasOnTouchmoveEvent,
-  _CanvasOnTouchmove as CanvasOnTouchmove,
-  _CanvasOnTouchendEvent as CanvasOnTouchendEvent,
-  _CanvasOnTouchend as CanvasOnTouchend,
-  _CanvasOnTouchcancelEvent as CanvasOnTouchcancelEvent,
-  _CanvasOnTouchcancel as CanvasOnTouchcancel,
-  _CanvasOnLongtapEvent as CanvasOnLongtapEvent,
-  _CanvasOnLongtap as CanvasOnLongtap,
-  _CanvasOnErrorDetail as CanvasOnErrorDetail,
-  _CanvasOnErrorEvent as CanvasOnErrorEvent,
-  _CanvasOnError as CanvasOnError,
-  _CanvasProps as CanvasProps,
   _Canvas as Canvas,
   _CanvasInstance as CanvasInstance,
+  _CanvasOnError as CanvasOnError,
+  _CanvasOnErrorDetail as CanvasOnErrorDetail,
+  _CanvasOnErrorEvent as CanvasOnErrorEvent,
+  _CanvasOnLongtap as CanvasOnLongtap,
+  _CanvasOnLongtapEvent as CanvasOnLongtapEvent,
+  _CanvasOnTouchcancel as CanvasOnTouchcancel,
+  _CanvasOnTouchcancelEvent as CanvasOnTouchcancelEvent,
+  _CanvasOnTouchend as CanvasOnTouchend,
+  _CanvasOnTouchendEvent as CanvasOnTouchendEvent,
+  _CanvasOnTouchmove as CanvasOnTouchmove,
+  _CanvasOnTouchmoveEvent as CanvasOnTouchmoveEvent,
+  _CanvasOnTouchstart as CanvasOnTouchstart,
+  _CanvasOnTouchstartEvent as CanvasOnTouchstartEvent,
+  _CanvasProps as CanvasProps,
+  _CanvasType as CanvasType,
 };
 
 declare global {
@@ -191,6 +191,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     canvas: _CanvasProps;
   }
 }

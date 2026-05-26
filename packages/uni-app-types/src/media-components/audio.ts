@@ -107,21 +107,21 @@ type _Audio = DefineComponent<_AudioProps>;
 type _AudioInstance = InstanceType<_Audio>;
 
 export type {
-  _AudioOnErrorDetail as AudioOnErrorDetail,
-  _AudioOnErrorEvent as AudioOnErrorEvent,
-  _AudioOnError as AudioOnError,
-  _AudioOnPlayEvent as AudioOnPlayEvent,
-  _AudioOnPlay as AudioOnPlay,
-  _AudioOnPauseEvent as AudioOnPauseEvent,
-  _AudioOnPause as AudioOnPause,
-  _AudioOnTimeupdateDetail as AudioOnTimeupdateDetail,
-  _AudioOnTimeupdateEvent as AudioOnTimeupdateEvent,
-  _AudioOnTimeupdate as AudioOnTimeupdate,
-  _AudioOnEndedEvent as AudioOnEndedEvent,
-  _AudioOnEnded as AudioOnEnded,
-  _AudioProps as AudioProps,
   _Audio as Audio,
   _AudioInstance as AudioInstance,
+  _AudioOnEnded as AudioOnEnded,
+  _AudioOnEndedEvent as AudioOnEndedEvent,
+  _AudioOnError as AudioOnError,
+  _AudioOnErrorDetail as AudioOnErrorDetail,
+  _AudioOnErrorEvent as AudioOnErrorEvent,
+  _AudioOnPause as AudioOnPause,
+  _AudioOnPauseEvent as AudioOnPauseEvent,
+  _AudioOnPlay as AudioOnPlay,
+  _AudioOnPlayEvent as AudioOnPlayEvent,
+  _AudioOnTimeupdate as AudioOnTimeupdate,
+  _AudioOnTimeupdateDetail as AudioOnTimeupdateDetail,
+  _AudioOnTimeupdateEvent as AudioOnTimeupdateEvent,
+  _AudioProps as AudioProps,
 };
 
 declare global {
@@ -212,6 +212,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     audio: _AudioProps;
   }
 }

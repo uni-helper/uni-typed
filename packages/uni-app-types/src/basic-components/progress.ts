@@ -100,12 +100,12 @@ type _Progress = DefineComponent<_ProgressProps>;
 type _ProgressInstance = InstanceType<_Progress>;
 
 export type {
-  _ProgressActiveMode as ProgressActiveMode,
-  _ProgressOnActiveendEvent as ProgressOnActiveendEvent,
-  _ProgressOnActiveend as ProgressOnActiveend,
-  _ProgressProps as ProgressProps,
   _Progress as Progress,
+  _ProgressActiveMode as ProgressActiveMode,
   _ProgressInstance as ProgressInstance,
+  _ProgressOnActiveend as ProgressOnActiveend,
+  _ProgressOnActiveendEvent as ProgressOnActiveendEvent,
+  _ProgressProps as ProgressProps,
 };
 
 declare global {
@@ -194,6 +194,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     progress: _ProgressProps;
   }
 }

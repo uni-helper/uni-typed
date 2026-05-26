@@ -1093,6 +1093,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     button: _ButtonProps;
   }
 }

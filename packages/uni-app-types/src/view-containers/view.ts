@@ -49,9 +49,9 @@ type _View = DefineComponent<_ViewProps>;
 type _ViewInstance = InstanceType<_View>;
 
 export type {
-  _ViewProps as ViewProps,
   _View as View,
   _ViewInstance as ViewInstance,
+  _ViewProps as ViewProps,
 };
 
 declare global {
@@ -157,6 +157,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     view: _ViewProps;
   }
 }

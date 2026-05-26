@@ -158,15 +158,15 @@ type _Image = DefineComponent<_ImageProps>;
 type _ImageInstance = InstanceType<_Image>;
 
 export type {
-  _ImageMode as ImageMode,
-  _ImageOnErrorEvent as ImageOnErrorEvent,
-  _ImageOnError as ImageOnError,
-  _ImageOnLoadDetail as ImageOnLoadDetail,
-  _ImageOnLoadEvent as ImageOnLoadEvent,
-  _ImageOnLoad as ImageOnLoad,
-  _ImageProps as ImageProps,
   _Image as Image,
   _ImageInstance as ImageInstance,
+  _ImageMode as ImageMode,
+  _ImageOnError as ImageOnError,
+  _ImageOnErrorEvent as ImageOnErrorEvent,
+  _ImageOnLoad as ImageOnLoad,
+  _ImageOnLoadDetail as ImageOnLoadDetail,
+  _ImageOnLoadEvent as ImageOnLoadEvent,
+  _ImageProps as ImageProps,
 };
 
 declare global {
@@ -279,6 +279,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     image: _ImageProps;
   }
 }

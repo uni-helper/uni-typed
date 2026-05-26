@@ -23,9 +23,9 @@ type _Label = DefineComponent<_LabelProps>;
 type _LabelInstance = InstanceType<_Label>;
 
 export type {
-  _LabelProps as LabelProps,
   _Label as Label,
   _LabelInstance as LabelInstance,
+  _LabelProps as LabelProps,
 };
 
 declare global {
@@ -135,6 +135,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     label: _LabelProps;
   }
 }

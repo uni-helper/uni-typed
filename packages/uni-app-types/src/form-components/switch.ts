@@ -49,14 +49,14 @@ type _Switch = DefineComponent<_SwitchProps>;
 type _SwitchInstance = InstanceType<_Switch>;
 
 export type {
+  _Switch as Switch,
   _SwitchChecked as SwitchChecked,
-  _SwitchType as SwitchType,
+  _SwitchInstance as SwitchInstance,
+  _SwitchOnChange as SwitchOnChange,
   _SwitchOnChangeDetail as SwitchOnChangeDetail,
   _SwitchOnChangeEvent as SwitchOnChangeEvent,
-  _SwitchOnChange as SwitchOnChange,
   _SwitchProps as SwitchProps,
-  _Switch as Switch,
-  _SwitchInstance as SwitchInstance,
+  _SwitchType as SwitchType,
 };
 
 declare global {
@@ -138,6 +138,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     switch: _SwitchProps;
   }
 }

@@ -76,15 +76,15 @@ type _Form = DefineComponent<_FormProps>;
 type _FormInstance = InstanceType<_Form>;
 
 export type {
-  _FormOnSubmitDetailValue as FormOnSubmitDetailValue,
-  _FormOnSubmitDetail as FormOnSubmitDetail,
-  _FormOnSubmitEvent as FormOnSubmitEvent,
-  _FormOnSubmit as FormOnSubmit,
-  _FormOnResetEvent as FormOnResetEvent,
-  _FormOnReset as FormOnReset,
-  _FormProps as FormProps,
   _Form as Form,
   _FormInstance as FormInstance,
+  _FormOnReset as FormOnReset,
+  _FormOnResetEvent as FormOnResetEvent,
+  _FormOnSubmit as FormOnSubmit,
+  _FormOnSubmitDetail as FormOnSubmitDetail,
+  _FormOnSubmitDetailValue as FormOnSubmitDetailValue,
+  _FormOnSubmitEvent as FormOnSubmitEvent,
+  _FormProps as FormProps,
 };
 
 declare global {
@@ -171,6 +171,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     form: _FormProps;
   }
 }

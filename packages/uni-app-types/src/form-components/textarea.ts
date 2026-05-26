@@ -253,29 +253,29 @@ type _Textarea = DefineComponent<_TextareaProps>;
 type _TextareaInstance = InstanceType<_Textarea>;
 
 export type {
-  _TextareaValue as TextareaValue,
+  _Textarea as Textarea,
   _TextareaConfirmType as TextareaConfirmType,
-  _TextareaOnFocusDetail as TextareaOnFocusDetail,
-  _TextareaOnFocusEvent as TextareaOnFocusEvent,
-  _TextareaOnFocus as TextareaOnFocus,
+  _TextareaInstance as TextareaInstance,
+  _TextareaOnBlur as TextareaOnBlur,
   _TextareaOnBlurDetail as TextareaOnBlurDetail,
   _TextareaOnBlurEvent as TextareaOnBlurEvent,
-  _TextareaOnBlur as TextareaOnBlur,
-  _TextareaOnLinechangeDetail as TextareaOnLinechangeDetail,
-  _TextareaOnLinechangeEvent as TextareaOnLinechangeEvent,
-  _TextareaOnLinechange as TextareaOnLinechange,
-  _TextareaOnInputDetail as TextareaOnInputDetail,
-  _TextareaOnInputEvent as TextareaOnInputEvent,
-  _TextareaOnInput as TextareaOnInput,
+  _TextareaOnConfirm as TextareaOnConfirm,
   _TextareaOnConfirmDetail as TextareaOnConfirmDetail,
   _TextareaOnConfirmEvent as TextareaOnConfirmEvent,
-  _TextareaOnConfirm as TextareaOnConfirm,
+  _TextareaOnFocus as TextareaOnFocus,
+  _TextareaOnFocusDetail as TextareaOnFocusDetail,
+  _TextareaOnFocusEvent as TextareaOnFocusEvent,
+  _TextareaOnInput as TextareaOnInput,
+  _TextareaOnInputDetail as TextareaOnInputDetail,
+  _TextareaOnInputEvent as TextareaOnInputEvent,
+  _TextareaOnKeyboardheightchange as TextareaOnKeyboardheightchange,
   _TextareaOnKeyboardheightchangeDetail as TextareaOnKeyboardheightchangeDetail,
   _TextareaOnKeyboardheightchangeEvent as TextareaOnKeyboardheightchangeEvent,
-  _TextareaOnKeyboardheightchange as TextareaOnKeyboardheightchange,
+  _TextareaOnLinechange as TextareaOnLinechange,
+  _TextareaOnLinechangeDetail as TextareaOnLinechangeDetail,
+  _TextareaOnLinechangeEvent as TextareaOnLinechangeEvent,
   _TextareaProps as TextareaProps,
-  _Textarea as Textarea,
-  _TextareaInstance as TextareaInstance,
+  _TextareaValue as TextareaValue,
 };
 
 declare global {
@@ -393,6 +393,7 @@ declare module "vue" {
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
      */
+    /* @ts-expect-error Override. */
     textarea: _TextareaProps;
   }
 }
