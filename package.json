@@ -60,6 +60,7 @@
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "unplugin-vue": "catalog:",
+    "unrun": "catalog:",
     "vitest": "catalog:",
     "vue-tsc": "catalog:"
   },
