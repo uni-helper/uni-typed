@@ -1,3 +1,24 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies:
+      '@pnpm/plugin-trusted-deps':
+        specifier: 0.2.2
+        version: 0.2.2
+
+packages:
+
+  '@pnpm/plugin-trusted-deps@0.2.2':
+    resolution: {integrity: sha512-+ZupiXKJhW2fbSilfyRp+wrAY54MKg+c0JWSFGdeb/y9bUoYN5u4XLOZ0Txk7O2bBa6NMhWrX5mwmsHP3/nm9Q==}
+
+snapshots:
+
+  '@pnpm/plugin-trusted-deps@0.2.2': {}
+
+---
 lockfileVersion: '9.0'
 
 settings:
@@ -120,8 +141,6 @@ catalogs:
     vue-tsc:
       specifier: ^3.3.2
       version: 3.3.2
-
-pnpmfileChecksum: sha256-15yQafiOk/n/FnyMLJdjllwGXgNxN7Ro+mGuxVKxhic=
 
 importers:
 

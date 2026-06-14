@@ -64,7 +64,7 @@
     "typescript": "^5.0.0 || ^6.0.0",
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.5.3",
   "engines": {
     "node": ">=14.18"
   },
