@@ -1065,7 +1065,6 @@ declare global {
 }
 
 // 3.3 <= Vue < 3.4
-// @ts-expect-error Invalid module name in augmentation, module cannot be found.
 declare module "vue/jsx-runtime" {
   namespace JSX {
     interface IntrinsicElements {
