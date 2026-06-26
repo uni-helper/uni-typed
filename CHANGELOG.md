@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
+
+### Bug Fixes
+
+* **uni-app-types:** align types with official component docs ([ca6add1](https://github.com/uni-helper/uni-typed/commit/ca6add1264cde4d099da627f8bec61261ce1b912)) - by @ModyQyW
+* **uni-cloud-types:** add confirm options to unicloud-db update ([774a2d4](https://github.com/uni-helper/uni-typed/commit/774a2d4cb4ed3b6415e1ad470cfa8950c5e9ceef)) - by @ModyQyW
+* **uni-ui-types:** align types with official uni-ui docs ([7333f7f](https://github.com/uni-helper/uni-typed/commit/7333f7f591167d0dead31340deb4fe5181b95bc7)) - by @ModyQyW
+
 ## [1.0.1](https://github.com/uni-helper/uni-typed/compare/v1.0.0...v1.0.1) (2026-05-26)
 
 **Note:** Version bump only for package monorepo

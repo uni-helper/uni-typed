@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
+
+### Bug Fixes
+
+* **uni-ui-types:** align types with official uni-ui docs ([7333f7f](https://github.com/uni-helper/uni-typed/commit/7333f7f591167d0dead31340deb4fe5181b95bc7)) - by @ModyQyW
+
 ## [1.0.1](https://github.com/uni-helper/uni-typed/compare/v1.0.0...v1.0.1) (2026-05-26)
 
 **Note:** Version bump only for package @uni-helper/uni-ui-types
