@@ -18,8 +18,12 @@
 |[@uni-helper/uni-types](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-types)|为 Vue v3 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型支持，即以上三者的集合。|
 |[@uni-helper/uni-app-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-app-types)|基于 @uni-helper/uni-app-types 封装 Vue v3 uni-app 组件。|
 |[@uni-helper/uni-cloud-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-cloud-types)|基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-cloud 组件。|
-|[@uni-helper/uni-ui-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-ui 组件。|
-|[@uni-helper/uni-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-app-types 封装 Vue v3 uni-app 组件、基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-cloud 组件、基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-ui 组件，即以上三者的集合。|
+|[@uni-helper/uni-ui-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-ui-types 封装 Vue v3 uni-ui 组件。|
+|[@uni-helper/uni-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-app-types 封装 Vue v3 uni-app 组件、基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-cloud 组件、基于 @uni-helper/uni-ui-types 封装 Vue v3 uni-ui 组件，即以上三者的集合。|
+
+## 贡献
+
+欢迎贡献！请阅读 [贡献指南](./CONTRIBUTING.md)。
 
 ## 致谢
 
