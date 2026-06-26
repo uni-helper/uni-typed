@@ -1,5 +1,5 @@
 import type { AdInterstitialInstance } from "@uni-helper/uni-app-types";
-import AdInterstitial from "./AdInterstitial.vue";
+import AdInterstitial from "./ad-interstitial.vue";
 
 export default AdInterstitial;
 

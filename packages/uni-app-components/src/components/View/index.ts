@@ -1,5 +1,5 @@
 import type { ViewInstance } from "@uni-helper/uni-app-types";
-import View from "./View.vue";
+import View from "./view.vue";
 
 export default View;
 

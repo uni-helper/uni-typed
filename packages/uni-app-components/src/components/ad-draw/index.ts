@@ -1,5 +1,5 @@
 import type { AdDrawInstance } from "@uni-helper/uni-app-types";
-import AdDraw from "./AdDraw.vue";
+import AdDraw from "./ad-draw.vue";
 
 export default AdDraw;
 

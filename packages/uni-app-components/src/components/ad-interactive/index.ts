@@ -1,5 +1,5 @@
 import type { AdInteractiveInstance } from "@uni-helper/uni-app-types";
-import AdInteractive from "./AdInteractive.vue";
+import AdInteractive from "./ad-interactive.vue";
 
 export default AdInteractive;
 

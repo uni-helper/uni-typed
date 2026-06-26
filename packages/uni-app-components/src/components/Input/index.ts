@@ -1,5 +1,5 @@
 import type { InputInstance } from "@uni-helper/uni-app-types";
-import Input from "./Input.vue";
+import Input from "./input.vue";
 
 export default Input;
 

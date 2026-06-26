@@ -1,5 +1,5 @@
 import type { AdContentPageInstance } from "@uni-helper/uni-app-types";
-import AdContentPage from "./AdContentPage.vue";
+import AdContentPage from "./ad-content-page.vue";
 
 export default AdContentPage;
 
