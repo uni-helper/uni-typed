@@ -133,7 +133,7 @@ type _ScrollViewProps = CommonProps &
     /**
      * 控制是否出现滚动条
      *
-     * 默认为 false
+     * 默认为 true
      */
     showScrollbar: boolean;
     /**
@@ -222,25 +222,25 @@ type _ScrollView = DefineComponent<_ScrollViewProps>;
 type _ScrollViewInstance = InstanceType<_ScrollView>;
 
 export type {
-  _ScrollViewRefresherDefaultStyle as ScrollViewRefresherDefaultStyle,
-  _ScrollViewOnScrolltoupperEvent as ScrollViewOnScrolltoupperEvent,
-  _ScrollViewOnScrolltoupper as ScrollViewOnScrolltoupper,
-  _ScrollViewOnScrolltolowerEvent as ScrollViewOnScrolltolowerEvent,
-  _ScrollViewOnScrolltolower as ScrollViewOnScrolltolower,
-  _ScrollViewOnScrollDetail as ScrollViewOnScrollDetail,
-  _ScrollViewOnScrollEvent as ScrollViewOnScrollEvent,
-  _ScrollViewOnScroll as ScrollViewOnScroll,
-  _ScrollViewOnRefresherpullingEvent as ScrollViewOnRefresherpullingEvent,
-  _ScrollViewOnRefresherpulling as ScrollViewOnRefresherpulling,
-  _ScrollViewOnRefresherrefreshEvent as ScrollViewOnRefresherrefreshEvent,
-  _ScrollViewOnRefresherrefresh as ScrollViewOnRefresherrefresh,
-  _ScrollViewOnRefresherrestoreEvent as ScrollViewOnRefresherrestoreEvent,
-  _ScrollViewOnRefresherrestore as ScrollViewOnRefresherrestore,
-  _ScrollViewOnRefresherabortEvent as ScrollViewOnRefresherabortEvent,
-  _ScrollViewOnRefresherabort as ScrollViewOnRefresherabort,
-  _ScrollViewProps as ScrollViewProps,
   _ScrollView as ScrollView,
   _ScrollViewInstance as ScrollViewInstance,
+  _ScrollViewOnRefresherabort as ScrollViewOnRefresherabort,
+  _ScrollViewOnRefresherabortEvent as ScrollViewOnRefresherabortEvent,
+  _ScrollViewOnRefresherpulling as ScrollViewOnRefresherpulling,
+  _ScrollViewOnRefresherpullingEvent as ScrollViewOnRefresherpullingEvent,
+  _ScrollViewOnRefresherrefresh as ScrollViewOnRefresherrefresh,
+  _ScrollViewOnRefresherrefreshEvent as ScrollViewOnRefresherrefreshEvent,
+  _ScrollViewOnRefresherrestore as ScrollViewOnRefresherrestore,
+  _ScrollViewOnRefresherrestoreEvent as ScrollViewOnRefresherrestoreEvent,
+  _ScrollViewOnScroll as ScrollViewOnScroll,
+  _ScrollViewOnScrollDetail as ScrollViewOnScrollDetail,
+  _ScrollViewOnScrollEvent as ScrollViewOnScrollEvent,
+  _ScrollViewOnScrolltolower as ScrollViewOnScrolltolower,
+  _ScrollViewOnScrolltolowerEvent as ScrollViewOnScrolltolowerEvent,
+  _ScrollViewOnScrolltoupper as ScrollViewOnScrolltoupper,
+  _ScrollViewOnScrolltoupperEvent as ScrollViewOnScrolltoupperEvent,
+  _ScrollViewProps as ScrollViewProps,
+  _ScrollViewRefresherDefaultStyle as ScrollViewRefresherDefaultStyle,
 };
 
 declare global {

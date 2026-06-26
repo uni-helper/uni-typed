@@ -40,6 +40,18 @@ type _PickerViewProps = CommonProps &
     indicatorClass: string;
     /** 设置蒙层的样式 */
     maskStyle: string;
+    /**
+     * 设置蒙层上半部分样式
+     *
+     * 仅 app-nvue（3.6.7+）支持
+     */
+    maskTopStyle: string;
+    /**
+     * 设置蒙层下半部分样式
+     *
+     * 仅 app-nvue（3.6.7+）支持
+     */
+    maskBottomStyle: string;
     /** 设置蒙层的类名 */
     maskClass: string;
     /**
@@ -65,18 +77,18 @@ type _PickerView = DefineComponent<_PickerViewProps>;
 type _PickerViewInstance = InstanceType<_PickerView>;
 
 export type {
-  _PickerViewValueElement as PickerViewValueElement,
-  _PickerViewValue as PickerViewValue,
-  _PickerViewOnChangeDetail as PickerViewOnChangeDetail,
-  _PickerViewOnChangeEvent as PickerViewOnChangeEvent,
-  _PickerViewOnChange as PickerViewOnChange,
-  _PickerViewOnPickstartEvent as PickerViewOnPickstartEvent,
-  _PickerViewOnPickstart as PickerViewOnPickstart,
-  _PickerViewOnPickendEvent as PickerViewOnPickendEvent,
-  _PickerViewOnPickend as PickerViewOnPickend,
-  _PickerViewProps as PickerViewProps,
   _PickerView as PickerView,
   _PickerViewInstance as PickerViewInstance,
+  _PickerViewOnChange as PickerViewOnChange,
+  _PickerViewOnChangeDetail as PickerViewOnChangeDetail,
+  _PickerViewOnChangeEvent as PickerViewOnChangeEvent,
+  _PickerViewOnPickend as PickerViewOnPickend,
+  _PickerViewOnPickendEvent as PickerViewOnPickendEvent,
+  _PickerViewOnPickstart as PickerViewOnPickstart,
+  _PickerViewOnPickstartEvent as PickerViewOnPickstartEvent,
+  _PickerViewProps as PickerViewProps,
+  _PickerViewValue as PickerViewValue,
+  _PickerViewValueElement as PickerViewValueElement,
 };
 
 declare global {

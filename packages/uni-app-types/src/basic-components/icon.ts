@@ -16,6 +16,14 @@ type _IconProps = CommonProps &
     size: number;
     /** 颜色 */
     color: string;
+    /**
+     * 视图盒子的尺寸
+     *
+     * 默认为 1024
+     *
+     * 仅小红书小程序支持
+     */
+    viewBox: number;
   }>;
 
 /** 图标 */
@@ -25,9 +33,9 @@ type _Icon = DefineComponent<_IconProps>;
 type _IconInstance = InstanceType<_Icon>;
 
 export type {
-  _IconProps as IconProps,
   _Icon as Icon,
   _IconInstance as IconInstance,
+  _IconProps as IconProps,
 };
 
 declare global {

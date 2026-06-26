@@ -96,7 +96,7 @@ type _SwiperProps = CommonProps &
     /** Swiper-item 可见时的 class */
     activeClass: string;
     /** Acceleration 设置为 true 时且处于滑动过程中，中间若干屏处于可见时的 class */
-    changingClass: boolean;
+    changingClass: string;
     /**
      * 是否自动切换
      *
@@ -218,20 +218,20 @@ type _Swiper = DefineComponent<_SwiperProps>;
 type _SwiperInstance = InstanceType<_Swiper>;
 
 export type {
-  _SwiperSource as SwiperSource,
+  _Swiper as Swiper,
   _SwiperEasingFunction as SwiperEasingFunction,
-  _SwiperOnChangeDetail as SwiperOnChangeDetail,
-  _SwiperOnChangeEvent as SwiperOnChangeEvent,
-  _SwiperOnChange as SwiperOnChange,
-  _SwiperOnTransitionDetail as SwiperOnTransitionDetail,
-  _SwiperOnTransitionEvent as SwiperOnTransitionEvent,
-  _SwiperOnTransition as SwiperOnTransition,
+  _SwiperInstance as SwiperInstance,
+  _SwiperOnAnimationfinish as SwiperOnAnimationfinish,
   _SwiperOnAnimationfinishDetail as SwiperOnAnimationfinishDetail,
   _SwiperOnAnimationfinishEvent as SwiperOnAnimationfinishEvent,
-  _SwiperOnAnimationfinish as SwiperOnAnimationfinish,
+  _SwiperOnChange as SwiperOnChange,
+  _SwiperOnChangeDetail as SwiperOnChangeDetail,
+  _SwiperOnChangeEvent as SwiperOnChangeEvent,
+  _SwiperOnTransition as SwiperOnTransition,
+  _SwiperOnTransitionDetail as SwiperOnTransitionDetail,
+  _SwiperOnTransitionEvent as SwiperOnTransitionEvent,
   _SwiperProps as SwiperProps,
-  _Swiper as Swiper,
-  _SwiperInstance as SwiperInstance,
+  _SwiperSource as SwiperSource,
 };
 
 declare global {

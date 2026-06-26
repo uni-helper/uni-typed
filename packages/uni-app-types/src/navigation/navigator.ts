@@ -209,6 +209,14 @@ type _NavigatorProps = CommonProps &
      * Target="miniProgram" 时有效
      */
     shortLink: string;
+    /**
+     * 是否给 navigator 组件加一层 a 标签控制 ssr 渲染
+     *
+     * 默认为 true
+     *
+     * 仅 web（3.7.6+）、App-vue（3.7.6+）支持
+     */
+    renderLink: boolean;
   }>;
 
 /**
@@ -224,13 +232,13 @@ type _Navigator = DefineComponent<_NavigatorProps>;
 type _NavigatorInstance = InstanceType<_Navigator>;
 
 export type {
-  _NavigatorOpenType as NavigatorOpenType,
+  _Navigator as Navigator,
   _NavigatorAnimationType as NavigatorAnimationType,
+  _NavigatorInstance as NavigatorInstance,
+  _NavigatorOpenType as NavigatorOpenType,
+  _NavigatorProps as NavigatorProps,
   _NavigatorTarget as NavigatorTarget,
   _NavigatorVersion as NavigatorVersion,
-  _NavigatorProps as NavigatorProps,
-  _Navigator as Navigator,
-  _NavigatorInstance as NavigatorInstance,
 };
 
 declare global {

@@ -414,6 +414,16 @@ type _VideoProps = CommonProps &
     playStrategy: _VideoPlayStrategy;
     /** HTTP 请求 Header */
     header: Record<string, any>;
+    /**
+     * 是否为直播源
+     *
+     * 用于拉流（live）场景
+     *
+     * 仅 App 3.7.2+、微信小程序（2.28.1+）支持
+     *
+     * 默认为 false
+     */
+    isLive: boolean;
     /** 开始/继续播放时触发 */
     onPlay: _VideoOnPlay;
     /** 暂停播放时触发 */

@@ -33,6 +33,34 @@ type _RadioProps = CommonProps &
     disabled: boolean;
     /** 颜色 */
     color: string;
+    /**
+     * 默认的背景颜色
+     *
+     * 默认为 #ffffff
+     */
+    backgroundColor: string;
+    /**
+     * 默认的边框颜色
+     *
+     * 默认为 #d1d1d1
+     */
+    borderColor: string;
+    /**
+     * 选中时的背景颜色，优先级高于 color
+     *
+     * 默认为 #007aff
+     */
+    activeBackgroundColor: string;
+    /**
+     * 选中时的边框颜色
+     */
+    activeBorderColor: string;
+    /**
+     * 图标颜色
+     *
+     * 默认为 #ffffff
+     */
+    iconColor: string;
   }>;
 
 /** 单选项目 */
@@ -42,10 +70,10 @@ type _Radio = DefineComponent<_RadioProps>;
 type _RadioInstance = InstanceType<_Radio>;
 
 export type {
-  _RadioValue as RadioValue,
-  _RadioProps as RadioProps,
   _Radio as Radio,
   _RadioInstance as RadioInstance,
+  _RadioProps as RadioProps,
+  _RadioValue as RadioValue,
 };
 
 declare global {

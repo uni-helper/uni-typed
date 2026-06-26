@@ -28,6 +28,35 @@ type _TextareaConfirmType =
   | "done"
   | "return";
 
+/**
+ * 键盘输入类型提示
+ *
+ * none 无键盘
+ *
+ * text 文本输入
+ *
+ * decimal 小数
+ *
+ * numeric 数字
+ *
+ * tel 电话
+ *
+ * search 搜索
+ *
+ * email 邮箱
+ *
+ * url 链接
+ */
+type _TextareaInputmode =
+  | "none"
+  | "text"
+  | "decimal"
+  | "numeric"
+  | "tel"
+  | "search"
+  | "email"
+  | "url";
+
 interface _TextareaOnFocusDetail {
   value: _TextareaValue;
   /** 键盘高度 */
@@ -232,6 +261,36 @@ type _TextareaProps = CommonProps &
      * 默认为 true
      */
     ignoreCompositionEvent: boolean;
+    /**
+     * 光标颜色
+     *
+     * 仅 H5(4.0+)、App-Vue(4.0+) 支持
+     */
+    cursorColor: string;
+    /**
+     * 键盘输入类型提示
+     *
+     * none 无键盘
+     *
+     * text 文本输入
+     *
+     * decimal 小数
+     *
+     * numeric 数字
+     *
+     * tel 电话
+     *
+     * search 搜索
+     *
+     * email 邮箱
+     *
+     * url 链接
+     *
+     * 默认为 text
+     *
+     * 仅 H5(3.7.0+)、App-Vue(3.7.0+) 支持
+     */
+    inputmode: _TextareaInputmode;
     /** 聚焦时触发 */
     onFocus: _TextareaOnFocus;
     /** 失焦时触发 */
@@ -255,6 +314,7 @@ type _TextareaInstance = InstanceType<_Textarea>;
 export type {
   _Textarea as Textarea,
   _TextareaConfirmType as TextareaConfirmType,
+  _TextareaInputmode as TextareaInputmode,
   _TextareaInstance as TextareaInstance,
   _TextareaOnBlur as TextareaOnBlur,
   _TextareaOnBlurDetail as TextareaOnBlurDetail,
@@ -296,6 +356,26 @@ declare global {
      * Done 完成
      */
     export type TextareaConfirmType = _TextareaConfirmType;
+    /**
+     * 键盘输入类型提示
+     *
+     * none 无键盘
+     *
+     * text 文本输入
+     *
+     * decimal 小数
+     *
+     * numeric 数字
+     *
+     * tel 电话
+     *
+     * search 搜索
+     *
+     * email 邮箱
+     *
+     * url 链接
+     */
+    export type TextareaInputmode = _TextareaInputmode;
     export interface TextareaOnFocusDetail extends _TextareaOnFocusDetail {}
     export type TextareaOnFocusEvent = _TextareaOnFocusEvent;
     /** 聚焦时触发 */

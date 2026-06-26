@@ -34,6 +34,16 @@ type _WebViewOnOnPostMessageEvent = BaseEvent;
 /** 网页向应用实时 postMessage */
 type _WebViewOnOnPostMessage = (event: _WebViewOnOnPostMessageEvent) => void;
 
+type _WebViewOnLoadEvent = BaseEvent;
+
+/** 网页加载成功时触发 */
+type _WebViewOnLoad = (event: _WebViewOnLoadEvent) => void;
+
+type _WebViewOnErrorEvent = BaseEvent;
+
+/** 网页加载失败时触发 */
+type _WebViewOnError = (event: _WebViewOnErrorEvent) => void;
+
 /** Web 浏览器组件属性 */
 type _WebViewProps = CommonProps &
   Partial<{
@@ -47,10 +57,22 @@ type _WebViewProps = CommonProps &
     webviewStyles: _WebViewStyles;
     /** 是否自动更新当前页面标题 */
     updateTitle: boolean;
+    /**
+     * 是否铺满整个页面
+     *
+     * 默认为 true
+     *
+     * 仅 H5（HBuilderX 3.5.4+）、App-HarmonyOS 支持
+     */
+    fullscreen: boolean;
     /** 网页向应用 postMessage 时，会在特定时机（后退、组件销毁、分享）触发并收到消息 */
     onMessage: _WebViewOnMessage;
     /** 网页向应用实时 postMessage */
     onOnPostMessage: _WebViewOnOnPostMessage;
+    /** 网页加载成功时触发 */
+    onLoad: _WebViewOnLoad;
+    /** 网页加载失败时触发 */
+    onError: _WebViewOnError;
   }>;
 
 /** Web 浏览器组件，可承载网页 */
@@ -60,15 +82,19 @@ type _WebView = DefineComponent<_WebViewProps>;
 type _WebViewInstance = InstanceType<_WebView>;
 
 export type {
-  _WebViewStyles as WebViewStyles,
-  _WebViewOnMessageDetail as WebViewOnMessageDetail,
-  _WebViewOnMessageEvent as WebViewOnMessageEvent,
-  _WebViewOnMessage as WebViewOnMessage,
-  _WebViewOnOnPostMessageEvent as WebViewOnOnPostMessageEvent,
-  _WebViewOnOnPostMessage as WebViewOnOnPostMessage,
-  _WebViewProps as WebViewProps,
   _WebView as WebView,
   _WebViewInstance as WebViewInstance,
+  _WebViewOnError as WebViewOnError,
+  _WebViewOnErrorEvent as WebViewOnErrorEvent,
+  _WebViewOnLoad as WebViewOnLoad,
+  _WebViewOnLoadEvent as WebViewOnLoadEvent,
+  _WebViewOnMessage as WebViewOnMessage,
+  _WebViewOnMessageDetail as WebViewOnMessageDetail,
+  _WebViewOnMessageEvent as WebViewOnMessageEvent,
+  _WebViewOnOnPostMessage as WebViewOnOnPostMessage,
+  _WebViewOnOnPostMessageEvent as WebViewOnOnPostMessageEvent,
+  _WebViewProps as WebViewProps,
+  _WebViewStyles as WebViewStyles,
 };
 
 declare global {
@@ -79,6 +105,12 @@ declare global {
     export type WebViewOnMessageEvent = _WebViewOnMessageEvent;
     /** 网页向应用 postMessage 时，会在特定时机（后退、组件销毁、分享）触发并收到消息 */
     export interface WebViewOnMessage extends _WebViewOnMessage {}
+    export type WebViewOnErrorEvent = _WebViewOnErrorEvent;
+    /** 网页加载失败时触发 */
+    export interface WebViewOnError extends _WebViewOnError {}
+    export type WebViewOnLoadEvent = _WebViewOnLoadEvent;
+    /** 网页加载成功时触发 */
+    export interface WebViewOnLoad extends _WebViewOnLoad {}
     export type WebViewOnOnPostMessageEvent = _WebViewOnOnPostMessageEvent;
     /** 网页向应用实时 postMessage */
     export interface WebViewOnOnPostMessage extends _WebViewOnOnPostMessage {}

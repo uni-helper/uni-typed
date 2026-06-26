@@ -5,8 +5,14 @@ import type { CustomEvent } from "../events";
 /** 是否选中 */
 type _SwitchChecked = boolean;
 
-/** 样式 */
-type _SwitchType = "_Switch" | "checkbox";
+/**
+ * 样式
+ *
+ * switch 开关样式
+ *
+ * checkbox 复选框样式
+ */
+type _SwitchType = "switch" | "checkbox";
 
 interface _SwitchOnChangeDetail {
   value: _SwitchChecked;
