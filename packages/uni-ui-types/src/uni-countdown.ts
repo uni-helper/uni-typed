@@ -63,6 +63,18 @@ type _UniCountdownProps = Partial<{
    */
   showDay: boolean;
   /**
+   * 是否显示小时
+   *
+   * 默认为 true
+   */
+  showHour: boolean;
+  /**
+   * 是否显示分钟
+   *
+   * 默认为 true
+   */
+  showMinute: boolean;
+  /**
    * 是否以冒号为分隔符
    *
    * 默认为 true
@@ -87,11 +99,11 @@ type _UniCountdown = DefineComponent<_UniCountdownProps>;
 type _UniCountdownInstance = InstanceType<_UniCountdown>;
 
 export type {
-  _UniCountdownOnUpdate as UniCountdownOnUpdate,
-  _UniCountdownOnTimeup as UniCountdownOnTimeup,
-  _UniCountdownProps as UniCountdownProps,
   _UniCountdown as UniCountdown,
   _UniCountdownInstance as UniCountdownInstance,
+  _UniCountdownOnTimeup as UniCountdownOnTimeup,
+  _UniCountdownOnUpdate as UniCountdownOnUpdate,
+  _UniCountdownProps as UniCountdownProps,
 };
 
 declare global {

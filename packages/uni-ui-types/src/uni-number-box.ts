@@ -67,6 +67,14 @@ type _UniNumberBoxProps = Partial<{
    * 默认为 false
    */
   disabled: boolean;
+  /**
+   * 输入框宽度
+   *
+   * 单位为 px
+   *
+   * 默认为 40
+   */
+  width: number;
   /** 值改变时触发 */
   onChange: _UniNumberBoxOnChange;
   /** 值改变时触发 */
@@ -84,16 +92,16 @@ type _UniNumberBox = DefineComponent<_UniNumberBoxProps>;
 type _UniNumberBoxInstance = InstanceType<_UniNumberBox>;
 
 export type {
-  _UniNumberBoxValue as UniNumberBoxValue,
-  _UniNumberBoxOnChange as UniNumberBoxOnChange,
-  _UniNumberBoxOnInput as UniNumberBoxOnInput,
-  _UniNumberBoxOnFocusEvent as UniNumberBoxOnFocusEvent,
-  _UniNumberBoxOnFocus as UniNumberBoxOnFocus,
-  _UniNumberBoxOnBlurEvent as UniNumberBoxOnBlurEvent,
-  _UniNumberBoxOnBlur as UniNumberBoxOnBlur,
-  _UniNumberBoxProps as UniNumberBoxProps,
   _UniNumberBox as UniNumberBox,
   _UniNumberBoxInstance as UniNumberBoxInstance,
+  _UniNumberBoxOnBlur as UniNumberBoxOnBlur,
+  _UniNumberBoxOnBlurEvent as UniNumberBoxOnBlurEvent,
+  _UniNumberBoxOnChange as UniNumberBoxOnChange,
+  _UniNumberBoxOnFocus as UniNumberBoxOnFocus,
+  _UniNumberBoxOnFocusEvent as UniNumberBoxOnFocusEvent,
+  _UniNumberBoxOnInput as UniNumberBoxOnInput,
+  _UniNumberBoxProps as UniNumberBoxProps,
+  _UniNumberBoxValue as UniNumberBoxValue,
 };
 
 declare global {

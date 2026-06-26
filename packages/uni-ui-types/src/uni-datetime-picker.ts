@@ -62,6 +62,9 @@ type _UniDatetimePickerOnChange = (value: _UniDatetimePickerValue) => void;
 /** 点击遮罩层触发 */
 type _UniDatetimePickerOnMaskClick = (value: _UniDatetimePickerValue) => void;
 
+/** 弹窗弹出时触发 */
+type _UniDatetimePickerOnShow = () => void;
+
 type _UniDatetimePickerProps = Partial<{
   /**
    * 选择器类型
@@ -135,6 +138,8 @@ type _UniDatetimePickerProps = Partial<{
   onChange: _UniDatetimePickerOnChange;
   /** 点击遮罩层触发 */
   onMaskClick: _UniDatetimePickerOnMaskClick;
+  /** 弹窗弹出时触发 */
+  onShow: _UniDatetimePickerOnShow;
 }>;
 
 /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间 */
@@ -143,19 +148,20 @@ type _UniDatetimePicker = DefineComponent<_UniDatetimePickerProps>;
 type _UniDatetimePickerInstance = InstanceType<_UniDatetimePicker>;
 
 export type {
-  _UniDatetimePickerType as UniDatetimePickerType,
-  _UniDatetimePickerValue as UniDatetimePickerValue,
-  _UniDatetimePickerStart as UniDatetimePickerStart,
-  _UniDatetimePickerEnd as UniDatetimePickerEnd,
-  _UniDatetimePickerReturnType as UniDatetimePickerReturnType,
-  _UniDatetimePickerShow as UniDatetimePickerShow,
-  _UniDatetimePickerClose as UniDatetimePickerClose,
+  _UniDatetimePicker as UniDatetimePicker,
   _UniDatetimePickerClear as UniDatetimePickerClear,
+  _UniDatetimePickerClose as UniDatetimePickerClose,
+  _UniDatetimePickerEnd as UniDatetimePickerEnd,
+  _UniDatetimePickerInstance as UniDatetimePickerInstance,
   _UniDatetimePickerOnChange as UniDatetimePickerOnChange,
   _UniDatetimePickerOnMaskClick as UniDatetimePickerOnMaskClick,
+  _UniDatetimePickerOnShow as UniDatetimePickerOnShow,
   _UniDatetimePickerProps as UniDatetimePickerProps,
-  _UniDatetimePicker as UniDatetimePicker,
-  _UniDatetimePickerInstance as UniDatetimePickerInstance,
+  _UniDatetimePickerReturnType as UniDatetimePickerReturnType,
+  _UniDatetimePickerShow as UniDatetimePickerShow,
+  _UniDatetimePickerStart as UniDatetimePickerStart,
+  _UniDatetimePickerType as UniDatetimePickerType,
+  _UniDatetimePickerValue as UniDatetimePickerValue,
 };
 
 declare global {
@@ -204,6 +210,8 @@ declare global {
     /** 点击遮罩层触发 */
     export interface UniDatetimePickerOnMaskClick
       extends _UniDatetimePickerOnMaskClick {}
+    /** 弹窗弹出时触发 */
+    export interface UniDatetimePickerOnShow extends _UniDatetimePickerOnShow {}
     export type UniDatetimePickerProps = _UniDatetimePickerProps;
     /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间 */
     export type UniDatetimePicker = _UniDatetimePicker;

@@ -288,6 +288,12 @@ type _UniTransitionProps = Partial<{
    * 默认为 300
    */
   duration: number;
+  /**
+   * 组件样式
+   *
+   * 同 css 样式，带连字符的属性需使用小驼峰写法，如 backgroundColor
+   */
+  styles: _UniTransitionType;
   /** 手动设置动画配置 */
   init: _UniTransitionStep;
   /** 调用表示一组动画完成 */
@@ -310,20 +316,20 @@ type _UniTransition = DefineComponent<_UniTransitionProps>;
 type _UniTransitionInstance = InstanceType<_UniTransition>;
 
 export type {
-  _UniTransitionModeClass as UniTransitionModeClass,
-  _UniTransitionTimingFunction as UniTransitionTimingFunction,
-  _UniTransitionConfig as UniTransitionConfig,
-  _UniTransitionType as UniTransitionType,
-  _UniTransitionInit as UniTransitionInit,
-  _UniTransitionStep as UniTransitionStep,
-  _UniTransitionRun as UniTransitionRun,
-  _UniTransitionOnClickEvent as UniTransitionOnClickEvent,
-  _UniTransitionOnClick as UniTransitionOnClick,
-  _UniTransitionOnChangeEvent as UniTransitionOnChangeEvent,
-  _UniTransitionOnChange as UniTransitionOnChange,
-  _UniTransitionProps as UniTransitionProps,
   _UniTransition as UniTransition,
+  _UniTransitionConfig as UniTransitionConfig,
+  _UniTransitionInit as UniTransitionInit,
   _UniTransitionInstance as UniTransitionInstance,
+  _UniTransitionModeClass as UniTransitionModeClass,
+  _UniTransitionOnChange as UniTransitionOnChange,
+  _UniTransitionOnChangeEvent as UniTransitionOnChangeEvent,
+  _UniTransitionOnClick as UniTransitionOnClick,
+  _UniTransitionOnClickEvent as UniTransitionOnClickEvent,
+  _UniTransitionProps as UniTransitionProps,
+  _UniTransitionRun as UniTransitionRun,
+  _UniTransitionStep as UniTransitionStep,
+  _UniTransitionTimingFunction as UniTransitionTimingFunction,
+  _UniTransitionType as UniTransitionType,
 };
 
 declare global {

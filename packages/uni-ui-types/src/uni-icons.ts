@@ -167,6 +167,9 @@ type _UniIconsType =
 /** 自定义图标类型 */
 export type _UniIconsCustomType = `icon-${string}`;
 
+/** 点击 Icon 触发事件 */
+type _UniIconsOnClick = () => void;
+
 /** 图标属性 */
 type _UniIconsProps = Partial<{
   /**
@@ -203,6 +206,8 @@ type _UniIconsProps = Partial<{
    * 默认为 空字符串
    */
   fontFamily: string;
+  /** 点击 Icon 触发事件 */
+  onClick: _UniIconsOnClick;
 }>;
 
 /** 图标 */
@@ -215,6 +220,7 @@ export type {
   _UniIcons as UniIcons,
   _UniIconsCustomType as UniIconsCustomType,
   _UniIconsInstance as UniIconsInstance,
+  _UniIconsOnClick as UniIconsOnClick,
   _UniIconsProps as UniIconsProps,
   _UniIconsType as UniIconsType,
 };
@@ -225,6 +231,8 @@ declare global {
     export type UniIconsType = _UniIconsType;
     /** 自定义图标类型 */
     export type UniIconsCustomType = _UniIconsCustomType;
+    /** 点击 Icon 触发事件 */
+    export interface UniIconsOnClick extends _UniIconsOnClick {}
     /** 图标属性 */
     export type UniIconsProps = _UniIconsProps;
     /** 图标 */

@@ -45,6 +45,12 @@ type _UniSegmentedControlProps = Partial<{
    * 默认为 #2979ff
    */
   activeColor: string;
+  /**
+   * 未激活时的颜色
+   *
+   * 默认为 transparent
+   */
+  inActiveColor: string;
   /** 选项 */
   values: string[];
   /** 点击时触发 */
@@ -58,13 +64,13 @@ type _UniSegmentedControl = DefineComponent<_UniSegmentedControlProps>;
 type _UniSegmentedControlInstance = InstanceType<_UniSegmentedControl>;
 
 export type {
-  _UniSegmentedControlCurrent as UniSegmentedControlCurrent,
-  _UniSegmentedControlStyleType as UniSegmentedControlStyleType,
-  _UniSegmentedControlOnClickItemEvent as UniSegmentedControlOnClickItemEvent,
-  _UniSegmentedControlOnClickItem as UniSegmentedControlOnClickItem,
-  _UniSegmentedControlProps as UniSegmentedControlProps,
   _UniSegmentedControl as UniSegmentedControl,
+  _UniSegmentedControlCurrent as UniSegmentedControlCurrent,
   _UniSegmentedControlInstance as UniSegmentedControlInstance,
+  _UniSegmentedControlOnClickItem as UniSegmentedControlOnClickItem,
+  _UniSegmentedControlOnClickItemEvent as UniSegmentedControlOnClickItemEvent,
+  _UniSegmentedControlProps as UniSegmentedControlProps,
+  _UniSegmentedControlStyleType as UniSegmentedControlStyleType,
 };
 
 declare global {

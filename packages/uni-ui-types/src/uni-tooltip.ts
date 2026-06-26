@@ -1,8 +1,35 @@
 import type { DefineComponent } from "vue";
 
+/**
+ * 出现位置
+ *
+ * left 左侧
+ *
+ * right 右侧
+ *
+ * top 上方
+ *
+ * bottom 下方
+ */
+type _UniTooltipPlacement = "left" | "right" | "top" | "bottom";
+
 type _UniTooltipProps = Partial<{
   /** 显示内容 */
   content: string;
+  /**
+   * 出现位置
+   *
+   * left 左侧
+   *
+   * right 右侧
+   *
+   * top 上方
+   *
+   * bottom 下方
+   *
+   * 默认为 left
+   */
+  placement: _UniTooltipPlacement;
 }>;
 
 /** 提示文字 */
@@ -11,13 +38,26 @@ type _UniTooltip = DefineComponent<_UniTooltipProps>;
 type _UniTooltipInstance = InstanceType<_UniTooltip>;
 
 export type {
-  _UniTooltipProps as UniTooltipProps,
   _UniTooltip as UniTooltip,
   _UniTooltipInstance as UniTooltipInstance,
+  _UniTooltipPlacement as UniTooltipPlacement,
+  _UniTooltipProps as UniTooltipProps,
 };
 
 declare global {
   namespace UniHelper {
+    /**
+     * 出现位置
+     *
+     * left 左侧
+     *
+     * right 右侧
+     *
+     * top 上方
+     *
+     * bottom 下方
+     */
+    export type UniTooltipPlacement = _UniTooltipPlacement;
     export type UniTooltipProps = _UniTooltipProps;
     /** 提示文字 */
     export type UniTooltip = _UniTooltip;

@@ -104,6 +104,18 @@ type _UniPopupDialogProps = Partial<{
    */
   cancelText: string;
   /**
+   * 限制输入框字数
+   *
+   * mode="input" 时有效
+   */
+  maxlength: number;
+  /**
+   * 是否显示取消按钮
+   *
+   * 默认为 false
+   */
+  showClose: boolean;
+  /**
    * 输入框类型
    *
    * mode="input" 时有效
@@ -138,6 +150,14 @@ type _UniPopupDialogProps = Partial<{
    */
   placeholder: string;
   /**
+   * 四周圆角值
+   *
+   * 左上、右上、右下、左下
+   *
+   * 示例: "20px 20px 20px 20px"
+   */
+  borderRadius: string;
+  /**
    * 是否拦截按钮事件
    *
    * true 不会关闭对话框，手动调用 close 以关闭
@@ -157,15 +177,15 @@ type _UniPopupDialog = DefineComponent<_UniPopupDialogProps>;
 type _UniPopupDialogInstance = InstanceType<_UniPopupDialog>;
 
 export type {
-  _UniPopupDialogType as UniPopupDialogType,
-  _UniPopupDialogMode as UniPopupDialogMode,
-  _UniPopupDialogValue as UniPopupDialogValue,
-  _UniPopupDialogOnClose as UniPopupDialogOnClose,
-  _UniPopupDialogOnConfirmEvent as UniPopupDialogOnConfirmEvent,
-  _UniPopupDialogOnConfirm as UniPopupDialogOnConfirm,
-  _UniPopupDialogProps as UniPopupDialogProps,
   _UniPopupDialog as UniPopupDialog,
   _UniPopupDialogInstance as UniPopupDialogInstance,
+  _UniPopupDialogMode as UniPopupDialogMode,
+  _UniPopupDialogOnClose as UniPopupDialogOnClose,
+  _UniPopupDialogOnConfirm as UniPopupDialogOnConfirm,
+  _UniPopupDialogOnConfirmEvent as UniPopupDialogOnConfirmEvent,
+  _UniPopupDialogProps as UniPopupDialogProps,
+  _UniPopupDialogType as UniPopupDialogType,
+  _UniPopupDialogValue as UniPopupDialogValue,
 };
 
 declare global {

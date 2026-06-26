@@ -112,6 +112,12 @@ type _UniSearchBarProps = Partial<{
    */
   bgColor: string;
   /**
+   * 输入文字颜色
+   *
+   * 默认为 #F8F8F8
+   */
+  textColor: string;
+  /**
    * 最大长度
    *
    * 默认为 100
@@ -144,24 +150,24 @@ type _UniSearchBar = DefineComponent<_UniSearchBarProps>;
 type _UniSearchBarInstance = InstanceType<_UniSearchBar>;
 
 export type {
-  _UniSearchBarValue as UniSearchBarValue,
-  _UniSearchBarClearButton as UniSearchBarClearButton,
-  _UniSearchBarCancelButton as UniSearchBarCancelButton,
-  _UniSearchBarBaseEvent as UniSearchBarBaseEvent,
-  _UniSearchBarOnConfirmEvent as UniSearchBarOnConfirmEvent,
-  _UniSearchBarOnConfirm as UniSearchBarOnConfirm,
-  _UniSearchBarOnInput as UniSearchBarOnInput,
-  _UniSearchBarOnCancelEvent as UniSearchBarOnCancelEvent,
-  _UniSearchBarOnCancel as UniSearchBarOnCancel,
-  _UniSearchBarOnClearEvent as UniSearchBarOnClearEvent,
-  _UniSearchBarOnClear as UniSearchBarOnClear,
-  _UniSearchBarOnFocusEvent as UniSearchBarOnFocusEvent,
-  _UniSearchBarOnFocus as UniSearchBarOnFocus,
-  _UniSearchBarOnBlurEvent as UniSearchBarOnBlurEvent,
-  _UniSearchBarOnBlur as UniSearchBarOnBlur,
-  _UniSearchBarProps as UniSearchBarProps,
   _UniSearchBar as UniSearchBar,
+  _UniSearchBarBaseEvent as UniSearchBarBaseEvent,
+  _UniSearchBarCancelButton as UniSearchBarCancelButton,
+  _UniSearchBarClearButton as UniSearchBarClearButton,
   _UniSearchBarInstance as UniSearchBarInstance,
+  _UniSearchBarOnBlur as UniSearchBarOnBlur,
+  _UniSearchBarOnBlurEvent as UniSearchBarOnBlurEvent,
+  _UniSearchBarOnCancel as UniSearchBarOnCancel,
+  _UniSearchBarOnCancelEvent as UniSearchBarOnCancelEvent,
+  _UniSearchBarOnClear as UniSearchBarOnClear,
+  _UniSearchBarOnClearEvent as UniSearchBarOnClearEvent,
+  _UniSearchBarOnConfirm as UniSearchBarOnConfirm,
+  _UniSearchBarOnConfirmEvent as UniSearchBarOnConfirmEvent,
+  _UniSearchBarOnFocus as UniSearchBarOnFocus,
+  _UniSearchBarOnFocusEvent as UniSearchBarOnFocusEvent,
+  _UniSearchBarOnInput as UniSearchBarOnInput,
+  _UniSearchBarProps as UniSearchBarProps,
+  _UniSearchBarValue as UniSearchBarValue,
 };
 
 declare global {

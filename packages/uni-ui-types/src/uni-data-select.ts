@@ -67,6 +67,14 @@ type _UniDataSelectProps = Partial<{
   /** 本地数据 */
   localdata: _UniDataSelectLocaldata;
   /**
+   * 返回的数据量
+   *
+   * 云端请求时有效
+   *
+   * 默认为 20
+   */
+  pageSize: number;
+  /**
    * 是否可以清空已选项
    *
    * 默认为 true

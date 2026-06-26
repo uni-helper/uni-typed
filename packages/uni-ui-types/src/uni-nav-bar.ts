@@ -1,6 +1,12 @@
 import type { DefineComponent } from "vue";
 import type { UniIconsType } from "./uni-icons";
 
+/** 左侧按钮点击时触发 */
+type _UniNavBarOnClickLeft = () => void;
+
+/** 右侧按钮点击时触发 */
+type _UniNavBarOnClickRight = () => void;
+
 /** 导航栏属性 */
 type _UniNavBarProps = Partial<{
   /** 标题文字 */
@@ -85,6 +91,18 @@ type _UniNavBarProps = Partial<{
    * 默认为 false
    */
   stat: boolean;
+  /**
+   * 微信小程序是否开启胶囊避让功能
+   *
+   * fixed 为 true 时生效，开启后标题不再水平居中
+   *
+   * 默认为 false
+   */
+  showMenuButtonWidth: boolean;
+  /** 左侧按钮点击时触发 */
+  onClickLeft: _UniNavBarOnClickLeft;
+  /** 右侧按钮点击时触发 */
+  onClickRight: _UniNavBarOnClickRight;
 }>;
 
 /** 导航栏组件，主要用于头部导航 */
@@ -94,13 +112,19 @@ type _UniNavBar = DefineComponent<_UniNavBarProps>;
 type _UniNavBarInstance = InstanceType<_UniNavBar>;
 
 export type {
-  _UniNavBarProps as UniNavBarProps,
   _UniNavBar as UniNavBar,
   _UniNavBarInstance as UniNavBarInstance,
+  _UniNavBarOnClickLeft as UniNavBarOnClickLeft,
+  _UniNavBarOnClickRight as UniNavBarOnClickRight,
+  _UniNavBarProps as UniNavBarProps,
 };
 
 declare global {
   namespace UniHelper {
+    /** 左侧按钮点击时触发 */
+    export interface UniNavBarOnClickLeft extends _UniNavBarOnClickLeft {}
+    /** 右侧按钮点击时触发 */
+    export interface UniNavBarOnClickRight extends _UniNavBarOnClickRight {}
     /** 导航栏属性 */
     export type UniNavBarProps = _UniNavBarProps;
     /** 导航栏组件，主要用于头部导航 */

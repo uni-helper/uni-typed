@@ -322,6 +322,12 @@ type _UniFilePickerBaseProps = Partial<{
    */
   readonly: boolean;
   /**
+   * 上传的目标目录
+   *
+   * 默认为 /
+   */
+  dir: string;
+  /**
    * 选择文件后的文件列表样式
    *
    * list 列表
@@ -469,40 +475,40 @@ type _UniFilePicker = DefineComponent<_UniFilePickerProps>;
 type _UniFilePickerInstance = InstanceType<_UniFilePicker>;
 
 export type {
-  _UniFilePickerValue as UniFilePickerValue,
-  _UniFilePickerMode as UniFilePickerMode,
-  _UniFilePickerFileMediatype as UniFilePickerFileMediatype,
-  _UniFilePickerFileType as UniFilePickerFileType,
-  _UniFilePickerListStyles as UniFilePickerListStyles,
-  _UniFilePickerImageStyles as UniFilePickerImageStyles,
-  _UniFilePickerSizeTypeItem as UniFilePickerSizeTypeItem,
-  _UniFilePickerSizeType as UniFilePickerSizeType,
-  _UniFilePickerSourceTypeItem as UniFilePickerSourceTypeItem,
-  _UniFilePickerSourceType as UniFilePickerSourceType,
-  _UniFilePickerUpload as UniFilePickerUpload,
+  _UniFilePicker as UniFilePicker,
+  _UniFilePickerArrayProps as UniFilePickerArrayProps,
+  _UniFilePickerBaseFile as UniFilePickerBaseFile,
+  _UniFilePickerBaseProps as UniFilePickerBaseProps,
+  _UniFilePickerCallbackFile as UniFilePickerCallbackFile,
   _UniFilePickerClearFiles as UniFilePickerClearFiles,
   _UniFilePickerFileImage as UniFilePickerFileImage,
+  _UniFilePickerFileMediatype as UniFilePickerFileMediatype,
   _UniFilePickerFileStatus as UniFilePickerFileStatus,
-  _UniFilePickerBaseFile as UniFilePickerBaseFile,
-  _UniFilePickerTempFileFile as UniFilePickerTempFileFile,
-  _UniFilePickerTempFile as UniFilePickerTempFile,
-  _UniFilePickerCallbackFile as UniFilePickerCallbackFile,
-  _UniFilePickerOnSelectEvent as UniFilePickerOnSelectEvent,
-  _UniFilePickerOnSelect as UniFilePickerOnSelect,
-  _UniFilePickerOnProgressEvent as UniFilePickerOnProgressEvent,
-  _UniFilePickerOnProgress as UniFilePickerOnProgress,
-  _UniFilePickerOnSuccessEvent as UniFilePickerOnSuccessEvent,
-  _UniFilePickerOnSuccess as UniFilePickerOnSuccess,
-  _UniFilePickerOnFailEvent as UniFilePickerOnFailEvent,
-  _UniFilePickerOnFail as UniFilePickerOnFail,
-  _UniFilePickerOnDeleteEvent as UniFilePickerOnDeleteEvent,
-  _UniFilePickerOnDelete as UniFilePickerOnDelete,
-  _UniFilePickerBaseProps as UniFilePickerBaseProps,
-  _UniFilePickerArrayProps as UniFilePickerArrayProps,
-  _UniFilePickerObjectProps as UniFilePickerObjectProps,
-  _UniFilePickerProps as UniFilePickerProps,
-  _UniFilePicker as UniFilePicker,
+  _UniFilePickerFileType as UniFilePickerFileType,
+  _UniFilePickerImageStyles as UniFilePickerImageStyles,
   _UniFilePickerInstance as UniFilePickerInstance,
+  _UniFilePickerListStyles as UniFilePickerListStyles,
+  _UniFilePickerMode as UniFilePickerMode,
+  _UniFilePickerObjectProps as UniFilePickerObjectProps,
+  _UniFilePickerOnDelete as UniFilePickerOnDelete,
+  _UniFilePickerOnDeleteEvent as UniFilePickerOnDeleteEvent,
+  _UniFilePickerOnFail as UniFilePickerOnFail,
+  _UniFilePickerOnFailEvent as UniFilePickerOnFailEvent,
+  _UniFilePickerOnProgress as UniFilePickerOnProgress,
+  _UniFilePickerOnProgressEvent as UniFilePickerOnProgressEvent,
+  _UniFilePickerOnSelect as UniFilePickerOnSelect,
+  _UniFilePickerOnSelectEvent as UniFilePickerOnSelectEvent,
+  _UniFilePickerOnSuccess as UniFilePickerOnSuccess,
+  _UniFilePickerOnSuccessEvent as UniFilePickerOnSuccessEvent,
+  _UniFilePickerProps as UniFilePickerProps,
+  _UniFilePickerSizeType as UniFilePickerSizeType,
+  _UniFilePickerSizeTypeItem as UniFilePickerSizeTypeItem,
+  _UniFilePickerSourceType as UniFilePickerSourceType,
+  _UniFilePickerSourceTypeItem as UniFilePickerSourceTypeItem,
+  _UniFilePickerTempFile as UniFilePickerTempFile,
+  _UniFilePickerTempFileFile as UniFilePickerTempFileFile,
+  _UniFilePickerUpload as UniFilePickerUpload,
+  _UniFilePickerValue as UniFilePickerValue,
 };
 
 declare global {

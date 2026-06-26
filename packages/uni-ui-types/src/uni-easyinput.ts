@@ -122,6 +122,19 @@ type _UniEasyinputOnBlurEvent = CustomEvent<_UniEasyinputOnBlurDetail>;
 /** 输入框失去焦点时触发 */
 type _UniEasyinputOnBlur = (event: _UniEasyinputOnBlurEvent) => void;
 
+interface _UniEasyinputOnKeyboardheightchangeDetail {
+  /** 键盘高度 */
+  height: number;
+}
+
+type _UniEasyinputOnKeyboardheightchangeEvent =
+  CustomEvent<_UniEasyinputOnKeyboardheightchangeDetail>;
+
+/** 键盘高度发生变化时触发 */
+type _UniEasyinputOnKeyboardheightchange = (
+  event: _UniEasyinputOnKeyboardheightchangeEvent,
+) => void;
+
 /** 点击完成时触发 */
 type _UniEasyinputOnConfirm = (value: _UniEasyinputValue) => void;
 
@@ -298,6 +311,8 @@ type _UniEasyinputProps = Partial<{
   onIconClick: _UniEasyinputOnIconClick;
   /** 输入框失去焦点或用户按下回车时触发 */
   onChange: _UniEasyinputOnChange;
+  /** 键盘高度发生变化时触发 */
+  onKeyboardheightchange: _UniEasyinputOnKeyboardheightchange;
 }>;
 
 /** 对原生 input 组件的增强 */
@@ -321,6 +336,9 @@ export type {
   _UniEasyinputOnFocusEvent as UniEasyinputOnFocusEvent,
   _UniEasyinputOnIconClick as UniEasyinputOnIconClick,
   _UniEasyinputOnInput as UniEasyinputOnInput,
+  _UniEasyinputOnKeyboardheightchange as UniEasyinputOnKeyboardheightchange,
+  _UniEasyinputOnKeyboardheightchangeDetail as UniEasyinputOnKeyboardheightchangeDetail,
+  _UniEasyinputOnKeyboardheightchangeEvent as UniEasyinputOnKeyboardheightchangeEvent,
   _UniEasyinputProps as UniEasyinputProps,
   _UniEasyinputStyles as UniEasyinputStyles,
   _UniEasyinputTrim as UniEasyinputTrim,
@@ -406,6 +424,13 @@ declare global {
     export interface UniEasyinputOnIconClick extends _UniEasyinputOnIconClick {}
     /** 输入框失去焦点或用户按下回车时触发 */
     export interface UniEasyinputOnChange extends _UniEasyinputOnChange {}
+    export type UniEasyinputOnKeyboardheightchangeDetail =
+      _UniEasyinputOnKeyboardheightchangeDetail;
+    export type UniEasyinputOnKeyboardheightchangeEvent =
+      _UniEasyinputOnKeyboardheightchangeEvent;
+    /** 键盘高度发生变化时触发 */
+    export interface UniEasyinputOnKeyboardheightchange
+      extends _UniEasyinputOnKeyboardheightchange {}
     export type UniEasyinputProps = _UniEasyinputProps;
     /** 对原生 input 组件的增强 */
     export type UniEasyinput = _UniEasyinput;
