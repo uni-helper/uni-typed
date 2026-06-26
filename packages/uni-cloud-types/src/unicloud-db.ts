@@ -189,6 +189,10 @@ interface _UnicloudDbUpdateOptions {
    * 默认为 true
    */
   needConfirm?: boolean;
+  /** 更新确认弹出框标题 */
+  confirmTitle?: string;
+  /** 更新确认弹出框内容 */
+  confirmContent?: string;
   /**
    * 是否显示 Loading
    *
@@ -379,29 +383,29 @@ type _UnicloudDb = DefineComponent<_UnicloudDbProps>;
 type _UnicloudDbInstance = InstanceType<_UnicloudDb>;
 
 export type {
-  _UnicloudDbSpaceInfoProvider as UnicloudDbSpaceInfoProvider,
-  _UnicloudDbSpaceInfo as UnicloudDbSpaceInfo,
-  _UnicloudDbPageData as UnicloudDbPageData,
-  _UnicloudDbLoadtime as UnicloudDbLoadtime,
-  _UnicloudDbLoadDataOptions as UnicloudDbLoadDataOptions,
-  _UnicloudDbLoadDataCallback as UnicloudDbLoadDataCallback,
-  _UnicloudDbLoadData as UnicloudDbLoadData,
-  _UnicloudDbLoadMore as UnicloudDbLoadMore,
-  _UnicloudDbClear as UnicloudDbClear,
-  _UnicloudDbReset as UnicloudDbReset,
-  _UnicloudDbRefresh as UnicloudDbRefresh,
-  _UnicloudDbId as UnicloudDbId,
-  _UnicloudDbRemoveOptions as UnicloudDbRemoveOptions,
-  _UnicloudDbRemove as UnicloudDbRemove,
-  _UnicloudDbAddOptions as UnicloudDbAddOptions,
-  _UnicloudDbAdd as UnicloudDbAdd,
-  _UnicloudDbUpdateOptions as UnicloudDbUpdateOptions,
-  _UnicloudDbUpdate as UnicloudDbUpdate,
-  _UnicloudDbOnLoad as UnicloudDbOnLoad,
-  _UnicloudDbOnError as UnicloudDbOnError,
-  _UnicloudDbProps as UnicloudDbProps,
   _UnicloudDb as UnicloudDb,
+  _UnicloudDbAdd as UnicloudDbAdd,
+  _UnicloudDbAddOptions as UnicloudDbAddOptions,
+  _UnicloudDbClear as UnicloudDbClear,
+  _UnicloudDbId as UnicloudDbId,
   _UnicloudDbInstance as UnicloudDbInstance,
+  _UnicloudDbLoadData as UnicloudDbLoadData,
+  _UnicloudDbLoadDataCallback as UnicloudDbLoadDataCallback,
+  _UnicloudDbLoadDataOptions as UnicloudDbLoadDataOptions,
+  _UnicloudDbLoadMore as UnicloudDbLoadMore,
+  _UnicloudDbLoadtime as UnicloudDbLoadtime,
+  _UnicloudDbOnError as UnicloudDbOnError,
+  _UnicloudDbOnLoad as UnicloudDbOnLoad,
+  _UnicloudDbPageData as UnicloudDbPageData,
+  _UnicloudDbProps as UnicloudDbProps,
+  _UnicloudDbRefresh as UnicloudDbRefresh,
+  _UnicloudDbRemove as UnicloudDbRemove,
+  _UnicloudDbRemoveOptions as UnicloudDbRemoveOptions,
+  _UnicloudDbReset as UnicloudDbReset,
+  _UnicloudDbSpaceInfo as UnicloudDbSpaceInfo,
+  _UnicloudDbSpaceInfoProvider as UnicloudDbSpaceInfoProvider,
+  _UnicloudDbUpdate as UnicloudDbUpdate,
+  _UnicloudDbUpdateOptions as UnicloudDbUpdateOptions,
 };
 
 declare module "vue" {

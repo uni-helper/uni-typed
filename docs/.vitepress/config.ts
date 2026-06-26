@@ -71,6 +71,7 @@ export default defineConfig({
         items: [
           { text: "常见问题", link: "/other/faq" },
           { text: "从 v0 迁移到 v1", link: "/other/migrate-v0-to-v1" },
+          { text: "类型同步记录（2026-06）", link: "/other/sync-2026-06" },
         ],
       },
     ],
