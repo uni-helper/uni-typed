@@ -1,7 +1,7 @@
 {
   "name": "@uni-helper/uni-app-components",
   "version": "1.1.0",
-  "description": "WIP 带有 TypeScript 类型的 uni-app 组件",
+  "description": "带有 TypeScript 类型的 uni-app 组件",
   "keywords": [
     "uni-app",
     "uniapp",
