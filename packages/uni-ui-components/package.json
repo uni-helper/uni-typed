@@ -1,0 +1,95 @@
+{
+  "name": "@uni-helper/uni-ui-components",
+  "version": "0.0.0",
+  "description": "带有 TypeScript 类型的 uni-ui 组件",
+  "keywords": [
+    "uni-app",
+    "uniapp",
+    "uni-ui",
+    "uniui",
+    "types",
+    "type",
+    "component"
+  ],
+  "homepage": "https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-components",
+  "bugs": {
+    "url": "https://github.com/uni-helper/uni-typed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uni-helper/uni-typed.git",
+    "directory": "packages/uni-ui-components"
+  },
+  "funding": "https://github.com/ModyQyW/sponsors",
+  "license": "MIT",
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui.dev@gmail.com",
+    "url": "https://modyqyw.top"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./components": {
+      "import": {
+        "types": "./dist/components/index.d.ts",
+        "default": "./dist/components/index.js"
+      },
+      "require": {
+        "types": "./dist/components/index.d.cts",
+        "default": "./dist/components/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/index.d.ts",
+        "dist/components/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "components.d.ts",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "build-post": "exit 0",
+    "prepublishOnly": "pnpm build",
+    "stub": "tsdown --watch"
+  },
+  "dependencies": {
+    "@uni-helper/uni-ui-types": "workspace:*"
+  },
+  "devDependencies": {
+    "vue": "catalog:"
+  },
+  "peerDependencies": {
+    "@uni-helper/uni-ui-types": "workspace:*",
+    "typescript": "^5.0.0 || ^6.0.0",
+    "vue": "^3.4.21"
+  },
+  "packageManager": "pnpm@10.34.4",
+  "engines": {
+    "node": ">=14.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
