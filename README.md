@@ -19,7 +19,7 @@
 |[@uni-helper/uni-app-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-app-types)|基于 @uni-helper/uni-app-types 封装 Vue v3 uni-app 组件。|
 |[@uni-helper/uni-cloud-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-cloud-types)|基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-cloud 组件。|
 |[@uni-helper/uni-ui-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-ui-types 封装 Vue v3 uni-ui 组件。|
-|[@uni-helper/uni-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types)|基于 @uni-helper/uni-app-types 封装 Vue v3 uni-app 组件、基于 @uni-helper/uni-cloud-types 封装 Vue v3 uni-cloud 组件、基于 @uni-helper/uni-ui-types 封装 Vue v3 uni-ui 组件，即以上三者的集合。|
+|[@uni-helper/uni-components](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-components)|基于 @uni-helper/uni-app-components、@uni-helper/uni-cloud-components 和 @uni-helper/uni-ui-components 封装 Vue v3 组件，即以上三者的集合。|
 
 ## 贡献
 

@@ -228,6 +228,25 @@ importers:
         specifier: 'catalog:'
         version: 3.4.38(typescript@6.0.3)
 
+  packages/uni-components:
+    dependencies:
+      '@uni-helper/uni-app-components':
+        specifier: workspace:*
+        version: link:../uni-app-components
+      '@uni-helper/uni-cloud-components':
+        specifier: workspace:*
+        version: link:../uni-cloud-components
+      '@uni-helper/uni-ui-components':
+        specifier: workspace:*
+        version: link:../uni-ui-components
+      typescript:
+        specifier: ^5.0.0 || ^6.0.0
+        version: 6.0.3
+    devDependencies:
+      vue:
+        specifier: 'catalog:'
+        version: 3.4.38(typescript@6.0.3)
+
   packages/uni-types:
     dependencies:
       '@uni-helper/uni-app-types':
