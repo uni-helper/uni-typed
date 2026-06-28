@@ -23,7 +23,7 @@
 #### 安装依赖
 
 ```shell
-npm i -D @uni-helper/uni-cloud-components @uni-helper/uni-cloud-types
+npm i -D @uni-helper/uni-cloud-components
 ```
 
 同时，你需要保证项目内已经安装了 Vue v3 和 TypeScript v5 / v6 相关依赖。
@@ -101,12 +101,6 @@ const loadData = () => {
 ```
 
 请查看 [源代码](https://github.com/uni-helper/uni-typed/tree/main/packages/uni-cloud-components/src/components) 了解所有组件。
-
-## 致谢
-
-最初在 [uni-base-components-types](https://github.com/satrong/uni-base-components-types) 得到了灵感。
-
-基于 [这个 PR](https://github.com/satrong/uni-base-components-types/pull/5) 完成。
 
 ## 贡献者们
 

@@ -10,6 +10,8 @@
   <a href="https://www.npmjs.com/package/@uni-helper/uni-ui-types">
     <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-ui-types?style=for-the-badge" alt="npm downloads" />
   </a>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
   <a href="https://deepwiki.com/uni-helper/uni-typed"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </div>
 

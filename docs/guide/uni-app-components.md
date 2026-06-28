@@ -23,7 +23,7 @@
 #### 安装依赖
 
 ```shell
-npm i -D @uni-helper/uni-app-components @uni-helper/uni-app-types
+npm i -D @uni-helper/uni-app-components
 ```
 
 同时，你需要保证项目内已经安装了 Vue v3 和 TypeScript v5 / v6 相关依赖。

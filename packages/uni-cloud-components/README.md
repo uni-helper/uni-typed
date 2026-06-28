@@ -1,14 +1,14 @@
-# @uni-helper/uni-cloud-types
+# @uni-helper/uni-cloud-components
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
   <a href="https://github.com/uni-helper/uni-typed/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/uni-helper/uni-typed?style=for-the-badge" alt="License" />
   </a>
-  <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-types">
-    <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-cloud-types?style=for-the-badge" alt="npm" />
+  <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-components">
+    <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-cloud-components?style=for-the-badge" alt="npm" />
   </a>
-  <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-types">
-    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-cloud-types?style=for-the-badge" alt="npm downloads" />
+  <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-components">
+    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-cloud-components?style=for-the-badge" alt="npm downloads" />
   </a>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
@@ -17,7 +17,7 @@
 
 ## 介绍
 
-这个包是 `@uni-helper/uni-typed` 项目的一部分，为 Vue v3 uni-app 组件提供 TypeScript 类型，请 [👉 查看文档](https://uni-typed.netlify.app/) 了解具体用法和示例。
+这个包是 `@uni-helper/uni-typed` 项目的一部分，将 uni-cloud 组件包装为可导入的 Vue v3 组件，并提供对应的 TypeScript 实例类型，请 [👉 查看 Netlify 文档](https://uni-typed.netlify.app/) 或 [👉 查看 Cloudflare 文档](https://uni-typed.pages.dev/) 了解具体用法和示例。
 
 ## 致谢
 

@@ -7,9 +7,11 @@
   <a href="https://www.npmjs.com/package/@uni-helper/uni-types">
     <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-types?style=for-the-badge" alt="npm" />
   </a>
-  <a href="https://www.npmjs.com/package/@uni-helper/uni-types">
-    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-types?style=for-the-badge" alt="npm downloads" />
+  <a href="https://www.npmjs.com/package/@uni-helper/uni-app-types">
+    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-app-types?style=for-the-badge" alt="npm downloads" />
   </a>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
   <a href="https://deepwiki.com/uni-helper/uni-typed"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </div>
 
