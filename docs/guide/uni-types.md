@@ -40,7 +40,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 npm i -D @uni-helper/uni-types
 ```
 
-同时，你需要保证项目内已经安装了 Vue v3 和 TypeScript v5 相关依赖。
+同时，你需要保证项目内已经安装了 Vue v3 和 TypeScript v5 / v6 相关依赖。
 
 > [!TIP]
 >

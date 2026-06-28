@@ -12,7 +12,11 @@
 
 ### 模板
 
-#### 官方模板
+#### 社区模板
+
+我们推荐使用 [create-uni](https://github.com/uni-helper/create-uni) 来创建一个模板，你也可以在 [这里](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 查看其它社区模板并挑选一个适合自己的。
+
+#### 【不推荐】官方模板
 
 根据 [官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html)，你可以使用以下命令获取官方模板。
 
@@ -28,10 +32,6 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 
 :::
 
-#### 社区模板
-
-我们推荐使用 [create-uni](https://github.com/uni-helper/create-uni) 来创建一个模板，你也可以在 [这里](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 查看其它社区模板并挑选一个适合自己的。
-
 ### 已有项目
 
 #### 安装依赖
@@ -40,7 +40,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 npm i -D @uni-helper/uni-app-types @uni-helper/uni-ui-types
 ```
 
-@uni-helper/uni-app-types 是对等依赖，你需要同时安装。同时，你需要保证项目内已经安装了 Vue v3、TypeScript v5 和 @dcloudio/uni-ui v1 相关依赖。
+@uni-helper/uni-app-types 是对等依赖，你需要同时安装。同时，你需要保证项目内已经安装了 Vue v3、TypeScript v5 / v6 和 @dcloudio/uni-ui v1 相关依赖。
 
 > [!TIP]
 >
