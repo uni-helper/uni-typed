@@ -9,7 +9,7 @@ const props = defineProps<AdFullscreenVideoProps>();
 </script>
 
 <template>
-  <ad-fullscreen-video :props>
+  <ad-fullscreen-video v-bind="props">
     <slot></slot>
   </ad-fullscreen-video>
 </template>

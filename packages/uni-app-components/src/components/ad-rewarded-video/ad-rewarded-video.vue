@@ -9,7 +9,7 @@ const props = defineProps<AdRewardedVideoProps>();
 </script>
 
 <template>
-  <ad-rewarded-video :props>
+  <ad-rewarded-video v-bind="props">
     <slot></slot>
   </ad-rewarded-video>
 </template>

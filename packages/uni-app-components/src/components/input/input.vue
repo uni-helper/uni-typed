@@ -9,7 +9,7 @@ const props = defineProps<InputProps>();
 </script>
 
 <template>
-  <input :props>
+  <input v-bind="props">
     <slot></slot>
   </input>
 </template>

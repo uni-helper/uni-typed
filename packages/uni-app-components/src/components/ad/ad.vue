@@ -9,7 +9,7 @@ const props = defineProps<AdProps>();
 </script>
 
 <template>
-  <ad :props>
+  <ad v-bind="props">
     <slot></slot>
   </ad>
 </template>

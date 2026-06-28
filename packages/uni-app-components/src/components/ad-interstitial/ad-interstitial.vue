@@ -9,7 +9,7 @@ const props = defineProps<AdInterstitialProps>();
 </script>
 
 <template>
-  <ad-interstitial :props>
+  <ad-interstitial v-bind="props">
     <slot></slot>
   </ad-interstitial>
 </template>

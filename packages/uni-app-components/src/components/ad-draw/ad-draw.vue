@@ -9,7 +9,7 @@ const props = defineProps<AdDrawProps>();
 </script>
 
 <template>
-  <ad-draw :props>
+  <ad-draw v-bind="props">
     <slot></slot>
   </ad-draw>
 </template>

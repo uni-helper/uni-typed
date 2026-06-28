@@ -9,7 +9,7 @@ const props = defineProps<AdContentPageProps>();
 </script>
 
 <template>
-  <ad-content-page :props>
+  <ad-content-page v-bind="props">
     <slot></slot>
   </ad-content-page>
 </template>
