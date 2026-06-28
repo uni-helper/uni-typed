@@ -1,6 +1,6 @@
 {
   "name": "@uni-helper/uni-ui-components",
-  "version": "0.0.0",
+  "version": "1.2.0",
   "description": "带有 TypeScript 类型的 uni-ui 组件",
   "keywords": [
     "uni-app",

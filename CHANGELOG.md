@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/uni-helper/uni-typed/compare/v1.1.0...v1.2.0) (2026-06-28)
+
+### Features
+
+* implement uni-app-components ([837c3b5](https://github.com/uni-helper/uni-typed/commit/837c3b5ffcf93ffa1d5a2b3296105beeb5dabc9a)) - by @
+* implement uni-components ([c8ad1e7](https://github.com/uni-helper/uni-typed/commit/c8ad1e7413811fbb6c97afce8668faf26879a5a9)) - by @
+* implement uni-ui-components ([7352435](https://github.com/uni-helper/uni-typed/commit/7352435b20b78e7e2885963a2e660845cca6389a)) - by @
+* introduce uni-cloud-components ([1ad819b](https://github.com/uni-helper/uni-typed/commit/1ad819bdfe591542dc32fb15ad2380eb27f04c18)) - by @
+
 ## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/uni-helper/uni-typed/compare/v1.1.0...v1.2.0) (2026-06-28)
+
+### Features
+
+* implement uni-app-components ([837c3b5](https://github.com/uni-helper/uni-typed/commit/837c3b5ffcf93ffa1d5a2b3296105beeb5dabc9a)) - by @
+
 ## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
 
 **Note:** Version bump only for package @uni-helper/uni-app-components
