@@ -27,7 +27,7 @@ v1 不支持 Vue v2，请参考 [常见问题](./faq#vue-2-支持情况)。
 
 ```jsonc
 {
-  // 对应 @vue/tsconfig v0.5.1
+  // 参考 @vue/tsconfig 官方推荐配置
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",

@@ -63,7 +63,7 @@ npm i -D @uni-helper/uni-app-types
 
 ```jsonc
 {
-  // 对应 @vue/tsconfig v0.5.1
+  // 参考 @vue/tsconfig 官方推荐配置
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",

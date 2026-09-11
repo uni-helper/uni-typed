@@ -63,7 +63,7 @@ npm i -D @uni-helper/uni-app-types @uni-helper/uni-ui-types
 
 ```jsonc
 {
-  // 对应 @vue/tsconfig v0.5.1
+  // 参考 @vue/tsconfig 官方推荐配置
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
@@ -124,7 +124,7 @@ import { ref } from 'vue';
 import type { UniBadgeType, UniBadgeOnClick } from '@uni-helper/uni-ui-types';
 
 const type = ref<UniBadgeType>('default');
-const onClick: UniBadgeOnClick = (event) => {
+const onClick: UniBadgeOnClick = () => {
   // ...
 };
 </script>
@@ -147,7 +147,7 @@ const onClick: UniBadgeOnClick = (event) => {
 import { ref } from 'vue';
 
 const type = ref<UniHelper.UniBadgeType>('default');
-const onClick: UniHelper.UniBadgeOnClick = (event) => {
+const onClick: UniHelper.UniBadgeOnClick = () => {
   // ...
 };
 </script>

@@ -12,7 +12,11 @@
 
 ### 模板
 
-#### 官方模板
+#### 社区模板
+
+我们推荐使用 [create-uni](https://github.com/uni-helper/create-uni) 来创建一个模板，你也可以在 [这里](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 查看其它社区模板并挑选一个适合自己的。
+
+#### 【不推荐】官方模板
 
 根据 [官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html)，你可以使用以下命令获取官方模板。
 
@@ -27,10 +31,6 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 截至 2026-05-09，官方模板依赖版本相对落后，如果你正在使用它，必须升级相关依赖版本才能正常获取相关 TypeScript 类型提示，请参考 [已有项目](#已有项目) 章节调整。
 
 :::
-
-#### 社区模板
-
-我们推荐使用 [create-uni](https://github.com/uni-helper/create-uni) 来创建一个模板，你也可以在 [这里](https://github.com/uni-helper/awesome-uni-app#%E6%A8%A1%E6%9D%BF) 查看其它社区模板并挑选一个适合自己的。
 
 ### 已有项目
 
@@ -63,7 +63,7 @@ npm i -D @uni-helper/uni-types
 
 ```jsonc
 {
-  // 对应 @vue/tsconfig v0.5.1
+  // 参考 @vue/tsconfig 官方推荐配置
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
@@ -88,7 +88,7 @@ npm i -D @uni-helper/uni-types
       "@mini-types/alipay",
       // wx API 相关的 TypeScript 类型，需要安装 miniprogram-api-typings
       "miniprogram-api-typings",
-      // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-types
+      // 为 uni-app、uni-cloud 和 uni-ui 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-types
       "@uni-helper/uni-types"
     ]
   },

@@ -62,7 +62,7 @@ npm i -D @uni-helper/uni-cloud-types
 
 ```jsonc
 {
-  // 对应 @vue/tsconfig v0.5.1
+  // 参考 @vue/tsconfig 官方推荐配置
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
@@ -87,7 +87,7 @@ npm i -D @uni-helper/uni-cloud-types
       "@mini-types/alipay",
       // wx API 相关的 TypeScript 类型，需要安装 miniprogram-api-typings
       "miniprogram-api-typings",
-      // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-cloud-types
+      // 为 uni-cloud 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-cloud-types
       "@uni-helper/uni-cloud-types"
     ]
   },
@@ -120,7 +120,7 @@ import type {
 } from '@uni-helper/uni-cloud-types';
 
 const spaceInfoProvider = ref<UnicloudDbSpaceInfoProvider>('aliyun');
-const onLoad: UnicloudDbOnLoad = (event) => {
+const onLoad: UnicloudDbOnLoad = (data, ended, pagination) => {
   // ...
 };
 </script>
@@ -143,7 +143,7 @@ const onLoad: UnicloudDbOnLoad = (event) => {
 import { ref } from 'vue';
 
 const spaceInfoProvider = ref<UniHelper.UnicloudDbSpaceInfoProvider>('aliyun');
-const onLoad: UniHelper.UnicloudDbOnLoad = (event) => {
+const onLoad: UniHelper.UnicloudDbOnLoad = (data, ended, pagination) => {
   // ...
 };
 </script>
