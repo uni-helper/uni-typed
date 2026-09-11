@@ -19,9 +19,9 @@ type _SwiperItem = DefineComponent<_SwiperItemProps>;
 type _SwiperItemInstance = InstanceType<_SwiperItem>;
 
 export type {
-  _SwiperItemProps as SwiperItemProps,
   _SwiperItem as SwiperItem,
   _SwiperItemInstance as SwiperItemInstance,
+  _SwiperItemProps as SwiperItemProps,
 };
 
 declare global {
@@ -46,8 +46,6 @@ declare module "vue" {
      *
      * 不能被子组件自动撑开
      * ***
-     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/scroll-item.html)
-     * |
      * [Netlify 使用说明](https://uni-typed.netlify.app/)
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)

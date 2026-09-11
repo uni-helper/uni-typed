@@ -10,7 +10,7 @@ import type { CommonProps } from "../common";
  */
 type _CustomTabBarDirection = "vertical" | "horizontal";
 
-interface _CustomTabBarOnOnTabItemTapDetail {
+interface _CustomTabBarOnTabItemTapDetail {
   /** 被点击 tabItem 的序号，从 0 开始 */
   index: number;
   /** 被点击 tabItem 的页面路径 */
@@ -20,8 +20,8 @@ interface _CustomTabBarOnOnTabItemTapDetail {
 }
 
 /** 点击事件 */
-type _CustomTabBarOnOnTabItemTap = (
-  detail: _CustomTabBarOnOnTabItemTapDetail,
+type _CustomTabBarOnTabItemTap = (
+  detail: _CustomTabBarOnTabItemTapDetail,
 ) => void;
 
 /** 自定义 tabBar 组件属性 */
@@ -50,7 +50,7 @@ type _CustomTabBarProps = CommonProps &
      */
     selected: number;
     /** 点击事件 */
-    onOnTabItemTap: _CustomTabBarOnOnTabItemTap;
+    onOnTabItemTap: _CustomTabBarOnTabItemTap;
   }>;
 
 /** 自定义 tabBar 组件 */
@@ -60,12 +60,12 @@ type _CustomTabBar = DefineComponent<_CustomTabBarProps>;
 type _CustomTabBarInstance = InstanceType<_CustomTabBar>;
 
 export type {
-  _CustomTabBarDirection as CustomTabBarDirection,
-  _CustomTabBarOnOnTabItemTapDetail as CustomTabBarOnOnTabItemTapDetail,
-  _CustomTabBarOnOnTabItemTap as CustomTabBarOnOnTabItemTap,
-  _CustomTabBarProps as CustomTabBarProps,
   _CustomTabBar as CustomTabBar,
+  _CustomTabBarDirection as CustomTabBarDirection,
   _CustomTabBarInstance as CustomTabBarInstance,
+  _CustomTabBarOnTabItemTap as CustomTabBarOnTabItemTap,
+  _CustomTabBarOnTabItemTapDetail as CustomTabBarOnTabItemTapDetail,
+  _CustomTabBarProps as CustomTabBarProps,
 };
 
 declare global {
@@ -78,11 +78,11 @@ declare global {
      * Horizontal 横向
      */
     export type CustomTabBarDirection = _CustomTabBarDirection;
-    export interface CustomTabBarOnOnTabItemTapDetail
-      extends _CustomTabBarOnOnTabItemTapDetail {}
+    export interface CustomTabBarOnTabItemTapDetail
+      extends _CustomTabBarOnTabItemTapDetail {}
     /** 点击事件 */
-    export interface CustomTabBarOnOnTabItemTap
-      extends _CustomTabBarOnOnTabItemTap {}
+    export interface CustomTabBarOnTabItemTap
+      extends _CustomTabBarOnTabItemTap {}
     /** 自定义 tabBar 组件属性 */
     export type CustomTabBarProps = _CustomTabBarProps;
     /** 自定义 tabBar 组件 */

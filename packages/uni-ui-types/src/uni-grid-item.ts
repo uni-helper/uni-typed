@@ -13,9 +13,9 @@ type _UniGridItem = DefineComponent<_UniGridItemProps>;
 type _UniGridItemInstance = InstanceType<_UniGridItem>;
 
 export type {
-  _UniGridItemProps as UniGridItemProps,
   _UniGridItem as UniGridItem,
   _UniGridItemInstance as UniGridItemInstance,
+  _UniGridItemProps as UniGridItemProps,
 };
 
 declare global {
@@ -33,8 +33,6 @@ declare module "vue" {
   export interface GlobalComponents {
     /** 宫格项
      * ***
-     * [👉🏻点击查看组件文档](https://uniapp.dcloud.net.cn/component/uniui/uni-grid-item.html)
-     * |
      * [Netlify 使用说明](https://uni-typed.netlify.app/)
      * |
      * [Cloudflare 使用说明](https://uni-typed.pages.dev/)
