@@ -72,10 +72,10 @@ type _MatchMedia = DefineComponent<_MatchMediaProps>;
 type _MatchMediaInstance = InstanceType<_MatchMedia>;
 
 export type {
-  _MatchMediaOrientation as MatchMediaOrientation,
-  _MatchMediaProps as MatchMediaProps,
   _MatchMedia as MatchMedia,
   _MatchMediaInstance as MatchMediaInstance,
+  _MatchMediaOrientation as MatchMediaOrientation,
+  _MatchMediaProps as MatchMediaProps,
 };
 
 declare global {

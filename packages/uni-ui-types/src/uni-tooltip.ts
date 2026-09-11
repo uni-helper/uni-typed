@@ -13,6 +13,7 @@ import type { DefineComponent } from "vue";
  */
 type _UniTooltipPlacement = "left" | "right" | "top" | "bottom";
 
+/** 文字提示属性 */
 type _UniTooltipProps = Partial<{
   /** 显示内容 */
   content: string;
@@ -35,6 +36,7 @@ type _UniTooltipProps = Partial<{
 /** 提示文字 */
 type _UniTooltip = DefineComponent<_UniTooltipProps>;
 
+/** 文字提示实例 */
 type _UniTooltipInstance = InstanceType<_UniTooltip>;
 
 export type {

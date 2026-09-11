@@ -52,13 +52,13 @@ type _UniIndexedList = DefineComponent<_UniIndexedListProps>;
 type _UniIndexedListInstance = InstanceType<_UniIndexedList>;
 
 export type {
-  _UniIndexedListOption as UniIndexedListOption,
   _UniIndexedItemSelected as UniIndexedItemSelected,
-  _UniIndexedListOnClickEvent as UniIndexedListOnClickEvent,
-  _UniIndexedListOnClick as UniIndexedListOnClick,
-  _UniIndexedListProps as UniIndexedListProps,
   _UniIndexedList as UniIndexedList,
   _UniIndexedListInstance as UniIndexedListInstance,
+  _UniIndexedListOnClick as UniIndexedListOnClick,
+  _UniIndexedListOnClickEvent as UniIndexedListOnClickEvent,
+  _UniIndexedListOption as UniIndexedListOption,
+  _UniIndexedListProps as UniIndexedListProps,
 };
 
 declare global {

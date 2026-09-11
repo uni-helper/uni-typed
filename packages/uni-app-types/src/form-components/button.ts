@@ -607,6 +607,66 @@ type _ButtonProps = CommonProps &
      */
     publicId: string;
     /**
+     * 客服的抖音号
+     *
+     * Open-type="im" 时有效
+     *
+     * 仅抖音小程序 2.68.0+ 支持
+     */
+    dataImId: string;
+    /**
+     * IM 卡片类型
+     *
+     * Open-type="im" 时有效
+     *
+     * 仅抖音小程序 2.80.0+ 支持
+     */
+    dataImType: string;
+    /**
+     * 商品的 id，仅支持泛知识课程库和生活服务商品库中的商品
+     *
+     * Open-type="im" 时有效
+     *
+     * 仅抖音小程序 2.80.0+ 支持
+     */
+    dataGoodsId: string;
+    /**
+     * 订单的 id，仅支持交易 2.0 订单
+     *
+     * Open-type="im" 时有效
+     *
+     * 仅抖音小程序 2.80.0+ 支持
+     */
+    dataOrderId: string;
+    /**
+     * 商品类型
+     *
+     * 1 代表生活服务
+     *
+     * 2 代表泛知识
+     *
+     * Open-type="im" 时有效
+     *
+     * 仅抖音小程序 2.80.0+ 支持
+     */
+    dataBizLine: string;
+    /**
+     * 客服类型
+     *
+     * 默认值为 seller
+     *
+     * 仅小红书小程序支持
+     */
+    contactType: string;
+    /**
+     * Contact-type 对应的 key
+     *
+     * Contact-type 为 seller 时非必传
+     *
+     * 仅小红书小程序支持
+     */
+    contactId: string;
+    /**
      * 卡片业态类型，用于一次性订阅消息
      *
      * Open-type="liveActivity" 时有效

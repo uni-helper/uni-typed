@@ -38,6 +38,7 @@ type _UniTagCustomStyle = string;
 /** 点击触发 */
 type _UniTagOnClick = () => void;
 
+/** 标签属性 */
 type _UniTagProps = Partial<{
   /** 标签内容 */
   text: string;
@@ -102,16 +103,17 @@ type _UniTagProps = Partial<{
 /** 用于展示一个或多个文字标签，可点击切换选中、不选中的状态 */
 type _UniTag = DefineComponent<_UniTagProps>;
 
+/** 标签实例 */
 type _UniTagInstance = InstanceType<_UniTag>;
 
 export type {
-  _UniTagSize as UniTagSize,
-  _UniTagType as UniTagType,
+  _UniTag as UniTag,
   _UniTagCustomStyle as UniTagCustomStyle,
+  _UniTagInstance as UniTagInstance,
   _UniTagOnClick as UniTagOnClick,
   _UniTagProps as UniTagProps,
-  _UniTag as UniTag,
-  _UniTagInstance as UniTagInstance,
+  _UniTagSize as UniTagSize,
+  _UniTagType as UniTagType,
 };
 
 declare global {

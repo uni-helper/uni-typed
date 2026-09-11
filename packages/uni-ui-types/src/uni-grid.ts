@@ -54,12 +54,12 @@ type _UniGrid = DefineComponent<_UniGridProps>;
 type _UniGridInstance = InstanceType<_UniGrid>;
 
 export type {
-  _UniGridOnChangeDetail as UniGridOnChangeDetail,
-  _UniGridOnChangeEvent as UniGridOnChangeEvent,
-  _UniGridOnChange as UniGridOnChange,
-  _UniGridProps as UniGridProps,
   _UniGrid as UniGrid,
   _UniGridInstance as UniGridInstance,
+  _UniGridOnChange as UniGridOnChange,
+  _UniGridOnChangeDetail as UniGridOnChangeDetail,
+  _UniGridOnChangeEvent as UniGridOnChangeEvent,
+  _UniGridProps as UniGridProps,
 };
 
 declare global {

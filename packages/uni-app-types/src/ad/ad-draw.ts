@@ -39,14 +39,14 @@ type _AdDraw = DefineComponent<_AdDrawProps>;
 type _AdDrawInstance = InstanceType<_AdDraw>;
 
 export type {
-  _AdDrawOnLoadEvent as AdDrawOnLoadEvent,
-  _AdDrawOnLoad as AdDrawOnLoad,
-  _AdDrawOnErrorDetail as AdDrawOnErrorDetail,
-  _AdDrawOnErrorEvent as AdDrawOnErrorEvent,
-  _AdDrawOnError as AdDrawOnError,
-  _AdDrawProps as AdDrawProps,
   _AdDraw as AdDraw,
   _AdDrawInstance as AdDrawInstance,
+  _AdDrawOnError as AdDrawOnError,
+  _AdDrawOnErrorDetail as AdDrawOnErrorDetail,
+  _AdDrawOnErrorEvent as AdDrawOnErrorEvent,
+  _AdDrawOnLoad as AdDrawOnLoad,
+  _AdDrawOnLoadEvent as AdDrawOnLoadEvent,
+  _AdDrawProps as AdDrawProps,
 };
 
 declare global {

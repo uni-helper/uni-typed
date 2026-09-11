@@ -103,16 +103,16 @@ type _Slider = DefineComponent<_SliderProps>;
 type _SliderInstance = InstanceType<_Slider>;
 
 export type {
-  _SliderValue as SliderValue,
-  _SliderOnChangeDetail as SliderOnChangeDetail,
-  _SliderOnChangeEvent as SliderOnChangeEvent,
-  _SliderOnChange as SliderOnChange,
-  _SliderOnChangingDetail as SliderOnChangingDetail,
-  _SliderOnChangingEvent as SliderOnChangingEvent,
-  _SliderOnChanging as SliderOnChanging,
-  _SliderProps as SliderProps,
   _Slider as Slider,
   _SliderInstance as SliderInstance,
+  _SliderOnChange as SliderOnChange,
+  _SliderOnChangeDetail as SliderOnChangeDetail,
+  _SliderOnChangeEvent as SliderOnChangeEvent,
+  _SliderOnChanging as SliderOnChanging,
+  _SliderOnChangingDetail as SliderOnChangingDetail,
+  _SliderOnChangingEvent as SliderOnChangingEvent,
+  _SliderProps as SliderProps,
+  _SliderValue as SliderValue,
 };
 
 declare global {

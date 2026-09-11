@@ -23,9 +23,9 @@ type _UniBreadcrumb = DefineComponent<_UniBreadcrumbProps>;
 type _UniBreadcrumbInstance = InstanceType<_UniBreadcrumb>;
 
 export type {
-  _UniBreadcrumbProps as UniBreadcrumbProps,
   _UniBreadcrumb as UniBreadcrumb,
   _UniBreadcrumbInstance as UniBreadcrumbInstance,
+  _UniBreadcrumbProps as UniBreadcrumbProps,
 };
 
 declare global {

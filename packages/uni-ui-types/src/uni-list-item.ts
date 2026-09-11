@@ -59,6 +59,7 @@ type _UniListItemOnSwitchChange = (
   event: _UniListItemOnSwitchChangeEvent,
 ) => void;
 
+/** 列表项属性 */
 type _UniListItemProps = Partial<{
   /** 标题 */
   title: string;
@@ -190,24 +191,26 @@ type _UniListItemProps = Partial<{
   onSwitchChange: _UniListItemOnSwitchChange;
 }>;
 
+/** 列表项 */
 type _UniListItem = DefineComponent<_UniListItemProps>;
 
+/** 列表项实例 */
 type _UniListItemInstance = InstanceType<_UniListItem>;
 
 export type {
-  _UniListItemEllipsis as UniListItemEllipsis,
-  _UniListItemThumbSize as UniListItemThumbSize,
-  _UniListItemLink as UniListItemLink,
-  _UniListItemDirection as UniListItemDirection,
-  _UniListItemSwitchChecked as UniListItemSwitchChecked,
-  _UniListItemExtraIcon as UniListItemExtraIcon,
-  _UniListItemOnClickEvent as UniListItemOnClickEvent,
-  _UniListItemOnClick as UniListItemOnClick,
-  _UniListItemOnSwitchChangeEvent as UniListItemOnSwitchChangeEvent,
-  _UniListItemOnSwitchChange as UniListItemOnSwitchChange,
-  _UniListItemProps as UniListItemProps,
   _UniListItem as UniListItem,
+  _UniListItemDirection as UniListItemDirection,
+  _UniListItemEllipsis as UniListItemEllipsis,
+  _UniListItemExtraIcon as UniListItemExtraIcon,
   _UniListItemInstance as UniListItemInstance,
+  _UniListItemLink as UniListItemLink,
+  _UniListItemOnClick as UniListItemOnClick,
+  _UniListItemOnClickEvent as UniListItemOnClickEvent,
+  _UniListItemOnSwitchChange as UniListItemOnSwitchChange,
+  _UniListItemOnSwitchChangeEvent as UniListItemOnSwitchChangeEvent,
+  _UniListItemProps as UniListItemProps,
+  _UniListItemSwitchChecked as UniListItemSwitchChecked,
+  _UniListItemThumbSize as UniListItemThumbSize,
 };
 
 declare global {

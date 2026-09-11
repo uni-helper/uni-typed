@@ -1,5 +1,6 @@
 import type { DefineComponent } from "vue";
 
+/** 跳转方式 */
 type _UniListChatLink = "navigateTo" | "redirectTo" | "reLaunch" | "switchTab";
 
 /** 角标位置 */
@@ -67,13 +68,13 @@ type _UniListChat = DefineComponent<_UniListChatProps>;
 type _UniListChatInstance = InstanceType<_UniListChat>;
 
 export type {
-  _UniListChatLink as UniListChatLink,
-  _UniListChatBadgePositon as UniListChatBadgePositon,
-  _UniListChatOnClickEvent as UniListChatOnClickEvent,
-  _UniListChatOnClick as UniListChatOnClick,
-  _UniListChatProps as UniListChatProps,
   _UniListChat as UniListChat,
+  _UniListChatBadgePositon as UniListChatBadgePositon,
   _UniListChatInstance as UniListChatInstance,
+  _UniListChatLink as UniListChatLink,
+  _UniListChatOnClick as UniListChatOnClick,
+  _UniListChatOnClickEvent as UniListChatOnClickEvent,
+  _UniListChatProps as UniListChatProps,
 };
 
 declare global {

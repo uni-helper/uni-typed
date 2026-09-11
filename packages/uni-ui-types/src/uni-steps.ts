@@ -65,11 +65,11 @@ type _UniSteps = DefineComponent<_UniStepsProps>;
 type _UniStepsInstance = InstanceType<_UniSteps>;
 
 export type {
+  _UniSteps as UniSteps,
   _UniStepsDirection as UniStepsDirection,
+  _UniStepsInstance as UniStepsInstance,
   _UniStepsOption as UniStepsOption,
   _UniStepsProps as UniStepsProps,
-  _UniSteps as UniSteps,
-  _UniStepsInstance as UniStepsInstance,
 };
 
 declare global {

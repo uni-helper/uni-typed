@@ -51,6 +51,7 @@ type _UniGoodsNavOnButtonClick = (
   event: _UniGoodsNavOnButtonClickEvent,
 ) => void;
 
+/** 商品导航属性 */
 type _UniGoodsNavProps = Partial<{
   /**
    * 选项
@@ -81,18 +82,19 @@ type _UniGoodsNavProps = Partial<{
 /** 商品加入购物车，立即购买 */
 type _UniGoodsNav = DefineComponent<_UniGoodsNavProps>;
 
+/** 商品导航实例 */
 type _UniGoodsNavInstance = InstanceType<_UniGoodsNav>;
 
 export type {
-  _UniGoodsNavOption as UniGoodsNavOption,
-  _UniGoodsNavOnClickEvent as UniGoodsNavOnClickEvent,
-  _UniGoodsNavOnClick as UniGoodsNavOnClick,
-  _UniGoodsNavOnButtonClickEvent as UniGoodsNavOnButtonClickEvent,
-  _UniGoodsNavOnButtonClick as UniGoodsNavOnButtonClick,
-  _UniGoodsNavButton as UniGoodsNavButton,
-  _UniGoodsNavProps as UniGoodsNavProps,
   _UniGoodsNav as UniGoodsNav,
+  _UniGoodsNavButton as UniGoodsNavButton,
   _UniGoodsNavInstance as UniGoodsNavInstance,
+  _UniGoodsNavOnButtonClick as UniGoodsNavOnButtonClick,
+  _UniGoodsNavOnButtonClickEvent as UniGoodsNavOnButtonClickEvent,
+  _UniGoodsNavOnClick as UniGoodsNavOnClick,
+  _UniGoodsNavOnClickEvent as UniGoodsNavOnClickEvent,
+  _UniGoodsNavOption as UniGoodsNavOption,
+  _UniGoodsNavProps as UniGoodsNavProps,
 };
 
 declare global {

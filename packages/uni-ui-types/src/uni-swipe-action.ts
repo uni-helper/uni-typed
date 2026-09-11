@@ -6,6 +6,7 @@ type _UniSwipeActionResize = () => void;
 /** 关闭所有已经打开的组件 */
 type _UniSwipeActionCloseAll = () => void;
 
+/** 滑动操作属性 */
 type _UniSwipeActionProps = Partial<{
   /** 动态添加数据后，如不能正常滑动，需要主动调用此方法 */
   resize: _UniSwipeActionResize;
@@ -20,14 +21,15 @@ type _UniSwipeActionProps = Partial<{
  */
 type _UniSwipeAction = DefineComponent<_UniSwipeActionProps>;
 
+/** 滑动操作实例 */
 type _UniSwipeActionInstance = InstanceType<_UniSwipeAction>;
 
 export type {
-  _UniSwipeActionResize as UniSwipeActionResize,
-  _UniSwipeActionCloseAll as UniSwipeActionCloseAll,
-  _UniSwipeActionProps as UniSwipeActionProps,
   _UniSwipeAction as UniSwipeAction,
+  _UniSwipeActionCloseAll as UniSwipeActionCloseAll,
   _UniSwipeActionInstance as UniSwipeActionInstance,
+  _UniSwipeActionProps as UniSwipeActionProps,
+  _UniSwipeActionResize as UniSwipeActionResize,
 };
 
 declare global {

@@ -175,17 +175,17 @@ type _MovableView = DefineComponent<_MovableViewProps>;
 type _MovableViewInstance = InstanceType<_MovableView>;
 
 export type {
+  _MovableView as MovableView,
   _MovableViewDirection as MovableViewDirection,
-  _MovableViewSource as MovableViewSource,
+  _MovableViewInstance as MovableViewInstance,
+  _MovableViewOnChange as MovableViewOnChange,
   _MovableViewOnChangeDetail as MovableViewOnChangeDetail,
   _MovableViewOnChangeEvent as MovableViewOnChangeEvent,
-  _MovableViewOnChange as MovableViewOnChange,
+  _MovableViewOnScale as MovableViewOnScale,
   _MovableViewOnScaleDetail as MovableViewOnScaleDetail,
   _MovableViewOnScaleEvent as MovableViewOnScaleEvent,
-  _MovableViewOnScale as MovableViewOnScale,
   _MovableViewProps as MovableViewProps,
-  _MovableView as MovableView,
-  _MovableViewInstance as MovableViewInstance,
+  _MovableViewSource as MovableViewSource,
 };
 
 declare global {
@@ -206,11 +206,13 @@ declare global {
      * 空字符串 setData
      */
     export type MovableViewSource = _MovableViewSource;
-    export interface MovableViewOnChangeDetail extends _MovableViewOnChangeDetail {}
+    export interface MovableViewOnChangeDetail
+      extends _MovableViewOnChangeDetail {}
     export type MovableViewOnChangeEvent = _MovableViewOnChangeEvent;
     /** 拖动过程中触发 */
     export interface MovableViewOnChange extends _MovableViewOnChange {}
-    export interface MovableViewOnScaleDetail extends _MovableViewOnScaleDetail {}
+    export interface MovableViewOnScaleDetail
+      extends _MovableViewOnScaleDetail {}
     export type MovableViewOnScaleEvent = _MovableViewOnScaleEvent;
     /** 缩放过程中触发 */
     export interface MovableViewOnScale extends _MovableViewOnScale {}

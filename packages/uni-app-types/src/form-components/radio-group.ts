@@ -30,12 +30,12 @@ type _RadioGroup = DefineComponent<_RadioGroupProps>;
 type _RadioGroupInstance = InstanceType<_RadioGroup>;
 
 export type {
-  _RadioGroupOnChangeDetail as RadioGroupOnChangeDetail,
-  _RadioGroupOnChangeEvent as RadioGroupOnChangeEvent,
-  _RadioGroupOnChange as RadioGroupOnChange,
-  _RadioGroupProps as RadioGroupProps,
   _RadioGroup as RadioGroup,
   _RadioGroupInstance as RadioGroupInstance,
+  _RadioGroupOnChange as RadioGroupOnChange,
+  _RadioGroupOnChangeDetail as RadioGroupOnChangeDetail,
+  _RadioGroupOnChangeEvent as RadioGroupOnChangeEvent,
+  _RadioGroupProps as RadioGroupProps,
 };
 
 declare global {

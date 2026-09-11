@@ -50,13 +50,14 @@ type _UniPopupMessageProps = Partial<{
 /** 消息弹窗 */
 type _UniPopupMessage = DefineComponent<_UniPopupMessageProps>;
 
+/** 消息弹窗实例 */
 type _UniPopupMessageInstance = InstanceType<_UniPopupMessage>;
 
 export type {
-  _UniPopupMessageType as UniPopupMessageType,
-  _UniPopupMessageProps as UniPopupMessageProps,
   _UniPopupMessage as UniPopupMessage,
   _UniPopupMessageInstance as UniPopupMessageInstance,
+  _UniPopupMessageProps as UniPopupMessageProps,
+  _UniPopupMessageType as UniPopupMessageType,
 };
 
 declare global {

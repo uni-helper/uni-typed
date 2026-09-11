@@ -7,7 +7,7 @@ import type { BaseEvent, CustomEvent } from "../events";
  *
  * RTC 实时通话，该模式时延更低
  *
- * @dec live 直播
+ * live 直播
  */
 type _LivePlayerMode = "live" | "RTC";
 
@@ -180,7 +180,7 @@ interface _LivePlayerInfo {
   /**
    * 音画同步错位时间（网络），此数值越小，音画同步越好
    *
-   * @decs 单位为 ms
+   * 单位为 ms
    */
   avRecvInterval?: number;
   /** 音频缓冲时长阈值，缓冲超过该阈值后，播放器会开始调控延时 */
@@ -304,7 +304,7 @@ type _LivePlayerProps = CommonProps &
      *
      * 默认为 live
      *
-     * @dec live 直播
+     * live 直播
      */
     mode: _LivePlayerMode;
     /**
@@ -396,31 +396,31 @@ type _LivePlayer = DefineComponent<_LivePlayerProps>;
 type _LivePlayerInstance = InstanceType<_LivePlayer>;
 
 export type {
-  _LivePlayerMode as LivePlayerMode,
-  _LivePlayerOrientation as LivePlayerOrientation,
-  _LivePlayerObjectFit as LivePlayerObjectFit,
-  _LivePlayerSoundMode as LivePlayerSoundMode,
-  _LivePlayerPictureInPictureMode as LivePlayerPictureInPictureMode,
+  _LivePlayer as LivePlayer,
   _LivePlayerCode as LivePlayerCode,
   _LivePlayerInfo as LivePlayerInfo,
-  _LivePlayerOnStatechangeDetail as LivePlayerOnStatechangeDetail,
-  _LivePlayerOnStatechangeEvent as LivePlayerOnStatechangeEvent,
-  _LivePlayerOnStatechange as LivePlayerOnStatechange,
-  _LivePlayerOnNetstatusDetail as LivePlayerOnNetstatusDetail,
-  _LivePlayerOnNetstatusEvent as LivePlayerOnNetstatusEvent,
-  _LivePlayerOnNetstatus as LivePlayerOnNetstatus,
+  _LivePlayerInstance as LivePlayerInstance,
+  _LivePlayerMode as LivePlayerMode,
+  _LivePlayerObjectFit as LivePlayerObjectFit,
+  _LivePlayerOnAudiovolumenotify as LivePlayerOnAudiovolumenotify,
+  _LivePlayerOnAudiovolumenotifyEvent as LivePlayerOnAudiovolumenotifyEvent,
+  _LivePlayerOnEnterpictureinpicture as LivePlayerOnEnterpictureinpicture,
+  _LivePlayerOnEnterpictureinpictureEvent as LivePlayerOnEnterpictureinpictureEvent,
+  _LivePlayerOnFullscreenchange as LivePlayerOnFullscreenchange,
   _LivePlayerOnFullscreenchangeDetail as LivePlayerOnFullscreenchangeDetail,
   _LivePlayerOnFullscreenchangeEvent as LivePlayerOnFullscreenchangeEvent,
-  _LivePlayerOnFullscreenchange as LivePlayerOnFullscreenchange,
-  _LivePlayerOnAudiovolumenotifyEvent as LivePlayerOnAudiovolumenotifyEvent,
-  _LivePlayerOnAudiovolumenotify as LivePlayerOnAudiovolumenotify,
-  _LivePlayerOnEnterpictureinpictureEvent as LivePlayerOnEnterpictureinpictureEvent,
-  _LivePlayerOnEnterpictureinpicture as LivePlayerOnEnterpictureinpicture,
-  _LivePlayerOnLeavepictureinpictureEvent as LivePlayerOnLeavepictureinpictureEvent,
   _LivePlayerOnLeavepictureinpicture as LivePlayerOnLeavepictureinpicture,
+  _LivePlayerOnLeavepictureinpictureEvent as LivePlayerOnLeavepictureinpictureEvent,
+  _LivePlayerOnNetstatus as LivePlayerOnNetstatus,
+  _LivePlayerOnNetstatusDetail as LivePlayerOnNetstatusDetail,
+  _LivePlayerOnNetstatusEvent as LivePlayerOnNetstatusEvent,
+  _LivePlayerOnStatechange as LivePlayerOnStatechange,
+  _LivePlayerOnStatechangeDetail as LivePlayerOnStatechangeDetail,
+  _LivePlayerOnStatechangeEvent as LivePlayerOnStatechangeEvent,
+  _LivePlayerOrientation as LivePlayerOrientation,
+  _LivePlayerPictureInPictureMode as LivePlayerPictureInPictureMode,
   _LivePlayerProps as LivePlayerProps,
-  _LivePlayer as LivePlayer,
-  _LivePlayerInstance as LivePlayerInstance,
+  _LivePlayerSoundMode as LivePlayerSoundMode,
 };
 
 declare global {
@@ -430,7 +430,7 @@ declare global {
      *
      * RTC 实时通话，该模式时延更低
      *
-     * @dec live 直播
+     * live 直播
      */
     export type LivePlayerMode = _LivePlayerMode;
     /**

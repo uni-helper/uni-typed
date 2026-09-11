@@ -38,10 +38,10 @@ type _UniCol = DefineComponent<_UniColProps>;
 type _UniColInstance = InstanceType<_UniCol>;
 
 export type {
-  _UniColRules as UniColRules,
-  _UniColProps as UniColProps,
   _UniCol as UniCol,
   _UniColInstance as UniColInstance,
+  _UniColProps as UniColProps,
+  _UniColRules as UniColRules,
 };
 
 declare global {

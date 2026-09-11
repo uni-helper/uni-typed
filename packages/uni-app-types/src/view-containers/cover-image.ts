@@ -42,13 +42,13 @@ type _CoverImage = DefineComponent<_CoverImageProps>;
 type _CoverImageInstance = InstanceType<_CoverImage>;
 
 export type {
-  _CoverImageOnLoadEvent as CoverImageOnLoadEvent,
-  _CoverImageOnLoad as CoverImageOnLoad,
-  _CoverImageOnErrorEvent as CoverImageOnErrorEvent,
-  _CoverImageOnError as CoverImageOnError,
-  _CoverImageProps as CoverImageProps,
   _CoverImage as CoverImage,
   _CoverImageInstance as CoverImageInstance,
+  _CoverImageOnError as CoverImageOnError,
+  _CoverImageOnErrorEvent as CoverImageOnErrorEvent,
+  _CoverImageOnLoad as CoverImageOnLoad,
+  _CoverImageOnLoadEvent as CoverImageOnLoadEvent,
+  _CoverImageProps as CoverImageProps,
 };
 
 declare global {

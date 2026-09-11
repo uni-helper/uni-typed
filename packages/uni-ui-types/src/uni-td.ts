@@ -3,6 +3,7 @@ import type { DefineComponent } from "vue";
 /** 单元格对齐方式 */
 type _UniTdAlign = "left" | "center" | "right";
 
+/** 表格单元格属性 */
 type _UniTdProps = Partial<{
   /**
    * 单元格宽度
@@ -30,15 +31,17 @@ type _UniTdProps = Partial<{
   colspan: number | string;
 }>;
 
+/** 表格单元格 */
 type _UniTd = DefineComponent<_UniTdProps>;
 
+/** 表格单元格实例 */
 type _UniTdInstance = InstanceType<_UniTd>;
 
 export type {
-  _UniTdAlign as UniTdAlign,
-  _UniTdProps as UniTdProps,
   _UniTd as UniTd,
+  _UniTdAlign as UniTdAlign,
   _UniTdInstance as UniTdInstance,
+  _UniTdProps as UniTdProps,
 };
 
 declare global {

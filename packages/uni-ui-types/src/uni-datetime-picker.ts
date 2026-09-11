@@ -65,6 +65,7 @@ type _UniDatetimePickerOnMaskClick = (value: _UniDatetimePickerValue) => void;
 /** 弹窗弹出时触发 */
 type _UniDatetimePickerOnShow = () => void;
 
+/** 日期选择器属性 */
 type _UniDatetimePickerProps = Partial<{
   /**
    * 选择器类型
@@ -145,6 +146,7 @@ type _UniDatetimePickerProps = Partial<{
 /** 支持时间戳输入和输出（起始时间、终止时间也支持时间戳），可同时选择日期和时间 */
 type _UniDatetimePicker = DefineComponent<_UniDatetimePickerProps>;
 
+/** 日期选择器实例 */
 type _UniDatetimePickerInstance = InstanceType<_UniDatetimePicker>;
 
 export type {

@@ -39,14 +39,14 @@ type _AdInteractive = DefineComponent<_AdInteractiveProps>;
 type _AdInteractiveInstance = InstanceType<_AdInteractive>;
 
 export type {
-  _AdInteractiveOnLoadEvent as AdInteractiveOnLoadEvent,
-  _AdInteractiveOnLoad as AdInteractiveOnLoad,
-  _AdInteractiveOnErrorDetail as AdInteractiveOnErrorDetail,
-  _AdInteractiveOnErrorEvent as AdInteractiveOnErrorEvent,
-  _AdInteractiveOnError as AdInteractiveOnError,
-  _AdInteractiveProps as AdInteractiveProps,
   _AdInteractive as AdInteractive,
   _AdInteractiveInstance as AdInteractiveInstance,
+  _AdInteractiveOnError as AdInteractiveOnError,
+  _AdInteractiveOnErrorDetail as AdInteractiveOnErrorDetail,
+  _AdInteractiveOnErrorEvent as AdInteractiveOnErrorEvent,
+  _AdInteractiveOnLoad as AdInteractiveOnLoad,
+  _AdInteractiveOnLoadEvent as AdInteractiveOnLoadEvent,
+  _AdInteractiveProps as AdInteractiveProps,
 };
 
 declare global {

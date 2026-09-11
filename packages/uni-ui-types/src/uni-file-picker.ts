@@ -1,5 +1,6 @@
 import type { DefineComponent } from "vue";
 
+/** 已选文件信息 */
 interface _UniFilePickerValue {
   name: string;
   extname: string;
@@ -177,6 +178,7 @@ type _UniFilePickerUpload = () => void;
  */
 type _UniFilePickerClearFiles = (index?: number) => void;
 
+/** 图片信息 */
 interface _UniFilePickerFileImage {
   width: number;
   height: number;
@@ -186,6 +188,7 @@ interface _UniFilePickerFileImage {
 /** 文件状态 */
 type _UniFilePickerFileStatus = "ready" | "error" | "success";
 
+/** 文件基础信息 */
 interface _UniFilePickerBaseFile {
   cloudPath: string;
   /** 文件后缀名，不含 . */
@@ -216,6 +219,7 @@ interface _UniFilePickerBaseFile {
   uuid: string;
 }
 
+/** 待上传的临时文件信息 */
 interface _UniFilePickerTempFileFile extends File {
   cloudPath: string;
   /**
@@ -236,12 +240,13 @@ interface _UniFilePickerTempFileFile extends File {
   uuid: string;
   /** 视频宽度 */
   width?: number;
-  /** 视频的高度 */
+  /** 视频高度 */
   height?: number;
   /** 视频时长，单位 s */
   duration?: number;
 }
 
+/** 待上传的临时文件 */
 interface _UniFilePickerTempFile extends _UniFilePickerBaseFile {
   /** 文件内容 */
   file: _UniFilePickerTempFileFile;
@@ -249,6 +254,7 @@ interface _UniFilePickerTempFile extends _UniFilePickerBaseFile {
   progress: number;
 }
 
+/** 上传成功后的文件信息 */
 interface _UniFilePickerCallbackFile extends _UniFilePickerBaseFile {
   /** 文件云上 ID */
   fileID: string;
@@ -308,6 +314,7 @@ interface _UniFilePickerOnDeleteEvent {
 /** 文件从列表移除时触发 */
 type _UniFilePickerOnDelete = (event: _UniFilePickerOnDeleteEvent) => void;
 
+/** 文件选择上传基础属性 */
 type _UniFilePickerBaseProps = Partial<{
   /**
    * 组件是否禁用
@@ -445,6 +452,7 @@ type _UniFilePickerBaseProps = Partial<{
   onDelete: _UniFilePickerOnDelete;
 }>;
 
+/** 多文件模式属性 */
 type _UniFilePickerArrayProps = _UniFilePickerBaseProps &
   Partial<{
     /** 组件数据，通常用来回显 */
@@ -453,6 +461,7 @@ type _UniFilePickerArrayProps = _UniFilePickerBaseProps &
     returnType?: "array";
   }>;
 
+/** 单文件模式属性 */
 type _UniFilePickerObjectProps = _UniFilePickerBaseProps &
   Partial<{
     /** 组件数据，通常用来回显 */

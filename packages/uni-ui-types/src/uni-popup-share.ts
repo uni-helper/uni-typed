@@ -31,14 +31,15 @@ type _UniPopupShareProps = Partial<{
 /** 分享弹窗 */
 type _UniPopupShare = DefineComponent<_UniPopupShareProps>;
 
+/** 分享弹窗实例 */
 type _UniPopupShareInstance = InstanceType<_UniPopupShare>;
 
 export type {
-  _UniPopupShareOnSelectEvent as UniPopupShareOnSelectEvent,
-  _UniPopupShareOnSelect as UniPopupShareOnSelect,
-  _UniPopupShareProps as UniPopupShareProps,
   _UniPopupShare as UniPopupShare,
   _UniPopupShareInstance as UniPopupShareInstance,
+  _UniPopupShareOnSelect as UniPopupShareOnSelect,
+  _UniPopupShareOnSelectEvent as UniPopupShareOnSelectEvent,
+  _UniPopupShareProps as UniPopupShareProps,
 };
 
 declare global {

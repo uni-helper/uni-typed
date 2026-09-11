@@ -105,7 +105,7 @@ type _ScrollViewProps = CommonProps &
     /**
      * 优先级低于 scroll-into-view
      *
-     * @decs 设置横向滚动条位置
+     * 设置横向滚动条位置
      */
     scrollLeft: number | string;
     /**

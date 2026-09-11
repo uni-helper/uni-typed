@@ -3,6 +3,7 @@ import type { DefineComponent } from "vue";
 /** 点击页码按钮时触发 */
 type _UniPaginationOnInput = (current: number) => void;
 
+/** 翻页方向 */
 type _UniPaginationOnChangeType = "prev" | "next";
 
 interface _UniPaginationOnChangeEvent {
@@ -94,13 +95,13 @@ type _UniPagination = DefineComponent<_UniPaginationProps>;
 type _UniPaginationInstance = InstanceType<_UniPagination>;
 
 export type {
-  _UniPaginationOnInput as UniPaginationOnInput,
-  _UniPaginationOnChangeType as UniPaginationOnChangeType,
-  _UniPaginationOnChangeEvent as UniPaginationOnChangeEvent,
-  _UniPaginationOnChange as UniPaginationOnChange,
-  _UniPaginationProps as UniPaginationProps,
   _UniPagination as UniPagination,
   _UniPaginationInstance as UniPaginationInstance,
+  _UniPaginationOnChange as UniPaginationOnChange,
+  _UniPaginationOnChangeEvent as UniPaginationOnChangeEvent,
+  _UniPaginationOnChangeType as UniPaginationOnChangeType,
+  _UniPaginationOnInput as UniPaginationOnInput,
+  _UniPaginationProps as UniPaginationProps,
 };
 
 declare global {

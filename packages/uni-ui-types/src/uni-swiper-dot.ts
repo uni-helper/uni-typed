@@ -107,15 +107,16 @@ type _UniSwiperDotProps = Partial<{
 /** 轮播图指示点 */
 type _UniSwiperDot = DefineComponent<_UniSwiperDotProps>;
 
+/** 轮播图指示点实例 */
 type _UniSwiperDotInstance = InstanceType<_UniSwiperDot>;
 
 export type {
-  _UniSwiperDotMode as UniSwiperDotMode,
+  _UniSwiperDot as UniSwiperDot,
   _UniSwiperDotDotsStyles as UniSwiperDotDotsStyles,
+  _UniSwiperDotInstance as UniSwiperDotInstance,
+  _UniSwiperDotMode as UniSwiperDotMode,
   _UniSwiperDotOnClickItem as UniSwiperDotOnClickItem,
   _UniSwiperDotProps as UniSwiperDotProps,
-  _UniSwiperDot as UniSwiperDot,
-  _UniSwiperDotInstance as UniSwiperDotInstance,
 };
 
 declare global {

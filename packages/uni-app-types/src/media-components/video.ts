@@ -318,7 +318,7 @@ type _VideoProps = CommonProps &
     /**
      * 是否显示静音按钮
      *
-     * @decs 默认为 false
+     * 默认为 false
      */
     showMuteBtn: boolean;
     /** 视频的标题，全屏时在顶部展示 */

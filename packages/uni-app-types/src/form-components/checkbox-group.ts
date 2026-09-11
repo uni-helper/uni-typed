@@ -26,12 +26,12 @@ type _CheckboxGroup = DefineComponent<_CheckboxGroupProps>;
 type _CheckboxGroupInstance = InstanceType<_CheckboxGroup>;
 
 export type {
-  _CheckboxGroupOnChangeDetail as CheckboxGroupOnChangeDetail,
-  _CheckboxGroupOnChangeEvent as CheckboxGroupOnChangeEvent,
-  _CheckboxGroupOnChange as CheckboxGroupOnChange,
-  _CheckboxGroupProps as CheckboxGroupProps,
   _CheckboxGroup as CheckboxGroup,
   _CheckboxGroupInstance as CheckboxGroupInstance,
+  _CheckboxGroupOnChange as CheckboxGroupOnChange,
+  _CheckboxGroupOnChangeDetail as CheckboxGroupOnChangeDetail,
+  _CheckboxGroupOnChangeEvent as CheckboxGroupOnChangeEvent,
+  _CheckboxGroupProps as CheckboxGroupProps,
 };
 
 declare global {

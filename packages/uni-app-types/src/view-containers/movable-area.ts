@@ -29,9 +29,9 @@ type _MovableArea = DefineComponent<_MovableAreaProps>;
 type _MovableAreaInstance = InstanceType<_MovableArea>;
 
 export type {
-  _MovableAreaProps as MovableAreaProps,
   _MovableArea as MovableArea,
   _MovableAreaInstance as MovableAreaInstance,
+  _MovableAreaProps as MovableAreaProps,
 };
 
 declare global {

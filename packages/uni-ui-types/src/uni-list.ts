@@ -31,9 +31,9 @@ type _UniList = DefineComponent<_UniListProps>;
 type _UniListInstance = InstanceType<_UniList>;
 
 export type {
-  _UniListProps as UniListProps,
   _UniList as UniList,
   _UniListInstance as UniListInstance,
+  _UniListProps as UniListProps,
 };
 
 declare global {

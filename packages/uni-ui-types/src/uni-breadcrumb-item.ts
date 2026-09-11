@@ -1,5 +1,6 @@
 import type { DefineComponent } from "vue";
 
+/** 面包屑项属性 */
 type _UniBreadcrumbItemProps = Partial<{
   /** 路由跳转页面路径 */
   to: string;
@@ -11,14 +12,16 @@ type _UniBreadcrumbItemProps = Partial<{
   replace: boolean;
 }>;
 
+/** 面包屑项 */
 type _UniBreadcrumbItem = DefineComponent<_UniBreadcrumbItemProps>;
 
+/** 面包屑项实例 */
 type _UniBreadcrumbItemInstance = InstanceType<_UniBreadcrumbItem>;
 
 export type {
-  _UniBreadcrumbItemProps as UniBreadcrumbItemProps,
   _UniBreadcrumbItem as UniBreadcrumbItem,
   _UniBreadcrumbItemInstance as UniBreadcrumbItemInstance,
+  _UniBreadcrumbItemProps as UniBreadcrumbItemProps,
 };
 
 declare global {

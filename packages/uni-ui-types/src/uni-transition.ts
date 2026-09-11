@@ -52,6 +52,7 @@ type _UniTransitionTimingFunction =
   | "step-start"
   | "step-end";
 
+/** 动画配置 */
 interface _UniTransitionConfig {
   /**
    * 动画持续时间
@@ -103,6 +104,7 @@ interface _UniTransitionConfig {
   transformOrigin: string;
 }
 
+/** 动画参数 */
 interface _UniTransitionType {
   /**
    * 透明度
@@ -117,7 +119,7 @@ interface _UniTransitionType {
    *
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的宽度值
+   * 可传入其他自定义单位的长度值
    */
   width: number | string;
   /**
@@ -125,31 +127,31 @@ interface _UniTransitionType {
    *
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的高度值
+   * 可传入其他自定义单位的长度值
    */
   height: number | string;
   /**
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的高度值
+   * 可传入其他自定义单位的长度值
    */
   top: number | string;
   /**
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的高度值
+   * 可传入其他自定义单位的长度值
    */
   right: number | string;
   /**
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的高度值
+   * 可传入其他自定义单位的长度值
    */
   bottom: number | string;
   /**
    * 如果传入 number 默认使用 px
    *
-   * 可传入其他自定义单位的高度值
+   * 可传入其他自定义单位的长度值
    */
   left: number | string;
   /**
@@ -255,6 +257,7 @@ type _UniTransitionOnChangeEvent = _UniTransitionOnClickEvent;
 /** 过渡动画结束时触发 */
 type _UniTransitionOnChange = (event: _UniTransitionOnChangeEvent) => void;
 
+/** 过渡动画属性 */
 type _UniTransitionProps = Partial<{
   /**
    * 控制组件是否显示
@@ -301,7 +304,7 @@ type _UniTransitionProps = Partial<{
   /**
    * 执行动画
    *
-   * @param 所有动画执行完毕后回调
+   * @param callback 所有动画执行完毕后回调
    */
   run: _UniTransitionRun;
   /** 点击触发 */
@@ -313,6 +316,7 @@ type _UniTransitionProps = Partial<{
 /** 元素过渡动画 */
 type _UniTransition = DefineComponent<_UniTransitionProps>;
 
+/** 过渡动画实例 */
 type _UniTransitionInstance = InstanceType<_UniTransition>;
 
 export type {

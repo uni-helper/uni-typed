@@ -47,11 +47,13 @@ type _UnicloudDbPageData = "add" | "replace";
  */
 type _UnicloudDbLoadtime = "auto" | "onready" | "manual";
 
+/** 手动加载数据的选项 */
 interface _UnicloudDbLoadDataOptions {
   /** 是否清空数据和分页信息 */
   clear: boolean;
 }
 
+/** 加载数据完成或失败后触发的回调 */
 type _UnicloudDbLoadDataCallback = () => any;
 
 /**
@@ -80,6 +82,7 @@ type _UnicloudDbRefresh = () => void;
 /** 单个数据 id */
 type _UnicloudDbId = string;
 
+/** 删除 item 的选项 */
 interface _UnicloudDbRemoveOptions {
   /** 云端执行数据库查询的前或后，触发某个 action 函数操作，进行预处理或后处理 */
   action?: string;
@@ -125,6 +128,7 @@ type _UnicloudDbRemove = (
   options?: _UnicloudDbRemoveOptions,
 ) => void;
 
+/** 新增 item 的选项 */
 interface _UnicloudDbAddOptions {
   /** 云端执行数据库查询的前或后，触发某个 action 函数操作，进行预处理或后处理 */
   action?: string;
@@ -168,6 +172,7 @@ type _UnicloudDbAdd = (
   options?: _UnicloudDbAddOptions,
 ) => void;
 
+/** 更新 item 的选项 */
 interface _UnicloudDbUpdateOptions {
   /** 云端执行数据库查询的前或后，触发某个 action 函数操作，进行预处理或后处理 */
   action?: string;
@@ -178,7 +183,7 @@ interface _UnicloudDbUpdateOptions {
    */
   showToast?: boolean;
   /**
-   * 新增成功后的 toast 提示
+   * 更新成功后的 toast 提示
    *
    * 默认为 修改成功
    */
@@ -301,10 +306,11 @@ type _UnicloudDbProps = Partial<{
    */
   startwith: string;
   /**
+   * Get tree 查询返回的树的最大层级，超过设定层级的节点不会返回
+   *
    * 取值范围为 1 - 15
    *
-   * @desce gettree查询返回的树的最大层级，超过设定层级的节点不会返回
-   * @dsec 默认为 10
+   * 默认为 10
    */
   limitlevel: number;
   /** 对数据进行分组 */
@@ -340,7 +346,7 @@ type _UnicloudDbProps = Partial<{
   /**
    * 手动加载数据
    *
-   * @param param.clear 是否清空数据和分页信息，默认为 false
+   * @param options.clear 是否清空数据和分页信息，默认为 false
    * @param callback 回调函数，加载数据完或加载失败后触发
    */
   loadData: _UnicloudDbLoadData;
@@ -460,7 +466,7 @@ declare global {
     /**
      * 手动加载数据
      *
-     * @param param.clear 是否清空数据和分页信息，默认为 false
+     * @param options.clear 是否清空数据和分页信息，默认为 false
      * @param callback 回调函数，加载数据完或加载失败后触发
      */
     export interface UnicloudDbLoadData extends _UnicloudDbLoadData {}

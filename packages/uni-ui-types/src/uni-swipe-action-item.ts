@@ -14,7 +14,7 @@ interface _UniSwipeActionItemOption {
   /** 按钮样式 */
   style: {
     /**
-     * 背景音乐
+     * 背景颜色
      *
      * 默认为 #c7c6cd
      */
@@ -34,6 +34,7 @@ interface _UniSwipeActionItemOption {
   };
 }
 
+/** 操作项打开的位置 */
 type _UniSwipeActionItemOnClickEventPosition = Exclude<
   _UniSwipeActionItemShow,
   "none"
@@ -53,6 +54,7 @@ type _UniSwipeActionItemOnClick = (
 /** 打开或关闭时触发 */
 type _UniSwipeActionItemOnChange = (show: _UniSwipeActionItemShow) => void;
 
+/** 滑动操作项属性 */
 type _UniSwipeActionItemProps = Partial<{
   /**
    * 其他组件开启的时候，当前组件是否自动关闭
@@ -90,20 +92,22 @@ type _UniSwipeActionItemProps = Partial<{
   onChange: _UniSwipeActionItemOnChange;
 }>;
 
+/** 滑动操作项 */
 type _UniSwipeActionItem = DefineComponent<_UniSwipeActionItemProps>;
 
+/** 滑动操作项实例 */
 type _UniSwipeActionItemInstance = InstanceType<_UniSwipeActionItem>;
 
 export type {
-  _UniSwipeActionItemShow as UniSwipeActionItemShow,
-  _UniSwipeActionItemOption as UniSwipeActionItemOption,
-  _UniSwipeActionItemOnClickEventPosition as UniSwipeActionItemOnClickEventPosition,
-  _UniSwipeActionItemOnClickEvent as UniSwipeActionItemOnClickEvent,
-  _UniSwipeActionItemOnClick as UniSwipeActionItemOnClick,
-  _UniSwipeActionItemOnChange as UniSwipeActionItemOnChange,
-  _UniSwipeActionItemProps as UniSwipeActionItemProps,
   _UniSwipeActionItem as UniSwipeActionItem,
   _UniSwipeActionItemInstance as UniSwipeActionItemInstance,
+  _UniSwipeActionItemOnChange as UniSwipeActionItemOnChange,
+  _UniSwipeActionItemOnClick as UniSwipeActionItemOnClick,
+  _UniSwipeActionItemOnClickEvent as UniSwipeActionItemOnClickEvent,
+  _UniSwipeActionItemOnClickEventPosition as UniSwipeActionItemOnClickEventPosition,
+  _UniSwipeActionItemOption as UniSwipeActionItemOption,
+  _UniSwipeActionItemProps as UniSwipeActionItemProps,
+  _UniSwipeActionItemShow as UniSwipeActionItemShow,
 };
 
 declare global {

@@ -79,17 +79,17 @@ type _UniCollapse = DefineComponent<_UniCollapseProps>;
 type _UniCollapseInstance = InstanceType<_UniCollapse>;
 
 export type {
-  _UniCollapseResize as UniCollapseResize,
-  _UniCollapseBaseProps as UniCollapseBaseProps,
-  _UniCollapseNoAccordionValue as UniCollapseNoAccordionValue,
-  _UniCollapseNoAccordionOnChange as UniCollapseNoAccordionOnChange,
-  _UniCollapseNoAccordionProps as UniCollapseNoAccordionProps,
-  _UniCollapseAccordionValue as UniCollapseAccordionValue,
+  _UniCollapse as UniCollapse,
   _UniCollapseAccordionOnChange as UniCollapseAccordionOnChange,
   _UniCollapseAccordionProps as UniCollapseAccordionProps,
-  _UniCollapseProps as UniCollapseProps,
-  _UniCollapse as UniCollapse,
+  _UniCollapseAccordionValue as UniCollapseAccordionValue,
+  _UniCollapseBaseProps as UniCollapseBaseProps,
   _UniCollapseInstance as UniCollapseInstance,
+  _UniCollapseNoAccordionOnChange as UniCollapseNoAccordionOnChange,
+  _UniCollapseNoAccordionProps as UniCollapseNoAccordionProps,
+  _UniCollapseNoAccordionValue as UniCollapseNoAccordionValue,
+  _UniCollapseProps as UniCollapseProps,
+  _UniCollapseResize as UniCollapseResize,
 };
 
 declare global {

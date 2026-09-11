@@ -174,6 +174,7 @@ type _UniPopupDialogProps = Partial<{
 /** 对话框弹窗 */
 type _UniPopupDialog = DefineComponent<_UniPopupDialogProps>;
 
+/** 对话框弹窗实例 */
 type _UniPopupDialogInstance = InstanceType<_UniPopupDialog>;
 
 export type {

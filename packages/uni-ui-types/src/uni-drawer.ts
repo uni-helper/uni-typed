@@ -65,13 +65,13 @@ type _UniDrawer = DefineComponent<_UniDrawerProps>;
 type _UniDrawerInstance = InstanceType<_UniDrawer>;
 
 export type {
-  _UniDrawerMode as UniDrawerMode,
-  _UniDrawerOpen as UniDrawerOpen,
-  _UniDrawerClose as UniDrawerClose,
-  _UniDrawerOnChange as UniDrawerOnChange,
-  _UniDrawerProps as UniDrawerProps,
   _UniDrawer as UniDrawer,
+  _UniDrawerClose as UniDrawerClose,
   _UniDrawerInstance as UniDrawerInstance,
+  _UniDrawerMode as UniDrawerMode,
+  _UniDrawerOnChange as UniDrawerOnChange,
+  _UniDrawerOpen as UniDrawerOpen,
+  _UniDrawerProps as UniDrawerProps,
 };
 
 declare global {

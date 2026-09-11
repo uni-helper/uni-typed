@@ -16,6 +16,7 @@ type _UniDataCheckboxValue = string | number;
  */
 type _UniDataCheckboxMode = "default" | "list" | "button" | "tag";
 
+/** 本地渲染数据的单项 */
 interface _UniDataCheckboxLocaldataItem {
   /** 显示文本 */
   text: string;
@@ -45,6 +46,7 @@ interface _UniDataCheckboxMap {
   value: string;
 }
 
+/** 数据选择器基础属性 */
 type _UniDataCheckboxBaseProps = Partial<{
   /** 本地渲染数据 */
   localdata: _UniDataCheckboxLocaldata;
@@ -116,6 +118,7 @@ type _UniDataCheckboxSingleOnChange = (
   event: _UniDataCheckboxSingleOnChangeEvent,
 ) => void;
 
+/** 数据选择器单选属性 */
 type _UniDataCheckboxSingleProps = Partial<{
   /** 默认值 */
   value: _UniDataCheckboxValue;
@@ -143,6 +146,7 @@ type _UniDataCheckboxMultipleOnChange = (
   event: _UniDataCheckboxMultipleOnChangeEvent,
 ) => void;
 
+/** 数据选择器多选属性 */
 type _UniDataCheckboxMultipleProps = Partial<{
   /** 默认值 */
   value: _UniDataCheckboxValue[];
@@ -168,6 +172,7 @@ type _UniDataCheckboxMultipleProps = Partial<{
   onChange: _UniDataCheckboxMultipleOnChange;
 }>;
 
+/** 数据选择器属性 */
 type _UniDataCheckboxProps =
   | _UniDataCheckboxSingleProps
   | _UniDataCheckboxMultipleProps;
@@ -188,27 +193,28 @@ type _UniDataCheckboxProps =
  */
 type _UniDataCheckbox = DefineComponent<_UniDataCheckboxProps>;
 
+/** 数据选择器实例 */
 type _UniDataCheckboxInstance = InstanceType<_UniDataCheckbox>;
 
 export type {
-  _UniDataCheckboxValue as UniDataCheckboxValue,
-  _UniDataCheckboxMode as UniDataCheckboxMode,
-  _UniDataCheckboxLocaldataItem as UniDataCheckboxLocaldataItem,
-  _UniDataCheckboxLocaldata as UniDataCheckboxLocaldata,
-  _UniDataCheckboxIcon as UniDataCheckboxIcon,
-  _UniDataCheckboxMap as UniDataCheckboxMap,
+  _UniDataCheckbox as UniDataCheckbox,
   _UniDataCheckboxBaseProps as UniDataCheckboxBaseProps,
-  _UniDataCheckboxSingleOnChangeDetail as UniDataCheckboxSingleOnChangeDetail,
-  _UniDataCheckboxSingleOnChangeEvent as UniDataCheckboxSingleOnChangeEvent,
-  _UniDataCheckboxSingleOnChange as UniDataCheckboxSingleOnChange,
-  _UniDataCheckboxSingleProps as UniDataCheckboxSingleProps,
+  _UniDataCheckboxIcon as UniDataCheckboxIcon,
+  _UniDataCheckboxInstance as UniDataCheckboxInstance,
+  _UniDataCheckboxLocaldata as UniDataCheckboxLocaldata,
+  _UniDataCheckboxLocaldataItem as UniDataCheckboxLocaldataItem,
+  _UniDataCheckboxMap as UniDataCheckboxMap,
+  _UniDataCheckboxMode as UniDataCheckboxMode,
+  _UniDataCheckboxMultipleOnChange as UniDataCheckboxMultipleOnChange,
   _UniDataCheckboxMultipleOnChangeDetail as UniDataCheckboxMultipleOnChangeDetail,
   _UniDataCheckboxMultipleOnChangeEvent as UniDataCheckboxMultipleOnChangeEvent,
-  _UniDataCheckboxMultipleOnChange as UniDataCheckboxMultipleOnChange,
   _UniDataCheckboxMultipleProps as UniDataCheckboxMultipleProps,
   _UniDataCheckboxProps as UniDataCheckboxProps,
-  _UniDataCheckbox as UniDataCheckbox,
-  _UniDataCheckboxInstance as UniDataCheckboxInstance,
+  _UniDataCheckboxSingleOnChange as UniDataCheckboxSingleOnChange,
+  _UniDataCheckboxSingleOnChangeDetail as UniDataCheckboxSingleOnChangeDetail,
+  _UniDataCheckboxSingleOnChangeEvent as UniDataCheckboxSingleOnChangeEvent,
+  _UniDataCheckboxSingleProps as UniDataCheckboxSingleProps,
+  _UniDataCheckboxValue as UniDataCheckboxValue,
 };
 
 declare global {
@@ -227,6 +233,7 @@ declare global {
      * tag 标签
      */
     export type UniDataCheckboxMode = _UniDataCheckboxMode;
+    /** 本地渲染数据的单项 */
     export interface UniDataCheckboxLocaldataItem
       extends _UniDataCheckboxLocaldataItem {}
     /** 本地渲染数据 */

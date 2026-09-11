@@ -14,6 +14,7 @@ type _UniDataPickerviewOnDatachange = (value: any[]) => void;
 /** 节点被点击时触发 */
 type _UniDataPickerviewOnNodeclick = (node: any) => void;
 
+/** 级联选择视图属性 */
 type _UniDataPickerviewProps = Partial<{
   /** 本地数据 */
   localdata: UniDataPickerLocaldata;

@@ -61,16 +61,16 @@ type _AdFullscreenVideo = DefineComponent<_AdFullscreenVideoProps>;
 type _AdFullscreenVideoInstance = InstanceType<_AdFullscreenVideo>;
 
 export type {
-  _AdFullscreenVideoOnLoadEvent as AdFullscreenVideoOnLoadEvent,
-  _AdFullscreenVideoOnLoad as AdFullscreenVideoOnLoad,
-  _AdFullscreenVideoOnErrorDetail as AdFullscreenVideoOnErrorDetail,
-  _AdFullscreenVideoOnErrorEvent as AdFullscreenVideoOnErrorEvent,
-  _AdFullscreenVideoOnError as AdFullscreenVideoOnError,
-  _AdFullscreenVideoOnCloseEvent as AdFullscreenVideoOnCloseEvent,
-  _AdFullscreenVideoOnClose as AdFullscreenVideoOnClose,
-  _AdFullscreenVideoProps as AdFullscreenVideoProps,
   _AdFullscreenVideo as AdFullscreenVideo,
   _AdFullscreenVideoInstance as AdFullscreenVideoInstance,
+  _AdFullscreenVideoOnClose as AdFullscreenVideoOnClose,
+  _AdFullscreenVideoOnCloseEvent as AdFullscreenVideoOnCloseEvent,
+  _AdFullscreenVideoOnError as AdFullscreenVideoOnError,
+  _AdFullscreenVideoOnErrorDetail as AdFullscreenVideoOnErrorDetail,
+  _AdFullscreenVideoOnErrorEvent as AdFullscreenVideoOnErrorEvent,
+  _AdFullscreenVideoOnLoad as AdFullscreenVideoOnLoad,
+  _AdFullscreenVideoOnLoadEvent as AdFullscreenVideoOnLoadEvent,
+  _AdFullscreenVideoProps as AdFullscreenVideoProps,
 };
 
 declare global {

@@ -104,17 +104,17 @@ type _UniTable = DefineComponent<_UniTableProps>;
 type _UniTableInstance = InstanceType<_UniTable>;
 
 export type {
-  _UniTableType as UniTableType,
-  _UniTableSelectionAll as UniTableSelectionAll,
-  _UniTableToggleRowSelection as UniTableToggleRowSelection,
+  _UniTable as UniTable,
   _UniTableClearSelection as UniTableClearSelection,
-  _UniTableToggleAllSelection as UniTableToggleAllSelection,
+  _UniTableInstance as UniTableInstance,
+  _UniTableOnSelectionChange as UniTableOnSelectionChange,
   _UniTableOnSelectionChangeDetail as UniTableOnSelectionChangeDetail,
   _UniTableOnSelectionChangeEvent as UniTableOnSelectionChangeEvent,
-  _UniTableOnSelectionChange as UniTableOnSelectionChange,
   _UniTableProps as UniTableProps,
-  _UniTable as UniTable,
-  _UniTableInstance as UniTableInstance,
+  _UniTableSelectionAll as UniTableSelectionAll,
+  _UniTableToggleAllSelection as UniTableToggleAllSelection,
+  _UniTableToggleRowSelection as UniTableToggleRowSelection,
+  _UniTableType as UniTableType,
 };
 
 declare global {

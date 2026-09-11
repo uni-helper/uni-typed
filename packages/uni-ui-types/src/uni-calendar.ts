@@ -218,21 +218,21 @@ type _UniCalendar = DefineComponent<_UniCalendarProps>;
 type _UniCalendarInstance = InstanceType<_UniCalendar>;
 
 export type {
-  _UniCalendarDate as UniCalendarDate,
-  _UniCalendarSelectedElement as UniCalendarSelectedElement,
-  _UniCalendarSelected as UniCalendarSelected,
-  _UniCalendarOpen as UniCalendarOpen,
-  _UniCalendarBaseEvent as UniCalendarBaseEvent,
-  _UniCalendarOnChangeEvent as UniCalendarOnChangeEvent,
-  _UniCalendarOnChange as UniCalendarOnChange,
-  _UniCalendarOnConfirmEvent as UniCalendarOnConfirmEvent,
-  _UniCalendarOnConfirm as UniCalendarOnConfirm,
-  _UniCalendarOnMonthSwitchEvent as UniCalendarOnMonthSwitchEvent,
-  _UniCalendarOnMonthSwitch as UniCalendarOnMonthSwitch,
-  _UniCalendarOnClose as UniCalendarOnClose,
-  _UniCalendarProps as UniCalendarProps,
   _UniCalendar as UniCalendar,
+  _UniCalendarBaseEvent as UniCalendarBaseEvent,
+  _UniCalendarDate as UniCalendarDate,
   _UniCalendarInstance as UniCalendarInstance,
+  _UniCalendarOnChange as UniCalendarOnChange,
+  _UniCalendarOnChangeEvent as UniCalendarOnChangeEvent,
+  _UniCalendarOnClose as UniCalendarOnClose,
+  _UniCalendarOnConfirm as UniCalendarOnConfirm,
+  _UniCalendarOnConfirmEvent as UniCalendarOnConfirmEvent,
+  _UniCalendarOnMonthSwitch as UniCalendarOnMonthSwitch,
+  _UniCalendarOnMonthSwitchEvent as UniCalendarOnMonthSwitchEvent,
+  _UniCalendarOpen as UniCalendarOpen,
+  _UniCalendarProps as UniCalendarProps,
+  _UniCalendarSelected as UniCalendarSelected,
+  _UniCalendarSelectedElement as UniCalendarSelectedElement,
 };
 
 declare global {

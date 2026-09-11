@@ -1,7 +1,9 @@
 import type { DefineComponent } from "vue";
 
+/** 选中值 */
 type _UniDataSelectValue = string | number;
 
+/** 本地数据的单项 */
 interface _UniDataSelectLocaldataItem {
   /** 值 */
   value: _UniDataSelectValue;
@@ -61,6 +63,7 @@ type _UniDataSelectOnClear = () => void;
 /** 改变时触发 */
 type _UniDataSelectOnChange = (value: _UniDataSelectValue) => void;
 
+/** 下拉框属性 */
 type _UniDataSelectProps = Partial<{
   /** 已选择数据的 value 值 */
   value: _UniDataSelectValue;
@@ -181,6 +184,7 @@ type _UniDataSelectProps = Partial<{
  */
 type _UniDataSelect = DefineComponent<_UniDataSelectProps>;
 
+/** 下拉框实例 */
 type _UniDataSelectInstance = InstanceType<_UniDataSelect>;
 
 export type {
@@ -201,7 +205,9 @@ export type {
 
 declare global {
   namespace UniHelper {
+    /** 选中值 */
     export type UniDataSelectValue = _UniDataSelectValue;
+    /** 本地数据的单项 */
     export interface UniDataSelectLocaldataItem
       extends _UniDataSelectLocaldataItem {}
     /** 本地数据 */

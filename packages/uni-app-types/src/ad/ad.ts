@@ -88,16 +88,16 @@ type _Ad = DefineComponent<_AdProps>;
 type _AdInstance = InstanceType<_Ad>;
 
 export type {
-  _AdOnLoadEvent as AdOnLoadEvent,
-  _AdOnLoad as AdOnLoad,
-  _AdOnErrorDetail as AdOnErrorDetail,
-  _AdOnErrorEvent as AdOnErrorEvent,
-  _AdOnError as AdOnError,
-  _AdOnCloseEvent as AdOnCloseEvent,
-  _AdOnClose as AdOnClose,
-  _AdProps as AdProps,
   _Ad as Ad,
   _AdInstance as AdInstance,
+  _AdOnClose as AdOnClose,
+  _AdOnCloseEvent as AdOnCloseEvent,
+  _AdOnError as AdOnError,
+  _AdOnErrorDetail as AdOnErrorDetail,
+  _AdOnErrorEvent as AdOnErrorEvent,
+  _AdOnLoad as AdOnLoad,
+  _AdOnLoadEvent as AdOnLoadEvent,
+  _AdProps as AdProps,
 };
 
 declare global {

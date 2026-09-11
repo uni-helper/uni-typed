@@ -98,12 +98,12 @@ type _UniNoticeBar = DefineComponent<_UniNoticeBarProps>;
 type _UniNoticeBarInstance = InstanceType<_UniNoticeBar>;
 
 export type {
+  _UniNoticeBar as UniNoticeBar,
+  _UniNoticeBarInstance as UniNoticeBarInstance,
   _UniNoticeBarOnClick as UniNoticeBarOnClick,
   _UniNoticeBarOnClose as UniNoticeBarOnClose,
   _UniNoticeBarOnGetmore as UniNoticeBarOnGetmore,
   _UniNoticeBarProps as UniNoticeBarProps,
-  _UniNoticeBar as UniNoticeBar,
-  _UniNoticeBarInstance as UniNoticeBarInstance,
 };
 
 declare global {

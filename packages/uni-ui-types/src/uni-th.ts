@@ -38,6 +38,7 @@ type _UniThOnFilterChangeEvent =
 /** 筛选数据时触发 */
 type _UniThOnFilterChange = (event: _UniThOnFilterChangeEvent) => void;
 
+/** 表格表头属性 */
 type _UniThProps = Partial<{
   /**
    * 单元格宽度
@@ -79,21 +80,23 @@ type _UniThProps = Partial<{
   onFilterChange: _UniThOnFilterChange;
 }>;
 
+/** 表格表头 */
 type _UniTh = DefineComponent<_UniThProps>;
 
+/** 表格表头实例 */
 type _UniThInstance = InstanceType<_UniTh>;
 
 export type {
-  _UniThAlign as UniThAlign,
-  _UniThFilterType as UniThFilterType,
-  _UniThFilterData as UniThFilterData,
-  _UniThOnSortChangeEvent as UniThOnSortChangeEvent,
-  _UniThOnSortChange as UniThOnSortChange,
-  _UniThOnFilterChangeEvent as UniThOnFilterChangeEvent,
-  _UniThOnFilterChange as UniThOnFilterChange,
-  _UniThProps as UniThProps,
   _UniTh as UniTh,
+  _UniThAlign as UniThAlign,
+  _UniThFilterData as UniThFilterData,
+  _UniThFilterType as UniThFilterType,
   _UniThInstance as UniThInstance,
+  _UniThOnFilterChange as UniThOnFilterChange,
+  _UniThOnFilterChangeEvent as UniThOnFilterChangeEvent,
+  _UniThOnSortChange as UniThOnSortChange,
+  _UniThOnSortChangeEvent as UniThOnSortChangeEvent,
+  _UniThProps as UniThProps,
 };
 
 declare global {

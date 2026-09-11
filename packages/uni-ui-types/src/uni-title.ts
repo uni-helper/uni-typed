@@ -14,6 +14,7 @@ type _UniTitleType = "h1" | "h2" | "h3" | "h4" | "h5";
  */
 type _UniTitleAlign = "left" | "center" | "right";
 
+/** 章节标题属性 */
 type _UniTitleProps = Partial<{
   /** 标题类型 */
   type: _UniTitleType;
@@ -54,14 +55,15 @@ type _UniTitleProps = Partial<{
  */
 type _UniTitle = DefineComponent<_UniTitleProps>;
 
+/** 章节标题实例 */
 type _UniTitleInstance = InstanceType<_UniTitle>;
 
 export type {
-  _UniTitleType as UniTitleType,
-  _UniTitleAlign as UniTitleAlign,
-  _UniTitleProps as UniTitleProps,
   _UniTitle as UniTitle,
+  _UniTitleAlign as UniTitleAlign,
   _UniTitleInstance as UniTitleInstance,
+  _UniTitleProps as UniTitleProps,
+  _UniTitleType as UniTitleType,
 };
 
 declare global {

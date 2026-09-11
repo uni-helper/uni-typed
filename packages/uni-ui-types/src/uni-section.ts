@@ -71,14 +71,15 @@ type _UniSectionProps = Partial<{
 /** 标题栏 */
 type _UniSection = DefineComponent<_UniSectionProps>;
 
+/** 标题栏实例 */
 type _UniSectionInstance = InstanceType<_UniSection>;
 
 export type {
-  _UniSectionType as UniSectionType,
-  _UniSectionOnClick as UniSectionOnClick,
-  _UniSectionProps as UniSectionProps,
   _UniSection as UniSection,
   _UniSectionInstance as UniSectionInstance,
+  _UniSectionOnClick as UniSectionOnClick,
+  _UniSectionProps as UniSectionProps,
+  _UniSectionType as UniSectionType,
 };
 
 declare global {

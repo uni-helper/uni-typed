@@ -103,23 +103,23 @@ type _Editor = DefineComponent<_EditorProps>;
 type _EditorInstance = InstanceType<_Editor>;
 
 export type {
-  _EditorOnReadyEvent as EditorOnReadyEvent,
-  _EditorOnReady as EditorOnReady,
-  _EditorOnFocusDetail as EditorOnFocusDetail,
-  _EditorOnFocusEvent as EditorOnFocusEvent,
-  _EditorOnFocus as EditorOnFocus,
-  _EditorOnBlurDetail as EditorOnBlurDetail,
-  _EditorOnBlurEvent as EditorOnBlurEvent,
-  _EditorOnBlur as EditorOnBlur,
-  _EditorOnInputDetail as EditorOnInputDetail,
-  _EditorOnInputEvent as EditorOnInputEvent,
-  _EditorOnInput as EditorOnInput,
-  _EditorOnStatuschangeDetail as EditorOnStatuschangeDetail,
-  _EditorOnStatuschangeEvent as EditorOnStatuschangeEvent,
-  _EditorOnStatuschange as EditorOnStatuschange,
-  _EditorProps as EditorProps,
   _Editor as Editor,
   _EditorInstance as EditorInstance,
+  _EditorOnBlur as EditorOnBlur,
+  _EditorOnBlurDetail as EditorOnBlurDetail,
+  _EditorOnBlurEvent as EditorOnBlurEvent,
+  _EditorOnFocus as EditorOnFocus,
+  _EditorOnFocusDetail as EditorOnFocusDetail,
+  _EditorOnFocusEvent as EditorOnFocusEvent,
+  _EditorOnInput as EditorOnInput,
+  _EditorOnInputDetail as EditorOnInputDetail,
+  _EditorOnInputEvent as EditorOnInputEvent,
+  _EditorOnReady as EditorOnReady,
+  _EditorOnReadyEvent as EditorOnReadyEvent,
+  _EditorOnStatuschange as EditorOnStatuschange,
+  _EditorOnStatuschangeDetail as EditorOnStatuschangeDetail,
+  _EditorOnStatuschangeEvent as EditorOnStatuschangeEvent,
+  _EditorProps as EditorProps,
 };
 
 declare global {

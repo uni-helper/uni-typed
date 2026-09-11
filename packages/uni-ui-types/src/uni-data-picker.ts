@@ -28,10 +28,13 @@ interface _UniDataPickerSpaceInfo {
   endpoint?: string;
 }
 
+/** 绑定数据的值 */
 export type _UniDataPickerValue = string | number | boolean | null;
 
+/** 节点唯一标识 */
 export type _UniDataPickerKey = _UniDataPickerValue;
 
+/** 本地数据的节点 */
 interface _UniDataPickerLocaldataItem {
   /**
    * 节点唯一标识
@@ -125,6 +128,7 @@ type _UniDataPickerOnPopupopened = () => void;
 /** 弹出层关闭时触发 */
 type _UniDataPickerOnPopupclosed = () => void;
 
+/** 级联选择器属性 */
 type _UniDataPickerProps = Partial<{
   /** 绑定数据 */
   value: _UniDataPickerValue;
@@ -308,26 +312,26 @@ type _UniDataPicker = DefineComponent<_UniDataPickerProps>;
 type _UniDataPickerInstance = InstanceType<_UniDataPicker>;
 
 export type {
-  _UniDataPickerSpaceInfoProvider as UniDataPickerSpaceInfoProvider,
-  _UniDataPickerSpaceInfo as UniDataPickerSpaceInfo,
-  _UniDataPickerValue as UniDataPickerValue,
-  _UniDataPickerKey as UniDataPickerKey,
-  _UniDataPickerLocaldataItem as UniDataPickerLocaldataItem,
-  _UniDataPickerLocaldata as UniDataPickerLocaldata,
-  _UniDataPickerPageData as UniDataPickerPageData,
-  _UniDataPickerMap as UniDataPickerMap,
-  _UniDataPickerShow as UniDataPickerShow,
-  _UniDataPickerHide as UniDataPickerHide,
-  _UniDataPickerClear as UniDataPickerClear,
-  _UniDataPickerOnChangeDetail as UniDataPickerOnChangeDetail,
-  _UniDataPickerOnChange as UniDataPickerOnChange,
-  _UniDataPickerOnNodeclick as UniDataPickerOnNodeclick,
-  _UniDataPickerOnStepsearch as UniDataPickerOnStepsearch,
-  _UniDataPickerOnPopupopened as UniDataPickerOnPopupopened,
-  _UniDataPickerOnPopupclosed as UniDataPickerOnPopupclosed,
-  _UniDataPickerProps as UniDataPickerProps,
   _UniDataPicker as UniDataPicker,
+  _UniDataPickerClear as UniDataPickerClear,
+  _UniDataPickerHide as UniDataPickerHide,
   _UniDataPickerInstance as UniDataPickerInstance,
+  _UniDataPickerKey as UniDataPickerKey,
+  _UniDataPickerLocaldata as UniDataPickerLocaldata,
+  _UniDataPickerLocaldataItem as UniDataPickerLocaldataItem,
+  _UniDataPickerMap as UniDataPickerMap,
+  _UniDataPickerOnChange as UniDataPickerOnChange,
+  _UniDataPickerOnChangeDetail as UniDataPickerOnChangeDetail,
+  _UniDataPickerOnNodeclick as UniDataPickerOnNodeclick,
+  _UniDataPickerOnPopupclosed as UniDataPickerOnPopupclosed,
+  _UniDataPickerOnPopupopened as UniDataPickerOnPopupopened,
+  _UniDataPickerOnStepsearch as UniDataPickerOnStepsearch,
+  _UniDataPickerPageData as UniDataPickerPageData,
+  _UniDataPickerProps as UniDataPickerProps,
+  _UniDataPickerShow as UniDataPickerShow,
+  _UniDataPickerSpaceInfo as UniDataPickerSpaceInfo,
+  _UniDataPickerSpaceInfoProvider as UniDataPickerSpaceInfoProvider,
+  _UniDataPickerValue as UniDataPickerValue,
 };
 
 declare global {

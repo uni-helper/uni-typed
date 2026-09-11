@@ -101,12 +101,12 @@ type _UniRate = DefineComponent<_UniRateProps>;
 type _UniRateInstance = InstanceType<_UniRate>;
 
 export type {
-  _UniRateValue as UniRateValue,
-  _UniRateOnChangeEvent as UniRateOnChangeEvent,
-  _UniRateOnChange as UniRateOnChange,
-  _UniRateProps as UniRateProps,
   _UniRate as UniRate,
   _UniRateInstance as UniRateInstance,
+  _UniRateOnChange as UniRateOnChange,
+  _UniRateOnChangeEvent as UniRateOnChangeEvent,
+  _UniRateProps as UniRateProps,
+  _UniRateValue as UniRateValue,
 };
 
 declare global {

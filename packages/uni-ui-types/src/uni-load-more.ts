@@ -54,6 +54,7 @@ type _UniLoadMoreOnClickLoadMore = (
   event: _UniLoadMoreOnClickLoadMoreEvent,
 ) => void;
 
+/** 加载更多属性 */
 type _UniLoadMoreProps = Partial<{
   /**
    * 图标大小
@@ -114,18 +115,19 @@ type _UniLoadMoreProps = Partial<{
 /** 用于列表中，做滚动加载使用，展示 loading 的各种状态 */
 type _UniLoadMore = DefineComponent<_UniLoadMoreProps>;
 
+/** 加载更多实例 */
 type _UniLoadMoreInstance = InstanceType<_UniLoadMore>;
 
 export type {
-  _UniLoadMoreStatus as UniLoadMoreStatus,
-  _UniLoadMoreIconType as UniLoadMoreIconType,
+  _UniLoadMore as UniLoadMore,
   _UniLoadMoreContentText as UniLoadMoreContentText,
+  _UniLoadMoreIconType as UniLoadMoreIconType,
+  _UniLoadMoreInstance as UniLoadMoreInstance,
+  _UniLoadMoreOnClickLoadMore as UniLoadMoreOnClickLoadMore,
   _UniLoadMoreOnClickLoadMoreDetail as UniLoadMoreOnClickLoadMoreDetail,
   _UniLoadMoreOnClickLoadMoreEvent as UniLoadMoreOnClickLoadMoreEvent,
-  _UniLoadMoreOnClickLoadMore as UniLoadMoreOnClickLoadMore,
   _UniLoadMoreProps as UniLoadMoreProps,
-  _UniLoadMore as UniLoadMore,
-  _UniLoadMoreInstance as UniLoadMoreInstance,
+  _UniLoadMoreStatus as UniLoadMoreStatus,
 };
 
 declare global {

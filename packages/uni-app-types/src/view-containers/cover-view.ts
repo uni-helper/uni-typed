@@ -27,9 +27,9 @@ type _CoverView = DefineComponent<_CoverViewProps>;
 type _CoverViewInstance = InstanceType<_CoverView>;
 
 export type {
-  _CoverViewProps as CoverViewProps,
   _CoverView as CoverView,
   _CoverViewInstance as CoverViewInstance,
+  _CoverViewProps as CoverViewProps,
 };
 
 declare global {

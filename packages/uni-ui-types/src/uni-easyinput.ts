@@ -144,6 +144,7 @@ type _UniEasyinputOnIconClick = (position: _UniEasyinputIconPosition) => void;
 /** 输入框失去焦点或用户按下回车时触发 */
 type _UniEasyinputOnChange = (value: _UniEasyinputValue) => void;
 
+/** 增强输入框属性 */
 type _UniEasyinputProps = Partial<{
   /** 名称 */
   name: string;
@@ -318,6 +319,7 @@ type _UniEasyinputProps = Partial<{
 /** 对原生 input 组件的增强 */
 type _UniEasyinput = DefineComponent<_UniEasyinputProps>;
 
+/** 增强输入框实例 */
 type _UniEasyinputInstance = InstanceType<_UniEasyinput>;
 
 export type {

@@ -195,15 +195,15 @@ type _NavigationBar = DefineComponent<_NavigationBarProps>;
 type _NavigationBarInstance = InstanceType<_NavigationBar>;
 
 export type {
-  _NavigationBarSubtitleOverflow as NavigationBarSubtitleOverflow,
-  _NavigationBarTitleAlign as NavigationBarTitleAlign,
+  _NavigationBar as NavigationBar,
   _NavigationBarBackgroundRepeat as NavigationBarBackgroundRepeat,
   _NavigationBarBlurEffect as NavigationBarBlurEffect,
-  _NavigationFrontColor as NavigationFrontColor,
   _NavigationBarColorAnimationTimingFunc as NavigationBarColorAnimationTimingFunc,
-  _NavigationBarProps as NavigationBarProps,
-  _NavigationBar as NavigationBar,
   _NavigationBarInstance as NavigationBarInstance,
+  _NavigationBarProps as NavigationBarProps,
+  _NavigationBarSubtitleOverflow as NavigationBarSubtitleOverflow,
+  _NavigationBarTitleAlign as NavigationBarTitleAlign,
+  _NavigationFrontColor as NavigationFrontColor,
 };
 
 declare global {

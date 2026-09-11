@@ -94,6 +94,7 @@ type _UniFabOnTrigger = (event: _UniFabOnTriggerEvent) => void;
 /** 悬浮按钮点击事件 */
 type _UniFabOnFabClick = () => void;
 
+/** 悬浮按钮属性 */
 type _UniFabProps = Partial<{
   /** 可选样式配置项 */
   pattern: _UniFabPattern;
@@ -144,21 +145,22 @@ type _UniFabProps = Partial<{
 /** 点击可展开一个图形按钮菜单 */
 type _UniFab = DefineComponent<_UniFabProps>;
 
+/** 悬浮按钮实例 */
 type _UniFabInstance = InstanceType<_UniFab>;
 
 export type {
-  _UniFabPattern as UniFabPattern,
-  _UniFabHorizontal as UniFabHorizontal,
-  _UniFabVertical as UniFabVertical,
-  _UniFabDirection as UniFabDirection,
-  _UniFabContentItem as UniFabContentItem,
-  _UniFabContent as UniFabContent,
-  _UniFabOnTriggerEvent as UniFabOnTriggerEvent,
-  _UniFabOnTrigger as UniFabOnTrigger,
-  _UniFabOnFabClick as UniFabOnFabClick,
-  _UniFabProps as UniFabProps,
   _UniFab as UniFab,
+  _UniFabContent as UniFabContent,
+  _UniFabContentItem as UniFabContentItem,
+  _UniFabDirection as UniFabDirection,
+  _UniFabHorizontal as UniFabHorizontal,
   _UniFabInstance as UniFabInstance,
+  _UniFabOnFabClick as UniFabOnFabClick,
+  _UniFabOnTrigger as UniFabOnTrigger,
+  _UniFabOnTriggerEvent as UniFabOnTriggerEvent,
+  _UniFabPattern as UniFabPattern,
+  _UniFabProps as UniFabProps,
+  _UniFabVertical as UniFabVertical,
 };
 
 declare global {

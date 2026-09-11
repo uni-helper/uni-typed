@@ -16,6 +16,7 @@ type _UniFormsItemSetRules = (rules: _UniFormsItemRules) => void;
 /** 校验子表单 */
 type _UniFormsItemOnFieldChange = (value: any) => void;
 
+/** 表单域属性 */
 type _UniFormsItemProps = Partial<{
   /** 表单域的属性名，在使用校验规则时必填 */
   name: string | string[];
@@ -55,19 +56,21 @@ type _UniFormsItemProps = Partial<{
   onFieldChange: _UniFormsItemOnFieldChange;
 }>;
 
+/** 表单域 */
 type _UniFormsItem = DefineComponent<_UniFormsItemProps>;
 
+/** 表单域实例 */
 type _UniFormsItemInstance = InstanceType<_UniFormsItem>;
 
 export type {
-  _UniFormsItemRulesRule as UniFormsItemRulesRule,
-  _UniFormsItemRules as UniFormsItemRules,
-  _UniFormsItemLabelAlign as UniFormsItemLabelAlign,
-  _UniFormsItemSetRules as UniFormsItemSetRules,
-  _UniFormsItemOnFieldChange as UniFormsItemOnFieldChange,
-  _UniFormsItemProps as UniFormsItemProps,
   _UniFormsItem as UniFormsItem,
   _UniFormsItemInstance as UniFormsItemInstance,
+  _UniFormsItemLabelAlign as UniFormsItemLabelAlign,
+  _UniFormsItemOnFieldChange as UniFormsItemOnFieldChange,
+  _UniFormsItemProps as UniFormsItemProps,
+  _UniFormsItemRules as UniFormsItemRules,
+  _UniFormsItemRulesRule as UniFormsItemRulesRule,
+  _UniFormsItemSetRules as UniFormsItemSetRules,
 };
 
 declare global {

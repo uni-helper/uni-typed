@@ -51,11 +51,11 @@ type _UniGroup = DefineComponent<_UniGroupProps>;
 type _UniGroupInstance = InstanceType<_UniGroup>;
 
 export type {
+  _UniGroup as UniGroup,
+  _UniGroupInstance as UniGroupInstance,
   _UniGroupMode as UniGroupMode,
   _UniGroupOnClick as UniGroupOnClick,
   _UniGroupProps as UniGroupProps,
-  _UniGroup as UniGroup,
-  _UniGroupInstance as UniGroupInstance,
 };
 
 declare global {

@@ -99,18 +99,18 @@ type _PageMeta = DefineComponent<_PageMetaProps>;
 type _PageMetaInstance = InstanceType<_PageMeta>;
 
 export type {
+  _PageMeta as PageMeta,
   _PageMetaBackgroundTextStyle as PageMetaBackgroundTextStyle,
+  _PageMetaInstance as PageMetaInstance,
+  _PageMetaOnResize as PageMetaOnResize,
   _PageMetaOnResizeDetail as PageMetaOnResizeDetail,
   _PageMetaOnResizeEvent as PageMetaOnResizeEvent,
-  _PageMetaOnResize as PageMetaOnResize,
-  _PageMetaOnScrollDetail as PageMetaOnScrollDetail,
-  _PageMetaOnScrollEvent as PageMetaOnScrollEvent,
   _PageMetaOnScroll as PageMetaOnScroll,
-  _PageMetaOnScrolldoneEvent as PageMetaOnScrolldoneEvent,
+  _PageMetaOnScrollDetail as PageMetaOnScrollDetail,
   _PageMetaOnScrolldone as PageMetaOnScrolldone,
+  _PageMetaOnScrolldoneEvent as PageMetaOnScrolldoneEvent,
+  _PageMetaOnScrollEvent as PageMetaOnScrollEvent,
   _PageMetaProps as PageMetaProps,
-  _PageMeta as PageMeta,
-  _PageMetaInstance as PageMetaInstance,
 };
 
 declare global {

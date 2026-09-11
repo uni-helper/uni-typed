@@ -74,16 +74,16 @@ type _RichText = DefineComponent<_RichTextProps>;
 type _RichTextInstance = InstanceType<_RichText>;
 
 export type {
-  _RichTextSpace as RichTextSpace,
-  _RichTextTextNode as RichTextTextNode,
-  _RichTextNodeNode as RichTextNodeNode,
-  _RichTextNode as RichTextNode,
-  _RichTextNodes as RichTextNodes,
-  _RichTextOnItemclickEvent as RichTextOnItemclickEvent,
-  _RichTextOnItemclick as RichTextOnItemclick,
-  _RichTextProps as RichTextProps,
   _RichText as RichText,
   _RichTextInstance as RichTextInstance,
+  _RichTextNode as RichTextNode,
+  _RichTextNodeNode as RichTextNodeNode,
+  _RichTextNodes as RichTextNodes,
+  _RichTextOnItemclick as RichTextOnItemclick,
+  _RichTextOnItemclickEvent as RichTextOnItemclickEvent,
+  _RichTextProps as RichTextProps,
+  _RichTextSpace as RichTextSpace,
+  _RichTextTextNode as RichTextTextNode,
 };
 
 declare global {

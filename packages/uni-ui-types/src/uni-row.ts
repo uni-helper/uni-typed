@@ -48,11 +48,11 @@ type _UniRow = DefineComponent<_UniRowProps>;
 type _UniRowInstance = InstanceType<_UniRow>;
 
 export type {
-  _UniRowJustify as UniRowJustify,
-  _UniRowAlign as UniRowAlign,
-  _UniRowProps as UniRowProps,
   _UniRow as UniRow,
+  _UniRowAlign as UniRowAlign,
   _UniRowInstance as UniRowInstance,
+  _UniRowJustify as UniRowJustify,
+  _UniRowProps as UniRowProps,
 };
 
 declare global {

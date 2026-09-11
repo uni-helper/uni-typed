@@ -51,9 +51,9 @@ type _UniLink = DefineComponent<_UniLinkProps>;
 type _UniLinkInstance = InstanceType<_UniLink>;
 
 export type {
-  _UniLinkProps as UniLinkProps,
   _UniLink as UniLink,
   _UniLinkInstance as UniLinkInstance,
+  _UniLinkProps as UniLinkProps,
 };
 
 declare global {

@@ -115,14 +115,14 @@ interface _TouchCanvasEvent<
 }
 
 export type {
-  _EventTarget as EventTarget,
   _BaseEvent as BaseEvent,
-  _CustomEvent as CustomEvent,
-  _TouchDetail as TouchDetail,
-  _TouchCanvasDetail as TouchCanvasDetail,
   _BaseTouchEvent as BaseTouchEvent,
-  _TouchEvent as TouchEvent,
+  _CustomEvent as CustomEvent,
+  _EventTarget as EventTarget,
+  _TouchCanvasDetail as TouchCanvasDetail,
   _TouchCanvasEvent as TouchCanvasEvent,
+  _TouchDetail as TouchDetail,
+  _TouchEvent as TouchEvent,
 };
 
 declare global {

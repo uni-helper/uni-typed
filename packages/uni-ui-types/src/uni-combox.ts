@@ -49,11 +49,11 @@ type _UniCombox = DefineComponent<_UniComboxProps>;
 type _UniComboxInstance = InstanceType<_UniCombox>;
 
 export type {
-  _UniComboxValue as UniComboxValue,
-  _UniComboxOnInput as UniComboxOnInput,
-  _UniComboxProps as UniComboxProps,
   _UniCombox as UniCombox,
   _UniComboxInstance as UniComboxInstance,
+  _UniComboxOnInput as UniComboxOnInput,
+  _UniComboxProps as UniComboxProps,
+  _UniComboxValue as UniComboxValue,
 };
 
 declare global {

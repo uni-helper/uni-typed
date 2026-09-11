@@ -11,6 +11,7 @@ import type { DefineComponent } from "vue";
  */
 type _UniCollapseItemTitleBorder = "auto" | "none" | "show";
 
+/** 折叠面板项属性 */
 type _UniCollapseItemProps = Partial<{
   /**
    * 唯一标志符
@@ -68,8 +69,10 @@ type _UniCollapseItemProps = Partial<{
   showArrow: boolean;
 }>;
 
+/** 折叠面板项 */
 type _UniCollapseItem = DefineComponent<_UniCollapseItemProps>;
 
+/** 折叠面板项实例 */
 type _UniCollapseItemInstance = InstanceType<_UniCollapseItem>;
 
 export type {

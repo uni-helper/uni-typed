@@ -19,6 +19,7 @@ interface _UniFavContentText {
 /** 点击触发 */
 type _UniFavOnClick = () => void;
 
+/** 收藏按钮属性 */
 type _UniFavProps = Partial<{
   /**
    * 按钮是否带星
@@ -71,14 +72,15 @@ type _UniFavProps = Partial<{
 /** 用于收藏功能，可点击切换选中、不选中的状态 */
 type _UniFav = DefineComponent<_UniFavProps>;
 
+/** 收藏按钮实例 */
 type _UniFavInstance = InstanceType<_UniFav>;
 
 export type {
+  _UniFav as UniFav,
   _UniFavContentText as UniFavContentText,
+  _UniFavInstance as UniFavInstance,
   _UniFavOnClick as UniFavOnClick,
   _UniFavProps as UniFavProps,
-  _UniFav as UniFav,
-  _UniFavInstance as UniFavInstance,
 };
 
 declare global {

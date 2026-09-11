@@ -140,14 +140,14 @@ type _UniBadge = DefineComponent<_UniBadgeProps>;
 type _UniBadgeInstance = InstanceType<_UniBadge>;
 
 export type {
-  _UniBadgeType as UniBadgeType,
-  _UniBadgeSize as UniBadgeSize,
-  _UniBadgeCustomStyle as UniBadgeCustomStyle,
+  _UniBadge as UniBadge,
   _UniBadgeAbsolute as UniBadgeAbsolute,
+  _UniBadgeCustomStyle as UniBadgeCustomStyle,
+  _UniBadgeInstance as UniBadgeInstance,
   _UniBadgeOnClick as UniBadgeOnClick,
   _UniBadgeProps as UniBadgeProps,
-  _UniBadge as UniBadge,
-  _UniBadgeInstance as UniBadgeInstance,
+  _UniBadgeSize as UniBadgeSize,
+  _UniBadgeType as UniBadgeType,
 };
 
 declare global {

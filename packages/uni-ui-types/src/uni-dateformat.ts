@@ -87,11 +87,11 @@ type _UniDateformat = DefineComponent<_UniDateformatProps>;
 type _UniDateformatInstance = InstanceType<_UniDateformat>;
 
 export type {
-  _UniDateformatLocale as UniDateformatLocale,
-  _UniDateformatData as UniDateformatData,
-  _UniDateformatProps as UniDateformatProps,
   _UniDateformat as UniDateformat,
+  _UniDateformatData as UniDateformatData,
   _UniDateformatInstance as UniDateformatInstance,
+  _UniDateformatLocale as UniDateformatLocale,
+  _UniDateformatProps as UniDateformatProps,
 };
 
 declare global {

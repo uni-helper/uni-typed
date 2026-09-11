@@ -1,5 +1,6 @@
 import type { DefineComponent } from "vue";
 
+/** 被点击的卡片区域 */
 type _UniCardOnClickType = "cover" | "title" | "extra" | "content" | "actions";
 
 /** 点击事件 */
@@ -22,7 +23,7 @@ type _UniCardProps = Partial<{
   /**
    * 封面图，支持网络图片和本地图片
    *
-   * 本图片需要传入绝对路径
+   * 本地图片需要传入绝对路径
    */
   cover: string;
   /**
@@ -88,11 +89,11 @@ type _UniCard = DefineComponent<_UniCardProps>;
 type _UniCardInstance = InstanceType<_UniCard>;
 
 export type {
-  _UniCardOnClickType as UniCardOnClickType,
-  _UniCardOnClick as UniCardOnClick,
-  _UniCardProps as UniCardProps,
   _UniCard as UniCard,
   _UniCardInstance as UniCardInstance,
+  _UniCardOnClick as UniCardOnClick,
+  _UniCardOnClickType as UniCardOnClickType,
+  _UniCardProps as UniCardProps,
 };
 
 declare global {

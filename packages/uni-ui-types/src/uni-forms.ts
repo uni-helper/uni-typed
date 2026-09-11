@@ -10,6 +10,7 @@ type _UniFormsFormat =
   | "url"
   | "email";
 
+/** 通用回调函数 */
 type _UniFormsCallback = (...args: any) => any;
 
 /**
@@ -53,7 +54,7 @@ interface _UniFormsRulesRule {
   minLength?: number;
   /** 校验数据最大长度 */
   maxLength?: number;
-  /** 校验失败提示信息语 */
+  /** 校验失败提示信息 */
   errorMessage?: string;
   /** 自定义校验规则 */
   validateFunction?: _UniFormsValidateFunction;
@@ -193,23 +194,23 @@ type _UniForms = DefineComponent<_UniFormsProps>;
 type _UniFormsInstance = InstanceType<_UniForms>;
 
 export type {
-  _UniFormsFormat as UniFormsFormat,
+  _UniForms as UniForms,
   _UniFormsCallback as UniFormsCallback,
-  _UniFormsValidateFunction as UniFormsValidateFunction,
-  _UniFormsRulesRule as UniFormsRulesRule,
-  _UniFormsRules as UniFormsRules,
-  _UniFormsValidateTrigger as UniFormsValidateTrigger,
-  _UniFormsLabelPosition as UniFormsLabelPosition,
-  _UniFormsLabelAlign as UniFormsLabelAlign,
+  _UniFormsClearValidate as UniFormsClearValidate,
   _UniFormsErrShowType as UniFormsErrShowType,
+  _UniFormsFormat as UniFormsFormat,
+  _UniFormsInstance as UniFormsInstance,
+  _UniFormsLabelAlign as UniFormsLabelAlign,
+  _UniFormsLabelPosition as UniFormsLabelPosition,
+  _UniFormsOnValidate as UniFormsOnValidate,
+  _UniFormsProps as UniFormsProps,
+  _UniFormsRules as UniFormsRules,
+  _UniFormsRulesRule as UniFormsRulesRule,
   _UniFormsSetRules as UniFormsSetRules,
   _UniFormsValidate as UniFormsValidate,
   _UniFormsValidateField as UniFormsValidateField,
-  _UniFormsClearValidate as UniFormsClearValidate,
-  _UniFormsOnValidate as UniFormsOnValidate,
-  _UniFormsProps as UniFormsProps,
-  _UniForms as UniForms,
-  _UniFormsInstance as UniFormsInstance,
+  _UniFormsValidateFunction as UniFormsValidateFunction,
+  _UniFormsValidateTrigger as UniFormsValidateTrigger,
 };
 
 declare global {
