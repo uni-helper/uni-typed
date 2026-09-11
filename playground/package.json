@@ -41,7 +41,7 @@
     "dev:quickapp-webview": "uni -p quickapp-webview",
     "dev:quickapp-webview-huawei": "uni -p quickapp-webview-huawei",
     "dev:quickapp-webview-union": "uni -p quickapp-webview-union",
-    "type-check": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@dcloudio/uni-app": "catalog:",
