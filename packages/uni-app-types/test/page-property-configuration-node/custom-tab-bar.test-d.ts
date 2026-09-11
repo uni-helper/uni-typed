@@ -2,8 +2,8 @@ import type {
   CustomTabBar,
   CustomTabBarDirection,
   CustomTabBarInstance,
-  CustomTabBarOnTabItemTap,
-  CustomTabBarOnTabItemTapDetail,
+  CustomTabBarOnOnTabItemTap,
+  CustomTabBarOnOnTabItemTapDetail,
   CustomTabBarProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
@@ -13,11 +13,11 @@ describe("CustomTabBar", () => {
   expectTypeOf<CustomTabBarDirection>().toBeString();
   expectTypeOf<CustomTabBarDirection>().toEqualTypeOf<UniHelper.CustomTabBarDirection>();
 
-  expectTypeOf<CustomTabBarOnTabItemTapDetail>().toBeObject();
-  expectTypeOf<CustomTabBarOnTabItemTapDetail>().toEqualTypeOf<UniHelper.CustomTabBarOnTabItemTapDetail>();
+  expectTypeOf<CustomTabBarOnOnTabItemTapDetail>().toBeObject();
+  expectTypeOf<CustomTabBarOnOnTabItemTapDetail>().toEqualTypeOf<UniHelper.CustomTabBarOnOnTabItemTapDetail>();
 
-  expectTypeOf<CustomTabBarOnTabItemTap>().toBeFunction();
-  expectTypeOf<CustomTabBarOnTabItemTap>().toEqualTypeOf<UniHelper.CustomTabBarOnTabItemTap>();
+  expectTypeOf<CustomTabBarOnOnTabItemTap>().toBeFunction();
+  expectTypeOf<CustomTabBarOnOnTabItemTap>().toEqualTypeOf<UniHelper.CustomTabBarOnOnTabItemTap>();
 
   expectTypeOf<CustomTabBarProps>().toBeObject();
   expectTypeOf<CustomTabBarProps>().toEqualTypeOf<UniHelper.CustomTabBarProps>();
