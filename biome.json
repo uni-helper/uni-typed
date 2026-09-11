@@ -25,7 +25,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
         "noExplicitAny": "off"
       },
@@ -45,7 +45,8 @@
         "rules": {
           "style": {
             "useConst": "off",
-            "useImportType": "off"
+            "useImportType": "off",
+            "useVueMultiWordComponentNames": "off"
           },
           "correctness": {
             "noUnusedVariables": "off",

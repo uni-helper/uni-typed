@@ -33,19 +33,17 @@
     "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "build:h5": "pnpm build && pnpm -C playground run build:h5",
     "build:mp-weixin": "pnpm build && pnpm -C playground run build:mp-weixin",
-    "check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
-    "dev": "pnpm stub",
+    "check": "biome check --no-errors-on-unmatched --files-ignore-unknown=true",
+    "dev": "pnpm -r --filter=./packages/* --parallel run dev",
     "docs:build": "pnpm -C docs run build",
     "docs:dev": "pnpm -C docs run dev",
     "docs:preview": "pnpm -C docs run preview",
-    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true",
+    "fix": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
     "play:h5": "pnpm dev && pnpm -C playground run dev:h5",
     "play:mp-weixin": "pnpm dev && pnpm -C playground run dev:mp-weixin",
-    "prepare": "is-ci || lefthook install",
     "release": "lerna version",
-    "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "test": "vitest run --typecheck",
-    "type-check": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
@@ -54,8 +52,6 @@
     "@lerna-lite/version": "catalog:",
     "@types/node": "catalog:",
     "conventional-changelog-conventionalcommits": "catalog:",
-    "is-ci": "catalog:",
-    "lefthook": "catalog:",
     "rimraf": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
@@ -64,5 +60,17 @@
     "vitest": "catalog:",
     "vue-tsc": "catalog:"
   },
-  "packageManager": "pnpm@10.34.4"
+  "packageManager": "pnpm@12.3.4",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26",
+      "onFail": "warn"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.3.4",
+      "onFail": "warn"
+    }
+  }
 }

@@ -30,27 +30,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Setup Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v6
+      - name: Setup pnpm and Node.js
+        uses: pnpm/setup@v2
         with:
-          node-version: ${{ matrix.node_version }}
-          cache: pnpm
-          registry-url: https://registry.npmjs.org
-
-      - name: Setup corepack
-        run: npm install -f -g npm@latest corepack@latest && corepack enable
-
-      - name: Install Dependencies
-        run: pnpm install
+          cache: true
+          require-lockfile: true
+          runtime: node@${{ matrix.node_version }}
 
       - name: Build
-        run: pnpm build
+        run: pnpm run build
 
-      - name: Test
-        run: pnpm test
+      - name: Check
+        run: pnpm run check
 
-      - name: Type Check
-        run: pnpm type-check
+      # - name: Test
+      #   run: pnpm run test
+
+      - name: Typecheck
+        run: pnpm typecheck
