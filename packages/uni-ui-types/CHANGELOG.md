@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/uni-helper/uni-typed/compare/v1.2.0...v1.3.0) (2026-09-11)
+
+### Bug Fixes
+
+* **types:** correct custom-tab-bar exports and remove dead doc links ([93ed474](https://github.com/uni-helper/uni-typed/commit/93ed4747f2189dc8f86b9d607da61e916b55dc37)) - by @ModyQyW
+
 ## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
 
 ### Bug Fixes

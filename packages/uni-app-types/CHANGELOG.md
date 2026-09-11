@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/uni-helper/uni-typed/compare/v1.2.0...v1.3.0) (2026-09-11)
+
+### Bug Fixes
+
+* **types:** correct custom-tab-bar exports and remove dead doc links ([93ed474](https://github.com/uni-helper/uni-typed/commit/93ed4747f2189dc8f86b9d607da61e916b55dc37)) - by @ModyQyW
+* **types:** correct custom-tab-bar types ([432ab5b](https://github.com/uni-helper/uni-typed/commit/432ab5baef0f20e187320bb58500bdf39d643363)) - by @
+* **uni-app-types:** add missing props and correct type definitions ([8dc3ef5](https://github.com/uni-helper/uni-typed/commit/8dc3ef580ccbe3fcd8aa7c311fb746b24528ae0a)) - by @ModyQyW
+
 ## [1.1.0](https://github.com/uni-helper/uni-typed/compare/v1.0.1...v1.1.0) (2026-06-26)
 
 ### Bug Fixes
