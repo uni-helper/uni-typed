@@ -47,6 +47,12 @@ type _AdRewardedVideoProps = CommonProps &
      * 默认为 `false`
      */
     loadnext: boolean;
+    /**
+     * 是否禁用默认点击行为
+     *
+     * 默认为 `false`
+     */
+    disabled: boolean;
     /** 服务器回调透传数据 */
     urlCallback: _AdRewardedVideoUrlCallback;
     /** 广告加载成功的回调 */
@@ -64,17 +70,17 @@ type _AdRewardedVideo = DefineComponent<_AdRewardedVideoProps>;
 type _AdRewardedVideoInstance = InstanceType<_AdRewardedVideo>;
 
 export type {
-  _AdRewardedVideoUrlCallback as AdRewardedVideoUrlCallback,
-  _AdRewardedVideoOnLoadEvent as AdRewardedVideoOnLoadEvent,
-  _AdRewardedVideoOnLoad as AdRewardedVideoOnLoad,
-  _AdRewardedVideoOnErrorDetail as AdRewardedVideoOnErrorDetail,
-  _AdRewardedVideoOnErrorEvent as AdRewardedVideoOnErrorEvent,
-  _AdRewardedVideoOnError as AdRewardedVideoOnError,
-  _AdRewardedVideoOnCloseEvent as AdRewardedVideoOnCloseEvent,
-  _AdRewardedVideoOnClose as AdRewardedVideoOnClose,
-  _AdRewardedVideoProps as AdRewardedVideoProps,
   _AdRewardedVideo as AdRewardedVideo,
   _AdRewardedVideoInstance as AdRewardedVideoInstance,
+  _AdRewardedVideoOnClose as AdRewardedVideoOnClose,
+  _AdRewardedVideoOnCloseEvent as AdRewardedVideoOnCloseEvent,
+  _AdRewardedVideoOnError as AdRewardedVideoOnError,
+  _AdRewardedVideoOnErrorDetail as AdRewardedVideoOnErrorDetail,
+  _AdRewardedVideoOnErrorEvent as AdRewardedVideoOnErrorEvent,
+  _AdRewardedVideoOnLoad as AdRewardedVideoOnLoad,
+  _AdRewardedVideoOnLoadEvent as AdRewardedVideoOnLoadEvent,
+  _AdRewardedVideoProps as AdRewardedVideoProps,
+  _AdRewardedVideoUrlCallback as AdRewardedVideoUrlCallback,
 };
 
 declare global {

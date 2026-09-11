@@ -534,7 +534,7 @@ type _LivePusherProps = CommonProps &
     /** 进入后台时推流的等待画面 */
     waitingImage: string;
     /** 等待画面资源的 MD5 值 */
-    waitingImageMd5: string;
+    waitingImageHash: string;
     /**
      * 是否调整焦距
      *
@@ -648,35 +648,35 @@ type _LivePusher = DefineComponent<_LivePusherProps>;
 type _LivePusherInstance = InstanceType<_LivePusher>;
 
 export type {
-  _LivePusherMode as LivePusherMode,
-  _LivePusherOrientation as LivePusherOrientation,
+  _LivePusher as LivePusher,
   _LivePusherAudioQuality as LivePusherAudioQuality,
-  _LivePusherDevicePosition as LivePusherDevicePosition,
-  _LivePusherLocalMirror as LivePusherLocalMirror,
   _LivePusherAudioReverbType as LivePusherAudioReverbType,
   _LivePusherAudioVolumeType as LivePusherAudioVolumeType,
   _LivePusherCode as LivePusherCode,
+  _LivePusherDevicePosition as LivePusherDevicePosition,
   _LivePusherInfo as LivePusherInfo,
-  _LiverPusherErrCode as LiverPusherErrCode,
-  _LivePusherOnStatechangeDetail as LivePusherOnStatechangeDetail,
-  _LivePusherOnStatechangeEvent as LivePusherOnStatechangeEvent,
-  _LivePusherOnStatechange as LivePusherOnStatechange,
-  _LivePusherOnNetstatusDetail as LivePusherOnNetstatusDetail,
-  _LivePusherOnNetstatusEvent as LivePusherOnNetstatusEvent,
-  _LivePusherOnNetstatus as LivePusherOnNetstatus,
-  _LivePusherOnErrorDetail as LivePusherOnErrorDetail,
-  _LivePusherOnErrorEvent as LivePusherOnErrorEvent,
-  _LivePusherOnError as LivePusherOnError,
-  _LivePusherOnBgmstartEvent as LivePusherOnBgmstartEvent,
-  _LivePusherOnBgmstart as LivePusherOnBgmstart,
+  _LivePusherInstance as LivePusherInstance,
+  _LivePusherLocalMirror as LivePusherLocalMirror,
+  _LivePusherMode as LivePusherMode,
+  _LivePusherOnBgmcomplete as LivePusherOnBgmcomplete,
+  _LivePusherOnBgmcompleteEvent as LivePusherOnBgmcompleteEvent,
+  _LivePusherOnBgmprogress as LivePusherOnBgmprogress,
   _LivePusherOnBgmprogressDetail as LivePusherOnBgmprogressDetail,
   _LivePusherOnBgmprogressEvent as LivePusherOnBgmprogressEvent,
-  _LivePusherOnBgmprogress as LivePusherOnBgmprogress,
-  _LivePusherOnBgmcompleteEvent as LivePusherOnBgmcompleteEvent,
-  _LivePusherOnBgmcomplete as LivePusherOnBgmcomplete,
+  _LivePusherOnBgmstart as LivePusherOnBgmstart,
+  _LivePusherOnBgmstartEvent as LivePusherOnBgmstartEvent,
+  _LivePusherOnError as LivePusherOnError,
+  _LivePusherOnErrorDetail as LivePusherOnErrorDetail,
+  _LivePusherOnErrorEvent as LivePusherOnErrorEvent,
+  _LivePusherOnNetstatus as LivePusherOnNetstatus,
+  _LivePusherOnNetstatusDetail as LivePusherOnNetstatusDetail,
+  _LivePusherOnNetstatusEvent as LivePusherOnNetstatusEvent,
+  _LivePusherOnStatechange as LivePusherOnStatechange,
+  _LivePusherOnStatechangeDetail as LivePusherOnStatechangeDetail,
+  _LivePusherOnStatechangeEvent as LivePusherOnStatechangeEvent,
+  _LivePusherOrientation as LivePusherOrientation,
   _LivePusherProps as LivePusherProps,
-  _LivePusher as LivePusher,
-  _LivePusherInstance as LivePusherInstance,
+  _LiverPusherErrCode as LiverPusherErrCode,
 };
 
 declare global {

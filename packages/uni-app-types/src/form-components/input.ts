@@ -69,7 +69,7 @@ type _InputTextContentType = "oneTimeCode";
  *
  * Type="text" 时有效
  *
- * @decs done 完成
+ * done 完成
  */
 type _InputConfirmType = "send" | "search" | "next" | "go" | "done";
 
@@ -90,7 +90,7 @@ type _InputConfirmType = "send" | "search" | "next" | "go" | "done";
  *
  * Email 邮件地址输入键盘，表单内邮件地址输入框应使用 type="email"
  *
- * Url 网址输入键盘，表单内网址输入因 type="url"
+ * Url 网址输入键盘，表单内网址输入框应使用 type="url"
  */
 type _InputInputMode =
   | "none"
@@ -283,7 +283,7 @@ type _InputProps = CommonProps &
      *
      * 默认为 done
      *
-     * @decs done 完成
+     * done 完成
      */
     confirmType: _InputConfirmType;
     /**
@@ -294,6 +294,12 @@ type _InputProps = CommonProps &
     confirmHold: boolean;
     /** 指定 focus 时的光标位置 */
     cursor: number;
+    /**
+     * 光标颜色
+     *
+     * 仅微信小程序 3.1.0+、H5(4.0+)、App-Vue(4.0+) 支持
+     */
+    cursorColor: string;
     /**
      * 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用
      *
@@ -392,9 +398,9 @@ type _InputProps = CommonProps &
      *
      * Email 邮件地址输入键盘，表单内邮件地址输入框应使用 type="email"
      *
-     * Url 网址输入键盘，表单内网址输入因 type="url"
+     * Url 网址输入键盘，表单内网址输入框应使用 type="url"
      */
-    inputMode: _InputInputMode;
+    inputmode: _InputInputMode;
     /** 输入时触发 */
     onInput: _InputOnInput;
     /** 聚焦时触发 */
@@ -497,7 +503,7 @@ declare global {
      *
      * Type="text" 时有效
      *
-     * @decs done 完成
+     * done 完成
      */
     export type InputConfirmType = _InputConfirmType;
     /**
@@ -517,7 +523,7 @@ declare global {
      *
      * Email 邮件地址输入键盘，表单内邮件地址输入框应使用 type="email"
      *
-     * Url 网址输入键盘，表单内网址输入因 type="url"
+     * Url 网址输入键盘，表单内网址输入框应使用 type="url"
      */
     export type InputInputMode = _InputInputMode;
     export interface InputOnInputDetail extends _InputOnInputDetail {}

@@ -616,6 +616,8 @@ type _MapProps = CommonProps &
     controls: _MapControl[];
     /** 缩放视野以包含所有给定的坐标点 */
     includePoints: _MapPoint[];
+    /** 显示层级 */
+    zIndex: number;
     /**
      * 是否显示 3D 楼块
      *
@@ -646,6 +648,22 @@ type _MapProps = CommonProps &
      * 默认为 false
      */
     enableRotate: boolean;
+    /**
+     * 旋转角度
+     *
+     * 取值范围为 0 - 360，地图正北和设备 y 轴角度的夹角
+     *
+     * 默认为 0
+     */
+    rotate: number;
+    /**
+     * 倾斜角度
+     *
+     * 范围为 0 ~ 40，关于 z 轴的倾角
+     *
+     * 默认为 0
+     */
+    skew: number;
     /**
      * 是否开启俯视
      *

@@ -2,6 +2,7 @@ import type { DefineComponent } from "vue";
 import type { CommonProps } from "../common";
 import type { BaseEvent, CustomEvent } from "../events";
 
+/** 选择的下标 */
 type _PickerViewValueElement = number;
 
 /** 依次表示 picker-view 内 picker-view-column 选择的下标 */
@@ -26,6 +27,7 @@ type _PickerViewOnPickendEvent = BaseEvent;
 /** 滚动选择结束时触发 */
 type _PickerViewOnPickend = (event: _PickerViewOnPickendEvent) => void;
 
+/** 嵌入页面的滚动选择器属性 */
 type _PickerViewProps = CommonProps &
   Partial<{
     /**
@@ -93,6 +95,7 @@ export type {
 
 declare global {
   namespace UniHelper {
+    /** 选择的下标 */
     export type PickerViewValueElement = _PickerViewValueElement;
     /** 依次表示 picker-view 内 picker-view-column 选择的下标 */
     export type PickerViewValue = _PickerViewValue;

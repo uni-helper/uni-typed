@@ -25,6 +25,7 @@ type _SelectorPickerOnCancelEvent = BaseEvent;
 /** 取消选择时触发 */
 type _SelectorPickerOnCancel = (event: _SelectorPickerOnCancelEvent) => void;
 
+/** 普通选择器属性 */
 type _SelectorPickerProps = CommonProps &
   Partial<{
     /** 在 form 中作为 key */
@@ -108,6 +109,7 @@ type _MultiSelectorPickerOnCancel = (
   event: _MultiSelectorPickerOnCancelEvent,
 ) => void;
 
+/** 多列选择器属性 */
 type _MultiSelectorPickerProps = Partial<{
   /** 在 form 中作为 key */
   name: string;
@@ -162,25 +164,26 @@ type _TimePickerOnCancelEvent = BaseEvent;
 /** 取消选择时触发 */
 type _TimePickerOnCancel = (event: _TimePickerOnCancelEvent) => void;
 
+/** 时间选择器属性 */
 type _TimePickerProps = Partial<{
   /** 在 form 中作为 key */
   name: string;
   /** 设置为时间选择器 */
   mode: "time";
   /**
-   * 选中的日期
+   * 选中的时间
    *
    * 格式为 hh:mm
    */
   value: _TimePickerValue;
   /**
-   * 有效日期范围的开始
+   * 有效时间范围的开始
    *
    * 格式为 hh:mm
    */
   start: _TimePickerValue;
   /**
-   * 有效日期范围的结束
+   * 有效时间范围的结束
    *
    * 格式为 hh:mm
    */
@@ -229,6 +232,7 @@ type _DatePickerOnCancelEvent = BaseEvent;
 /** 取消选择时触发 */
 type _DatePickerOnCancel = (event: _DatePickerOnCancelEvent) => void;
 
+/** 日期选择器属性 */
 type _DatePickerProps = Partial<{
   /** 在 form 中作为 key */
   name: string;
@@ -276,6 +280,7 @@ type _DatePickerProps = Partial<{
   onCancel: _DatePickerOnCancel;
 }>;
 
+/** 省市区名称 */
 type _RegionPickerValueElement = string;
 
 /** 选中的省市区 */
@@ -312,6 +317,7 @@ type _RegionPickerOnCancelEvent = BaseEvent;
 /** 取消选择时触发 */
 type _RegionPickerOnCancel = (event: _RegionPickerOnCancelEvent) => void;
 
+/** 省市区选择器属性 */
 type _RegionPickerProps = Partial<{
   /** 在 form 中作为 key */
   name: string;
@@ -349,6 +355,7 @@ type _RegionPickerProps = Partial<{
   onCancel: _RegionPickerOnCancel;
 }>;
 
+/** 滚动选择器选中的值 */
 type _PickerValue =
   | _SelectorPickerValue
   | _MultiSelectorPickerValue
@@ -371,55 +378,55 @@ type _Picker = DefineComponent<_PickerProps>;
 type _PickerInstance = InstanceType<_Picker>;
 
 export type {
-  _SelectorPickerRange as SelectorPickerRange,
-  _SelectorPickerValue as SelectorPickerValue,
-  _SelectorPickerSelectorType as SelectorPickerSelectorType,
-  _SelectorPickerOnChangeDetail as SelectorPickerOnChangeDetail,
-  _SelectorPickerOnChangeEvent as SelectorPickerOnChangeEvent,
-  _SelectorPickerOnChange as SelectorPickerOnChange,
-  _SelectorPickerOnCancelEvent as SelectorPickerOnCancelEvent,
-  _SelectorPickerOnCancel as SelectorPickerOnCancel,
-  _SelectorPickerProps as SelectorPickerProps,
-  _MultiSelectorPickerRange as MultiSelectorPickerRange,
-  _MultiSelectorPickerValueElement as MultiSelectorPickerValueElement,
-  _MultiSelectorPickerValue as MultiSelectorPickerValue,
-  _MultiSelectorPickerOnChangeDetail as MultiSelectorPickerOnChangeDetail,
-  _MultiSelectorPickerOnChangeEvent as MultiSelectorPickerOnChangeEvent,
-  _MultiSelectorPickerOnChange as MultiSelectorPickerOnChange,
-  _MultiSelectorPickerOnColumnchangeDetail as MultiSelectorPickerOnColumnchangeDetail,
-  _MultiSelectorPickerOnColumnchangeEvent as MultiSelectorPickerOnColumnchangeEvent,
-  _MultiSelectorPickerOnColumnchange as MultiSelectorPickerOnColumnchange,
-  _MultiSelectorPickerOnCancelEvent as MultiSelectorPickerOnCancelEvent,
-  _MultiSelectorPickerOnCancel as MultiSelectorPickerOnCancel,
-  _MultiSelectorPickerProps as MultiSelectorPickerProps,
-  _TimePickerValue as TimePickerValue,
-  _TimePickerOnChangeDetail as TimePickerOnChangeDetail,
-  _TimePickerOnChangeEvent as TimePickerOnChangeEvent,
-  _TimePickerOnChange as TimePickerOnChange,
-  _TimePickerOnCancelEvent as TimePickerOnCancelEvent,
-  _TimePickerOnCancel as TimePickerOnCancel,
-  _TimePickerProps as TimePickerProps,
-  _DatePickerValue as DatePickerValue,
   _DatePickerFields as DatePickerFields,
+  _DatePickerOnCancel as DatePickerOnCancel,
+  _DatePickerOnCancelEvent as DatePickerOnCancelEvent,
+  _DatePickerOnChange as DatePickerOnChange,
   _DatePickerOnChangeDetail as DatePickerOnChangeDetail,
   _DatePickerOnChangeEvent as DatePickerOnChangeEvent,
-  _DatePickerOnChange as DatePickerOnChange,
-  _DatePickerOnCancelEvent as DatePickerOnCancelEvent,
-  _DatePickerOnCancel as DatePickerOnCancel,
   _DatePickerProps as DatePickerProps,
-  _RegionPickerValueElement as RegionPickerValueElement,
-  _RegionPickerValue as RegionPickerValue,
-  _RegionPickerLevel as RegionPickerLevel,
-  _RegionPickerOnChangeDetail as RegionPickerOnChangeDetail,
-  _RegionPickerOnChangeEvent as RegionPickerOnChangeEvent,
-  _RegionPickerOnChange as RegionPickerOnChange,
-  _RegionPickerOnCancelEvent as RegionPickerOnCancelEvent,
-  _RegionPickerOnCancel as RegionPickerOnCancel,
-  _RegionPickerProps as RegionPickerProps,
-  _PickerValue as PickerValue,
-  _PickerProps as PickerProps,
+  _DatePickerValue as DatePickerValue,
+  _MultiSelectorPickerOnCancel as MultiSelectorPickerOnCancel,
+  _MultiSelectorPickerOnCancelEvent as MultiSelectorPickerOnCancelEvent,
+  _MultiSelectorPickerOnChange as MultiSelectorPickerOnChange,
+  _MultiSelectorPickerOnChangeDetail as MultiSelectorPickerOnChangeDetail,
+  _MultiSelectorPickerOnChangeEvent as MultiSelectorPickerOnChangeEvent,
+  _MultiSelectorPickerOnColumnchange as MultiSelectorPickerOnColumnchange,
+  _MultiSelectorPickerOnColumnchangeDetail as MultiSelectorPickerOnColumnchangeDetail,
+  _MultiSelectorPickerOnColumnchangeEvent as MultiSelectorPickerOnColumnchangeEvent,
+  _MultiSelectorPickerProps as MultiSelectorPickerProps,
+  _MultiSelectorPickerRange as MultiSelectorPickerRange,
+  _MultiSelectorPickerValue as MultiSelectorPickerValue,
+  _MultiSelectorPickerValueElement as MultiSelectorPickerValueElement,
   _Picker as Picker,
   _PickerInstance as PickerInstance,
+  _PickerProps as PickerProps,
+  _PickerValue as PickerValue,
+  _RegionPickerLevel as RegionPickerLevel,
+  _RegionPickerOnCancel as RegionPickerOnCancel,
+  _RegionPickerOnCancelEvent as RegionPickerOnCancelEvent,
+  _RegionPickerOnChange as RegionPickerOnChange,
+  _RegionPickerOnChangeDetail as RegionPickerOnChangeDetail,
+  _RegionPickerOnChangeEvent as RegionPickerOnChangeEvent,
+  _RegionPickerProps as RegionPickerProps,
+  _RegionPickerValue as RegionPickerValue,
+  _RegionPickerValueElement as RegionPickerValueElement,
+  _SelectorPickerOnCancel as SelectorPickerOnCancel,
+  _SelectorPickerOnCancelEvent as SelectorPickerOnCancelEvent,
+  _SelectorPickerOnChange as SelectorPickerOnChange,
+  _SelectorPickerOnChangeDetail as SelectorPickerOnChangeDetail,
+  _SelectorPickerOnChangeEvent as SelectorPickerOnChangeEvent,
+  _SelectorPickerProps as SelectorPickerProps,
+  _SelectorPickerRange as SelectorPickerRange,
+  _SelectorPickerSelectorType as SelectorPickerSelectorType,
+  _SelectorPickerValue as SelectorPickerValue,
+  _TimePickerOnCancel as TimePickerOnCancel,
+  _TimePickerOnCancelEvent as TimePickerOnCancelEvent,
+  _TimePickerOnChange as TimePickerOnChange,
+  _TimePickerOnChangeDetail as TimePickerOnChangeDetail,
+  _TimePickerOnChangeEvent as TimePickerOnChangeEvent,
+  _TimePickerProps as TimePickerProps,
+  _TimePickerValue as TimePickerValue,
 };
 
 declare global {

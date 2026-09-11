@@ -1,16 +1,23 @@
 import type { DefineComponent } from "vue";
 import type { CommonProps } from "../common";
 
+/** `<picker-view />` 子组件属性 */
 type _PickerViewColumnProps = CommonProps & Partial<{}>;
 
+/**
+ * `<picker-view />` 的子组件，仅可放置于 `<picker-view />` 中
+ *
+ * 其子节点的高度会自动设置成与 `<picker-view>` 的选中框的高度一致
+ */
 type _PickerViewColumn = DefineComponent<_PickerViewColumnProps>;
 
+/** `<picker-view />` 子组件实例 */
 type _PickerViewColumnInstance = InstanceType<_PickerViewColumn>;
 
 export type {
-  _PickerViewColumnProps as PickerViewColumnProps,
   _PickerViewColumn as PickerViewColumn,
   _PickerViewColumnInstance as PickerViewColumnInstance,
+  _PickerViewColumnProps as PickerViewColumnProps,
 };
 
 declare global {

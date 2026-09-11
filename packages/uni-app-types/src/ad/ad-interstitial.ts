@@ -41,6 +41,8 @@ type _AdInterstitialProps = CommonProps &
      * 默认为 `false`
      */
     loadnext: boolean;
+    /** 透传到作用域插槽的数据 */
+    options: Record<string, any>;
     /** 广告加载成功的回调 */
     onLoad: _AdInterstitialOnLoad;
     /** 广告加载失败的回调 */
@@ -56,16 +58,16 @@ type _AdInterstitial = DefineComponent<_AdInterstitialProps>;
 type _AdInterstitialInstance = InstanceType<_AdInterstitial>;
 
 export type {
-  _AdInterstitialOnLoadEvent as AdInterstitialOnLoadEvent,
-  _AdInterstitialOnLoad as AdInterstitialOnLoad,
-  _AdInterstitialOnErrorDetail as AdInterstitialOnErrorDetail,
-  _AdInterstitialOnErrorEvent as AdInterstitialOnErrorEvent,
-  _AdInterstitialOnError as AdInterstitialOnError,
-  _AdInterstitialOnCloseEvent as AdInterstitialOnCloseEvent,
-  _AdInterstitialOnClose as AdInterstitialOnClose,
-  _AdInterstitialProps as AdInterstitialProps,
   _AdInterstitial as AdInterstitial,
   _AdInterstitialInstance as AdInterstitialInstance,
+  _AdInterstitialOnClose as AdInterstitialOnClose,
+  _AdInterstitialOnCloseEvent as AdInterstitialOnCloseEvent,
+  _AdInterstitialOnError as AdInterstitialOnError,
+  _AdInterstitialOnErrorDetail as AdInterstitialOnErrorDetail,
+  _AdInterstitialOnErrorEvent as AdInterstitialOnErrorEvent,
+  _AdInterstitialOnLoad as AdInterstitialOnLoad,
+  _AdInterstitialOnLoadEvent as AdInterstitialOnLoadEvent,
+  _AdInterstitialProps as AdInterstitialProps,
 };
 
 declare global {
