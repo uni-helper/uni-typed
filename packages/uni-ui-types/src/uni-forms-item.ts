@@ -35,9 +35,9 @@ type _UniFormsItemProps = Partial<{
    *
    * 单位为 px
    *
-   * 默认为 65
+   * 默认为 70
    */
-  labelWidth: number;
+  labelWidth: string | number;
   /**
    * 显示的错误提示内容
    *
