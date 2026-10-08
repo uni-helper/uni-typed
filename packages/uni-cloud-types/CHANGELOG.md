@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/uni-helper/uni-typed/compare/v1.4.0...v1.4.1) (2026-10-08)
+
+### Bug Fixes
+
+* **uni-cloud-types:** make unicloud-db instance methods non-optional ([1e6298e](https://github.com/uni-helper/uni-typed/commit/1e6298e21cdc2a7f6553c7e5c217ca05680e090e)) - by @ModyQyW
+
 ## [1.4.0](https://github.com/uni-helper/uni-typed/compare/v1.3.0...v1.4.0) (2026-10-08)
 
 **Note:** Version bump only for package @uni-helper/uni-cloud-types
