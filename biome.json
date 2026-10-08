@@ -12,7 +12,8 @@
       "!**/manifest.json",
       "!**/pages.json",
       "!**/package.json",
-      "!lerna.json"
+      "!lerna.json",
+      "!**/banner.svg"
     ]
   },
   "assist": {
