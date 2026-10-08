@@ -344,6 +344,24 @@ type _UnicloudDbProps = Partial<{
    */
   ssrKey: string;
   /**
+   * 成功回调
+   *
+   * 联网返回结果后，若希望先修改下数据再渲染界面，则在本方法里对 data 进行修改
+   *
+   * @param data 当前查询结果
+   * @param ended 是否有更多数据
+   * @param pagination 分页信息
+   * @param pagination.size 每页数据量
+   * @param pagination.count 数据总量
+   */
+  onLoad: _UnicloudDbOnLoad;
+  /** 失败回调 */
+  onError: _UnicloudDbOnError;
+}>;
+
+/** 数据库查询组件方法 */
+type _UnicloudDbExpose = {
+  /**
    * 手动加载数据
    *
    * @param options.clear 是否清空数据和分页信息，默认为 false
@@ -366,27 +384,13 @@ type _UnicloudDbProps = Partial<{
   update: _UnicloudDbUpdate;
   /** 获取 data */
   dataList: any;
-  /**
-   * 成功回调
-   *
-   * 联网返回结果后，若希望先修改下数据再渲染界面，则在本方法里对 data 进行修改
-   *
-   * @param data 当前查询结果
-   * @param ended 是否有更多数据
-   * @param pagination 分页信息
-   * @param pagination.size 每页数据量
-   * @param pagination.count 数据总量
-   */
-  onLoad: _UnicloudDbOnLoad;
-  /** 失败回调 */
-  onError: _UnicloudDbOnError;
-}>;
+};
 
 /** 数据库查询组件，对 uni-clientdb 的 js 库的再封装 */
 type _UnicloudDb = DefineComponent<_UnicloudDbProps>;
 
 /** 数据库查询组件实例 */
-type _UnicloudDbInstance = InstanceType<_UnicloudDb>;
+type _UnicloudDbInstance = InstanceType<_UnicloudDb> & _UnicloudDbExpose;
 
 export type {
   _UnicloudDb as UnicloudDb,

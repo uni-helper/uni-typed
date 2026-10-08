@@ -99,4 +99,8 @@ describe("UnicloudDb", () => {
     .toHaveProperty("$")
     .toMatchTypeOf<ComponentInternalInstance>();
   expectTypeOf<UnicloudDbInstance>().toEqualTypeOf<UniHelper.UnicloudDbInstance>();
+
+  // 实例方法来自 Expose，不是可选成员，可直接调用
+  expectTypeOf<UnicloudDbInstance["loadData"]>().toBeFunction();
+  expectTypeOf<UnicloudDbInstance["refresh"]>().toBeFunction();
 });
