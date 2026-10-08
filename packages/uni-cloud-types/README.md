@@ -1,19 +1,19 @@
 # @uni-helper/uni-cloud-types
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+<p align="center">
   <a href="https://github.com/uni-helper/uni-typed/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/uni-helper/uni-typed?style=for-the-badge" alt="License" />
+    <img src="https://img.shields.io/github/license/uni-helper/uni-typed?style=for-the-badge&labelColor=005947&color=eee" alt="License" />
   </a>
   <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-types">
-    <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-cloud-types?style=for-the-badge" alt="npm" />
+    <img src="https://img.shields.io/npm/v/%40uni-helper%2Funi-cloud-types?style=for-the-badge&labelColor=005947&color=eee" alt="npm" />
   </a>
   <a href="https://www.npmjs.com/package/@uni-helper/uni-cloud-types">
-    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-cloud-types?style=for-the-badge" alt="npm downloads" />
+    <img src="https://img.shields.io/npm/dm/%40uni-helper%2Funi-cloud-types?style=for-the-badge&labelColor=005947&color=eee" alt="npm downloads" />
   </a>
-</div>
-<div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+</p>
+<p align="center">
   <a href="https://deepwiki.com/uni-helper/uni-typed"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-</div>
+</p>
 
 ## 介绍
 
