@@ -48,11 +48,13 @@ import { UniBadge, UniCard } from '@uni-helper/uni-ui-components';
 </script>
 
 <template>
-  <UniCard>
+  <UniCard title="卡片标题">
     <template #cover>
       <image src="/static/logo.png" mode="widthFix" />
     </template>
-    <UniBadge text="99+" />
+    <template #actions>
+      <UniBadge text="99+" />
+    </template>
   </UniCard>
 </template>
 ```
@@ -80,8 +82,10 @@ export function createApp() {
 <script setup lang="ts"></script>
 
 <template>
-  <UniCard>
-    <UniBadge text="99+" />
+  <UniCard title="卡片标题">
+    <template #actions>
+      <UniBadge text="99+" />
+    </template>
   </UniCard>
 </template>
 ```
@@ -109,7 +113,7 @@ const openPopup = () => {
 
 ### 具名插槽
 
-部分组件提供具名插槽以自定义内容。包装组件会原样透传所有插槽，使用方式与原生 uni-ui 组件一致。
+部分组件提供具名插槽以自定义内容。包装组件会透传插槽，使用方式与原生 uni-ui 组件一致。
 
 ```vue
 <script setup lang="ts">

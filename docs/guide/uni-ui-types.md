@@ -28,7 +28,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 
 ::: warning
 
-截至 2026-05-09，官方模板依赖版本相对落后，如果你正在使用它，必须升级相关依赖版本才能正常获取相关 TypeScript 类型提示，请参考 [已有项目](#已有项目) 章节调整。
+截至 2026-10-08，官方模板依赖版本相对落后，如果你正在使用它，必须升级相关依赖版本才能正常获取相关 TypeScript 类型提示，请参考 [已有项目](#已有项目) 章节调整。
 
 :::
 
@@ -56,7 +56,7 @@ npm i -D @uni-helper/uni-app-types @uni-helper/uni-ui-types
 
 - `compilerOptions.moduleResolution` 为 Bundler
 - `compilerOptions.types` 包含 @uni-helper/uni-app-types 和 @uni-helper/uni-ui-types
-- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-app-types/volar-plugin
+- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-app-types/volar-plugin（v1.0.0-alpha.7 起可选）
 - `include` 包含 Vue 相关源码文件
 
 以下是一个 `tsconfig.json` 示例，你可以直接复制它并粘贴到项目内。请注意，你可能需要稍微调整以匹配你的开发需求，相关依赖需要自行安装。
@@ -94,10 +94,11 @@ npm i -D @uni-helper/uni-app-types @uni-helper/uni-ui-types
       "@uni-helper/uni-ui-types"
     ]
   },
-  "vueCompilerOptions": {
-    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
-    "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
-  },
+  // v1.0.0-alpha.7 开始不再需要配置
+  // "vueCompilerOptions": {
+  //   // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+  //   "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+  // },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.d.ts"]
 }
 ```

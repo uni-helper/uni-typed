@@ -20,7 +20,7 @@ v1 不支持 Vue v2，请参考 [常见问题](./faq#vue-2-支持情况)。
 
 - `compilerOptions.moduleResolution` 为 Bundler
 - `compilerOptions.types` 包含对应的类型，如 @uni-helper/uni-app-types、@uni-helper/uni-cloud-types、@uni-helper/uni-ui-types、@uni-helper/uni-types
-- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-app-types/volar-plugin 或 @uni-helper/uni-types/volar-plugin
+- `vueCompilerOptions.plugins` 包含 @uni-helper/uni-app-types/volar-plugin 或 @uni-helper/uni-types/volar-plugin（v1.0.0-alpha.7 起可选）
 - `include` 包含 Vue 相关源码文件
 
 以下是一个 `tsconfig.json` 示例，你可以直接复制它并粘贴到项目内。请注意，你可能需要稍微调整以匹配你的开发需求，相关依赖需要自行安装。

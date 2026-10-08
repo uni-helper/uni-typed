@@ -89,7 +89,7 @@ export function createApp() {
 
 ### 实例类型
 
-每个组件都导出对应的实例类型，可结合 `ref` 获取组件实例并调用方法。
+每个组件都导出对应的实例类型，可结合 `ref` 获取组件实例。uni-app 内置组件不暴露实例方法，实例上的属性以 prop 形式呈现，可以直接读取；uni-ui 组件（如 `UniPopup`）和 uni-cloud 组件（如 `UnicloudDb`）暴露实例方法，可通过 `ref` 调用。
 
 ```vue
 <script setup lang="ts">
@@ -99,8 +99,8 @@ import { ScrollView, UniPopup, type ScrollViewInstance, type UniPopupInstance } 
 const scrollViewRef = ref<ScrollViewInstance>();
 const popupRef = ref<UniPopupInstance>();
 
-const scrollToTop = () => {
-  scrollViewRef.value?.scrollTop(0);
+const getScrollTop = () => {
+  return scrollViewRef.value?.scrollTop;
 };
 
 const openPopup = () => {
@@ -109,7 +109,7 @@ const openPopup = () => {
 </script>
 
 <template>
-  <ScrollView ref="scrollViewRef" scroll-y></ScrollView>
+  <ScrollView ref="scrollViewRef" scroll-y :scroll-top="0"></ScrollView>
   <UniPopup ref="popupRef" />
 </template>
 ```

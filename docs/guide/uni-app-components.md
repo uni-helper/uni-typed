@@ -85,7 +85,7 @@ export function createApp() {
 
 ### 实例类型
 
-每个组件都导出对应的实例类型，可结合 `ref` 获取组件实例并调用方法。
+每个组件都导出对应的实例类型，可结合 `ref` 获取组件实例。uni-app 内置组件不暴露实例方法，实例上的属性以 prop 形式呈现，可以直接读取。
 
 ```vue
 <script setup lang="ts">
@@ -94,13 +94,13 @@ import { ScrollView, type ScrollViewInstance } from '@uni-helper/uni-app-compone
 
 const scrollViewRef = ref<ScrollViewInstance>();
 
-const scrollToTop = () => {
-  scrollViewRef.value?.scrollTop(0);
+const getScrollTop = () => {
+  return scrollViewRef.value?.scrollTop;
 };
 </script>
 
 <template>
-  <ScrollView ref="scrollViewRef" scroll-y></ScrollView>
+  <ScrollView ref="scrollViewRef" scroll-y :scroll-top="0"></ScrollView>
 </template>
 ```
 
