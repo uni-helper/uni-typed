@@ -1,12 +1,20 @@
 import type {
   CoverView,
   CoverViewInstance,
+  CoverViewOnClick,
+  CoverViewOnClickEvent,
   CoverViewProps,
 } from "@uni-helper/uni-app-types";
 import { describe, expectTypeOf } from "vitest";
 import type { ComponentInternalInstance } from "vue";
 
 describe("CoverView", () => {
+  expectTypeOf<CoverViewOnClickEvent>().toBeObject();
+  expectTypeOf<CoverViewOnClickEvent>().toEqualTypeOf<UniHelper.CoverViewOnClickEvent>();
+
+  expectTypeOf<CoverViewOnClick>().toBeFunction();
+  expectTypeOf<CoverViewOnClick>().toEqualTypeOf<UniHelper.CoverViewOnClick>();
+
   expectTypeOf<CoverViewProps>().toBeObject();
   expectTypeOf<CoverViewProps>().toEqualTypeOf<UniHelper.CoverViewProps>();
 

@@ -1,6 +1,8 @@
 import type {
   CoverImage,
   CoverImageInstance,
+  CoverImageOnClick,
+  CoverImageOnClickEvent,
   CoverImageOnError,
   CoverImageOnErrorEvent,
   CoverImageOnLoad,
@@ -22,6 +24,12 @@ describe("CoverImage", () => {
 
   expectTypeOf<CoverImageOnError>().toBeFunction();
   expectTypeOf<CoverImageOnError>().toEqualTypeOf<UniHelper.CoverImageOnError>();
+
+  expectTypeOf<CoverImageOnClickEvent>().toBeObject();
+  expectTypeOf<CoverImageOnClickEvent>().toEqualTypeOf<UniHelper.CoverImageOnClickEvent>();
+
+  expectTypeOf<CoverImageOnClick>().toBeFunction();
+  expectTypeOf<CoverImageOnClick>().toEqualTypeOf<UniHelper.CoverImageOnClick>();
 
   expectTypeOf<CoverImageProps>().toBeObject();
   expectTypeOf<CoverImageProps>().toEqualTypeOf<UniHelper.CoverImageProps>();

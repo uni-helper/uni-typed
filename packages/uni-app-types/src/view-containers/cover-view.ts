@@ -1,5 +1,11 @@
 import type { DefineComponent } from "vue";
 import type { CommonProps } from "../common";
+import type { BaseEvent } from "../events";
+
+type _CoverViewOnClickEvent = BaseEvent;
+
+/** 点击时触发 */
+type _CoverViewOnClick = (event: _CoverViewOnClickEvent) => void;
 
 /** 覆盖在原生组件之上的视图属性 */
 type _CoverViewProps = CommonProps &
@@ -10,6 +16,8 @@ type _CoverViewProps = CommonProps &
      * 仅在设置了 overflow-y: scroll 成为滚动元素后生效
      */
     scrollTop: number | string;
+    /** 点击时触发 */
+    onClick: _CoverViewOnClick;
   }>;
 
 /**
@@ -29,11 +37,16 @@ type _CoverViewInstance = InstanceType<_CoverView>;
 export type {
   _CoverView as CoverView,
   _CoverViewInstance as CoverViewInstance,
+  _CoverViewOnClick as CoverViewOnClick,
+  _CoverViewOnClickEvent as CoverViewOnClickEvent,
   _CoverViewProps as CoverViewProps,
 };
 
 declare global {
   namespace UniHelper {
+    export type CoverViewOnClickEvent = _CoverViewOnClickEvent;
+    /** 点击时触发 */
+    export interface CoverViewOnClick extends _CoverViewOnClick {}
     /** 覆盖在原生组件之上的视图 */
     export type CoverViewProps = _CoverViewProps;
     /**

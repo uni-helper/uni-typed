@@ -5,9 +5,13 @@ import type {
   MovableViewOnChange,
   MovableViewOnChangeDetail,
   MovableViewOnChangeEvent,
+  MovableViewOnHtouchmove,
+  MovableViewOnHtouchmoveEvent,
   MovableViewOnScale,
   MovableViewOnScaleDetail,
   MovableViewOnScaleEvent,
+  MovableViewOnVtouchmove,
+  MovableViewOnVtouchmoveEvent,
   MovableViewProps,
   MovableViewSource,
 } from "@uni-helper/uni-app-types";
@@ -30,6 +34,12 @@ describe("MovableView", () => {
   expectTypeOf<MovableViewOnChange>().toBeFunction();
   expectTypeOf<MovableViewOnChange>().toEqualTypeOf<UniHelper.MovableViewOnChange>();
 
+  expectTypeOf<MovableViewOnHtouchmoveEvent>().toBeObject();
+  expectTypeOf<MovableViewOnHtouchmoveEvent>().toEqualTypeOf<UniHelper.MovableViewOnHtouchmoveEvent>();
+
+  expectTypeOf<MovableViewOnHtouchmove>().toBeFunction();
+  expectTypeOf<MovableViewOnHtouchmove>().toEqualTypeOf<UniHelper.MovableViewOnHtouchmove>();
+
   expectTypeOf<MovableViewOnScaleDetail>().toBeObject();
   expectTypeOf<MovableViewOnScaleDetail>().toEqualTypeOf<UniHelper.MovableViewOnScaleDetail>();
 
@@ -38,6 +48,12 @@ describe("MovableView", () => {
 
   expectTypeOf<MovableViewOnScale>().toBeFunction();
   expectTypeOf<MovableViewOnScale>().toEqualTypeOf<UniHelper.MovableViewOnScale>();
+
+  expectTypeOf<MovableViewOnVtouchmoveEvent>().toBeObject();
+  expectTypeOf<MovableViewOnVtouchmoveEvent>().toEqualTypeOf<UniHelper.MovableViewOnVtouchmoveEvent>();
+
+  expectTypeOf<MovableViewOnVtouchmove>().toBeFunction();
+  expectTypeOf<MovableViewOnVtouchmove>().toEqualTypeOf<UniHelper.MovableViewOnVtouchmove>();
 
   expectTypeOf<MovableViewProps>().toBeObject();
   expectTypeOf<MovableViewProps>().toEqualTypeOf<UniHelper.MovableViewProps>();

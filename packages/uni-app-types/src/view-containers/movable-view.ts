@@ -1,6 +1,6 @@
 import type { DefineComponent } from "vue";
 import type { CommonProps } from "../common";
-import type { CustomEvent } from "../events";
+import type { BaseEvent, CustomEvent } from "../events";
 
 /** Movable-view 的移动方向 */
 type _MovableViewDirection = "all" | "vertical" | "horizontal" | "none";
@@ -62,6 +62,16 @@ type _MovableViewOnScaleEvent = CustomEvent<_MovableViewOnScaleDetail>;
 
 /** 缩放过程中触发 */
 type _MovableViewOnScale = (event: _MovableViewOnScaleEvent) => void;
+
+type _MovableViewOnHtouchmoveEvent = BaseEvent;
+
+/** 横向移动时触发 */
+type _MovableViewOnHtouchmove = (event: _MovableViewOnHtouchmoveEvent) => void;
+
+type _MovableViewOnVtouchmoveEvent = BaseEvent;
+
+/** 纵向移动时触发 */
+type _MovableViewOnVtouchmove = (event: _MovableViewOnVtouchmoveEvent) => void;
 
 /** 可移动的视图容器属性 */
 type _MovableViewProps = CommonProps &
@@ -162,6 +172,10 @@ type _MovableViewProps = CommonProps &
     onChange: _MovableViewOnChange;
     /** 缩放过程中触发 */
     onScale: _MovableViewOnScale;
+    /** 横向移动时触发 */
+    onHtouchmove: _MovableViewOnHtouchmove;
+    /** 纵向移动时触发 */
+    onVtouchmove: _MovableViewOnVtouchmove;
   }>;
 
 /**
@@ -181,9 +195,13 @@ export type {
   _MovableViewOnChange as MovableViewOnChange,
   _MovableViewOnChangeDetail as MovableViewOnChangeDetail,
   _MovableViewOnChangeEvent as MovableViewOnChangeEvent,
+  _MovableViewOnHtouchmove as MovableViewOnHtouchmove,
+  _MovableViewOnHtouchmoveEvent as MovableViewOnHtouchmoveEvent,
   _MovableViewOnScale as MovableViewOnScale,
   _MovableViewOnScaleDetail as MovableViewOnScaleDetail,
   _MovableViewOnScaleEvent as MovableViewOnScaleEvent,
+  _MovableViewOnVtouchmove as MovableViewOnVtouchmove,
+  _MovableViewOnVtouchmoveEvent as MovableViewOnVtouchmoveEvent,
   _MovableViewProps as MovableViewProps,
   _MovableViewSource as MovableViewSource,
 };
@@ -216,6 +234,12 @@ declare global {
     export type MovableViewOnScaleEvent = _MovableViewOnScaleEvent;
     /** 缩放过程中触发 */
     export interface MovableViewOnScale extends _MovableViewOnScale {}
+    export type MovableViewOnHtouchmoveEvent = _MovableViewOnHtouchmoveEvent;
+    /** 横向移动时触发 */
+    export interface MovableViewOnHtouchmove extends _MovableViewOnHtouchmove {}
+    export type MovableViewOnVtouchmoveEvent = _MovableViewOnVtouchmoveEvent;
+    /** 纵向移动时触发 */
+    export interface MovableViewOnVtouchmove extends _MovableViewOnVtouchmove {}
     /** 可移动的视图容器属性 */
     export type MovableViewProps = _MovableViewProps;
     /**

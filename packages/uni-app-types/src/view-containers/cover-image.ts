@@ -12,6 +12,11 @@ type _CoverImageOnErrorEvent = BaseEvent;
 /** 图片加载失败时触发 */
 type _CoverImageOnError = (event: _CoverImageOnErrorEvent) => void;
 
+type _CoverImageOnClickEvent = BaseEvent;
+
+/** 点击时触发 */
+type _CoverImageOnClick = (event: _CoverImageOnClickEvent) => void;
+
 /** 覆盖在原生组件之上的图片视图属性 */
 type _CoverImageProps = CommonProps &
   Partial<{
@@ -27,6 +32,8 @@ type _CoverImageProps = CommonProps &
     onLoad: _CoverImageOnLoad;
     /** 图片加载失败时触发 */
     onError: _CoverImageOnError;
+    /** 点击时触发 */
+    onClick: _CoverImageOnClick;
   }>;
 
 /**
@@ -44,6 +51,8 @@ type _CoverImageInstance = InstanceType<_CoverImage>;
 export type {
   _CoverImage as CoverImage,
   _CoverImageInstance as CoverImageInstance,
+  _CoverImageOnClick as CoverImageOnClick,
+  _CoverImageOnClickEvent as CoverImageOnClickEvent,
   _CoverImageOnError as CoverImageOnError,
   _CoverImageOnErrorEvent as CoverImageOnErrorEvent,
   _CoverImageOnLoad as CoverImageOnLoad,
@@ -59,6 +68,9 @@ declare global {
     export type CoverImageOnErrorEvent = _CoverImageOnErrorEvent;
     /** 图片加载失败时触发 */
     export interface CoverImageOnError extends _CoverImageOnError {}
+    export type CoverImageOnClickEvent = _CoverImageOnClickEvent;
+    /** 点击时触发 */
+    export interface CoverImageOnClick extends _CoverImageOnClick {}
     /** 覆盖在原生组件之上的图片视图属性 */
     export type CoverImageProps = _CoverImageProps;
     /**
