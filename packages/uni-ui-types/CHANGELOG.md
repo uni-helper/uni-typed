@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/uni-helper/uni-typed/compare/v1.3.0...v1.4.0) (2026-10-08)
+
+### Bug Fixes
+
+* **uni-ui-types:** widen uni-forms-item labelWidth type ([aab873e](https://github.com/uni-helper/uni-typed/commit/aab873e70a6a311f81f01203931cbcc11283a0b3)) - by @ModyQyW
+
 ## [1.3.0](https://github.com/uni-helper/uni-typed/compare/v1.2.0...v1.3.0) (2026-09-11)
 
 ### Bug Fixes

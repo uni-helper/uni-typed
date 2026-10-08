@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/uni-helper/uni-typed/compare/v1.3.0...v1.4.0) (2026-10-08)
+
+### Features
+
+* **uni-app-types:** add missing events for movable-view and cover components ([b723a6d](https://github.com/uni-helper/uni-typed/commit/b723a6d888586a647d69028f52d8c13a4ed55d22)) - by @ModyQyW
+
 ## [1.3.0](https://github.com/uni-helper/uni-typed/compare/v1.2.0...v1.3.0) (2026-09-11)
 
 ### Bug Fixes
