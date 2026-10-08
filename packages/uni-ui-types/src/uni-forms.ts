@@ -141,7 +141,7 @@ type _UniFormsProps = Partial<{
    *
    * 单位为 px
    *
-   * 默认为 65
+   * 默认为 70
    */
   labelWidth: string | number;
   /**

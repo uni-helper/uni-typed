@@ -70,7 +70,7 @@ type _UniBadgeProps = Partial<{
    *
    * small 小
    *
-   * 默认为 normal
+   * 默认为 small
    */
   size: _UniBadgeSize;
   /**

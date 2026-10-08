@@ -247,17 +247,17 @@ type _UniEasyinputProps = Partial<{
    *
    * false 不去除左右空格
    *
-   * both 去除两端空格
+   * "both" 去除两端空格
    *
-   * left 去除左侧空格
+   * "left" 去除左侧空格
    *
-   * right 去除右侧空格
+   * "right" 去除右侧空格
    *
-   * all 去除所有空格
+   * "all" 去除所有空格
    *
-   * none 不去除空格
+   * "none" 不去除空格
    *
-   * 默认为 true
+   * 默认为 false
    */
   trim: _UniEasyinputTrim;
   /**
