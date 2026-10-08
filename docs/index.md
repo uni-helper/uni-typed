@@ -10,8 +10,8 @@ hero:
       text: 介绍 →
       link: /guide/getting-started
   image:
-    src: /logo.png
-    alt: Uni Helper
+    src: /logo.svg
+    alt: uni-typed logo
 features:
   - title: "@uni-helper/uni-app-types"
     details: 为 Vue v3 uni-app 组件提供 TypeScript 类型

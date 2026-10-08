@@ -6,7 +6,7 @@ export default defineConfig({
   description: "为 uni-app 打造的 TypeScript 支持项目",
   head: [
     // icon
-    ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
     ["meta", { name: "og:type", content: "website" }],
     // Open Graph
     ["meta", { name: "og:locale", content: "zh-cn" }],
@@ -37,7 +37,7 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    logo: { src: "/logo.png", width: 24, height: 24 },
+    logo: { src: "/logo.svg", width: 24, height: 24 },
     nav: [
       { text: "指南", link: "/guide/getting-started", activeMatch: "/guide/" },
       {
@@ -45,7 +45,7 @@ export default defineConfig({
         items: [
           {
             text: "更新日志",
-            link: "https://github.com/uni-helper/uni-typed/tree/main/CHANGELOG.md",
+            link: "https://github.com/uni-helper/uni-typed/blob/main/CHANGELOG.md",
           },
         ],
       },
