@@ -142,7 +142,7 @@ type _ImageProps = CommonProps &
     /**
      * 是否能拖动图片
      *
-     * 默认为 true
+     * 默认为 false
      */
     draggable: boolean;
     /** 图片加载错误时触发 */
