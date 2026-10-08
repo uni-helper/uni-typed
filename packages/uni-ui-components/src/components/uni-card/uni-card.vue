@@ -10,6 +10,7 @@ const props = defineProps<UniCardProps>();
 
 <template>
   <uni-card v-bind="props">
+    <slot></slot>
     <slot name="cover"></slot>
     <slot name="title"></slot>
     <slot name="actions"></slot>

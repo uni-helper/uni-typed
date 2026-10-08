@@ -10,6 +10,7 @@ const props = defineProps<UniDataSelectProps>();
 
 <template>
   <uni-data-select v-bind="props">
+    <slot></slot>
     <slot name="empty"></slot>
     <slot name="option"></slot>
     <slot name="selected"></slot>

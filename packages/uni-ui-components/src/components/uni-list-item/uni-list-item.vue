@@ -10,6 +10,7 @@ const props = defineProps<UniListItemProps>();
 
 <template>
   <uni-list-item v-bind="props">
+    <slot></slot>
     <slot name="header"></slot>
     <slot name="body"></slot>
     <slot name="footer"></slot>
