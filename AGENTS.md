@@ -67,6 +67,7 @@ pnpm release      # lerna-lite version：main 分支按 conventional commits 定
 - playground 经 exports map 解析到 `dist/`，所以 `play:*` / `build:h5` 等根脚本都内置了先 `dev` 或 `build`；直接 `pnpm -C playground dev` 会因 `dist` 缺失而解析失败。
 - CI（`.github/workflows/ci.yml`）只跑 build / check / typecheck，Test 步骤被注释掉。`pnpm test` 是唯一校验类型定义的关口，提交前自己跑。
 - 根 tsconfig 的 `paths` 指向 `src`，类型测试通过不代表 tsdown 产物没坏；改构建配置时另外跑一次 `pnpm build`。
+- uni-app x 和 uni-ui x 没有对应的包，也不该加。那边组件类型由 uni-app x 编译器按 `XxxComponentPublicInstance` 规范产出，没有 tsconfig 或 `.d.ts` 接入点。有人提需求时指向 `docs/other/uni-app-x.md`。
 - `pnpm check` 目前在 `README.md`、各 `CHANGELOG.md`、`pnpm-workspace.yaml`、`playground/src/uni.scss` 上报格式化差异，是 biome 2.6.4 比这些文件当初的格式化版本新造成的，不是代码问题。`CHANGELOG.md` 由 lerna 生成，别手工重排。
 
 ## Conventions

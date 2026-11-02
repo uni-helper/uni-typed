@@ -17,7 +17,7 @@ description: 对照官方文档同步 packages 里的组件类型。用户提到
 | `uni-cloud-types`  | <https://doc.dcloud.net.cn/uniCloud/unicloud-db.html>                                                           |
 | `uni-*-components` | 不含类型定义，类型包改了不用跟着改                                                                              |
 
-uni-app x（`doc.dcloud.net.cn/uni-app-x/`）是另一套非 Vue 产品，不在范围内。
+uni-app x 和 uni-ui x（`doc.dcloud.net.cn/uni-app-x/`）不在范围内，`docs/other/uni-app-x.md` 里写了原因：那边的组件类型由 uni-app x 编译器按 `XxxComponentPublicInstance` 规范产出，没有 tsconfig 或 `.d.ts` 的接入点，发布类型包也没人消费。
 
 ## 文档里怎么取数据
 
