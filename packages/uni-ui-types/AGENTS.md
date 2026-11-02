@@ -8,7 +8,7 @@
 
 ## Layout
 
-- `src/uni-<组件>.ts` 平铺（约 60 个文件，一组件一文件），无域子目录。
+- `src/uni-<组件>.ts` 平铺（60 个文件，一组件一文件），无域子目录。
 - `test/` 平铺 `uni-*.test-d.ts`，风格同根约定（`expectTypeOf` + `UniHelper.*` 镜像对照）。
 
 ## Gotchas

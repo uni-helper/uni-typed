@@ -9,7 +9,7 @@
 
 ## Layout
 
-- `src/components/uni-<组件>/` 每组件一目录（约 59 个），模式同根 AGENTS.md 的「组件封装模式」。
+- `src/components/uni-<组件>/` 每组件一目录（60 个），模式同根 AGENTS.md 的「组件封装模式」。
 - `components.d.ts` 和 `shims-vue.d.ts` 是手写提交的单行文件，没有生成脚本，不要重新生成。
 
 ## Gotchas
