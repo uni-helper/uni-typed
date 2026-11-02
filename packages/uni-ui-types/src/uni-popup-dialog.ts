@@ -112,7 +112,7 @@ type _UniPopupDialogProps = Partial<{
   /**
    * 是否显示取消按钮
    *
-   * 默认为 false
+   * 默认为 true
    */
   showClose: boolean;
   /**

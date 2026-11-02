@@ -154,7 +154,7 @@ type _SwiperProps = CommonProps &
     /**
      * 当开启时，会根据滑动速度，连续滑动多屏
      *
-     * 默认 false
+     * 默认为 false
      */
     acceleration: boolean;
     /**

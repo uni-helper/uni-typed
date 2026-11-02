@@ -399,6 +399,8 @@ type _InputProps = CommonProps &
      * Email 邮件地址输入键盘，表单内邮件地址输入框应使用 type="email"
      *
      * Url 网址输入键盘，表单内网址输入框应使用 type="url"
+     *
+     * 默认为 text
      */
     inputmode: _InputInputMode;
     /** 输入时触发 */

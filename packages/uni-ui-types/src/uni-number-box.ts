@@ -28,7 +28,7 @@ type _UniNumberBoxProps = Partial<{
   /**
    * 输入框当前值
    *
-   * 默认为 0
+   * 默认为 1
    */
   value: _UniNumberBoxValue;
   /**

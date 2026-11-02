@@ -278,7 +278,7 @@ type _UnicloudDbProps = Partial<{
   /**
    * 是否查询总数据条数
    *
-   * 默认 false
+   * 默认为 false
    */
   getcount: boolean;
   /**
@@ -288,7 +288,7 @@ type _UnicloudDbProps = Partial<{
    *
    * true 直接返回结果数据，一般用于非列表页
    *
-   * 默认 false
+   * 默认为 false
    */
   getone: boolean;
   /**
@@ -332,7 +332,7 @@ type _UnicloudDbProps = Partial<{
    *
    * manual 手动模式，不自动加载数据，如果涉及到分页，需要先手动修改当前页再调用加载数据
    *
-   * 默认 auto
+   * 默认为 auto
    */
   loadtime: _UnicloudDbLoadtime;
   /**

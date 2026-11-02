@@ -114,7 +114,7 @@ type _UniSearchBarProps = Partial<{
   /**
    * 输入文字颜色
    *
-   * 默认为 #F8F8F8
+   * 默认为 #000000
    */
   textColor: string;
   /**

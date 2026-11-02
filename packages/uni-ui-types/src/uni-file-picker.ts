@@ -341,7 +341,7 @@ type _UniFilePickerBaseProps = Partial<{
    *
    * grid 网格
    *
-   * 默认为 list
+   * 默认为 grid
    */
   mode: _UniFilePickerMode;
   /**

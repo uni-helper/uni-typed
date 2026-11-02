@@ -40,7 +40,11 @@ type _SwitchProps = CommonProps &
      * 默认为 false
      */
     disabled: boolean;
-    /** 样式 */
+    /**
+     * 样式
+     *
+     * 默认为 switch
+     */
     type: _SwitchType;
     /** 颜色 */
     color: string;

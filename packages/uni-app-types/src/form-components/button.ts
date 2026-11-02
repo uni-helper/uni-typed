@@ -410,7 +410,11 @@ type _ButtonProps = CommonProps &
      * 默认为 false
      */
     plain: boolean;
-    /** 是否禁用 */
+    /**
+     * 是否禁用
+     *
+     * 默认为 false
+     */
     disabled: boolean;
     /**
      * 是否带 loading 图标

@@ -211,7 +211,7 @@ type _UniDataPickerProps = Partial<{
   /**
    * 是否查询总数据条数
    *
-   * 默认 false
+   * 默认为 false
    */
   getcount: boolean;
   /**
@@ -221,7 +221,7 @@ type _UniDataPickerProps = Partial<{
    *
    * true 直接返回结果数据，一般用于非列表页
    *
-   * 默认 false
+   * 默认为 false
    */
   getone: boolean;
   /**

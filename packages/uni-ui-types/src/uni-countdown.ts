@@ -17,7 +17,7 @@ type _UniCountdownProps = Partial<{
   /**
    * 文字颜色
    *
-   * 默认为 #000000
+   * 默认为 #333
    */
   color: string;
   /**

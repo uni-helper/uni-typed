@@ -28,7 +28,7 @@ type _UniTooltipProps = Partial<{
    *
    * bottom 下方
    *
-   * 默认为 left
+   * 默认为 bottom
    */
   placement: _UniTooltipPlacement;
 }>;
