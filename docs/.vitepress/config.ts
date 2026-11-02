@@ -70,6 +70,7 @@ export default defineConfig({
         text: "其它",
         items: [
           { text: "常见问题", link: "/other/faq" },
+          { text: "uni-app x 与 uni-ui x", link: "/other/uni-app-x" },
           { text: "从 v0 迁移到 v1", link: "/other/migrate-v0-to-v1" },
         ],
       },

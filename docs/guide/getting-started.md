@@ -15,6 +15,8 @@
 | [@uni-helper/uni-ui-components](./uni-ui-components)       | 基于 @uni-helper/uni-ui-types 封装 Vue v3 uni-ui 组件。                                                                                     |
 | [@uni-helper/uni-components](./uni-components)             | 基于 @uni-helper/uni-app-components、@uni-helper/uni-cloud-components 和 @uni-helper/uni-ui-components 封装 Vue v3 组件，即以上三者的集合。 |
 
+本仓库只覆盖 uni-app（Vue v3）。uni-app x 和 uni-ui x 不在范围内，原因见 [uni-app x 与 uni-ui x](/other/uni-app-x)。
+
 ## 致谢
 
 最初在 [uni-base-components-types](https://github.com/satrong/uni-base-components-types) 得到了灵感。
