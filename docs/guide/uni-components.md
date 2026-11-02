@@ -62,9 +62,9 @@ import { Button, View, UniBadge, UnicloudDb } from '@uni-helper/uni-components';
 
 ```ts
 // main.ts
-import { createSSRApp } from 'vue';
-import App from './App.vue';
-import UniComponents from '@uni-helper/uni-components';
+import { createSSRApp } from "vue";
+import App from "./App.vue";
+import UniComponents from "@uni-helper/uni-components";
 
 export function createApp() {
   const app = createSSRApp(App);

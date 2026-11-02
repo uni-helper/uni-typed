@@ -12,18 +12,18 @@ Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C We
 
 如果你遇到了类似的问题，请先回退并锁定版本，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
 
-截至 2026-10-08，经实测确定，以下版本组合可正常实现类型提示。
+截至 2026-11-02，经实测确定，以下版本组合可正常实现类型提示。
 
-|依赖|版本|
-|---|---|
-|Volar|v3.3.12|
-|TypeScript|v6.0.3|
-|Vue|v3.4.38|
-|@dcloudio/*|v3.0.0-5000720260410001|
-|@uni-helper/uni-app-types|{{version}}|
-|@uni-helper/uni-cloud-types|{{version}}|
-|@uni-helper/uni-ui-types|{{version}}|
-|@uni-helper/uni-types|{{version}}|
+| 依赖                        | 版本                    |
+| --------------------------- | ----------------------- |
+| Volar                       | v3.3.14                 |
+| TypeScript                  | v6.0.3                  |
+| Vue                         | v3.4.38                 |
+| @dcloudio/*                 | v3.0.0-5000720260410001 |
+| @uni-helper/uni-app-types   | {{version}}             |
+| @uni-helper/uni-cloud-types | {{version}}             |
+| @uni-helper/uni-ui-types    | {{version}}             |
+| @uni-helper/uni-types       | {{version}}             |
 
 ## 如何确认 Volar 版本？
 
@@ -47,14 +47,14 @@ Volar、TypeScript、Vue 等开源项目的目标是与开放标准（即 W3C We
 
 如果你正在使用 Vue 2 且需要组件 TypeScript 类型支持，请参考以下版本组合，这是最后已知可用的版本组合。请使用 [Volar v2.0.21](https://cdn.jsdelivr.net/gh/uni-helper/uni-typed/assets/Vue.volar-2.0.21.vsix)、Vue v2.6.14、[@uni-helper/uni-ui-types v0.5](https://github.com/uni-helper/uni-ui-types) 和 TypeScript v5.4.5。
 
-|依赖|版本|
-|---|---|
-|Volar|v2.0.21|
-|TypeScript|v5.4.5|
-|Vue|v2.6.14|
-|@dcloudio/*|2.0.2-4020420240722003|
-|@uni-helper/uni-app-types|v0.5.13|
-|@uni-helper/uni-ui-types|v0.5.13|
+| 依赖                      | 版本                   |
+| ------------------------- | ---------------------- |
+| Volar                     | v2.0.21                |
+| TypeScript                | v5.4.5                 |
+| Vue                       | v2.6.14                |
+| @dcloudio/*               | 2.0.2-4020420240722003 |
+| @uni-helper/uni-app-types | v0.5.13                |
+| @uni-helper/uni-ui-types  | v0.5.13                |
 
 ::: warning
 
@@ -73,3 +73,5 @@ Volar 和 Vetur 不可共存，请只启用其中一个。
 ## 类型与文档冲突
 
 类型与官方文档的冲突之处，请以官方文档为准，并在 QQ 群内反馈、微信群内反馈、提交 ISSUE 或 PR，我们将尽快处理，非常感谢你的帮助！🙏
+
+uni-ui 是个例外。`@dcloudio/uni-ui` 的文档表格会落后于组件源码，遇到默认值不一致时以源码里的 `props: { x: { default: ... } }` 为准。例如 `uni-icons` 的 `size`，文档写 24，源码是 16，本项目跟源码。

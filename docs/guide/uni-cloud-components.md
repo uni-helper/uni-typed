@@ -58,9 +58,9 @@ import { UnicloudDb } from '@uni-helper/uni-cloud-components';
 
 ```ts
 // main.ts
-import { createSSRApp } from 'vue';
-import App from './App.vue';
-import UniCloudComponents from '@uni-helper/uni-cloud-components';
+import { createSSRApp } from "vue";
+import App from "./App.vue";
+import UniCloudComponents from "@uni-helper/uni-cloud-components";
 
 export function createApp() {
   const app = createSSRApp(App);

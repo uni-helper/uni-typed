@@ -28,7 +28,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 
 ::: warning
 
-截至 2026-10-08，官方模板依赖版本相对落后，如果你正在使用它，必须升级相关依赖版本才能正常获取相关 TypeScript 类型提示，请参考 [已有项目](#已有项目) 章节调整。
+截至 2026-11-02，官方模板仍锁定 `typescript ^4.9.4` 和 `vue-tsc ^1.0.24`，这两个版本无法加载本项目的类型提示。如果你正在使用它，请先按 [已有项目](#已有项目) 章节把相关依赖升级到 Vue v3 与 TypeScript v5 / v6。
 
 :::
 
@@ -91,7 +91,13 @@ npm i -D @uni-helper/uni-cloud-types
       "@uni-helper/uni-cloud-types"
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.d.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "*.d.ts"
+  ]
 }
 ```
 

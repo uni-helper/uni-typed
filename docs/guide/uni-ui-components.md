@@ -65,9 +65,9 @@ import { UniBadge, UniCard } from '@uni-helper/uni-ui-components';
 
 ```ts
 // main.ts
-import { createSSRApp } from 'vue';
-import App from './App.vue';
-import UniUiComponents from '@uni-helper/uni-ui-components';
+import { createSSRApp } from "vue";
+import App from "./App.vue";
+import UniUiComponents from "@uni-helper/uni-ui-components";
 
 export function createApp() {
   const app = createSSRApp(App);

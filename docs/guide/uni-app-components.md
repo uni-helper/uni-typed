@@ -60,9 +60,9 @@ import { Button, View } from '@uni-helper/uni-app-components';
 
 ```ts
 // main.ts
-import { createSSRApp } from 'vue';
-import App from './App.vue';
-import UniAppComponents from '@uni-helper/uni-app-components';
+import { createSSRApp } from "vue";
+import App from "./App.vue";
+import UniAppComponents from "@uni-helper/uni-app-components";
 
 export function createApp() {
   const app = createSSRApp(App);
