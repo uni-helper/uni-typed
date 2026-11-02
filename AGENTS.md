@@ -68,7 +68,7 @@ pnpm release      # lerna-lite version：main 分支按 conventional commits 定
 - CI（`.github/workflows/ci.yml`）只跑 build / check / typecheck，Test 步骤被注释掉。`pnpm test` 是唯一校验类型定义的关口，提交前自己跑。
 - 根 tsconfig 的 `paths` 指向 `src`，类型测试通过不代表 tsdown 产物没坏；改构建配置时另外跑一次 `pnpm build`。
 - uni-app x 和 uni-ui x 没有对应的包，也不该加。那边组件类型由 uni-app x 编译器按 `XxxComponentPublicInstance` 规范产出，没有 tsconfig 或 `.d.ts` 接入点。有人提需求时指向 `docs/other/uni-app-x.md`。
-- `pnpm check` 目前在 `README.md`、各 `CHANGELOG.md`、`pnpm-workspace.yaml`、`playground/src/uni.scss` 上报格式化差异，是 biome 2.6.4 比这些文件当初的格式化版本新造成的，不是代码问题。`CHANGELOG.md` 由 lerna 生成，别手工重排。
+- `CHANGELOG.md` 在 biome 的忽略列表里，因为它是 lerna 生成的，重排后下次发版又会脏。要加新文件到忽略列表时，别顺手把 `docs/index.md` 那条 override 一起删掉。
 
 ## Conventions
 
