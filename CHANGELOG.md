@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/uni-helper/uni-typed/compare/v1.4.1...v1.4.2) (2026-11-02)
+
+### Bug Fixes
+
+* **uni-app-types:** make vue/jsx-runtime augmentations resolvable ([16dd0fa](https://github.com/uni-helper/uni-typed/commit/16dd0fa562f8ecf76e853a7b3d38c6b64c959def)) - by @ModyQyW
+
 ## [1.4.1](https://github.com/uni-helper/uni-typed/compare/v1.4.0...v1.4.1) (2026-10-08)
 
 ### Bug Fixes
