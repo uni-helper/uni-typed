@@ -64,7 +64,7 @@
     "typescript": "^5.0.0 || ^6.0.0",
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@12.10.1",
+  "packageManager": "pnpm@12.16.1",
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -73,7 +73,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.10.1",
+      "version": "12.16.1",
       "onFail": "warn"
     }
   },

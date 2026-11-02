@@ -6,7 +6,7 @@
 
 - 语言：TypeScript（strict，`moduleResolution: "Bundler"`）。根 `tsconfig.json` 的 `paths` 把所有 `@uni-helper/*` 映射到 `packages/*/src`——类型检查和测试都针对源码，不针对 dist。
 - 运行时：Node 26，仅约束开发环境（`.node-version` 与根及各包 `package.json` 的 `devEngines`）。
-- 包管理器：pnpm 12.10.1（`packageManager` 字段锁定）。依赖版本集中在 `pnpm-workspace.yaml` 的 `catalog`，各包一律写 `catalog:`；`@dcloudio/*` 钉在 `3.0.0-5000720260410001`。
+- 包管理器：pnpm 12.16.1（`packageManager` 字段锁定）。依赖版本集中在 `pnpm-workspace.yaml` 的 `catalog`，各包一律写 `catalog:`；`@dcloudio/*` 钉在 `3.0.0-5000720260410001`。
 - 工具链：tsdown 构建（类型包 `dts: true`，组件包 `dts: { vue: true }` + `unplugin-vue/rolldown` 编译 .vue）、vitest `--typecheck`（仓库没有 vitest 配置文件，靠默认 glob 命中 `*.test-d.ts` + 根 tsconfig）、biome 格式化与 lint（`.vscode/` 已提交 formatOnSave 设置）、vue-tsc 类型检查、@lerna-lite/version 发版。
 - 工作区：`packages/*` 8 个发布包（均为 `@uni-helper/*`，`sideEffects: false`）+ `docs`（VitePress 文档站）+ `playground`（uni-app 示例工程）。
 - peer 依赖：类型包 peer `typescript ^5||^6` 与 `vue ^3.0.0`；组件包对依赖的类型包同时 dep + peer。

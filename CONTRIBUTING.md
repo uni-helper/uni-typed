@@ -5,7 +5,7 @@
 ## 前置条件
 
 - Node.js 26（版本锁定见 `.node-version` 与 `package.json` 的 `devEngines.runtime` 字段）
-- pnpm 12.10.1（版本锁定见 `package.json` 的 `packageManager` 与 `devEngines.packageManager` 字段）
+- pnpm 12.16.1（版本锁定见 `package.json` 的 `packageManager` 与 `devEngines.packageManager` 字段）
 - [biome](https://biomejs.dev/) 负责格式化与 lint（配置见 `biome.json`）
 
 ```bash
