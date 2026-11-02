@@ -13,7 +13,9 @@
       "!**/pages.json",
       "!**/package.json",
       "!lerna.json",
-      "!**/banner.svg"
+      "!**/CHANGELOG.md",
+      "!**/banner.svg",
+      "!**/CHANGELOG.md"
     ]
   },
   "assist": {
@@ -40,6 +42,12 @@
     "indentStyle": "space"
   },
   "overrides": [
+    {
+      "includes": ["docs/index.md"],
+      "formatter": {
+        "enabled": false
+      }
+    },
     {
       "includes": ["**/*.vue"],
       "linter": {
