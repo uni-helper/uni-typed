@@ -98,6 +98,28 @@ type _ButtonFormType = "submit" | "reset";
  * UploadDouyinVideo 发布抖音视频
  *
  * Im 跳转抖音 IM 客服
+ *
+ * JoinGroup 加群
+ *
+ * PrivateMessage 私信
+ *
+ * PlatformIm 跳转抖音平台客服
+ *
+ * NavigateToVideoView 跳转视频播放页
+ *
+ * OpenAwemeUserProfile 跳转抖音号个人页
+ *
+ * OpenWebcastRoom 跳转抖音直播间
+ *
+ * AddShortcut 添加到桌面
+ *
+ * AuthorizePrivateMessage 主动授权私信
+ *
+ * AddCalendarEvent 写入系统日历
+ *
+ * OpenSubscribeMessageSetting 跳转订阅消息设置页
+ *
+ * LifeIm 跳转抖音生活服务 IM 客服
  */
 type _ButtonOpenType =
   | "feedback"
@@ -130,7 +152,18 @@ type _ButtonOpenType =
   | "openProfile"
   | "agreePrivacyAuthorization"
   | "uploadDouyinVideo"
-  | "im";
+  | "im"
+  | "joinGroup"
+  | "privateMessage"
+  | "platformIm"
+  | "navigateToVideoView"
+  | "openAwemeUserProfile"
+  | "openWebcastRoom"
+  | "addShortcut"
+  | "authorizePrivateMessage"
+  | "addCalendarEvent"
+  | "openSubscribeMessageSetting"
+  | "lifeIm";
 
 /**
  * 返回用户信息的语言
@@ -494,6 +527,28 @@ type _ButtonProps = CommonProps &
      * UploadDouyinVideo 发布抖音视频
      *
      * Im 跳转抖音 IM 客服
+     *
+     * JoinGroup 加群
+     *
+     * PrivateMessage 私信
+     *
+     * PlatformIm 跳转抖音平台客服
+     *
+     * NavigateToVideoView 跳转视频播放页
+     *
+     * OpenAwemeUserProfile 跳转抖音号个人页
+     *
+     * OpenWebcastRoom 跳转抖音直播间
+     *
+     * AddShortcut 添加到桌面
+     *
+     * AuthorizePrivateMessage 主动授权私信
+     *
+     * AddCalendarEvent 写入系统日历
+     *
+     * OpenSubscribeMessageSetting 跳转订阅消息设置页
+     *
+     * LifeIm 跳转抖音生活服务 IM 客服
      */
     openType: _ButtonOpenType;
     /**
@@ -918,6 +973,28 @@ declare global {
      * UploadDouyinVideo 发布抖音视频
      *
      * Im 跳转抖音 IM 客服
+     *
+     * JoinGroup 加群
+     *
+     * PrivateMessage 私信
+     *
+     * PlatformIm 跳转抖音平台客服
+     *
+     * NavigateToVideoView 跳转视频播放页
+     *
+     * OpenAwemeUserProfile 跳转抖音号个人页
+     *
+     * OpenWebcastRoom 跳转抖音直播间
+     *
+     * AddShortcut 添加到桌面
+     *
+     * AuthorizePrivateMessage 主动授权私信
+     *
+     * AddCalendarEvent 写入系统日历
+     *
+     * OpenSubscribeMessageSetting 跳转订阅消息设置页
+     *
+     * LifeIm 跳转抖音生活服务 IM 客服
      */
     export type ButtonOpenType = _ButtonOpenType;
     /**
