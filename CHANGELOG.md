@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/uni-helper/uni-typed/compare/v1.4.2...v1.5.0) (2026-11-06)
+
+### Features
+
+* **uni-app-types:** add Douyin-only button open-type values ([#64](https://github.com/uni-helper/uni-typed/issues/64)) ([1731c92](https://github.com/uni-helper/uni-typed/commit/1731c92b552a51e310f7d76b1a8c5c21122674b2)) - by @liujiayii
+
 ## [1.4.2](https://github.com/uni-helper/uni-typed/compare/v1.4.1...v1.4.2) (2026-11-02)
 
 ### Bug Fixes
